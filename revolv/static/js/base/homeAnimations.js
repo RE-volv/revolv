@@ -9,7 +9,7 @@ function increaseCount1(currentValue1,step1,value1){
   }
   else
   {
-    $(".our-impacts-module .module-box .titles").eq(0).html(value1);
+    $(".our-impacts-module .module-box .titles").eq(0).html(format(value1)+"");
     return;
   }
   setTimeout(function () {

@@ -704,8 +704,8 @@ def harborhouse(request):
 def leo_page(request):
     return render(request,'base/partials/leo_page.html')
 
-def revolv_accelator(request):
-    return render(request,'base/partials/revolv_accelator.html')
+def revolv_accelerator(request):
+    return render(request,'base/partials/revolv_accelerator.html')
 
 def leadership_circle(request):
     return render(request,'base/partials/leadership-circle.html')
