@@ -7,11 +7,14 @@ DATABASE_PASSWORD="revolv"
 DATABASE_NAME="revolv_db"
 PGSQL_VERSION=9.3
 
+cd /vagrant
+
 # Need to fix locale so that Postgres creates databases in UTF-8
 locale-gen en_GB.UTF-8
 dpkg-reconfigure locales
 
 apt-get update -y
+apt-get install -y git
 
 # Postgresql
 apt-get install -y postgresql-$PGSQL_VERSION libpq-dev
@@ -22,8 +25,8 @@ service postgresql restart
 apt-get install -y build-essential python python-dev python-setuptools
 easy_install -U pip
 pip install -U virtualenv
-virtualenv revolv -p `which python2.7`
-source revolv/bin/activate
+virtualenv venv -p `which python2.7`
+source venv/bin/activate
 pip install -r requirements/dev.txt
 
 # Node.js and npm
@@ -37,7 +40,6 @@ sudo -u postgres psql -c "create user $DATABASE_USERNAME with password '$DATABAS
 sudo -u postgres psql -c "grant all privileges on database $DATABASE_NAME to $DATABASE_USERNAME;"
 sudo -u postgres psql -c "alter user $DATABASE_USERNAME createdb;"
 
-cd /vagrant
 npm install
 cp revolv/settings/local.example.py revolv/settings/local.py
 echo "DJANGO_SETTINGS_MODULE=revolv.settings.local" > .env
