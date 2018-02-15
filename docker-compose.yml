@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  db:
+    image: "postgres"
+    environment:
+      - POSTGRES_USER='revolv'
+      - POSTGRES_DB='revolv'
+      - POSTGRES_PASSWORD='revolv'
+  app:
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: .
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on: 
+     - "db"
+    command: python manage.py runserver 0.0.0.0:3000
