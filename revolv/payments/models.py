@@ -530,6 +530,7 @@ class Payment(models.Model):
 
 
 class ProjectMontlyRepaymentConfig(models.Model):
+    import calendar
     """
     A Model contains configuration distribution of repayment.
 
@@ -542,7 +543,9 @@ class ProjectMontlyRepaymentConfig(models.Model):
 
     project = models.ForeignKey("project.Project")
     year = models.PositiveSmallIntegerField(default=date.today().year)
-    repayment_type = models.CharField(max_length=3, choices=REPAYMENT_TYPE_CHOICES)
+    starting_year = models.IntegerField(max_length=4, default=date.today().year)
+    starting_month = models.CharField(max_length=25, default=calendar.month_name[date.today().month])
+    repayment_type = models.CharField(max_length=3, choices=REPAYMENT_TYPE_CHOICES, blank=True)
     amount = models.FloatField()
     factories = ImportProxy('revolv.payments.factories', 'ProjectMontlyRepaymentConfigFactory')
 

@@ -52,6 +52,7 @@ urlpatterns = patterns(
     url(r'^my-portfolio/monthlyrepaymentreport/', base_views.MonthlyRepaymentReport.as_view(),
         name='monthlyrepaymentreport'),
     url(r'^monthly_repayment_table/$', 'revolv.base.views.monthly_repayment_table', name='monthly_repayment_table'),
+    url(r'^repayment_config/$', 'revolv.administrator.views.repayment_config', name='repayment_config'),
 
     url(r'^what-we-do/projects/', base_views.ProjectListView.as_view(), name='projects_list'),
     url(r'^signin/$', base_views.SignInView.as_view(), name='signin'),
