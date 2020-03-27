@@ -25,7 +25,7 @@ wagtail==1.0b2
 wagtailsettings==0.4.1
 django-sekizai==0.8.1
 django-sesame==1.1
-simple-salesforce==0.75
+simple-salesforce==0.75.3
 stripe==1.33.0
 PyYAML==3.11
 six==1.9.0
