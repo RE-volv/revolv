@@ -323,7 +323,7 @@ WAGTAILADMIN_NOTIFICATION_FROM_EMAIL = 'content-management-bot@re-volv.org'
 LOGIN_URL = '/signin/'
 
 import djcelery
-#from celery.schedules import crontab
+from celery.schedules import crontab
 
 from datetime import datetime
 

@@ -64,7 +64,7 @@ for backend in TEMPLATES:
 """
 
 # Uncomment if using celery worker configuration
-#CELERY_SEND_TASK_ERROR_EMAILS = True
+CELERY_SEND_TASK_ERROR_EMAILS = True
 BROKER_URL = 'amqp://revolv_%(ENVIRONMENT)s:%(BROKER_PASSWORD)s@%(BROKER_HOST)s/revolv_%(ENVIRONMENT)s' % os.environ  # noqa
 
 # Environment overrides

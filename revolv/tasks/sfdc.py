@@ -1,4 +1,4 @@
-#from celery.task import task
+from celery.task import task
 from simple_salesforce import Salesforce
 
 from django.conf import settings
@@ -15,7 +15,7 @@ class SFDCException(Exception):
     pass
 
 
-#@task
+@task
 def send_signup_info(name, email, address=''):
     if not settings.SFDC_ACCOUNT:
         return
@@ -36,7 +36,7 @@ def send_signup_info(name, email, address=''):
         logger.error('SFDC sign-up: ERROR for name: %s and data: %s, res: %s', name, payload, res, exc_info=True)
         #send_signup_info.retry(args=[name, email, address], countdown=INTERVAL, exc=e, max_retries=MAX_RETRIES)
 
-#@task
+@task
 def send_nonprofit_info(firstnamedt, lastnamedt, emaildt, orgnamedt, orgaddressdt, orgstatedt, zipcodedt, websitedt, affiliatedt, phonenumberdt, headsourcedt):
 
     if not settings.SFDC_ACCOUNT:
@@ -60,7 +60,7 @@ def send_nonprofit_info(firstnamedt, lastnamedt, emaildt, orgnamedt, orgaddressd
     except Exception as e:
         logger.error('SFDC sign-up: ERROR for name: %s and data: %s, res: %s', emaildt, payload, res, exc_info=True)
 
-#@task
+@task
 def send_volunteer_info(firstnamedt, lastnamedt, emaildt, zipcodedt, colstudentdt, headsourcedt, orgnamedt, orgaddressdt, orgstatedt, websitedt, affiliatedt, phonenumberdt):
 
     if not settings.SFDC_ACCOUNT:
@@ -94,7 +94,7 @@ def send_volunteer_info(firstnamedt, lastnamedt, emaildt, zipcodedt, colstudentd
     except Exception as e:
         logger.error('SFDC sign-up: ERROR for name: %s and data: %s, res: %s', emaildt, payload, res, exc_info=True)
 
-#@task
+@task
 def fetch_user_by_email(email):
 
     sf = Salesforce(
