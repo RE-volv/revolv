@@ -357,10 +357,10 @@ ADMIN_REINVESTMENT_DATE_DT = datetime(now.year, now.month, **ADMIN_REINVESTMENT_
 # using RabbitMQ as a broker, this sends results back as AMQP messages
 CELERY_RESULT_BACKEND = "amqp"
 
-#CELERY_IMPORTS = ('revolv.tasks.reinvestment_allocation', 'revolv.tasks.reinvestment_rollover')
+CELERY_IMPORTS = ('revolv.tasks.reinvestment_allocation', 'revolv.tasks.reinvestment_rollover')
 # The default Django db scheduler
-#CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"
-"""
+CELERYBEAT_SCHEDULER = "djcelery.schedulers.DatabaseScheduler"
+
 CELERYBEAT_SCHEDULE = {
     "scrape": {
         "task": "revolv.project.tasks.scrape",
@@ -380,7 +380,7 @@ CELERYBEAT_SCHEDULE = {
                             day_of_month=ADMIN_REINVESTMENT_DATE['day']),
     }
 }
-"""
+
 
 GOOGLEMAPS_API_KEY = "AIzaSyAaU4JyPmDkoZZxknsbikaMMJOUBOVhfkI"
 
