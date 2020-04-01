@@ -1,17 +1,18 @@
 psycopg2==2.5.3
 django-facebook==6.0.1
-Pillow==6.2.0
+Pillow==2.9.0
 Willow==0.2.2
 createsend==6.0.0
 mock==1.0.1
 paypalrestsdk==1.4.1
 pytz==2014.7
+django-compressor==1.3
 django-contrib-comments==1.8.0
 django-storages==1.1.7
-django-imagekit==4.0.1
+django-imagekit==3.0
 django-widget-tweaks==1.3
 dj-database-url==0.3.0
-gunicorn==19.5.0
+gunicorn==19.1.1
 boto==2.34.0
 celery==3.1.17
 django-celery==3.1.16
@@ -26,13 +27,13 @@ django-sekizai==0.8.1
 django-sesame==1.1
 simple-salesforce==0.75.3
 stripe==1.33.0
-PyYAML==5.1
+PyYAML==3.11
 six==1.9.0
 django-dotenv==1.3.0
 django-modelcluster==1.1
 django-blog-zinnia==0.15.2
 django-tagging==0.4.5
-Django==1.11
+Django==1.7
 django-mptt==0.6.1
 
 python-social-auth==0.2
@@ -40,7 +41,7 @@ python-social-auth==0.2
   python-dateutil==2.7.2
   oauthlib==1.0.3
   PyJWT==1.4.0
-  requests==2.20.0
+  requests==2.9.1
   requests-oauthlib==0.6.0
   djrill==2.1.0
   django-mathfilters==0.4.0
