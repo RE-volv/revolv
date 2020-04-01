@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     'social.apps.django_app.default',
 
     # wagtail cms: see http://wagtail.readthedocs.org/en/v1.0b2/howto/settings.html
-    'compressor',
+    #'compressor',
     'taggit',
     'modelcluster',
     'wagtail.wagtailcore',
@@ -272,8 +272,8 @@ STATICFILES_DIRS = (
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder'  # for the {% compress %} tags in wagtail to work
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder'
+    #'compressor.finders.CompressorFinder'  # for the {% compress %} tags in wagtail to work
 )
 
 # If using Celery, tell it to obey our logging configuration.
@@ -311,7 +311,7 @@ X_FRAME_OPTIONS = 'DENY'
 # disable django-compressor for wagtail admin pages. this is hacky
 # but necessary until we can get it to play nicer with s3.
 # see https://github.com/calblueprint/revolv/issues/363
-COMPRESS_ENABLED = False
+#COMPRESS_ENABLED = False
 
 CKEDITOR_UPLOAD_PATH = "ckeditor_uploads/"
 CKEDITOR_IMAGE_BACKEND = "pillow"
