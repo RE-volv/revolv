@@ -117,9 +117,9 @@
                             <div class="blue-bar">
                               <span class="pull-left"></span>
                               {% if completed_project.days_left > 0 %}
-                                  <span>{{ completed_project.total_kwh_value|floatformat:"0"|intcomma }} kW Solar System</span>
+                                  <span>{{ completed_project.impact_power|floatformat:"0"|intcomma }} kW Solar System</span>
                               {% else %}
-                                  <span >{{ completed_project.total_kwh_value|floatformat:"0"|intcomma }} kW Solar System</span>
+                                  <span >{{ completed_project.impact_power|floatformat:"0"|intcomma }} kW Solar System</span>
                               {% endif %}
                             </div>
                             <!-- end .blue-bar -->
@@ -156,9 +156,9 @@
                             <div class="blue-bar">
                               <span class="pull-left"></span>
                               {% if completed_project.days_left > 0 %}
-                                  <span>{{ completed_project.total_kwh_value|floatformat:"0"|intcomma }} kW Solar System</span>
+                                  <span>{{ completed_project.impact_power|floatformat:"0"|intcomma }} kW Solar System</span>
                               {% else %}
-                                  <span >{{ completed_project.total_kwh_value|floatformat:"0"|intcomma }} kW Solar System</span>
+                                  <span >{{ completed_project.impact_power|floatformat:"0"|intcomma }} kW Solar System</span>
                               {% endif %}
                             </div>
                             <!-- end .blue-bar -->
@@ -188,7 +188,7 @@
                               </span>
                               <div><div class="img" style="background-image:url('{{MEDIA_URL}}{{completed_project.cover_photo.url }}' ); opacity: 0.6"></div><span class="completed_project"><img src="/static/images/installedorange.png" alt="Project is completed" ></span></div>
                             </a>
-                            <div class="funded-round">
+                            <div class="funded-round" style="display:none;">
                               <div class="status-circular">
                                 <span class="status-text">
                                   <span class="round-depict"><span>OF</span> ${{ completed_project.funding_goal|floatformat:0|intcomma }}</span>
@@ -212,17 +212,17 @@
                           <!-- end .img-main -->
                           <div class="info-main">
                             <div class="blue-bar">
-                              <span class="pull-left">${{ completed_project.amount_donated|floatformat:"0"|intcomma }}</span>
+                              <span>
                               {% if completed_project.days_left > 0 %}
-                                  <span class="pull-right">{{ completed_project.days_left }} Days Left</span>
+                              <span>{{ completed_project.impact_power|floatformat:"0"|intcomma }} kW Solar System</span>
                               {% else %}
-                                  <span class="pull-right">Campaign completed</span>
+                              <span >{{ completed_project.impact_power|floatformat:"0"|intcomma }} kW Solar System</span>
                               {% endif %}
                             </div>
                             <!-- end .blue-bar -->
                             <div class="dark-blue-bar">
-                              <span class="pull-left actual-energy">{{ completed_project.get_statistic_for_project|floatformat:"0"|intcomma}} lbs CO<sub>2</sub></span>
-                              <span class="pull-right">{{ completed_project.total_donors }} Donors</span>
+                              <span >{{ completed_project.carbon_avoided }} lbs CO<sub>2</sub> Avoided</span>
+                              <span class="pull-right"></span>
                             </div>
                             <!-- end .blue-bar -->
                           </div>
