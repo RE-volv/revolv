@@ -97,21 +97,23 @@
               <div class="col-sm-12 col-md-3 no-gutter">
                 <div class="impact-col">
                   <img src="../../static/images/home-img/solar-img-light.png">
-                  <h4 class="blue-text fw-700" >{{ num_projects }}</h4>
+                  {% if num_projects %}
+                  <h4 class="blue-text fw-700" >{{ num_projects |stringformat:"i"|intcomma }}</h4>
+                  {% endif %}
                   <p class="fw-700" style="color:#100084;">NONPROFIT <br> SOLAR PROJECTS<br/> FUNDED</p>
                 </div>
               </div>
               <div class="col-sm-12 col-md-3 no-gutter">
                   <div class="impact-col">
                     <img src="../../static/images/home-img/solarkw-img-light.png">
-                    <h4 class="blue-text fw-700">{{ num_kw_installed |floatformat:"0"|intcomma }}</h4>
+                    <h4 class="blue-text fw-700">{{ num_kw_installed |stringformat:"i"|intcomma }}</h4>
                     <p class="fw-700" style="color:#100084;">TOTAL KILOWATT<br/> INSTALLED</p>
                   </div>
               </div>
               <div class="col-sm-12 col-md-3 no-gutter">
                 <div class="impact-col">
                   <img src="../../static/images/home-img/team-img-light.png">
-                  <h4 class="blue-text fw-700">{{ num_people_affected |floatformat:"0"|intcomma }}</h4>
+                  <h4 class="blue-text fw-700">{{ num_people_affected |join:", "|intcomma  }}</h4>
                   <p class="fw-700" style="color:#100084;">COMMUNITY<br /> MEMBERS IMPACTED</p>
                 </div>
               </div>

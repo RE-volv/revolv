@@ -749,12 +749,17 @@ def completedproject(request):
     
     completed_projects = Project.objects.get_completed()
 
+    num_projects = Project.objects.get_completed().count(),
+    num_kw_installed = Project.objects.filter(project_status=Project.COMPLETED).aggregate(n=Sum('impact_power'))['n'],
+    num_people_affected = Project.objects.filter(project_status=Project.COMPLETED).aggregate(n=Sum('people_affected'))['n'],
+    co2_avoided = str(int(Project.objects.get_total_avoided_co2()))
+
     context = {
         'completed_projects': completed_projects,
-        'num_projects': Project.objects.get_completed().count(),
-        'num_kw_installed': Project.objects.filter(project_status=Project.COMPLETED).aggregate(n=Sum('impact_power'))['n'],
-        'num_people_affected': Project.objects.filter(project_status=Project.COMPLETED).aggregate(n=Sum('people_affected'))['n'],
-        'co2_avoided': str(int(Project.objects.get_total_avoided_co2()))
+        'num_projects' : num_projects,
+        'num_kw_installed': num_kw_installed,
+        'num_people_affected': num_people_affected,
+        'co2_avoided': co2_avoided
     }
 
     # return render_to_response('base/partials/completed_projects.html',context_instance=RequestContext(request))
