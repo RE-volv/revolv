@@ -3,7 +3,7 @@ import tempfile
 import urllib2
 
 from bs4 import BeautifulSoup
-celery.task import task
+from celery.task import task
 from django.core.files import File
 from models import Project
 from utils import get_solar_csv_url
