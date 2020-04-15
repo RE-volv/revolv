@@ -93,7 +93,38 @@
     <div class="row" style="margin-top: 40px; padding: 0px 0px 0px 0px;">
         <div class="regular slider">
           <h1 class="blue-text mt-5 mb-5 fw-500" style="line-height: 1.4em;">RE-volv is proud to help deserving nonprofits go solar and educate their community about the importance of clean energy. </h1>
-             <h2 class="blue-text mt-5 mb-5"> Learn more about the completed nonprofit solar projects by clicking on any of the projects below </h2>
+            <div class="row">
+              <div class="col-sm-12 col-md-3 no-gutter">
+                <div class="impact-col">
+                  <img src="../../static/images/home-img/solar-img-light.png">
+                  <h4 class="blue-text fw-700" >{{ global_impacts.num_projects }}</h4>
+                  <p class="fw-700" style="color:#100084;">NONPROFIT <br> SOLAR PROJECTS<br/> FUNDED</p>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 no-gutter">
+                  <div class="impact-col">
+                    <img src="../../static/images/home-img/solarkw-img-light.png">
+                    <h4 class="blue-text fw-700">{{ global_impacts.num_kw_installed |floatformat:"0"|intcomma }}</h4>
+                    <p class="fw-700" style="color:#100084;">TOTAL KILOWATT<br/> INSTALLED</p>
+                  </div>
+              </div>
+              <div class="col-sm-12 col-md-3 no-gutter">
+                <div class="impact-col">
+                  <img src="../../static/images/home-img/team-img-light.png">
+                  <h4 class="blue-text fw-700">{{ global_impacts.num_people_affected |floatformat:"0"|intcomma }}</h4>
+                  <p class="fw-700" style="color:#100084;">COMMUNITY<br /> MEMBERS IMPACTED</p>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-3 no-gutter">
+                  <div class="impact-col">
+                    <img src="../../static/images/home-img/co-2-img-light.png">
+                    <h4 class="blue-text fw-700">{{ global_impacts.co2_avoided |floatformat:"0"|intcomma  }} lbs</h4>
+                    <p class="fw-700" style="color:#100084;">CO<sub>2</sub><br/> AVOIDED</p>
+                  </div>
+              </div>
+            </div>
+          
+          <h2 class="blue-text mt-5 mb-5"> Learn more about the completed nonprofit solar projects by clicking on any of the projects below </h2>
             {% for completed_project in completed_projects %}
 
                 {% if completed_project.tagline == 'progress' %}

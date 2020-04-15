@@ -1,0 +1,327 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+
+<title>{% block title %}Solar for Nonprofit - RE-volv{% endblock %}</title>
+
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+
+<!-- -->
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLEMAPS_API_KEY }}">
+</script>
+
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+  
+<script src="https://jawj.github.io/OverlappingMarkerSpiderfier/bin/oms.min.js" async></script>
+  
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'>
+<style>
+a {
+  outline:none !important;
+}
+.popup-youtube {
+  .youtube-click {
+    outline:none;
+    width: 50px;
+    heignt: 50px;
+  }
+}
+</style>
+
+<script data-obct type="text/javascript">
+  /** DO NOT MODIFY THIS CODE**/
+  !function(_window, _document){
+  var OB_ADV_ID='005c40e939328013e9892302acc1b8b8d2';
+  if(_window.obApi){var toArray=function(object){return Object.prototype.toString.call(object)==='[object Array]'? object:[object];};_window.obApi.marketerId=toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));return;}
+  var api= _window.obApi=function(){api.dispatch? api.dispatch.apply(api, arguments): api.queue.push(arguments);};api.version='1.1';api.loaded=true;api.marketerId= OB_ADV_ID;api.queue=[];var tag= _document.createElement('script');tag.async=true;tag.src='//amplify.outbrain.com/cp/obtp.js';tag.type='text/javascript';var script= _document.getElementsByTagName('script')[0];script.parentNode.insertBefore(tag, script);}(window, document);
+  obApi('track','PAGE_VIEW');
+</script>
+{% endblock %}
+
+{% block body %}
+    
+    <main role="main" class="container-fluid">
+
+      <div class="container-fluid application-header" id="top-section" style="background-position: center !important; height: 250px;"><div class="row text-center" style="height: 200px !important; margin: 0 auto;"><div class="col hero-text align-self-end"></div></div></div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/nonprofit-img/scroll-icon.png">
+          </div>
+      </div>
+      
+      <div class="container-fluid" style="padding: 5% 0 10% 0; background-size: cover;background-position: bottom center;">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-sm-12 col-md-10">
+
+                <div class="container-fluid mt-4" id="section-seven">
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-sm-12 co-md-12 col-lg-10 text-center">
+                      <h1 class="blue-text fw-300 mb-5">Solar Project Videos</h1>
+                      <div class="line-section mb-5">
+                        <div class="line-center"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center align-items-center mt-5">
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?time_continue=2&v=rH0F8XXnQLo?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Primates Inc.</h5>
+                        <p>Westfield, WI </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=QIGGzHD-X_o?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>East End Community Services</h5>
+                        <p>Dayton, OH</p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=n23k_-Lp82E?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>VFW Post 10420</h5>
+                        <p>Murrells Inlet, SC </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=C469pyc9q3Q?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Lakeshore Avenue Baptist Church</h5>
+                        <p>Oakland, CA </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=sLpjVT2RYr8?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Unity Gardens</h5>
+                        <p>Berkeley, CA </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=4IIasAvTHsg?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>True Fellowship Baptist Church</h5>
+                        <p>Richmond, California </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=V6FOTKO82qM?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Veterans of Foreign Wars Post 10804</h5>
+                        <p>Little River, SC </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=2foMJHCJerQ?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>The Village of Arts and Humanities</h5>
+                        <p>Philadelphia, PA </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=oVf2sDc3WoY?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Project Home</h5>
+                        <p>Madison, WI </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=2fnuAyGqTsQ?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Mission of Mary Cooperative</h5>
+                        <p>Dayton, OH </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=ejgxgJkdFBI?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Faith Baptist Church</h5>
+                        <p>Oakland, CA </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=nk4WxTuBwCo?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Camp Ketcha</h5>
+                        <p>Scarborough, ME </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=YKqF10gUbE4?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Harbor House</h5>
+                        <p>Oakland, CA </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=rIZYltafCAY?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>River Revitalization Foundation</h5>
+                        <p>Milwaukee, WI </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=wk6oHwQc9X0?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Isla Vista Food Cooperative</h5>
+                        <p>Isla Vista, CA</p>
+                      </div>
+
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=OWDKZSRYk_Y?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Serenity House</h5>
+                        <p>Philadelphia, PA </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=_wxX2dc3g4I?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Riverwest Co-op Grocery & Cafe</h5>
+                        <p>Milwaukee, WI</p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=nrzfVaceSa8?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Other Avenues Food Cooperative</h5>
+                        <p>San Francisco, CA </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=Y3YZRCTJrMY?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Kehilla Community Synagogue</h5>
+                        <p>Oakland, CA </p>
+                      </div>
+
+                      <div class="testimonial-col col-md-6 my-4">
+                        <a class="testimonial-img-wrap popup-youtube"
+                          href="https://www.youtube.com/watch?v=Nl845-aMDAM?autoplay=1&rel=0">
+                          <img src="static/images/home-img/richmondthumb1.jpg">
+                          <div class="play-button">
+                          </div>
+                        </a>
+                        <h5>Shawl-Anderson Dance Center</h5>
+                        <p>Berkeley, CA </p>
+                      </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-10 col-lg-8 text-center">
+              <a class="btn btn-blue btn-me btn-arrow-orange mx-2" style="margin-top:20px;" href="/get-involved/apply/" role="button">Signup your nonprofit</a>
+          </div>
+        </div>
+      </div>
+      
+    </main><!-- /.container -->
+    <script>
+      $(document).ready(function() {
+          $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+              type: 'iframe',
+              mainClass: 'mfp-fade',
+              preloader: true,
+          });
+      });
+    
+      </script>
+    
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+        <script src="{% static 'js/home-js/script.js' %}"></script>
+        <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/nonprofit-js/script.js' %}"></script>
+
+
+{% endblock %}

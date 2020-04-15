@@ -534,6 +534,8 @@ def solar_ambassador(request):
 def nonprofit_app(request):
     return render(request, 'base/partials/nonprofit_app.html')
 
+def nonprofit_videos(request):
+    return render(request, 'base/partials/nonprofit_videos.html')
 
 # education center categories
 def solarenergysection(request):
@@ -744,9 +746,23 @@ def solarathome(request):
 
 
 def completedproject(request):
+
+    people_donated_sys_count = RevolvUserProfile.objects.exclude(project=None).count()
+    people_donated_stat_Count = str(int(people_donated_sys_count))
+
+    global_impacts = {
+        # Users who have backed at least one project:
+        'num_people_donated': people_donated_stat_Count,
+        'num_projects': Project.objects.get_completed().count(),
+        'num_kw_installed': Project.objects.filter(project_status=Project.COMPLETED).aggregate(n=Sum('impact_power'))['n'],
+        'num_people_affected':
+            Project.objects.filter(project_status=Project.COMPLETED).aggregate(n=Sum('people_affected'))['n'],
+        'co2_avoided': str(int(Project.objects.get_total_avoided_co2())),
+    }
+
     completed_projects = Project.objects.get_completed()
     # return render_to_response('base/partials/completed_projects.html',context_instance=RequestContext(request))
-    return render(request, 'base/partials/completed_projects.html', {'completed_projects': completed_projects})
+    return render(request, 'base/partials/completed_projects.html', {'completed_projects': completed_projects, 'global_impacts': global_impacts})
 
 def completedcampaigns(request):
     completed_campaigns = Project.objects.get_completed_ssf()
