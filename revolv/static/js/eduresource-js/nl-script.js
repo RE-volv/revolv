@@ -2,8 +2,8 @@ $(function(){
   var overlay = $('<div id="overlay"></div>');
 
   overlay.appendTo(document.body);
-  $("#overlay").delay(20000).show(0);
-  $(".popup").delay(20000).show(0);
+  $("#overlay").delay(7000).show(0);
+  $(".popup").delay(7000).show(0);
 
   $('.close').click(function(){
     $('.popup').hide();
