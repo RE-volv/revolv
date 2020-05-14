@@ -15,6 +15,9 @@ src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLEMAPS_API_KEY }}">
 <script src="https://jawj.github.io/OverlappingMarkerSpiderfier/bin/oms.min.js" async></script>
   
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'>
+<link href="{% static 'css/eduresource-css/style.css' %}?version={{ version_number }}" rel="stylesheet" />
+<script src="{% static 'js/eduresource-js/nl-script.js' %}"></script>
+
 <style>
 a {
   outline:none !important;
@@ -30,6 +33,20 @@ a {
 {% endblock %}
 
 {% block body %}
+
+    <div class='popup animated fadeIn' id="modalUser">
+      <div class='newspadding container' style="padding: 44px 35px; margin-top: 200px;">
+        <h4 style="color:#f8f9fa !important; font-weight: 700 !important; text-align: center;">Want to learn more?</h4>
+        <p style="margin: 0px; font-size: 18px; text-align: center; font-family: 'Montserrat', sans-serif;">Please join us on June 2, 2020, at 11AM PDT as we hear from clean energy leaders, solar installation professionals, and RE-volv’s student Solar Ambassadors to find out how easy it is to take action on climate change at the local level by helping community-serving nonprofits go solar. Space is limited - sign up today!</p>
+          <div class="row justify-content-center align-items-center" style="padding: 20px 0px">
+            <div class="row align-items-center">
+              <a class="btn btn-blue btn-me btn-arrow-orange mx-2" href="https://us02web.zoom.us/webinar/register/7815887093972/WN_AuSaEAl8TdmKSKBU8rQH9w" target="_blank" rel="noopener noreferrer" role="button">Register Here</a>
+            </div>
+          </div> 
+          <a href="" target="_blank" rel="noopener noreferrer" class="close" id="close-welcome" style="font-size:0.9rem;"> x Close</a>
+        </div>
+      </div>
+    </div>
 
     <main role="main" class="container-fluid alternate">
       <div class="container-fluid alternate" id="top-section">
@@ -348,6 +365,22 @@ a {
           </div>
         </div>
       </div>
+
+      <div class="container-fluid" id="ambassador-section-five">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-12 col-lg-8 text-center">
+            <p class="text-white mb-4 fw-600">Please join us on June 2, 2020, at 11AM PDT as we hear from clean energy leaders,
+              solar installation professionals, and RE-volv’s student Solar Ambassadors to find out how easy it is to
+              take action on climate change at the local level by helping community-serving nonprofits go solar. Space
+              is limited - sign up today!</p>
+            <div class="row justify-content-center align-items-center margin-top:40px;">
+              <a class="btn btn-orange btn-me btn-arrow-white mx-2"
+              href="https://us02web.zoom.us/webinar/register/7815887093972/WN_AuSaEAl8TdmKSKBU8rQH9w" target="_blank" rel="noopener noreferrer"  role="button">Register</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </main><!-- /.container -->
 
   <script>
