@@ -4,9 +4,10 @@
 {% load wagtailimages_tags %}
 
 {% block head %}
-<link rel="stylesheet" type="text/css" href="/static/css/edu-media-css/ambassador.css?version={{ version_number }}">
+<!-- 
+<link href="{% static 'css/edu-media-css/ambassador.css' %}?version={{ version_number }}" rel="stylesheet" />
+-->
 {% endblock %}
-
 
 {% block body %}
 
@@ -68,7 +69,7 @@
 						</div>
 					</div>
 
-					<!-------------------------------------------------- Watch ambassador in action  ------------------------------------------->
+					<!-------------------------------------------------- Watch ambassador in action  
 
 					<div class="row justify-content-center align-items-center">
 						<div class="col-sm-12 co-md-10 col-lg-8">
@@ -77,20 +78,17 @@
 								<div class="player-skin">
 									<video controls crossorigin playsinline
 										poster="../../../static/images/about-abr-img/ambassador-player-poster.png" id="ambassador-player">
-										<!-- Video files -->
-										<!-- <source src="../../../static/images/about-abr-img/ambassador540.mp4" type="video/mp4" size="576"> -->
+		
 										<source src="../../../static/images/about-abr-img/ambassador720.mp4" type="video/mp4" size="720">
 										<source src="../../../static/images/about-abr-img/ambassador540.mp4" type="video/mp4" size="576">
-										<!-- <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080"> -->
 
-										<!-- Fallback for browsers that don't support the <video> element -->
-										<!-- <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a> -->
 										<a href="../../../static/images/about-abr-img/ambassador720.mp4" download>Download</a>
 									</video>
 								</div>
 							</div>
 						</div>
 					</div>
+					------------------------------------>
 
 					<!-- Vertical Steppers -->
 					<div class="row mt-1">
@@ -1291,10 +1289,8 @@
 
 	</div>
 	<!--- end container -->
-
 </div>
 <!---- end main -->
-
 
 <script type="text/javascript">
 	//Show/Hide - clicked on accordions
@@ -1306,8 +1302,5 @@
 
 	});
 </script>
-
-
-
 
 {% endblock %}

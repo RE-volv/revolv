@@ -91,14 +91,14 @@ urlpatterns = patterns(
     url(r'^blog-center/articles/solarinvestment/', 'revolv.base.views.solararticles', name='solararticles'),
     url(r'^blog-center/articles/newyearrevolution/', 'revolv.base.views.newyearrevolution', name='newyearrevolution'),
 
-    url(r'^portal/', 'revolv.base.views.ambassador_portal', name='ambassador_portal'),
-
     url(r'^monthly_donor', 'revolv.base.views.monthly_donor', name='monthly_donor'),
     url(r'^thanks/postdonation/', 'revolv.base.views.postdonation', name='postdonation'),
     url(r'^thanks/postmonthlydonation/', 'revolv.base.views.postmonthlydonation', name='postmonthlydonation'),
     url(r'^thanks/postnonprofit/', 'revolv.base.views.postnonprofitlead', name='postnonprofitlead'),
 
     url(r'^ambassador_info/', 'revolv.base.views.ambassador_info', name='ambassador_info'),
+
+    url(r'^portal/', 'revolv.base.views.sa_portal', name='sa_portal'),
 
     url(r'^re-volv/media', 'revolv.base.views.media_archive', name='media_archive'),
     url(r'^get-involved/education/', 'revolv.base.views.education_center_section', name='education_center_section'),

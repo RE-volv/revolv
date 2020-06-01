@@ -627,8 +627,9 @@ def monthly_donor(request):
     return render(request, 'base/partials/monthly-donate.html')
 
 
-def ambassador_portal(request):
-    return render(request, 'base/partials/ambassador-portal.html')
+def sa_portal(request):
+    return render(request, 'base/partials/sa-portal.html')
+
 
 #--------------------------------
 def postdonation(request):
