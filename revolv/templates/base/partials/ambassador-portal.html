@@ -2,12 +2,8 @@
 
 {% load staticfiles %}
 
-
-
 {% block head %}
-
-<link href="{% static 'css/edu-media-css/ambassador.css' %}" rel="stylesheet" />
-
+<link rel="stylesheet" type="text/css" href="/static/css/edu-media-css/ambassador.css?version={{ version_number }}">
 {% endblock %}
 
 
