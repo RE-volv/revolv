@@ -407,7 +407,7 @@ $(document).ready(function() {
    /*$('.input-email-code > div:last-child input[type=text]').mask("hhhhh-hhhh?-hh",{placeholder:"x"});*/
   function formMessage() {
       $(".form-submit-msg-btn").click(function(e){
-          window.location.href = "/ambassador/portal";
+          window.location.href = "/ambassador_info/";
       });
 
   }

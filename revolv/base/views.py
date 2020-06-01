@@ -856,6 +856,22 @@ def intake_form_submit(request):
 
     if colstudentdt == 'Yes' or colstudentdt == 'No':
         send_volunteer_info(firstnamedt, lastnamedt, emaildt, zipcodedt, colstudentdt , headsourcedt, orgnamedt, orgaddressdt, orgstatedt, websitedt, affiliatedt, phonenumberdt)
+        auth = {'api_key': settings.CM_KEY }
+        smart_email_id = 'b2e5d3e2-5fb0-460b-bf64-eb6fa7d95a25'
+        tx_mailer = Transactional(auth)
+        my_data = {
+            'x-apple-data-detectors': 'x-apple-data-detectorsTestValue',
+            'href^="tel"': 'href^="tel"TestValue',
+            'href^="sms"': 'href^="sms"TestValue',
+            'owa': 'owaTestValue',
+            'role=section': 'role=sectionTestValue',
+            'style*="font-size:1px"': 'style*="font-size:1px"TestValue',
+            'nameform': firstnamedt,
+
+        }
+        consent_to_track = 'yes' # Valid: 'yes', 'no', 'unchanged'
+        response = tx_mailer.smart_email_send(smart_email_id, emaildt , consent_to_track, data = my_data)
+
     else:
         send_nonprofit_info(firstnamedt, lastnamedt, emaildt, orgnamedt, orgaddressdt, orgstatedt, zipcodedt, websitedt, affiliatedt, phonenumberdt, headsourcedt)
     
