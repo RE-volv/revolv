@@ -66,6 +66,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="full-width colstudent-block">
                 <div class="full-width colstudent-cntnr">
                     <div>
@@ -99,6 +100,45 @@
                     </div>
                 </div>
             </div>
+
+            <!---- joining existing team -->
+
+            <div class="full-width colteam-block">
+                <div class="full-width colteam-cntnr">
+                    <div>
+                       Joining an existing team?
+                    </div>
+                    <div class="full-width interest-block flex flex-aln-itm-cnt">
+                        <div class="form-checkbox flex flex-aln-itm-cnt flex-jty-con-cnt"  id="yTeam">
+                            <div class="unmarked-checkbox" data-checkbox-status="unchecked"></div>
+                        </div>
+                        <div class="interest-text">
+                            Yes
+                        </div>
+                    </div>
+                    <div class="full-width interest-block flex flex-aln-itm-cnt">
+                        <div class="form-checkbox flex flex-aln-itm-cnt flex-jty-con-cnt"  id="nTeam">
+                            <div class="mark-checkbox" data-checkbox-status="checked"></div>
+                        </div>
+                        <div class="interest-text">
+                            No
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="full-width schoolTeam-org-cntnr hidden" id="teamInput">
+                <div class="full-width schoolTeam-org-block">
+                    <div >
+                        Name of the school or someone else on your team
+                    </div>
+                    <div>
+                        <textarea rows="3" class="text-area" style="width:100%"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!---- -->
+            
             <div class="full-width get-to-know-revolv-cntnr">
                 <div class="full-width get-to-know-revolv-block flex flex-wrap">
                     <div>
@@ -254,6 +294,14 @@
         });
         $("#yCollege").click(function() {
             $("#schoolInput").removeClass("hidden");
+        });
+
+        $("#nTeam").click(function() {
+            $("#teamInput").addClass("hidden");
+          
+        });
+        $("#yTeam").click(function() {
+            $("#teamInput").removeClass("hidden");
         });
 
         $("#yOther").click(function() {

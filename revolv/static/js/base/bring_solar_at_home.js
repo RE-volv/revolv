@@ -57,6 +57,15 @@ $(document).ready(function() {
               $this.removeClass('unmarked-checkbox').addClass('mark-checkbox');
               $this.data('checkbox-status', "checked");
           }
+       }  else if (findParent.parents('.colteam-block').length){
+        var $this = $(this).find("div:first-child");
+        var checkboxSatus = $this.data('checkbox-status');
+        if(checkboxSatus == "unchecked") {
+            findParent.closest('.colteam-block').find('.form-checkbox div:first-child').addClass('unmarked-checkbox').removeClass('mark-checkbox');
+            findParent.closest('.colteam-block').find('.form-checkbox div:first-child').data('checkbox-status', "unchecked");
+            $this.removeClass('unmarked-checkbox').addClass('mark-checkbox');
+            $this.data('checkbox-status', "checked");
+          }
        }  else if (findParent.parents('.get-to-know-revolv-block').length){
           var $this = $(this).find("div:first-child");
           var checkboxSatus = $this.data('checkbox-status');
@@ -83,6 +92,15 @@ $(document).ready(function() {
               findParent.closest('.schoolLoc-org-block').find('.form-checkbox div:first-child').data('checkbox-status', "unchecked");
               $this.removeClass('unmarked-checkbox').addClass('mark-checkbox');
               $this.data('checkbox-status', "checked");
+          }
+       } else if (findParent.parents('.schoolTeam-org-block').length){
+        var $this = $(this).find("div:first-child");
+        var checkboxSatus = $this.data('checkbox-status');
+        if(checkboxSatus == "unchecked") {
+            findParent.closest('.schoolTeam-org-block').find('.form-checkbox div:first-child').addClass('unmarked-checkbox').removeClass('mark-checkbox');
+            findParent.closest('.schoolTeam-org-block').find('.form-checkbox div:first-child').data('checkbox-status', "unchecked");
+            $this.removeClass('unmarked-checkbox').addClass('mark-checkbox');
+            $this.data('checkbox-status', "checked");
           }
        } else if (findParent.parents('.solar-proj-need-block').length){
           var $this = $(this).find("div:first-child");
@@ -299,6 +317,7 @@ $(document).ready(function() {
       var signUp = $(".sign-up-revolve-update div:last-child").text().trim();
       var interest = $(".know-interest-cntnr .mark-checkbox").parent().next().text().trim();
       var colstudent = $(".colstudent-cntnr .mark-checkbox").parent().next().text().trim();
+      var colteam = $(".colteam-cntnr .mark-checkbox").parent().next().text().trim();
       var heardSource = $(".get-to-know-revolv-block .mark-checkbox").parent().next().text().trim();
 
 
@@ -322,6 +341,7 @@ $(document).ready(function() {
       var otherForm = $(".get-to-know-revolv-cntnr .get-to-know-revolv-block #otherCheckbox .get-to-know-text .text-area").val().trim();
       
       var schoolLoc = $(".schoolLoc-org-cntnr .schoolLoc-org-block .text-area").val().trim();
+      var schoolTeam = $(".schoolTeam-org-cntnr .schoolTeam-org-block .text-area").val().trim();
 
       var affiliation = $(".affiliation-org-cntnr .affiliation-org-block .text-area").val().trim();
       var solarProjNeed = $(".solar-proj-need-cntnr .mark-checkbox").parent().next().text().trim();
@@ -350,7 +370,7 @@ $(document).ready(function() {
                   colstudent: colstudent,
                   signUp: signUp,
                   interest: interest,
-                  colstudent: colstudent,
+                  colteam: colteam,
                   heardSource: heardSource,
                   otherForm: otherForm,  
                   orgState : orgState,
@@ -366,6 +386,7 @@ $(document).ready(function() {
            
 
                   schoolLoc: schoolLoc,
+                  schoolTeam: schoolTeam,
                   affiliation: affiliation,
                   solarProjNeed: solarProjNeed,
 
@@ -386,7 +407,7 @@ $(document).ready(function() {
    /*$('.input-email-code > div:last-child input[type=text]').mask("hhhhh-hhhh?-hh",{placeholder:"x"});*/
   function formMessage() {
       $(".form-submit-msg-btn").click(function(e){
-          window.location.href = "/thanks/postnonprofit/";
+          window.location.href = "/ambassador/portal";
       });
 
   }

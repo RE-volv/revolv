@@ -91,6 +91,8 @@ urlpatterns = patterns(
     url(r'^blog-center/articles/solarinvestment/', 'revolv.base.views.solararticles', name='solararticles'),
     url(r'^blog-center/articles/newyearrevolution/', 'revolv.base.views.newyearrevolution', name='newyearrevolution'),
 
+    url(r'^ambassador/portal', 'revolv.base.views.ambassador_portal', name='ambassador_portal'),
+
     url(r'^monthly_donor', 'revolv.base.views.monthly_donor', name='monthly_donor'),
     url(r'^thanks/postdonation/', 'revolv.base.views.postdonation', name='postdonation'),
     url(r'^thanks/postmonthlydonation/', 'revolv.base.views.postmonthlydonation', name='postmonthlydonation'),

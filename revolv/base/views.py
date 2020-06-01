@@ -626,6 +626,10 @@ def newyearrevolution(request):
 def monthly_donor(request):
     return render(request, 'base/partials/monthly-donate.html')
 
+
+def ambassador_portal(request):
+    return render(request, 'base/partials/ambassador-portal.html')
+
 #--------------------------------
 def postdonation(request):
 
@@ -785,6 +789,7 @@ def intake_form_submit(request):
         firstZip = request.GET.get('firstZip')
         phonenumber = request.GET.get('phonenumber')
         colstudent = request.GET.get('colstudent')
+        colteam = request.GET.get('colteam')
         signUp = request.GET.get('signUp')
         interest = request.GET.get('interest')
         heardSource = request.GET.get('heardSource')
@@ -800,6 +805,7 @@ def intake_form_submit(request):
         missionStatement = request.GET.get('missionStatement')
         orgStartYear = request.GET.get('orgStartYear')
         schoolLoc = request.GET.get('schoolLoc')
+        schoolTeam = request.GET.get('schoolTeam')
         affiliation = request.GET.get('affiliation')
         solarProjNeed = request.GET.get('solarProjNeed')
         annualBudget = request.GET.get('annualBudget')
@@ -827,8 +833,10 @@ def intake_form_submit(request):
 
     phonenumberdt = phonenumber
     colstudentdt = colstudent
+    colteamdt = colteam
 
     schoolLocdt = schoolLoc
+    schoolTeamdt = schoolTeam
 
     interestdt = interest
     headsourcedt = heardSource
@@ -867,7 +875,9 @@ def intake_form_submit(request):
         'firstzipform': firstZipdt,
         'zipcodeform': zipcodedt,
         'colstudentform': colstudentdt,
+        'colteamform': colteamdt,
         'schoolLocform': schoolLocdt,
+        'schoolTeamform': schoolTeamdt,
         'phoneNumform': phonenumberdt,
         'interestform': interestdt,
         'sourceform': headsourcedt,
