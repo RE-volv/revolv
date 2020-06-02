@@ -432,19 +432,18 @@ $(document).ready(function(){
   //load the google map
   function loadMap(){
     function initialize() {
-      var myLatlngCenter = new google.maps.LatLng(-22.363882,131.044922);
+      /*
       var mapOptions = {
         zoom: 4,
-        center: myLatlngCenter,
         mapTypeControl: false
       };
       var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-      var myLatlng = new google.maps.LatLng(-22.363882,131.044922);
 
       var marker = new google.maps.Marker({
         position: myLatlng,
         map: map
       });
+      */
     }
 
     initialize();
