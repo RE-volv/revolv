@@ -537,6 +537,9 @@ def nonprofit_app(request):
 def nonprofit_videos(request):
     return render(request, 'base/partials/nonprofit_videos.html')
 
+def webinar_videos(request):
+    return render(request, 'base/partials/webinar_videos.html')
+
 # education center categories
 def solarenergysection(request):
     return render(request, 'base/partials/solarenergyfinancing.html')

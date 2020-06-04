@@ -58,6 +58,7 @@ urlpatterns = patterns(
     url(r'^get-involved/apply', 'revolv.base.views.nonprofit_app', name='nonprofit_app'),
 
     url(r'^nonprofit/videos', 'revolv.base.views.nonprofit_videos', name='nonprofit_videos'),
+    url(r'^webinar/', 'revolv.base.views.webinar_videos', name='webinar_videos'),
 
     #education center categories
     url(r'^get-involved/education/solarenergyfinancing', 'revolv.base.views.solarenergysection', name='solarenergysection'),

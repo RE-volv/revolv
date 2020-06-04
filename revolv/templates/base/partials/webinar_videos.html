@@ -1,0 +1,68 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+
+<title>{% block title %}Webinar - RE-volv{% endblock %}</title>
+
+<style>
+@element iframe {
+  $this {
+    width: 100%;
+    height: calc(100ew / eval("width/height"));
+  }
+}
+</style>
+
+{% endblock %}
+
+{% block body %}
+    
+    <main role="main" class="container-fluid">
+
+      <div class="container-fluid application-header" id="top-section" style="background-position: center !important; height: 250px;"><div class="row text-center" style="height: 200px !important; margin: 0 auto;"><div class="col hero-text align-self-end"></div></div></div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/nonprofit-img/scroll-icon.png">
+          </div>
+      </div>
+      
+      <div class="container-fluid" style="padding: 5% 0 10% 0; background-size: cover;background-position: bottom center;">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-sm-12 col-md-10">
+
+                <div class="container-fluid mt-4" id="section-seven">
+                  <div class="row justify-content-center align-items-center">
+                    <div class="col-sm-12 co-md-12 col-lg-10 text-center">
+                      <h1 class="blue-text fw-300 mb-5">RE-volv Webinar</h1>
+                      <div class="line-section mb-5">
+                        <div class="line-center"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row justify-content-center align-items-center mt-5">
+
+                      <!-- video embed code copied directly from YouTube -->
+                      <iframe width="860" height="485" src="https://www.youtube.com/embed/9k5Bpy4l54w" frameborder="0" allowfullscreen></iframe>
+                                
+                      <div class="testimonial-col col-md-12 my-12">
+                        <h5>June 02, 2020</h5>
+                      </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+    </main><!-- /.container -->
+
+{% endblock %}
