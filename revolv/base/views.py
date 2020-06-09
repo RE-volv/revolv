@@ -858,7 +858,7 @@ def intake_form_submit(request):
 
 
     if colstudentdt == 'Yes' or colstudentdt == 'No':
-        send_volunteer_info(firstnamedt, lastnamedt, emaildt, zipcodedt, colstudentdt , headsourcedt, orgnamedt, orgaddressdt, orgstatedt, websitedt, affiliatedt, phonenumberdt)
+        send_volunteer_info(firstnamedt, lastnamedt, emaildt, zipcodedt, colstudentdt , headsourcedt, orgnamedt, orgaddressdt, orgstatedt, websitedt, affiliatedt, phonenumberdt, schoolLocdt, colteamdt, schoolTeamdt)
         auth = {'api_key': settings.CM_KEY }
         smart_email_id = 'b2e5d3e2-5fb0-460b-bf64-eb6fa7d95a25'
         tx_mailer = Transactional(auth)

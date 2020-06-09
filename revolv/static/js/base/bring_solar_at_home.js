@@ -312,8 +312,8 @@ $(document).ready(function() {
 
       var phonenumber = $('.input-email-code > div:last-child input[type=text]').val().trim();
       var orgState = $('.org-statezip > div:last-child input[type=text]').val().trim();
-      var zipCode = '';
-      
+      var zipCode = $('.input-full-zip > div:last-child input[type=text]').val().trim();
+     
       var signUp = $(".sign-up-revolve-update div:last-child").text().trim();
       var interest = $(".know-interest-cntnr .mark-checkbox").parent().next().text().trim();
       var colstudent = $(".colstudent-cntnr .mark-checkbox").parent().next().text().trim();
