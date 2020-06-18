@@ -37,7 +37,7 @@ def send_signup_info(name, email, address=''):
         #send_signup_info.retry(args=[name, email, address], countdown=INTERVAL, exc=e, max_retries=MAX_RETRIES)
 
 @task
-def send_nonprofit_info(firstnamedt, lastnamedt, emaildt, orgnamedt, orgaddressdt, orgstatedt, zipcodedt, websitedt, affiliatedt, phonenumberdt, headsourcedt):
+def send_nonprofit_info(firstnamedt, lastnamedt, emaildt, orgnamedt, orgaddressdt, orgstatedt, zipcodedt, websitedt, affiliatedt, phonenumberdt, headsourcedt, solarinstallerdt, systemsizedt, epcgrosscostdt, epcyearproductiondt, additionalnotesdt):
 
     if not settings.SFDC_ACCOUNT:
         return
@@ -50,7 +50,7 @@ def send_nonprofit_info(firstnamedt, lastnamedt, emaildt, orgnamedt, orgaddressd
             password=settings.SFDC_PASSWORD
         )
 
-        sf.Lead.create({'FirstName':firstnamedt, 'LastName':lastnamedt, 'Email': emaildt, 'Company': orgnamedt, 'Street': orgaddressdt, 'State': orgstatedt, 'Country': 'United States',  'PostalCode': zipcodedt, 'Website' : websitedt, 'Title': affiliatedt, 'Phone': phonenumberdt, 'How_did_you_hear_about_us__c': headsourcedt })
+        sf.Lead.create({'FirstName':firstnamedt, 'LastName':lastnamedt, 'Email': emaildt, 'Company': orgnamedt, 'Street': orgaddressdt,   'Solar_Installer__c': solarinstallerdt, 'System_Size__c': systemsizedt, 'Gross_Cost__c': epcgrosscostdt, 'First_Year_Production__c': epcyearproductiondt, 'Additional_Notes__c': additionalnotesdt, 'State': orgstatedt, 'Country': 'United States',  'PostalCode': zipcodedt, 'Website' : websitedt, 'Title': affiliatedt, 'Phone': phonenumberdt, 'How_did_you_hear_about_us__c': headsourcedt })
         
         logger.info('send sign-up to SFDC with data: %s', payload)
         #res = sf.apexecute('lead', method='POST', data=payload)
@@ -75,9 +75,9 @@ def send_volunteer_info(firstnamedt, lastnamedt, emaildt, zipcodedt, colstudentd
         )
 
         if orgnamedt == '':
-            orgnamedt = 'Solar Ambassador/Champion'
+            orgnamedt = 'Solar Ambassador'
         elif orgnamedt == None:
-            orgnamedt = 'Solar Ambassador/Champion'
+            orgnamedt = 'Solar Ambassador'
 
 
         volunteer_type = 'Community Champion'

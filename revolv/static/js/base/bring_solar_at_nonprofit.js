@@ -328,6 +328,12 @@ $(document).ready(function() {
         var organisationName = $('.org-name-taxid > div:first-child input[type=text]').val().trim();
         var organisationTaxId = $('.org-name-taxid > div:last-child input[type=text]').val().trim();
         var organisationAddress = $('.org-statezip > div:first-child input[type=text]').val().trim();
+
+        var solarInstaller = $('.org-name-epc > div:first-child input[type=text]').val().trim();
+        var systemSize = $('.org-name-epc > div:last-child input[type=text]').val().trim();
+        var epcGrossCost = $('.org-epc-detail > div:first-child input[type=text]').val().trim();
+        var epcYearProduction = $('.org-epc-detail > div:last-child input[type=text]').val().trim();
+        var additionalNotes = $(".epc-org-cntnr .epc-org-block .text-area").val().trim();
         
         var otherForm = $(".get-to-know-revolv-cntnr .get-to-know-revolv-block #otherCheckbox .get-to-know-text .text-area").val().trim();
 
@@ -369,7 +375,13 @@ $(document).ready(function() {
                     organisationName: organisationName,
                     organisationTaxId: organisationTaxId,
                     organisationAddress: organisationAddress,
-  
+
+                    solarInstaller: solarInstaller,
+                    systemSize: systemSize,
+                    epcGrossCost: epcGrossCost,
+                    epcYearProduction: epcYearProduction,
+                    additionalNotes: additionalNotes,
+
                     websiteName: websiteName,
 
                     affiliation: affiliation,

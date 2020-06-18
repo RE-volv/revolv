@@ -534,6 +534,9 @@ def solar_ambassador(request):
 def nonprofit_app(request):
     return render(request, 'base/partials/nonprofit_app.html')
 
+def nonprofit_epc(request):
+    return render(request, 'base/partials/nonprofit_epc.html')
+
 def nonprofit_videos(request):
     return render(request, 'base/partials/nonprofit_videos.html')
 
@@ -803,6 +806,13 @@ def intake_form_submit(request):
         organisationName = request.GET.get('organisationName')
         organisationTaxId = request.GET.get('organisationTaxId')
         organisationAddress = request.GET.get('organisationAddress')
+
+        solarInstaller = request.GET.get('solarInstaller')
+        systemSize = request.GET.get('systemSize')
+        epcGrossCost = request.GET.get('epcGrossCost')
+        epcYearProduction = request.GET.get('epcYearProduction')
+        additionalNotes = request.GET.get('additionalNotes')
+
         billingAddress = request.GET.get('billingAddress')
         websiteName = request.GET.get('websiteName')
         phoneNumber = request.GET.get('phoneNumber')
@@ -850,6 +860,12 @@ def intake_form_submit(request):
     orgaddressdt = organisationAddress
     websitedt = websiteName
 
+    solarinstallerdt = solarInstaller
+    systemsizedt = systemSize
+    epcgrosscostdt = epcGrossCost
+    epcyearproductiondt = epcYearProduction
+    additionalnotesdt = additionalNotes
+
     affiliatedt = affiliation
     nonprofitdt = solarProjNeed
 
@@ -876,7 +892,8 @@ def intake_form_submit(request):
         response = tx_mailer.smart_email_send(smart_email_id, emaildt , consent_to_track, data = my_data)
 
     else:
-        send_nonprofit_info(firstnamedt, lastnamedt, emaildt, orgnamedt, orgaddressdt, orgstatedt, zipcodedt, websitedt, affiliatedt, phonenumberdt, headsourcedt)
+        send_nonprofit_info(firstnamedt, lastnamedt, emaildt, orgnamedt, orgaddressdt, orgstatedt, zipcodedt, websitedt, affiliatedt, phonenumberdt, headsourcedt, solarinstallerdt, systemsizedt, epcgrosscostdt, epcyearproductiondt, additionalnotesdt)
+
     
     fullnamedt = firstnamedt + "  " + lastnamedt
 
@@ -935,6 +952,9 @@ def intake_form3(request):
     return render_to_response('base/intake_form3.html',
                               context_instance=RequestContext(request))
 
+def intake_form4(request):
+    return render_to_response('base/intake_form4.html',
+                              context_instance=RequestContext(request))
 
 class ReinvestmentRedirect(UserDataMixin, TemplateView):
     '''

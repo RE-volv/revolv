@@ -1,0 +1,216 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block title %}Home | Bring Solar to Your Community{% endblock %}
+{% block head %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/bring_solar_at_community.css?version={{ version_number }}">
+        <link rel="stylesheet" type="text/css" href="/static/css/intake_form.css?version={{ version_number }}">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="/static/js/base/bring_solar_at_nonprofit.js?version={{ version_number }}"></script>
+        <script src="/static/js/base/jquery.cookie.js"></script>
+        
+        <script data-obct type="text/javascript">
+          /** DO NOT MODIFY THIS CODE**/
+          !function(_window, _document){
+          var OB_ADV_ID='005c40e939328013e9892302acc1b8b8d2';
+          if(_window.obApi){var toArray=function(object){return Object.prototype.toString.call(object)==='[object Array]'? object:[object];};_window.obApi.marketerId=toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));return;}
+          var api= _window.obApi=function(){api.dispatch? api.dispatch.apply(api, arguments): api.queue.push(arguments);};api.version='1.1';api.loaded=true;api.marketerId= OB_ADV_ID;api.queue=[];var tag= _document.createElement('script');tag.async=true;tag.src='//amplify.outbrain.com/cp/obtp.js';tag.type='text/javascript';var script= _document.getElementsByTagName('script')[0];script.parentNode.insertBefore(tag, script);}(window, document);
+          obApi('track','PAGE_VIEW');
+        </script>
+	
+{%endblock%}
+
+{% block body %}
+
+    <div class="container-fluid ambassador-header" id="top-section" style="height: 260px;">
+      <div class="row text-center">
+        <div class="col hero-text">
+          <h1 class="text-light" style="margin-top:90px;">Bring Solar to Your <br />Community</h1>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid scroll-section" id="scroll-section">
+        <div class="scroll-icon">
+          <img class="scroll-arrow bouncing" src="../../../static/images/about-abr-img/scroll-icon.png">
+        </div>
+    </div>
+    <div class="full-width intake-form-container">
+    
+        <div class="form-step-1" style="display:block;">
+            <div class="full-width step-1-heading" style="margin-top: 40px; font-size: 3rem;">
+                    Tell us more about the nonprofit you want to help go solar.
+            </div>
+            <div class="full-width input-full-name">
+                <div class="col-xs-12 col-sm-6 padding-zero firstname" style=" padding-left: 0px;">
+                    <input type="text" placeholder="First Name" class="full-width" required>
+                </div>
+                <div class="col-xs-12 col-sm-6 padding-zero lastname" style=" padding-left: 0px;">
+                    <input type="text" placeholder="Last Name" class="full-width">
+                </div>
+            </div>
+
+            <div class="full-width input-email-code webite-and-phone" style="padding-left: 0px; padding-left: 0px;">
+                <div class="col-xs-12 col-sm-6 padding-zero lastname" style=" padding-left: 0px;">
+                        <input type="text" placeholder="Your Email" class="full-width">
+                </div>
+                <div class="col-xs-12 col-sm-6 padding-zero phonenumber" style=" padding-left: 0px;">
+                        <input type="text" placeholder="Phone Number" class="full-width">
+                </div>
+            </div>
+            
+            <div class="full-width organization-details">
+                <div class="full-width org-name-taxid">
+                    <div class="col-xs-12 col-sm-6 padding-zero" style="padding-left: 0px;">
+                        <input type="text" placeholder="Nonprofit Name">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 padding-zero" style="padding-left: 0px;">
+                        <input type="text" placeholder="Nonprofit Website" class="full-width">
+                    </div>
+                </div>
+                <div class="full-width org-statezip">
+                    <div class="col-xs-12 col-sm-6 padding-zero" style="padding-left: 0px;">
+                            <input type="text" placeholder="Nonprofit City" class="full-width">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 padding-zero" style="padding-left: 0px;">
+                        <input type="text" placeholder="Nonprofit State" class="full-width">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="full-width organization-details">
+                <div class="full-width org-name-epc">
+                    <div class="col-xs-12 col-sm-6 padding-zero" style="padding-left: 0px;">
+                        <input type="text" placeholder="Solar Installer Name">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 padding-zero" style="padding-left: 0px;">
+                        <input type="text" placeholder="System Size" class="full-width">
+                    </div>
+                </div>
+                <div class="full-width org-epc-detail">
+                    <div class="col-xs-12 col-sm-6 padding-zero" style="padding-left: 0px;">
+                            <input type="text" placeholder="Gross Cost" class="full-width">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 padding-zero" style="padding-left: 0px;">
+                        <input type="text" placeholder="First Year Production" class="full-width">
+                    </div>
+                </div>
+            </div>
+
+            <div class="full-width epc-org-cntnr">
+                <div class="full-width epc-org-block">
+                    <div>
+                        Additional Notes
+                    </div>
+                    <div>
+                        <textarea rows="3" class="text-area" style="width:100%"></textarea>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="full-width get-to-know-revolv-cntnr hidden">
+                    <div class="full-width get-to-know-revolv-block flex flex-wrap">
+                        <div>
+                            How did you hear about RE-volv: 
+                        </div>
+                        <div class="get-to-know-block col-xs-12 col-sm-6 padding-zero flex flex-aln-itm-cnt">
+                            <div class="form-checkbox flex flex-aln-itm-cnt flex-jty-con-cnt">
+                                <div class="mark-checkbox" data-checkbox-status="checked"></div>
+                            </div>
+                            <div class="get-to-know-text">
+                                
+                            Online search
+                            </div>
+                        </div>
+                        <div class="get-to-know-block col-xs-12 col-sm-6 padding-zero flex flex-aln-itm-cnt">
+                            <div class="form-checkbox flex flex-aln-itm-cnt flex-jty-con-cnt">
+                                <div class="unmarked-checkbox" data-checkbox-status="unchecked"></div>
+                            </div>
+                            <div class="get-to-know-text">
+                                    News
+                            </div>
+                        </div>
+                        <div class="get-to-know-block col-xs-12 col-sm-6 padding-zero flex flex-aln-itm-cnt">
+                            <div class="form-checkbox flex flex-aln-itm-cnt flex-jty-con-cnt">
+                                <div class="unmarked-checkbox" data-checkbox-status="unchecked"></div>
+                            </div>
+                            <div class="get-to-know-text">
+                                    Email from RE-volv
+                            </div>
+                        </div>
+                        <div class="get-to-know-block col-xs-12 col-sm-6 padding-zero flex flex-aln-itm-cnt">
+                             <div class="form-checkbox flex flex-aln-itm-cnt flex-jty-con-cnt">
+                                <div class="unmarked-checkbox" data-checkbox-status="unchecked"></div>
+                            </div>
+                            <div class="get-to-know-text">
+                                    Referral from a solar installer
+                            </div>
+                        </div>
+                        <div class="get-to-know-block col-xs-12 col-sm-6 padding-zero flex flex-aln-itm-cnt">
+                             <div class="form-checkbox flex flex-aln-itm-cnt flex-jty-con-cnt">
+                                <div class="unmarked-checkbox" data-checkbox-status="unchecked"></div>
+                            </div>
+                            <div class="get-to-know-text">
+                                    From previous RE-volv projects
+                            </div>
+                        </div>
+                        <div class="get-to-know-block col-xs-12 col-sm-6 padding-zero flex flex-aln-itm-cnt">
+                                <div class="form-checkbox flex flex-aln-itm-cnt flex-jty-con-cnt">
+                                   <div class="unmarked-checkbox" data-checkbox-status="unchecked"></div>
+                               </div>
+                               <div class="get-to-know-text">
+                                    RE-volv volunteer
+                               </div>
+                        </div>
+                                                <div class="get-to-know-block col-xs-12 col-sm-6 padding-zero flex flex-aln-itm-cnt">
+                            <div class="form-checkbox flex flex-aln-itm-cnt flex-jty-con-cnt">
+                                <div class="unmarked-checkbox" data-checkbox-status="unchecked"></div>
+                            </div>
+                            <div class="get-to-know-text">
+                                    Social Media
+                            </div>
+                        </div>
+                        <div class="get-to-know-block col-xs-12 col-sm-6 padding-zero flex flex-aln-itm-cnt" id="otherCheckbox">
+                             <div class="form-checkbox flex flex-aln-itm-cnt flex-jty-con-cnt" id="yOther">
+                                <div class="unmarked-checkbox" data-checkbox-status="unchecked"></div>
+                            </div>
+                            <div class="get-to-know-text">
+                                    Other
+                                <textarea rows="3" class="text-area hidden col-sm-12" id="otherTextarea"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="full-width affiliation-org-cntnr">
+                <div class="full-width affiliation-org-block">
+                    <div>
+                        What is your affiliation to this organization?
+                    </div>
+                    <div>
+                        <textarea rows="3" class="text-area" style="width:100%"></textarea>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center fw-100" style="font-size: 1.65rem;">Accepting nonprofits within United States </p> 
+            <p class="text-center fw-100" style="font-size: 1.25rem;">By submitting you agree to our <a href="/terms/privacy_policy">Privacy Policy</a> </p> 
+            <div class="full-width form-submit-btnon">
+                SUBMIT
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key={{GOOGLEMAPS_API_KEY}}">
+</script>
+
+    <script src="/static/js/base/jquery.maskedinput.min.js"></script>
+
+    <script>
+        $("#yOther").click(function() {
+            $("#otherTextarea").removeClass("hidden");
+        });
+    </script>
+
+{%endblock%}

@@ -56,6 +56,7 @@ urlpatterns = patterns(
     url(r'^about-us/jobs', 'revolv.base.views.jobs', name='jobs'),
     url(r'^get-involved/solar-ambassador', 'revolv.base.views.solar_ambassador', name='solar_ambassador'),
     url(r'^get-involved/apply', 'revolv.base.views.nonprofit_app', name='nonprofit_app'),
+    url(r'^get-involved/solar', 'revolv.base.views.nonprofit_epc', name='nonprofit_epc'),
 
     url(r'^nonprofit/videos', 'revolv.base.views.nonprofit_videos', name='nonprofit_videos'),
     url(r'^webinar/', 'revolv.base.views.webinar_videos', name='webinar_videos'),
@@ -142,6 +143,7 @@ urlpatterns = patterns(
     url(r'^bring_solar_to_your_community/intake_form/$',intake_form, name='intake_form'),
     url(r'^bring_solar_to_your_community/intake_form/signup/$','revolv.base.views.intake_form2', name='intake_form2'),
     url(r'^bring_solar_to_your_community/intake_form/nonprofit/$','revolv.base.views.intake_form3', name='intake_form3'),
+    url(r'^bring_solar_to_your_community/intake_form/solar/$','revolv.base.views.intake_form4', name='intake_form4'),
     url(r'^bring_solar_to_your_community/intake_form/submit/$',intake_form_submit, name='intake_form_submit'),
     url(r'^my_social_account/$', 'revolv.base.views.social_connection', name='social-connection'),
     url(r'^delete/$', 'revolv.base.views.delete', name='delete'),

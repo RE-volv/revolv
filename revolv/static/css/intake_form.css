@@ -72,7 +72,7 @@ intake-form-containerform-container input[type='text'] {
     background-color: #fff;
     border-radius: 50%;
 }
-.know-interest-cntnr, .get-to-know-revolv-block, .proj-intrest-desc-block, .lead-exp-desc-block, .affiliation-org-block, .colstudent-cntnr, .colteam-cntnr, .schoolLoc-org-block, .schoolTeam-org-block,
+.know-interest-cntnr, .get-to-know-revolv-block, .proj-intrest-desc-block, .lead-exp-desc-block, .affiliation-org-block, .epc-org-block, .colstudent-cntnr, .colteam-cntnr, .schoolLoc-org-block, .schoolTeam-org-block,
     .nonprofitInterest-cntnr, .solar-proj-need-cntnr, .annual-budget-cntnr, .own-building-block, .org-building-years, .org-intrest-solar-block, .electricity-provider, .folk-count,
     .get-building-roof-year, .roof-replace-plan {
     background-color: #fff;
@@ -85,6 +85,9 @@ intake-form-containerform-container input[type='text'] {
     padding: 4vmin 0 5vmin;
 }
 .affiliation-org-cntnr {
+    padding: 2.2vmin 0 5vmin;
+}
+.epc-org-cntnr {
     padding: 2.2vmin 0 5vmin;
 }
 .schoolLoc-org-cntnr {
@@ -125,7 +128,7 @@ intake-form-containerform-container input[type='text'] {
     color: #818181;
 }
 .know-interest-cntnr > div:first-child, .get-to-know-revolv-block > div:first-child, .proj-intrest-desc-block > div:first-child,
-            .lead-exp-desc-block > div:first-child, .affiliation-org-block > div:first-child, .colstudent-cntnr > div:first-child, .colteam-cntnr > div:first-child, .schoolLoc-org-block > div:first-child, .schoolTeam-org-block > div:first-child, .nonprofitInterest-cntnr > div:first-child, .solar-proj-need-cntnr > div:first-child,
+            .lead-exp-desc-block > div:first-child, .epc-org-block > div:first-child, .affiliation-org-block > div:first-child, .colstudent-cntnr > div:first-child, .colteam-cntnr > div:first-child, .schoolLoc-org-block > div:first-child, .schoolTeam-org-block > div:first-child, .nonprofitInterest-cntnr > div:first-child, .solar-proj-need-cntnr > div:first-child,
             .annual-budget-cntnr > div:first-child, .own-building-block > div:first-child, .org-building-years > div:first-child,
             .org-intrest-solar-block > div:first-child, .electricity-provider > div:first-child, .folk-count > div:first-child, .get-building-roof-year > div:first-child, .roof-replace-plan > div:first-child {
     font-size: 3.2vmin;
@@ -245,7 +248,7 @@ intake-form-containerform-container input[type='text'] {
     .interest-text, .get-to-know-text {
         font-size: 3.5vmin;
     }
-    .know-interest-cntnr > div:first-child, .get-to-know-revolv-block > div:first-child, .proj-intrest-desc-block > div:first-child, .lead-exp-desc-block > div:first-child, .affiliation-org-block > div:first-child, .colstudent-cntnr > div:first-child, .colteam-cntnr > div:first-child, .schoolLoc-org-block > div:first-child, .schoolTeam-org-block > div:first-child, .nonprofitInterest-cntnr > div:first-child, .solar-proj-need-cntnr > div:first-child, .annual-budget-cntnr > div:first-child, .own-building-block > div:first-child, .org-building-years > div:first-child, .org-intrest-solar-block > div:first-child, .electricity-provider > div:first-child, .folk-count > div:first-child, .get-building-roof-year > div:first-child, .roof-replace-plan > div:first-child {
+    .know-interest-cntnr > div:first-child, .get-to-know-revolv-block > div:first-child, .proj-intrest-desc-block > div:first-child, .lead-exp-desc-block > div:first-child, .epc-org-block > div:first-child, .affiliation-org-block > div:first-child, .colstudent-cntnr > div:first-child, .colteam-cntnr > div:first-child, .schoolLoc-org-block > div:first-child, .schoolTeam-org-block > div:first-child, .nonprofitInterest-cntnr > div:first-child, .solar-proj-need-cntnr > div:first-child, .annual-budget-cntnr > div:first-child, .own-building-block > div:first-child, .org-building-years > div:first-child, .org-intrest-solar-block > div:first-child, .electricity-provider > div:first-child, .folk-count > div:first-child, .get-building-roof-year > div:first-child, .roof-replace-plan > div:first-child {
         font-size: 3.7vmin;
     }
     .show-step-number {
