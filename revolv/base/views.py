@@ -626,6 +626,9 @@ def solararticles(request):
 def newyearrevolution(request):
     return render(request, 'base/partials/blog-article1.html')
 
+def solidarity(request):
+    return render(request, 'base/partials/blog-article3.html')
+
 #-----------Donate Monthly
 
 
