@@ -32,12 +32,12 @@ a {
 
 {% block body %}
 
-    <main role="main" class="container-fluid alternate">
+    <main role="main" class="container-fluid">
       <div class="container-fluid alternate" id="top-section">
         <div class="overlay"></div>
         <video playsinline autoplay muted loop>
-          <source src="static/images/home-img/Banner_video2.webm" type="video/webm">
-          <source src="static/images/home-img/Banner_video2.mp4" type="video/mp4">
+          <source src="https://res.cloudinary.com/dkwon4bkk/video/upload/images/home-img/Banner_video2.mp4" type="video/mp4">
+            
         </video>
         <div class="row text-center">
           <div class="col hero-text align-self-end">
@@ -48,7 +48,7 @@ a {
       <div class="container-fluid" id="second-section">
         <div class="scroll-section">
           <div class="scroll-icon">
-            <img class="scroll-arrow bouncing" src="static/images/home-img/scroll-icon.png">
+            <img class="scroll-arrow bouncing" src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/scroll-icon.png">
           </div>
         </div>
         <div class="row justify-content-center align-items-center h-75">
@@ -70,8 +70,7 @@ a {
               </div>
               <div class="col-sm-12 col-md-7">
                 <video autoplay loop muted id="gif-col">
-                  <source src="static/images/home-img/animation.mp4" type="video/mp4">
-                  <source src="static/images/home-img/animation.webm" type="video/webm">
+                  <source src="https://res.cloudinary.com/dkwon4bkk//video/upload/images/home-img/animation.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -104,28 +103,28 @@ a {
             <div class="row">
               <div class="col-sm-12 col-md-3 no-gutter">
                 <div class="impact-col">
-                  <img src="static/images/home-img/ambassador-img.png">
+                  <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/ambassador-img.png">
                   <h4 class="lblue-text fw-700">232</h4>
                   <p class="fw-700">SOLAR AMBASSADORS<br/> TRAINED</p>
                 </div>
               </div>
               <div class="col-sm-12 col-md-3 no-gutter">
                 <div class="impact-col">
-                  <img src="static/images/home-img/solar-img.png">
+                  <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/solar-img.png">
                   <h4 class="lblue-text fw-700">{{ global_impacts.num_projects }}</h4>
                   <p class="fw-700">NONPROFIT <br> SOLAR PROJECTS<br/> FUNDED</p>
                 </div>
               </div>
               <div class="col-sm-12 col-md-3 no-gutter">
                 <div class="impact-col">
-                  <img src="static/images/home-img/team-img.png">
+                  <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/team-img.png">
                   <h4 class="lblue-text fw-700">{{ global_impacts.num_people_affected |floatformat:"0"|intcomma }}</h4>
                   <p class="fw-700">COMMUNITY<br /> MEMBERS IMPACTED</p>
                 </div>
               </div>
               <div class="col-sm-12 col-md-3 no-gutter">
                   <div class="impact-col">
-                    <img src="static/images/home-img/co-2-img.png">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/co-2-img.png">
                     <h4 class="lblue-text fw-700">{{ global_impacts.co2_avoided |floatformat:"0"|intcomma  }} lbs</h4>
                     <p class="fw-700">CO<sub>2</sub><br/> AVOIDED</p>
                   </div>
@@ -222,7 +221,7 @@ a {
               <!--testimonial one -->
               <div class="testimonial-col">
                 <a class="testimonial-img-wrap popup-youtube" href="https://www.youtube.com/watch?v=YRFMFHUyhO4?autoplay=1&rel=0">
-                  <img src="static/images/home-img/riverthumb1.jpg">
+                  <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/riverthumb1.jpg">
                   <div class="play-button">
                   </div>
                 </a>
@@ -233,7 +232,7 @@ a {
               <!--testimonial two -->
               <div class="testimonial-col">
                 <a class="testimonial-img-wrap popup-youtube" href="https://www.youtube.com/watch?v=4IIasAvTHsg?autoplay=1&rel=0">
-                  <img src="static/images/home-img/richmondthumb1.jpg">
+                  <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/richmondthumb1.jpg">
                   <div class="play-button">
                   </div>
                 </a>
@@ -244,7 +243,7 @@ a {
               <!--testimonial 
               <div class="testimonial-col">
                 <a class="testimonial-img-wrap" href="https://www.youtube.com/watch?v=Uvbn7GpHLnE" target="_blank" rel="noopener noreferrer"v>
-                  <img src="static/images/home-img/Darryl.png">
+                  <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/Darryl.png">
                   <div class="play-button">
                   </div>
                 </a>
@@ -346,19 +345,19 @@ a {
             </div>
             <div class="row justify-content-center align-items-center featured-imgs">
               <div class="col-sm-3 col-md-2 featured-logo">
-                <img src="static/images/home-img/nyt-img.png">
+                <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/nyt-img.png">
               </div>
               <div class="col-sm-3 col-md-2 featured-logo">
-                <img src="static/images/home-img/sa-img.png">
+                <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/sa-img.png">
               </div>
               <div class="col-sm-3 col-md-2 featured-logo">
-                <img src="static/images/home-img/sslogo-img.png">
+                <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/sslogo-img.png">
               </div>
               <div class="col-sm-3 col-md-2 featured-logo">
-                <img src="static/images/home-img/forbes-img.png">
+                <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/forbes-img.png">
               </div>
               <div class="col-sm-3 col-md-2 featured-logo">
-                <img src="static/images/home-img/whouse-img.png">
+                <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/whouse-img.png">
               </div>
             </div>
           </div>

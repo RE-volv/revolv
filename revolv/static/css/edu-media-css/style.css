@@ -612,7 +612,7 @@ footer {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: url(../../../static/images/edu-media-img/video-overlay.png);
+	background: url(https://res.cloudinary.com/dkwon4bkk/image/upload/images/edu-media-img/video-overlay.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: bottom;
@@ -659,7 +659,7 @@ footer {
   left: 0;
   height: 100%;
   width: 100%;
-  background: url(../../../static/images/edu-media-img/video-overlay.png);
+  background: url(https://res.cloudinary.com/dkwon4bkk/image/upload/images/edu-media-img/video-overlay.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom; 
@@ -904,7 +904,7 @@ footer {
 	padding: 2em 4em;
 }
 #section-eight {
-	background: url(../../../static/images/edu-media-img/donate_bg.png);
+	background: url(https://res.cloudinary.com/dkwon4bkk/image/upload/images/edu-media-img/donate_bg.png);
 	background-size: cover;
 	padding: 60px 0;
 	margin-top: 5%;
@@ -1228,7 +1228,7 @@ footer {
 
 /* Nonprofit Application */
 .application-header {
-	background: url(../../../static/images/edu-media-img/application-header.png);
+	background: url(https://res.cloudinary.com/dkwon4bkk/image/upload/images/edu-media-img/application-header.png);
 }
 
 
