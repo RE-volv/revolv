@@ -508,8 +508,36 @@ footer {
 #top-section {
 	background-position: bottom center !important;
 	position: relative;
-    overflow: hidden;
+	overflow: hidden;
+	background-size: 100%;
 }
+@media (max-width: 1600px) {
+	#top-section {
+		background-size: auto !important;
+	}
+}
+
+.about-header {
+    background: url(../../images/about-abr-img/about-header.png) no-repeat !important;
+    background-size: 100% !important;
+}
+
+#second-section .row {
+	margin-top: 100px;
+}
+
+@media (max-width: 1600px) {
+	#application-section-five {
+		background-size: auto !important;
+	}
+}
+
+@media (max-width: 1600px) {
+	#about-section-seven {
+		background-size: auto !important;
+	}
+}
+
 #top-section-min {
 	background-position: bottom center !important;
 	background-repeat: no-repeat;
@@ -1024,6 +1052,11 @@ footer {
 	background: #fafbfc;
 	padding: 8% 0;
 }
+#about-section-seven {
+    background: url(../../images/about-abr-img/section_4_bg.png) no-repeat;
+    background-size: 100%;
+    padding: 5% 0;
+}
 .misvis-col {
 	margin: 0 1em;
     overflow: hidden;
@@ -1478,6 +1511,13 @@ footer {
 	padding: 120px 0;
 	background-size: 100%;
 }
+
+@media (max-width: 1600px) {
+	#monthly-donate-section-four {
+		background-size: auto;
+	}
+}
+
 #monthly-donate-section-five {
 	padding: 5% 0;
 }
@@ -1992,7 +2032,7 @@ footer {
     }
     #about-section-three {
     	background: url(../../../static/images/edu-media-img/about_section-3-mobile-bg.png);
-    	padding-top: 375px;
+    	padding-top: 170px;
     }
     #about-section-four .text-right, #about-section-five .text-right{
 	    text-align: center !important;

@@ -131,7 +131,7 @@ a {
               </div>
             </div>
           </div>
-          {% if fund_main_active_projects|length == 0 %}<span id="newsletter-anchor"></span>{% endif %}
+          {% if fund_main_active_projects|length == 0 %} {% endif %}
         </div>
       </div>
       {% if fund_main_active_projects|length == 0 %}
@@ -176,11 +176,11 @@ a {
               {% endfor %}
             </div> 
           </div>
-          <span id="newsletter-anchor"></span>
         </div>
       </div>
       {% endif %}
       <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        <span id="newsletter-anchor"></span>
         {% csrf_token %}
         <div class="container-fluid" id="section-six">
           <div class="row justify-content-center align-items-center section-six-row">
