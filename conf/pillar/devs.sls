@@ -55,3 +55,7 @@ users:
     guest:
         public_key:
             - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDru7DH7OyJw7nGWQkt7XDZduf42PvtwnjzaJ+ePYhbq4/vO+X4DqoYblogJgxzCfwK0iVaSFbLhlKmztkGbTODOmdxP/txXnVgAs8tAl5UXB3QfKBKlGL5t2u1kJUbEh7dZ50qlVGWPRfbwxYDEy3vxJXGdLGm5NZQ98nNU4oPEz1YhIv61J6i4tBLKrLvsa+uo3PVObA/lFlchGx0gor9luF0MVyAzJqS9/rue1MGd2vwm2Coe8CTmVq0joDIrcaGmhlE1smuQ2JD5i7CMUUzinmt/hdJUMHanNp+FIXgBX3TysiGK6fMGaDpL2UcMHk/JnFmjLv7eXVn9q32HPxN remark@RE-Mark
+    
+    guestuser:
+        public_key:
+            - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6yGXC7OX8kPhRs6xM/Zj4DEOO9HqgUbrj9v2OLZJ9fgKfRrDrNSjkPR3sgUOSpoLiOMFBAkxI815I2DKcZ8dLZ3Z8bWS5OcdTDJx89/bpd2Z66BuDRneogt0Kl/eS0ELb7HE6kPCtnWchEgvQ2VVBVKXut9SBkNhIfzFXchUQDqizHCvCqmWsx1b7Z+UqO5a6oNBwCoXz1l7RiTvBcvB68wV7SbU/bDW8zNFVmUhe43QxvS/3HCT1boaoDM3d0zxR2kyiD/ki1HmLg2CX8twP8cmJU1jKs/g36GnoM73hEOtWGwXesdveZC+iwV3NDYc5k74/J30TWqvYMb+MhN5V remark@RE-Mark
