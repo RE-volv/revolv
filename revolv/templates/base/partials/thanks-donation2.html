@@ -21,6 +21,13 @@
 
 <link href="{% static 'css/edu-media-css/stripe.css' %}" rel="stylesheet" />
 
+<style>
+
+.complete_btn_margin{
+  margin-top: 200px;
+}
+</style>
+
 {% endblock %}
 
 {% block body %}
@@ -203,6 +210,7 @@
       </div>
     </div>
 
+
     <div id="container" style="height: 100%; z-index: 100; position: fixed; top: 172px; bottom: -50px;">
       <section data-reactroot="" class="Checkout is-desktop" role="dialog" aria-live="polite"
         aria-label="Secure Credit Card Form">
@@ -213,7 +221,7 @@
             <div class="Overlay-Background"></div>
           </div>
         </span><span>
-          <div class="ModalContainer" style="margin-top: 146px;">
+          <div class="ModalContainer">
             <div class="Modal-animationWrapper"><span></span>
               <main class="Modal" role="main">
                 <div>
@@ -247,15 +255,75 @@
                   <div style="position: relative; height: 270px;">
                     <div>
                       <div class="Section Section--modalBody">
-                        <div class="Section-content"><span>
+                        <div class="Section-content "><span>
 
                             <p> Enter your billing address</p>
 
-                            <div class="StaggerGroup is-slideInFromBottomShort is-enter-head-first is-wait-header">
+
+                            <!------------------------------------------------------->
+
+                            <div class="StaggerGroup is-slideInFromBottomShort is-enter-head-first is-wait-header"
+                              style="">
                               <span>
                                 <div class="StaggerGroup is-slideInFromBottomShort is-enter-head-first is-wait-header">
                                   <div class="u-paddingTopMd">
-                                    <div class="Addresses">
+
+
+                                    <div class="StaggerGroup-child is-head-1 is-tail-4">
+                                      <div class="Section Section--fillBottom">
+                                        <div style="position: relative;">
+                                          <div>
+                                            <fieldset class="Fieldset Fieldset--subdued"><span
+                                                class="Fieldset-childLeftRight Fieldset-childTopBottom Fieldset-child--subdued Fieldset-child--checkboxActive u-paddingSm u-displayBlock">
+
+                                                <a href="#" class=""
+                                                  style="border: none; box-shadow: none; vertical-align: -4px; width: 15px;
+                                                    height: 15px;     display: inline-block; -webkit-user-select: none;">
+                                                  <input class="" type="checkbox" id="scales" name="scales" value="1"
+                                                    checked>
+
+                                                </a>
+
+                                                <label
+                                                  class="Fieldset-label--small Fieldset-label Fieldset-label--small">Same
+                                                  billing &amp; shipping info</label></span></fieldset>
+
+
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+
+
+
+
+
+                                    <div id="billingButtons" class="StaggerGroup-child is-head-1 is-tail-4"
+                                      style="display:none;">
+                                      <div class="Section Section--fillBottom">
+                                        <div style="position: relative;">
+                                          <div style="">
+                                            <div>
+                                              <ul class="SegmentedControl">
+                                                <li
+                                                  class="SegmentedControl-Item SegmentedControl-Item--selected SegmentedControl-Item-Billing">
+                                                  Billing</li>
+                                                <li class="SegmentedControl-Item SegmentedControl-Item-Shipping">
+                                                  Shipping</li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    `
+
+
+                                    <!-------------billing address ------------------->
+
+                                    <div id="billing_addrs" class="Addresses">
                                       <div class="Addresses-object is-billing"><span>
                                           <div
                                             class="StaggerGroup is-slideInFromBottomShort is-enter-head-first is-wait-header">
@@ -308,6 +376,7 @@
                                                 </div>
                                               </div>
 
+
                                               <div class="StaggerGroup-child is-head-2 is-tail-3">
                                                 <div
                                                   class="Fieldset-childLeftRight Fieldset-child--shortBottomBorder Textbox Textbox--iconLeft can-setfocus">
@@ -333,6 +402,7 @@
                                                   <div style="position: relative;"></div>
                                                 </div>
                                               </div>
+
 
                                               <div class="StaggerGroup-child is-head-1 is-tail-4">
                                                 <div
@@ -400,8 +470,7 @@
 
                                                     <div class="Textbox-iconLeft"><span class="Icon-wrapper"><svg
                                                           role="img" class="Icon" fill="#2b2b2b" focusable="false"
-                                                          xmlns="http://www.w3.org/2000/svg"
-                                                          viewBox="0 0 30 30"></svg>
+                                                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"></svg>
                                                         <title>User</title>
                                                         <path fill-rule="evenodd" transform="translate(7, 8)"
                                                           d="M11.996684,14 C13.0947221,14 14,13.1101744 13.9999999,12.009095 L14,11.1491834 C14.0000003,9.91850391 13.3623813,9.53591084 10.9228899,8.52151991 C9.65809648,7.99559263 9.07889982,7.67070275 9.05789428,7.60696539 C9.0285739,7.51799818 8.87779879,7.81924073 9.56596152,6.74789493 C10.1158583,5.89180439 10.4051134,4.98207687 10.4051136,3.71797921 C10.4051139,1.68118868 9.60051814,0.485608698 8.21363982,0.121696257 C7.80812531,0.0152905441 7.55676223,9.41263804e-05 6.96135352,9.42910654e-05 C5.00856522,9.483119e-05 3.52263311,1.0188016 3.5226329,3.56578315 C3.52263286,4.68755112 3.79796986,5.52392778 4.34876041,6.49138191 C4.94128002,7.53213241 4.94703121,7.54559374 4.90298986,7.76729822 C4.89714459,7.79672334 4.33356436,8.13608721 3.04999838,8.70234264 C0.704440887,9.73710414 0.00773538487,10.1871597 0.0115913123,11.4408697 C0.0122174355,11.6444427 0.0113716658,11.7911179 0.00963390836,11.8891851 C0.00814961188,11.953822 0.00814961188,11.953822 0.00838740291,11.946099 C-0.0102850819,13.0932349 0.880033796,13.9999998 1.99322919,13.9999998 L11.996684,14 Z M1.00716107,11.9956084 C1.00716107,11.9956084 1.01294346,11.8789576 1.01158658,11.4377941 C1.00719768,10.0107946 5.61918235,9.29435064 5.88382455,7.96213996 C6.14846675,6.62992931 4.52263281,5.90956861 4.5226329,3.56578323 C4.52263309,1.22199787 6.15002134,1.00009452 6.96135379,1.00009429 C7.77268624,1.00009407 9.40511407,0.941891089 9.40511362,3.71797904 C9.40511313,6.49406696 7.69616924,6.66991367 8.10814245,7.9199693 C8.52011565,9.17002493 13.0000003,9.84816832 13,11.1491833 L12.9999999,12.0090951 C13,12.5563568 12.5438559,13 11.9966841,13 L1.99322921,12.9999998 C1.43911312,12.9999998 0.998392539,12.5512468 1.00716107,11.9956084 Z M1.00716107,11.9956084">
@@ -412,21 +481,212 @@
                                                 </div>
                                               </div>
 
+                                              <div class="StaggerGroup-child is-head-1 is-tail-4">
+                                                <div
+                                                  class="Fieldset-childLeftRight Fieldset-childTop Textbox Textbox--iconLeft can-setfocus">
+                                                  <div class="Textbox-inputRow"><label class="Textbox-label"
+                                                      for="501bd26">Name</label>
+
+                                                    <input type="text" list="select"
+                                                      class="form-control Fieldset-input Textbox-control"
+                                                      id="StripeTShirt" value="" name="StripeFormTShirt"
+                                                      for="stripetshirt" placeholder="T Shirt Size"
+                                                      autocomplete="stripe-tshirt" autocorrect="no" autocapitalize="no"
+                                                      spellcheck="no">
+
+
+                                                    <datalist class="form-control" id="select" style="display:none; ">
+                                                      <option value="S">
+                                                      <option value="M">
+                                                      <option value="L">
+                                                      <option value="XL">
+                                                      <option value="XXL">
+                                                    </datalist>
+
+                                                    <div class="Textbox-iconLeft"><span class="Icon-wrapper"><svg
+                                                          role="img" class="Icon" fill="#2b2b2b" focusable="false"
+                                                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"></svg>
+                                                        <title>User</title>
+                                                        <path fill-rule="evenodd" transform="translate(7, 8)"
+                                                          d="M11.996684,14 C13.0947221,14 14,13.1101744 13.9999999,12.009095 L14,11.1491834 C14.0000003,9.91850391 13.3623813,9.53591084 10.9228899,8.52151991 C9.65809648,7.99559263 9.07889982,7.67070275 9.05789428,7.60696539 C9.0285739,7.51799818 8.87779879,7.81924073 9.56596152,6.74789493 C10.1158583,5.89180439 10.4051134,4.98207687 10.4051136,3.71797921 C10.4051139,1.68118868 9.60051814,0.485608698 8.21363982,0.121696257 C7.80812531,0.0152905441 7.55676223,9.41263804e-05 6.96135352,9.42910654e-05 C5.00856522,9.483119e-05 3.52263311,1.0188016 3.5226329,3.56578315 C3.52263286,4.68755112 3.79796986,5.52392778 4.34876041,6.49138191 C4.94128002,7.53213241 4.94703121,7.54559374 4.90298986,7.76729822 C4.89714459,7.79672334 4.33356436,8.13608721 3.04999838,8.70234264 C0.704440887,9.73710414 0.00773538487,10.1871597 0.0115913123,11.4408697 C0.0122174355,11.6444427 0.0113716658,11.7911179 0.00963390836,11.8891851 C0.00814961188,11.953822 0.00814961188,11.953822 0.00838740291,11.946099 C-0.0102850819,13.0932349 0.880033796,13.9999998 1.99322919,13.9999998 L11.996684,14 Z M1.00716107,11.9956084 C1.00716107,11.9956084 1.01294346,11.8789576 1.01158658,11.4377941 C1.00719768,10.0107946 5.61918235,9.29435064 5.88382455,7.96213996 C6.14846675,6.62992931 4.52263281,5.90956861 4.5226329,3.56578323 C4.52263309,1.22199787 6.15002134,1.00009452 6.96135379,1.00009429 C7.77268624,1.00009407 9.40511407,0.941891089 9.40511362,3.71797904 C9.40511313,6.49406696 7.69616924,6.66991367 8.10814245,7.9199693 C8.52011565,9.17002493 13.0000003,9.84816832 13,11.1491833 L12.9999999,12.0090951 C13,12.5563568 12.5438559,13 11.9966841,13 L1.99322921,12.9999998 C1.43911312,12.9999998 0.998392539,12.5512468 1.00716107,11.9956084 Z M1.00716107,11.9956084">
+                                                        </path>
+                                                      </span></div>
+                                                  </div><span></span>
+                                                  <div style="position: relative;"></div>
+                                                </div>
+                                              </div>
+
+
+
+
                                             </fieldset>
                                           </div>
-                                        </span></div>
+                                        </span>
+                                      </div>
+
                                     </div>
+
+                                    <!---------------------------------------------------------shipping address --------------------------------------------->
+
+                                    <div id="shipping_addrs" class="Addresses" style="display:none;">
+                                      <div class="Addresses-object is-billing"><span>
+                                          <div
+                                            class="StaggerGroup is-slideInFromBottomShort is-enter-head-first is-wait-header">
+                                            <fieldset class="Fieldset">
+
+
+
+                                              <div class="StaggerGroup-child is-head-2 is-tail-3">
+                                                <div
+                                                  class="Fieldset-childLeftRight Fieldset-child--shortBottomBorder Textbox Textbox--iconLeft can-setfocus">
+                                                  <div class="Textbox-inputRow"><label class="Textbox-label"
+                                                      for="804beb40-2e4d-11ea-bc0f-eff4c501bd26">Street</label>
+
+                                                    <input type="text"
+                                                      class="form-control Fieldset-input Textbox-control"
+                                                      id="StripeMailingStreet" value="" name="StripeFormMailingStreet"
+                                                      for="stripemailingstreet" placeholder="Street"
+                                                      autocomplete="street-mailingaddress" autocorrect="no"
+                                                      autocapitalize="no" spellcheck="no" required>
+
+                                                    <div class="Textbox-iconLeft"><span class="Icon-wrapper"><svg
+                                                          role="img" class="Icon" fill="#2b2b2b" focusable="false"
+                                                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                                                          <title>Push-pin</title>
+                                                          <path fill-rule="evenodd" transform="translate(8, 7)"
+                                                            d="M6.96835335,14.4141594 C7.14378184,14.2130951 7.33880908,13.9850182 7.54859821,13.7339676 C8.14789969,13.0167952 8.74728299,12.2571079 9.30845088,11.4862878 C10.9985122,9.16482011 12,7.25762947 12,5.80510753 C12,2.58994421 9.3050091,0 6,0 C2.6949909,0 0,2.58994421 0,5.80510753 C0,7.25762947 1.00148783,9.16482011 2.69154912,11.4862878 C3.25271701,12.2571079 3.85210031,13.0167952 4.45140179,13.7339676 C4.66119092,13.9850182 4.85621816,14.2130951 5.03164665,14.4141594 C5.13795558,14.5360035 5.2148819,14.6226158 5.25757295,14.6699269 L6,15.4927001 L6.74242705,14.6699269 C6.7851181,14.6226158 6.86204442,14.5360035 6.96835335,14.4141594 Z M5.25757295,13.3300731 C5.27604949,13.309597 5.30380421,13.278504 5.34014057,13.2373842 C3.98193439,11.6258984 1,7.854524 1,5.80510753 C1,3.15131979 3.23857611,1 6,1 C8.76142389,1 11,3.15131979 11,5.80510753 C11,7.854524 8.01806561,11.6258984 6.65985943,13.2373842 C6.69619579,13.278504 6.72395051,13.309597 6.74242705,13.3300731 L6.58151981,13.3300731 C6.22583758,13.7497221 6,14 6,14 C6,14 5.77416242,13.7497221 5.41848019,13.3300731 L5.25757295,13.3300731 Z M6,8 C7.10456955,8 8,7.10456955 8,6 C8,4.89543045 7.10456955,4 6,4 C4.89543045,4 4,4.89543045 4,6 C4,7.10456955 4.89543045,8 6,8 Z M6,7 C6.55228478,7 7,6.55228478 7,6 C7,5.44771522 6.55228478,5 6,5 C5.44771522,5 5,5.44771522 5,6 C5,6.55228478 5.44771522,7 6,7 Z M6,7">
+                                                          </path>
+                                                        </svg></span></div>
+                                                  </div><span></span>
+                                                  <div style="position: relative;"></div>
+                                                </div>
+                                              </div>
+
+
+
+
+                                              <div class="StaggerGroup-child is-head-1 is-tail-4">
+                                                <div
+                                                  class="Fieldset-childLeftRight Fieldset-childTop Textbox Textbox--iconLeft can-setfocus">
+                                                  <div class="Textbox-inputRow"><label class="Textbox-label"
+                                                      for="501bd26">Name</label>
+
+                                                    <input type="text"
+                                                      class="form-control Fieldset-input Textbox-control"
+                                                      id="StripeMailingSuite" value="" name="StripeFormMailingSuite"
+                                                      for="stripemailingsuite" placeholder="Suite, unit (optional)"
+                                                      autocomplete="stripe-mailingsuit" autocorrect="no"
+                                                      autocapitalize="no" spellcheck="no" required>
+
+                                                    <div class="Textbox-iconLeft"><span class="Icon-wrapper"><svg
+                                                          role="img" class="Icon" fill="#2b2b2b" focusable="false"
+                                                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"></svg>
+                                                        <title>User</title>
+                                                        <path fill-rule="evenodd" transform="translate(7, 8)"
+                                                          d="M11.996684,14 C13.0947221,14 14,13.1101744 13.9999999,12.009095 L14,11.1491834 C14.0000003,9.91850391 13.3623813,9.53591084 10.9228899,8.52151991 C9.65809648,7.99559263 9.07889982,7.67070275 9.05789428,7.60696539 C9.0285739,7.51799818 8.87779879,7.81924073 9.56596152,6.74789493 C10.1158583,5.89180439 10.4051134,4.98207687 10.4051136,3.71797921 C10.4051139,1.68118868 9.60051814,0.485608698 8.21363982,0.121696257 C7.80812531,0.0152905441 7.55676223,9.41263804e-05 6.96135352,9.42910654e-05 C5.00856522,9.483119e-05 3.52263311,1.0188016 3.5226329,3.56578315 C3.52263286,4.68755112 3.79796986,5.52392778 4.34876041,6.49138191 C4.94128002,7.53213241 4.94703121,7.54559374 4.90298986,7.76729822 C4.89714459,7.79672334 4.33356436,8.13608721 3.04999838,8.70234264 C0.704440887,9.73710414 0.00773538487,10.1871597 0.0115913123,11.4408697 C0.0122174355,11.6444427 0.0113716658,11.7911179 0.00963390836,11.8891851 C0.00814961188,11.953822 0.00814961188,11.953822 0.00838740291,11.946099 C-0.0102850819,13.0932349 0.880033796,13.9999998 1.99322919,13.9999998 L11.996684,14 Z M1.00716107,11.9956084 C1.00716107,11.9956084 1.01294346,11.8789576 1.01158658,11.4377941 C1.00719768,10.0107946 5.61918235,9.29435064 5.88382455,7.96213996 C6.14846675,6.62992931 4.52263281,5.90956861 4.5226329,3.56578323 C4.52263309,1.22199787 6.15002134,1.00009452 6.96135379,1.00009429 C7.77268624,1.00009407 9.40511407,0.941891089 9.40511362,3.71797904 C9.40511313,6.49406696 7.69616924,6.66991367 8.10814245,7.9199693 C8.52011565,9.17002493 13.0000003,9.84816832 13,11.1491833 L12.9999999,12.0090951 C13,12.5563568 12.5438559,13 11.9966841,13 L1.99322921,12.9999998 C1.43911312,12.9999998 0.998392539,12.5512468 1.00716107,11.9956084 Z M1.00716107,11.9956084">
+                                                        </path>
+                                                      </span></div>
+                                                  </div><span></span>
+                                                  <div style="position: relative;"></div>
+                                                </div>
+                                              </div>
+
+                                              <div class="StaggerGroup-child is-head-1 is-tail-4">
+                                                <div
+                                                  class="Fieldset-childLeftRight Fieldset-childTop Textbox Textbox--iconLeft can-setfocus">
+                                                  <div class="Textbox-inputRow"><label class="Textbox-label"
+                                                      for="501bd26">Name</label>
+
+                                                    <input type="text"
+                                                      class="form-control Fieldset-input Textbox-control"
+                                                      id="StripeMailingCity" value="" name="StripeFormMailingCity"
+                                                      for="stripemailingcity" placeholder="City"
+                                                      autocomplete="stripe-mailingcity" autocorrect="no"
+                                                      autocapitalize="no" spellcheck="no" required>
+
+
+
+                                                    <div class="Textbox-iconLeft"><span class="Icon-wrapper"><svg
+                                                          role="img" class="Icon" fill="#2b2b2b" focusable="false"
+                                                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"></svg>
+                                                        <title>User</title>
+                                                        <path fill-rule="evenodd" transform="translate(7, 8)"
+                                                          d="M11.996684,14 C13.0947221,14 14,13.1101744 13.9999999,12.009095 L14,11.1491834 C14.0000003,9.91850391 13.3623813,9.53591084 10.9228899,8.52151991 C9.65809648,7.99559263 9.07889982,7.67070275 9.05789428,7.60696539 C9.0285739,7.51799818 8.87779879,7.81924073 9.56596152,6.74789493 C10.1158583,5.89180439 10.4051134,4.98207687 10.4051136,3.71797921 C10.4051139,1.68118868 9.60051814,0.485608698 8.21363982,0.121696257 C7.80812531,0.0152905441 7.55676223,9.41263804e-05 6.96135352,9.42910654e-05 C5.00856522,9.483119e-05 3.52263311,1.0188016 3.5226329,3.56578315 C3.52263286,4.68755112 3.79796986,5.52392778 4.34876041,6.49138191 C4.94128002,7.53213241 4.94703121,7.54559374 4.90298986,7.76729822 C4.89714459,7.79672334 4.33356436,8.13608721 3.04999838,8.70234264 C0.704440887,9.73710414 0.00773538487,10.1871597 0.0115913123,11.4408697 C0.0122174355,11.6444427 0.0113716658,11.7911179 0.00963390836,11.8891851 C0.00814961188,11.953822 0.00814961188,11.953822 0.00838740291,11.946099 C-0.0102850819,13.0932349 0.880033796,13.9999998 1.99322919,13.9999998 L11.996684,14 Z M1.00716107,11.9956084 C1.00716107,11.9956084 1.01294346,11.8789576 1.01158658,11.4377941 C1.00719768,10.0107946 5.61918235,9.29435064 5.88382455,7.96213996 C6.14846675,6.62992931 4.52263281,5.90956861 4.5226329,3.56578323 C4.52263309,1.22199787 6.15002134,1.00009452 6.96135379,1.00009429 C7.77268624,1.00009407 9.40511407,0.941891089 9.40511362,3.71797904 C9.40511313,6.49406696 7.69616924,6.66991367 8.10814245,7.9199693 C8.52011565,9.17002493 13.0000003,9.84816832 13,11.1491833 L12.9999999,12.0090951 C13,12.5563568 12.5438559,13 11.9966841,13 L1.99322921,12.9999998 C1.43911312,12.9999998 0.998392539,12.5512468 1.00716107,11.9956084 Z M1.00716107,11.9956084">
+                                                        </path>
+                                                      </span></div>
+                                                  </div><span></span>
+                                                  <div style="position: relative;"></div>
+                                                </div>
+                                              </div>
+
+
+                                              <div class="StaggerGroup-child is-head-1 is-tail-4">
+                                                <div
+                                                  class="Fieldset-childLeftRight Fieldset-childTop Textbox Textbox--iconLeft can-setfocus">
+                                                  <div class="Textbox-inputRow"><label class="Textbox-label"
+                                                      for="501bd26">Name</label>
+
+                                                    <input type="text"
+                                                      class="form-control Fieldset-input Textbox-control"
+                                                      id="StripeMailingState" value="" name="StripeFormMailingState"
+                                                      for="stripemailingstate" placeholder="State"
+                                                      autocomplete="stripe-mailingstate" autocorrect="no"
+                                                      autocapitalize="no" spellcheck="no" required>
+
+                                                    <div class="Textbox-iconLeft"><span class="Icon-wrapper"><svg
+                                                          role="img" class="Icon" fill="#2b2b2b" focusable="false"
+                                                          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"></svg>
+                                                        <title>User</title>
+                                                        <path fill-rule="evenodd" transform="translate(7, 8)"
+                                                          d="M11.996684,14 C13.0947221,14 14,13.1101744 13.9999999,12.009095 L14,11.1491834 C14.0000003,9.91850391 13.3623813,9.53591084 10.9228899,8.52151991 C9.65809648,7.99559263 9.07889982,7.67070275 9.05789428,7.60696539 C9.0285739,7.51799818 8.87779879,7.81924073 9.56596152,6.74789493 C10.1158583,5.89180439 10.4051134,4.98207687 10.4051136,3.71797921 C10.4051139,1.68118868 9.60051814,0.485608698 8.21363982,0.121696257 C7.80812531,0.0152905441 7.55676223,9.41263804e-05 6.96135352,9.42910654e-05 C5.00856522,9.483119e-05 3.52263311,1.0188016 3.5226329,3.56578315 C3.52263286,4.68755112 3.79796986,5.52392778 4.34876041,6.49138191 C4.94128002,7.53213241 4.94703121,7.54559374 4.90298986,7.76729822 C4.89714459,7.79672334 4.33356436,8.13608721 3.04999838,8.70234264 C0.704440887,9.73710414 0.00773538487,10.1871597 0.0115913123,11.4408697 C0.0122174355,11.6444427 0.0113716658,11.7911179 0.00963390836,11.8891851 C0.00814961188,11.953822 0.00814961188,11.953822 0.00838740291,11.946099 C-0.0102850819,13.0932349 0.880033796,13.9999998 1.99322919,13.9999998 L11.996684,14 Z M1.00716107,11.9956084 C1.00716107,11.9956084 1.01294346,11.8789576 1.01158658,11.4377941 C1.00719768,10.0107946 5.61918235,9.29435064 5.88382455,7.96213996 C6.14846675,6.62992931 4.52263281,5.90956861 4.5226329,3.56578323 C4.52263309,1.22199787 6.15002134,1.00009452 6.96135379,1.00009429 C7.77268624,1.00009407 9.40511407,0.941891089 9.40511362,3.71797904 C9.40511313,6.49406696 7.69616924,6.66991367 8.10814245,7.9199693 C8.52011565,9.17002493 13.0000003,9.84816832 13,11.1491833 L12.9999999,12.0090951 C13,12.5563568 12.5438559,13 11.9966841,13 L1.99322921,12.9999998 C1.43911312,12.9999998 0.998392539,12.5512468 1.00716107,11.9956084 Z M1.00716107,11.9956084">
+                                                        </path>
+                                                      </span></div>
+                                                  </div><span></span>
+                                                  <div style="position: relative;"></div>
+                                                </div>
+                                              </div>
+
+
+                                            </fieldset>
+
+
+
+                                          </div>
+                                        </span>
+                                      </div>
+
+                                    </div>
+
+
+
+
+
+
                                   </div>
                                 </div>
-                              </span></div>
+
+                              </span>
+
+                            </div>
+
+
+
                           </span></div>
+
                       </div>
+
                     </div>
+
                   </div><span></span>
 
-                  <nav class="Section Section-content" role="navigation">
+
+
+
+                  <nav id="complete_btn" class="Section Section-content" role="navigation" style="margin-top: 140px;">
+
                     <div style="position: relative;">
                       <div>
+
                         <div class="Section-button"><button id="test2" type="submit" value="button2"
                             style="width: 100%; padding: 0px; border: 0px;"
                             class="Button-animationWrapper-child--primary Button"><span>
@@ -435,6 +695,7 @@
                       </div>
                     </div>
                   </nav>
+
                 </form>
               </main>
             </div>
@@ -451,6 +712,46 @@
 
 </main><!-- /.container -->
 
+
+<script>
+
+
+$(document).ready(function () {
+
+  $('#scales').click(function () {
+       // This will show / hide your element accordingly
+       $('#billingButtons').toggle();
+   
+    });
+
+    $("input#scales:checkbox").change(function () {
+    if (this.checked) {
+      $('#complete_btn').css('margin-top', '140px');
+    } else if (!this.checked) {
+      $('#complete_btn').css('margin-top', '200px');
+    }
+  });
+
+
+
+$(' #billingButtons .SegmentedControl-Item-Billing').click(function () {
+  $(this).removeClass('red').addClass('SegmentedControl-Item--selected');
+  $('.SegmentedControl-Item-Shipping').removeClass("SegmentedControl-Item--selected");
+  $('#shipping_addrs').css('display','none');
+  $('#billing_addrs').css('display','block');
+
+});
+
+$('#billingButtons .SegmentedControl-Item-Shipping').click(function () {
+  $(this).removeClass('red').addClass('SegmentedControl-Item--selected');
+  $('.SegmentedControl-Item-Billing').removeClass("SegmentedControl-Item--selected");
+  $('#shipping_addrs').css('display','block');
+  $('#billing_addrs').css('display','none');
+});
+
+
+});   
+</script>
  
   <script src="{% static 'js/blog-monthly-js/plyr.polyfilled.js' %}"></script>
   <script src="{% static 'js/blog-monthly-js/script.js' %}"></script>
@@ -473,17 +774,67 @@
         var tcfirst = $(this).closest("form").find("input[name='StripeFormFirstName']").val();
         var tclast = $(this).closest("form").find("input[name='StripeFormLastName']").val();
 
+        var tcshirt = $(this).closest("form").find("input[name='StripeFormTShirt']").val();
+
+        var tcshirt = $(this).closest("form").find("input[name='StripeFormTShirt']").val();
+
+        var tcmailstreet = $(this).closest("form").find("input[name='StripeFormMailingStreet']").val();
+        var tcmailsuite = $(this).closest("form").find("input[name='StripeFormMailingSuite']").val();
+        var tcmailcity = $(this).closest("form").find("input[name='StripeFormMailingCity']").val();
+        var tcmailstate = $(this).closest("form").find("input[name='StripeFormMailingState']").val();
+
+
+
         var serialized = $form.serializeArray();
         var endpoint = $form.attr('action');
 
-        var $StripeStreet =  $(this).closest("form").find("input[name='StripeFormStreet']").val();
-        var $StreetCity = $(this).closest("form").find("input[name='StripeFormCity']").val();
 
-        var $StreetSuite = $(this).closest("form").find("input[name='StripeFormSuite']").val();
+            var $stripetshirt = $('<input>')
+              .attr('type', 'hidden')
+              .attr('name', 'stripetshirt')
+              .val(tcshirt);
+ 
+            $stripetshirt.appendTo($form);
 
-        var $StripeFirstName =  $(this).closest("form").find("input[name='StripeFormFirstName']").val();
-        var $StripeLastName = $(this).closest("form").find("input[name='StripeFormLastName']").val();
+            //----
 
+            var $stripemailingstreet = $('<input>')
+              .attr('type', 'hidden')
+              .attr('name', 'stripemailingstreet')
+              .val(tcmailstreet);
+ 
+            $stripemailingstreet.appendTo($form);
+
+            //----
+
+            var $stripemailingsuite = $('<input>')
+              .attr('type', 'hidden')
+              .attr('name', 'stripemailingsuite')
+              .val(tcmailsuite);
+ 
+            $stripemailingsuite.appendTo($form);
+
+            //----
+
+            var $stripemailingcity = $('<input>')
+              .attr('type', 'hidden')
+              .attr('name', 'stripemailingcity')
+              .val(tcmailcity);
+ 
+            $stripemailingcity.appendTo($form);
+
+            //----
+
+            var $stripemailingstate = $('<input>')
+              .attr('type', 'hidden')
+              .attr('name', 'stripemailingstate')
+              .val(tcmailstate);
+ 
+            $stripemailingstate.appendTo($form);
+
+            //----
+
+            // mailing addrs
 
 
             var $stripefirstname = $('<input>')
@@ -592,8 +943,9 @@
   $(document).ready(function(){
     $('select option[value="US"]').attr("selected",true);
     //new WOW().init();
+
   });
 
 </script>
 
-  {% endblock %}
+{% endblock %}

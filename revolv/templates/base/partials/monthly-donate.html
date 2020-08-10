@@ -2,304 +2,476 @@
 {% load staticfiles %}
 {% load humanize %}
 {% load wagtailimages_tags %}
-
 {% block head %}
 
 <script src="{% static 'js/blog-monthly-js/plyr.polyfilled.js' %}"></script>
 <script src="{% static 'js/blog-monthly-js/script.js' %}"></script>
+<link href="{% static 'css/edu-media-css/style-monthlydonor.css' %}?version={{ version_number }}" rel="stylesheet" />
 <!-- -->
 <script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
-
 <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+
 {% endblock %}
-
 {% block body %}
-
-    <main role="main" class="container-fluid">
-      <div class="container-fluid monthly-donate-header" id="top-section">
-        <div class="row text-center">
-          <div class="col hero-text align-self-end">
-            <h1 class="text-white fw-700 mb-1">Let’s change lives</h1>
-            <h3 class="text-white fw-300 mb-5">Invest in a world where everyone can <br />thrive from clean energy</h3>
-          </div>
-        </div>
+<main role="main" class="container-fluid">
+  <div class="container-fluid monthly-donate-header" id="top-section">
+    <div class="row text-center">
+      <div class="col hero-text align-self-end">
+        <h1 class="text-white fw-700 mb-1">Let’s change lives</h1>
+        <h3 class="text-white fw-300 mb-5">Invest in a world where everyone can <br />thrive from clean energy</h3>
       </div>
-      <div class="container-fluid scroll-section" id="scroll-section">
-          <div class="scroll-icon">
-            <img class="scroll-arrow bouncing" src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/blog-monthly-img/scroll-icon.png">
-          </div>
-      </div>
-      <div class="container-fluid" id="monthly-donate-section-two">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-sm-12 co-md-10 col-lg-10">
-            <div class="row justify-content-center align-items-center text-center">
-              <div class="col-sm-12 col-md-6 text-right mt-4">
-                <h1 class="orange-text fw-700 mb-0">Spread clean energy.</h1>
-                <h4 class="orange-text fw-300 mb-4">Make a real change in people's lives</h4>
-                <h5 class="grey-text fw-300 mb-5">100% of your monthly donation supports schools, homeless shelter, food pantries, hospitals and other nonprofits, save money and the environment.</h5>
-                <div class="row justify-content-center text-center">
-                  <div class="col-sm-4 clean-enrgy-col" data-tooltip-content="#tooltip-1">
-                    <span class="tooltip-1"></span>
-                    <h6>About <br />RE-volv</h6>
-                  </div>
-                  <div class="col-sm-4 clean-enrgy-col" data-tooltip-content="#tooltip-2">
-                    <span class="tooltip-2"></span>
-                    <h6>About the Solar Seed Fund</h6>
-                  </div>
-                  <div class="col-sm-4 clean-enrgy-col" data-tooltip-content="#tooltip-3">
-                    <span class="tooltip-3"></span>
-                    <h6>Types of nonprofits benefiting</h6>
-                  </div>
-                </div>
+    </div>
+  </div>
+  <div class="container-fluid scroll-section" id="scroll-section">
+    <div class="scroll-icon">
+      <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+    </div>
+  </div>
+  <section class="kc-elm kc-css-365789 kc_row xt_kc_row_has_container xt_kc_row_has_padding" style="padding: 60px 0px;">
+    <div class="kc-row-container kc-container">
+      <div class="kc-wrap-columns">
+        <div class="kc-elm kc-css-403103 kc_col-sm-12 kc_column kc_col-sm-12">
+          <div class="kc-col-container">
+            <div class="sec-title text-left section-title-margin-bottom-medium section-title-color-default" style="margin-bottom: 60px;">
+              <h1 class="orange-text fw-700 mb-3"> Why a Monthly Gift?</h1>
+              <div class="grey-text fw-400" style="line-height: 1.6; max-width:900px;">
+                To solve climate change, we know we have to switch to 100% clean
+                renewable energy for everyone, as quickly and equitably as possible. Now
+                is the time to make the just transition to clean energy a reality.
               </div>
-
-              <div class="col-sm-12 col-md-6 text-right">
-                  <div class="donate-tabs">
-                      <ul class="nav justify-content-center" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link" data-toggle="tab" href="#tabs-once" role="tab">Give Once</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" data-toggle="tab" href="#tabs-monthly" role="tab">Monthly</a>
-                        </li>
-                      </ul><!-- Tab panes -->
-                      
-                      <form action="{% url 'project:stripe_operation_donation' %}" autocomplete="off" id="general_form" method="post" novalidate="" onkeydown="return event.key != 'Enter';">
-                      {% csrf_token %}
-                      <div class="tab-content">
-                        <div class="tab-pane" id="tabs-once" role="tabpanel">
-                          <h5 class="blue-text fw-700">Enter an amount to give</h5>
-                           <!-- Amount -->
-                          <div class="input-group input-group-lg">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">$</span>
-                            </div>
-                            <input id="donation-inputz" type="number" step="0.01" min="1" oninput="validity.valid||(value='');" value="10" placeholder="Custom"
-                            name="donation_amount_cents" class="form-control" aria-label="Amount (to the nearest dollar)">
-                            <div class="input-group-append">
-                              <span class="postinput input-group-text">USD</span>
-                            </div>
-                          </div>
-                          <!-- Amount -->
-                          <div style="height: 4px; margin-bottom: 1.5rem !important; margin-top: 1.5rem !important;"></div>
-                          <a id="donate-button" class="w-full show-next-donate-screen stripe-button-el btn btn-orange btn-me btn-arrow-white my-2" role="button" style="color:white;">DONATE</a>
-                        </div>
-                        </form>
-                        <div class="tab-pane active" id="tabs-monthly" role="tabpanel">
-                          <h5 class="blue-text fw-700">Enter an amount to give per month</h5>
-                          <!-- Amount -->
-                          <!-- Form override -->
-                          <form action="{% url 'project:stripe_operation_donation' %}" method="POST" onkeydown="return event.key != 'Enter';">
-                              {% csrf_token %}                        
-                            <!-- Form override -->
-                            <div class="input-group input-group-lg">
-                              <div class="input-group-prepend">
-                                <span class="input-group-text preinput">$</span>
-                              </div>
-                              <!-- main stripe -->
-                              <input id="donation-inputz" type="number" step="0.01" min="1" oninput="validity.valid||(value='');" value="10" placeholder="Custom"
-                              name="donation_amount_in_cents" class="form-control" aria-label="Amount (to the nearest dollar)">
-                              <input name="metadata" value="1.00" type="hidden">
-                              <input name="check" value="checked" type="hidden">  
-                              <!-- main stripe -->
-                              <div class="input-group-append">
-                                <span class="postinput input-group-text">USD/month</span>
-                              </div>
-                            </div>
-                            
-                            <div style="height: 4px; margin-bottom: 1.5rem !important; margin-top: 1.5rem !important;"></div>
-                            <!-- main stripe -->
-                            <a id="donate-button" class="w-full show-next-donate-screen stripe-monthly-donation-button-el btn btn-orange btn-me btn-arrow-white my-2 " role="button" style="color:white; width:100%;">DONATE MONTHLY</a>
-                            <!-- main stripe -->
-                            <!-- Form override -->
-                          <!-- Amount -->
-                          </form>
-                        </div>
+              </br>
+              <div class="grey-text fw-400" style="line-height: 1.6; max-width:900px;">
+                Your recurring donation brings clean energy to nonprofits around the
+                country that need it more than ever. </br> With your support RE-volv is able to
+                empower more youth climate leaders, provide more nonprofits with clean
+                energy cost savings for decades to come, and engage more communities
+                in the fight for clean energy. By becoming a monthly donor, you are
+                playing a pivotal role in ushering in the era of 100% clean energy.
+              </div>
+              <div class="col-md-12" style="margin: 100px 0px; margin:0px; display:none;">
+                <dl class="amb-accordion">
+                  <dt class=""> Giving a monthly gift </dt>
+                  <dd style="display: none;">
+                    <div class="fr-view">
+                      <p><strong>Your recurring donation means RE-volv is able to empower more nonprofits, solar
+                          installers, and communities with the promise of clean solar energy for decades to come. By
+                          donating monthly, RE-volv is able to plan more accurately for the future, use your gift in the
+                          most efficient and effective manner, and truly see our goals through to the end. </strong></p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <div class="donation-mod-one donation-mod-grid row causes">
+              <div class=" donation-mod-item ch-causes col-lg-4 col-md-4 col-sm-6 post-241">
+                <form action="{% url 'project:stripe_operation_donation' %}" method="POST" style="height:100%;">
+                  {% csrf_token %}
+                  <input type="hidden" name="donation_amount_in_cents" value="10">
+                  <input name="metadata" value="1.00" type="hidden">
+                  <input name="check" value="checked" type="hidden">
+                  <div
+                    class="cause-inner clearfix shadow shadow-hover stripe-monthly-donation-button-el component-link btn-donate donation-inputz"
+                    style="height: 100%; width:100%; border-radius: 30px;">
+                    <div class="theme-feature shadow shadow-hover  " style=" padding: 15px 30px !important; border-radius: 30px 30px 0px 0px;">
+                      <div class="theme-feature-inner">
+                        <h3 class="fw-700" style="margin: 0 0 0px !important;"> Donation of <span class="fw-600">$10</span> </h3>
                       </div>
-                    
+                    </div>
+                    <a href="/monthly_donor">
+                      <img src="../../../static/images/edu-media-img/tier1.png" alt="tier3 RE-volv gift">
+                    </a>
+                    <div class="donation-inner-content" style="border-radius: 30px;">
+                      <h3>
+                      </h3>
+                      <p class="fw-500">
+                        Join our monthly donor program at the <strong>$10</strong> level and receive a
+                        RE-volv notebook, license plate frame, and bookmark - and show
+                        the world you care about clean energy!
+                      </p>
+                    </div>
                   </div>
+                </form>
               </div>
+              <div class="stripe-monthly-donation-button-el donation-mod-item ch-causes col-lg-4 col-md-4 col-sm-6">
+                <form action="{% url 'project:stripe_operation_donation' %}" method="POST" style="height:100%;">
+                  {% csrf_token %}
+                  <input type="hidden" name="donation_amount_in_cents" value="25">
+                  <input name="metadata" value="1.00" type="hidden">
+                  <input name="check" value="checked" type="hidden">
+                  <div class="cause-inner clearfix shadow shadow-hover stripe-monthly-donation-button-el"
+                    style="height: 100%; width:100%; border-radius: 30px;">
 
+                    <div class="theme-feature shadow shadow-hover" style=" padding: 15px 30px !important; border-radius: 30px 30px 0px 0px;">
+                      <div class="theme-feature-inner">
+                        <h3 class="fw-700" style="margin: 0 0 0px !important;"> Donation of <span class="fw-600">$25</span> </h3>
+                      </div>
+                    </div>
+                    <a href="/monthly_donor">
+                      <img src="../../../static/images/edu-media-img/tier2.png" alt="tier2 RE-volv gift" />
+                    </a>
+                    <div class="donation-inner-content" style="border-radius: 30px;">
+                      <h3>
+                      </h3>
+                      <p class="fw-500">
+                        Join at the <strong>$25</strong> level and receive all the awesome $10 level perks plus a stylish RE-volv t-shirt. 
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="stripe-monthly-donation-button-el donation-mod-item ch-causes col-lg-4 col-md-4 col-sm-6">
+                <form action="{% url 'project:stripe_operation_donation' %}" method="POST" style="height:100%;">
+                  {% csrf_token %}
+                  <input type="hidden" name="donation_amount_in_cents" value="35">
+                  <input name="metadata" value="1.00" type="hidden">
+                  <input name="check" value="checked" type="hidden">
+                  <div
+                    class="cause-inner clearfix shadow shadow-hover stripe-monthly-donation-button-el"
+                    style="height: 100%; width:100%; border-radius: 30px;"
+                    >
+                    <div class="theme-feature shadow shadow-hover" style=" padding: 15px 30px !important; border-radius: 30px 30px 0px 0px;">
+                      <div class="theme-feature-inner">
+                        <h3 class="fw-700" style="margin: 0 0 0px !important; font-family: 'Montserrat', sans-serif;"> Donation of <span class="fw-600">$35</span> </h3>
+                      </div>
+                    </div>
+                    <a href="/monthly_donor">
+                      <img src="../../../static/images/edu-media-img/whtier3.png" style="transform: scaleX(1);" alt="RE-volv tier 3 gift" />
+                    </a>
+                    <div class="donation-inner-content" style="border-radius: 30px;">
+                      <h3>
+                      </h3>
+                      <p class="fw-500">
+                        And for a limited time, if you join at the <strong>$35</strong> level or higher, you’ll receive all of the lower level perks along with an exclusive signed copy of Climate Courage, the forthcoming book by RE-volv’s Executive Director, Andreas Karelas.
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>    
             </div>
           </div>
         </div>
       </div>
-      <div class="container-fluid" id="monthly-donate-section-three">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-sm-12 co-md-10 col-lg-8">
-            <div class="row justify-content-center align-items-center text-center" id="ambassador-player-section"> 
-                <h1><img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/blog-monthly-img/quote-mark.png"></h1>
-                <h3 class="text-white fw-300 mb-3">Every penny, nickel, and dime that I’m saving from solar is going to my three year old granddaughter's education</h3>
-                <h5 class="orange-text fw-700 mb-5">Unity Gardens affordable housing resident</h5>
-                <div class="player-skin mt-3">
-                  <video controls crossorigin playsinline poster="https://res.cloudinary.com/dkwon4bkk/image/upload/images/blog-monthly-img/monthly-donate-video-cover.png" id="ambassador-player" class="plyr-video">
-                    <!-- Video files 
+    </div>
+  </section>
+  
+  <div class="container-fluid" id="application-section-six" style="height: 100%; padding: 680px 0px;">
+  </div>
+
+  <div id="donate-box"></div>
+  <div class="container-fluid" id="monthly-donate-section-two">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-sm-12 co-md-10 col-lg-10">
+        <div class="row justify-content-center align-items-center text-center">
+          <div class="col-sm-12 col-md-6 text-right mt-4">
+            <h1 class="orange-text fw-700 mb-0">Spread clean energy.</h1>
+            <h4 class="orange-text fw-300 mb-4">Make a real change in people's lives</h4>
+            <h5 class="grey-text fw-300 mb-5">100% of your monthly donation supports schools, homeless shelter, food
+              pantries, hospitals and other nonprofits, save money and the environment.</h5>
+            <div class="row justify-content-center text-center">
+              <div class="col-sm-4 clean-enrgy-col" data-tooltip-content="#tooltip-1">
+                <span class="tooltip-1"></span>
+                <h6>About <br />RE-volv</h6>
+              </div>
+              <div class="col-sm-4 clean-enrgy-col" data-tooltip-content="#tooltip-2">
+                <span class="tooltip-2"></span>
+                <h6>About the Solar Seed Fund</h6>
+              </div>
+              <div class="col-sm-4 clean-enrgy-col" data-tooltip-content="#tooltip-3">
+                <span class="tooltip-3"></span>
+                <h6>Types of nonprofits benefiting</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 text-right">
+            <div class="donate-tabs">
+              <ul class="nav justify-content-center" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#tabs-once" role="tab">Give Once</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#tabs-monthly" role="tab">Monthly</a>
+                </li>
+              </ul><!-- Tab panes -->
+              <form action="{% url 'project:stripe_operation_donation' %}" autocomplete="off" id="general_form"
+                method="post" novalidate="" onkeydown="return event.key != 'Enter';">
+                {% csrf_token %}
+                <div class="tab-content">
+                  <div class="tab-pane" id="tabs-once" role="tabpanel">
+                    <h5 class="blue-text fw-700">Enter an amount to give</h5>
+                    <!-- Amount -->
+                    <div class="input-group input-group-lg">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                      </div>
+                      <input id="donation-inputz" type="number" step="0.01" min="1"
+                        oninput="validity.valid||(value='');" value="10" placeholder="Custom"
+                        name="donation_amount_cents" class="form-control" aria-label="Amount (to the nearest dollar)">
+                      <div class="input-group-append">
+                        <span class="postinput input-group-text">USD</span>
+                      </div>
+                    </div>
+                    <!-- Amount -->
+                    <div style="height: 4px; margin-bottom: 1.5rem !important; margin-top: 1.5rem !important;"></div>
+                    <a id="donate-button"
+                      class="w-full show-next-donate-screen stripe-button-el btn btn-orange btn-me btn-arrow-white my-2"
+                      role="button" style="color:white;">DONATE</a>
+                  </div>
+              </form>
+              <div class="tab-pane active" id="tabs-monthly" role="tabpanel">
+                <h5 class="blue-text fw-700">Enter an amount to give per month</h5>
+                <div id="donate" class="">
+                  <div class="ak-field-box ak-donate-three-step">
+                    <div class="ak-amount-wrapper clearfix margin-bottom-small">
+                      <ul class="ak-unstyled nobullet text-large">
+                        <form action="{% url 'project:stripe_operation_donation' %}" method="POST">
+                          {% csrf_token %}
+                          <input type="hidden" name="donation_amount_in_cents" value="10">
+                          <input name="metadata" value="1.00" type="hidden">
+                          <input name="check" value="checked" type="hidden">
+                          <li
+                            class="stripe-monthly-donation-button-el component-link btn-donate donation-inputz ak-amount-container c3_3 ct3_3 cm3_3 no-margin-bottom stripe-monthly-donation-button-el	"
+                            style="box-shadow: 0 -5px 30px 0px rgba(0, 0, 0, .05);">
+                            <label for="id_amount_10" class="input-radio-button bg-ltgray" style="padding: 5px">
+                              <span class=""></span><span class="" style="color:#100084;">10 </span>
+                              <input type="radio" id="id_amount_10" value="10" class="ak-amount-radio-button hidden"
+                                name="amount">
+                            </label>
+                          </li>
+                        </form>
+                        <form action="{% url 'project:stripe_operation_donation' %}" method="POST">
+                          {% csrf_token %}
+                          <input type="hidden" name="donation_amount_in_cents" value="25">
+                          <input name="metadata" value="1.00" type="hidden">
+                          <input name="check" value="checked" type="hidden">
+                          <li
+                            class="stripe-monthly-donation-button-el component-link btn-donate donation-inputz ak-amount-container c3_3 ct3_3 cm3_3 no-margin-bottom stripe-monthly-donation-button-el	"
+                            style="box-shadow: 0 -5px 30px 0px rgba(0, 0, 0, .05);">
+                            <label for="id_amount_10" class="input-radio-button bg-ltgray" style="padding: 5px">
+                              <span class=""></span><span class="" style="color:#100084;">25 </span>
+                              <input type="radio" id="id_amount_10" value="10" class="ak-amount-radio-button hidden"
+                                name="amount">
+                            </label>
+                          </li>
+                        </form>
+                        <form action="{% url 'project:stripe_operation_donation' %}" method="POST">
+                          {% csrf_token %}
+                          <input type="hidden" name="donation_amount_in_cents" value="35">
+                          <input name="metadata" value="1.00" type="hidden">
+                          <input name="check" value="checked" type="hidden">
+                          <li
+                            class="stripe-monthly-donation-button-el component-link btn-donate donation-inputz ak-amount-container c3_3 ct3_3 cm3_3 no-margin-bottom stripe-monthly-donation-button-el	"
+                            style="box-shadow: 0 -5px 30px 0px rgba(0, 0, 0, .05);">
+                            <label for="id_amount_10" class="input-radio-button bg-ltgray" style="padding: 5px">
+                              <span class=""></span><span class="" style="color:#100084;">35 </span>
+                              <input type="radio" id="id_amount_10" value="10" class="ak-amount-radio-button hidden"
+                                name="amount">
+                            </label>
+                          </li>
+                        </form>
+                        <form action="{% url 'project:stripe_operation_donation' %}" method="POST">
+                          {% csrf_token %}
+                          <input type="hidden" name="donation_amount_in_cents" value="50">
+                          <input name="metadata" value="1.00" type="hidden">
+                          <input name="check" value="checked" type="hidden">
+                          <li
+                            class="stripe-monthly-donation-button-el component-link btn-donate donation-inputz ak-amount-container c3_3 ct3_3 cm3_3 no-margin-bottom stripe-monthly-donation-button-el	"
+                            style="box-shadow: 0 -5px 30px 0px rgba(0, 0, 0, .05);">
+                            <label for="id_amount_10" class="input-radio-button bg-ltgray" style="padding: 5px">
+                              <span class=""></span><span class="" style="color:#100084;">50 </span>
+                              <input type="radio" id="id_amount_10" value="10" class="ak-amount-radio-button hidden"
+                                name="amount">
+                            </label>
+                          </li>
+                        </form>
+                        <form action="{% url 'project:stripe_operation_donation' %}" method="POST">
+                          {% csrf_token %}
+                          <input type="hidden" name="donation_amount_in_cents" value="75">
+                          <input name="metadata" value="1.00" type="hidden">
+                          <input name="check" value="checked" type="hidden">
+                          <li
+                            class="stripe-monthly-donation-button-el component-link btn-donate donation-inputz ak-amount-container c3_3 ct3_3 cm3_3 no-margin-bottom stripe-monthly-donation-button-el	"
+                            style="box-shadow: 0 -5px 30px 0px rgba(0, 0, 0, .05);">
+                            <label for="id_amount_10" class="input-radio-button bg-ltgray" style="padding: 5px">
+                              <span class=""></span><span class="" style="color:#100084;">75 </span>
+                              <input type="radio" id="id_amount_10" value="10" class="ak-amount-radio-button hidden"
+                                name="amount">
+                            </label>
+                          </li>
+                        </form>
+                        <form action="{% url 'project:stripe_operation_donation' %}" method="POST">
+                          {% csrf_token %}
+                          <input type="hidden" name="donation_amount_in_cents" value="100">
+                          <input name="metadata" value="1.00" type="hidden">
+                          <input name="check" value="checked" type="hidden">
+                          <li
+                            class="stripe-monthly-donation-button-el component-link btn-donate donation-inputz ak-amount-container c3_3 ct3_3 cm3_3 no-margin-bottom stripe-monthly-donation-button-el	"
+                            style="box-shadow: 0 -5px 30px 0px rgba(0, 0, 0, .05);">
+                            <label for="id_amount_10" class="input-radio-button bg-ltgray" style="padding: 5px">
+                              <span class=""></span><span class="" style="color:#100084;">100 </span>
+                              <input type="radio" id="id_amount_10" value="10" class="ak-amount-radio-button hidden"
+                                name="amount">
+                            </label>
+                          </li>
+                        </form>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Amount -->
+                <!-- Form override -->
+                <form action="{% url 'project:stripe_operation_donation' %}" method="POST"
+                  onkeydown="return event.key != 'Enter';">
+                  {% csrf_token %}
+                  <!-- Form override -->
+                  <div class="input-group input-group-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text preinput">$</span>
+                    </div>
+                    <!-- main stripe -->
+                    <input id="donation-inputz" type="number" step="0.01" min="1" oninput="validity.valid||(value='');"
+                      value="35" placeholder="Custom" name="donation_amount_in_cents" class="form-control"
+                      aria-label="Amount (to the nearest dollar)">
+                    <input name="metadata" value="1.00" type="hidden">
+                    <input name="check" value="checked" type="hidden">
+                    <!-- main stripe -->
+                    <div class="input-group-append">
+                      <span class="postinput input-group-text">USD/month</span>
+                    </div>
+                  </div>
+                  <div style="height: 4px; margin-bottom: 1.5rem !important; margin-top: 1.5rem !important;"></div>
+                  <!-- main stripe -->
+                  <a id="donate-button"
+                    class="w-full show-next-donate-screen stripe-monthly-donation-button-el btn btn-orange btn-me btn-arrow-white my-2 "
+                    role="button" style="color:white; width:100%;">DONATE MONTHLY</a>
+                  <!-- main stripe -->
+                  <!-- Form override -->
+                  <!-- Amount -->
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="container-fluid" id="monthly-donate-section-four" style="padding: 70px 0px;  background-size: cover;">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-sm-12 co-md-12 col-lg-8 text-center">
+        <h2 class="text-white fw-600">Join us in building a just transition.</h4>
+          <h4 class="text-white fw-300">Become a monthly donor today and accelerate the switch to 100%
+            clean energy in communities across the country. For a limited time,
+            donate $35 a month or more ​ and receive an exclusive signed copy
+            of ​ Climate Courage, the forthcoming book by RE-volv’s Executive
+            Director, Andreas Karelas, along with other great perks.
+        </h2>
+      </div>
+    </div>
+  </div>
+    
+  <div class="container-fluid" id="monthly-donate-section-three" style="background:#110A21;">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-sm-12 co-md-10 col-lg-8">
+        <div class="row justify-content-center align-items-center text-center" id="ambassador-player-section">
+          <div class="player-skin mt-3">
+            <video controls crossorigin playsinline
+              poster="../../../static/images/blog-monthly-img/monthly-donate-video-cover.png" id="ambassador-player"
+              class="plyr-video">
+              <!-- Video files 
                     <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" type="video/mp4" size="576">
                     <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4" type="video/mp4" size="720">
                     <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
                     <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1440p.mp4" type="video/mp4" size="1440">
                     -->
-                    <source src="https://res.cloudinary.com/dkwon4bkk/video/upload/images/blog-monthly-img/donor_video.mp4" type="video/mp4" size="720">
-                    <!-- Fallback for browsers that don't support the <video> element -->
-                    <a href="https://res.cloudinary.com/dkwon4bkk/video/upload/images/blog-monthly-img/donor_video.mp4" download>Download</a>
-                  </video>
-                </div>
-            </div>
+              <source src="../../../static/images/blog-monthly-img/donor_video.mp4" type="video/mp4" size="720">
+              <!-- Fallback for browsers that don't support the <video> element -->
+              <a href="../../../static/images/blog-monthly-img/donor_video.mp4" download>Download</a>
+            </video>
           </div>
+          <h1><img src="../../../static/images/blog-monthly-img/quote-mark.png"></h1>
+          <h3 class="text-white fw-300 mb-3">Every penny, nickel, and dime that I’m saving from solar is going to my
+            three year old granddaughter's education</h3>
+          <h5 class="orange-text fw-700 mb-5">Unity Gardens affordable housing resident</h5>
         </div>
       </div>
-      <div class="container-fluid" id="monthly-donate-section-four">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-sm-12 co-md-12 col-lg-8 text-center">
-            <h4 class="text-white fw-600">Monthly membership means making history.</h4>
-            <h2 class="text-white fw-300">Stay connected, and join us on <br />the frontlines of change.</h2>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid" id="monthly-donate-section-five">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-sm-12 co-md-10 col-lg-10">
-            <div class="row justify-content-center align-items-center text-center">
-              <div class="col-sm-12 col-md-6 text-center">
-                <h2 class="orange-text fw-700 mb-5">Here is what you can expect <br />when you join</h2>
-                <div class="row justify-content-center text-center">
-                  <div class="col-sm-4 clean-enrgy-col" data-tooltip-content="#tooltip-4">
-                    <span class="tooltip-4"></span>
-                    <h6>Access to exclusive events</h6>
-                  </div>
-                  <div class="col-sm-4 clean-enrgy-col" data-tooltip-content="#tooltip-5">
-                    <span class="tooltip-5"></span>
-                    <h6>Inside stories of communities thriving</h6>
-                  </div>
-                  <div class="col-sm-4 clean-enrgy-col" data-tooltip-content="#tooltip-6">
-                    <span class="tooltip-6"></span>
-                    <h6>Proof of dollars well spent</h6>
-                  </div>
-                </div>
+    </div>
+  </div>
+  <div class="container-fluid" id="monthly-donate-section-five">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-sm-12 co-md-10 col-lg-10">
+        <div class="row justify-content-center align-items-center text-center">
+          <div class="col-sm-12 col-md-6 text-center">
+            <h2 class="orange-text fw-700 mb-5">Here is what you can expect <br />when you join</h2>
+            <div class="row justify-content-center text-center">
+              <div class="col-sm-4 clean-enrgy-col" data-tooltip-content="#tooltip-4">
+                <span class="tooltip-4"></span>
+                <h6>Access to exclusive events</h6>
               </div>
-
-              <div class="col-sm-12 col-md-6 text-right">
-                  <div class="donate-tabs">
-                      <ul class="nav justify-content-center" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link" data-toggle="tab" href="#tabs-once" role="tab">Give Once</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link active" data-toggle="tab" href="#tabs-monthly" role="tab">Monthly</a>
-                        </li>
-                      </ul><!-- Tab panes -->
-                      
-                      <form action="{% url 'project:stripe_operation_donation' %}" autocomplete="off" id="general_form" method="post" novalidate="" onkeydown="return event.key != 'Enter';">
-                      {% csrf_token %}
-                      <div class="tab-content">
-                        <div class="tab-pane" id="tabs-once" role="tabpanel">
-                          <h5 class="blue-text fw-700">Enter an amount to give</h5>
-                           <!-- Amount -->
-                          <div class="input-group input-group-lg">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text">$</span>
-                            </div>
-                            <input id="donation-inputz" type="number" step="0.01" min="1" oninput="validity.valid||(value='');" value="10" placeholder="Custom"
-                            name="donation_amount_cents" class="form-control" aria-label="Amount (to the nearest dollar)">
-                            <div class="input-group-append">
-                              <span class="postinput input-group-text">USD</span>
-                            </div>
-                          </div>
-                          <!-- Amount -->
-                          <div style="height: 4px; margin-bottom: 1.5rem !important; margin-top: 1.5rem !important;"></div>
-                          <a id="donate-button" class="w-full show-next-donate-screen stripe-button-el btn btn-orange btn-me btn-arrow-white my-2" role="button" style="color:white;">DONATE</a>
-                        </div>
-                        </form>
-                        <div class="tab-pane active" id="tabs-monthly" role="tabpanel">
-                          <h5 class="blue-text fw-700">Enter an amount to give per month</h5>
-                          <!-- Amount -->
-                          <!-- Form override -->
-                          <form action="{% url 'project:stripe_operation_donation' %}" method="POST" onkeydown="return event.key != 'Enter';">
-                              {% csrf_token %}                        
-                            <!-- Form override -->
-                            <div class="input-group input-group-lg">
-                              <div class="input-group-prepend">
-                                <span class="input-group-text preinput">$</span>
-                              </div>
-                              <!-- main stripe -->
-                              <input id="donation-inputz" type="number" step="0.01" min="1" oninput="validity.valid||(value='');" value="10" placeholder="Custom"
-                              name="donation_amount_in_cents" class="form-control" aria-label="Amount (to the nearest dollar)">
-                              <input name="metadata" value="1.00" type="hidden">
-                              <input name="check" value="checked" type="hidden">  
-                              <!-- main stripe -->
-                              <div class="input-group-append">
-                                <span class="postinput input-group-text">USD/month</span>
-                              </div>
-                            </div>
-                            
-                            <div style="height: 4px; margin-bottom: 1.5rem !important; margin-top: 1.5rem !important;"></div>
-                            <!-- main stripe -->
-                            <a id="donate-button" class="w-full show-next-donate-screen stripe-monthly-donation-button-el btn btn-orange btn-me btn-arrow-white my-2 " role="button" style="color:white; width:100%;">DONATE MONTHLY</a>
-                            <!-- main stripe -->
-                            <!-- Form override -->
-                          <!-- Amount -->
-                          </form>
-                        </div>
-                      </div>
-                    
-                  </div>
+              <div class="col-sm-4 clean-enrgy-col" data-tooltip-content="#tooltip-5">
+                <span class="tooltip-5"></span>
+                <h6>Inside stories of communities thriving</h6>
               </div>
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
-        {% csrf_token %}
-        <div class="container-fluid" id="section-six">
-          <div class="row justify-content-center align-items-center section-six-row">
-            <div class="col-sm-12 co-md-12 col-lg-10">
-              <div class="row align-items-center">
-                <div class="col-sm-12 col-md-5 text-right text-white">
-                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
-                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
-                </div>
-                <div class="col-sm-12 col-md-7">
-                  <div class="input-group mb-3 subscription-form inputs">
-                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
-                      <div class="input-group-append">
-                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
-                      </div>
-                  </div>
-                </div>
+              <div class="col-sm-4 clean-enrgy-col" data-tooltip-content="#tooltip-6">
+                <span class="tooltip-6"></span>
+                <h6>Proof of dollars well spent</h6>
               </div>
             </div>
           </div>
-        </div>
-      </form>
-      <!--Tooltips-->
-      <div class="tooltip_templates">
-        <div id="tooltip-1">
-          <div class="tooltip-body">
-            <p>RE-volv raises money to put solar panels on community-serving nonprofit organizations like homeless shelters, schools, community centers, and houses of worship. As these organizations pay RE-volv back, we reinvest the money into more solar projects in low-income communities across the country.</p>
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------->
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="row justify-content-center align-items-center" style="background:#ff8a00; height:140px;">
+    <div class="col-sm-12 co-md-12 col-lg-12">
+      <div class="row align-items-center">
+        <div class="col-sm-12 col-md-12 text-center text-white my-2">
+          <div class="row justify-content-center"> 
+              <a class="btn btn-blue btn-me mx-2 my-2" href="#donate-box" style="height: 100%;">Donate</a>
           </div>
+        </div>    
         </div>
       </div>
-      <div class="tooltip_templates">
-        <div id="tooltip-2">
-          <div class="tooltip-body">
-            <p>The revolving fund used by RE-volv to finance its leases is seeded through donations and a percentage of the lease payments from each project is reinvested back into the fund for use in future solar projects. <br> This revolving fund is known as the “Solar Seed Fund.” Through this model, the success of each nonprofit project drives a virtuous cycle that enables RE-volv to support more campaigns and increase contributions to each successive project. </p>
-          </div>
-        </div>
+    </div>
+
+  <!--Tooltips-->
+  <div class="tooltip_templates">
+    <div id="tooltip-1">
+      <div class="tooltip-body">
+        <p>RE-volv raises money to put solar panels on community-serving nonprofit organizations like homeless shelters,
+          schools, community centers, and houses of worship. As these organizations pay RE-volv back, we reinvest the
+          money into more solar projects in low-income communities across the country.</p>
       </div>
-      <div class="tooltip_templates">
-        <div id="tooltip-3">
-          <div class="tooltip-body">
-            <p>Homeless shelters, schools, community centers, and houses of worship are a few examples of the types of nonprofits we help go solar. All of these community institutions provide vital services to those who need it most. The monetary savings from solar helps these nonprofits and their community thrive.</p>
-          </div>
-        </div>
+    </div>
+  </div>
+  <div class="tooltip_templates">
+    <div id="tooltip-2">
+      <div class="tooltip-body">
+        <p>The revolving fund used by RE-volv to finance its leases is seeded through donations and a percentage of the
+          lease payments from each project is reinvested back into the fund for use in future solar projects. <br> This
+          revolving fund is known as the “Solar Seed Fund.” Through this model, the success of each nonprofit project
+          drives a virtuous cycle that enables RE-volv to support more campaigns and increase contributions to each
+          successive project. </p>
       </div>
-    </main><!-- /.container -->
+    </div>
+  </div>
+  <div class="tooltip_templates">
+    <div id="tooltip-3">
+      <div class="tooltip-body">
+        <p>Homeless shelters, schools, community centers, and houses of worship are a few examples of the types of
+          nonprofits we help go solar. All of these community institutions provide vital services to those who need it
+          most. The monetary savings from solar helps these nonprofits and their community thrive.</p>
+      </div>
+    </div>
+  </div>
+</main><!-- /.container -->
   
     <script src="{% static 'js/blog-monthly-js/plyr.polyfilled.js' %}"></script>
     <script src="{% static 'js/blog-monthly-js/script.js' %}"></script>
- 
+    
     <script>
       $(function ($) {
       var handler = StripeCheckout.configure({
@@ -409,5 +581,12 @@
        $(".donate-popup .next-button").addClass("disable-donation-btn");
      }
     </script>
-
+<script type="text/javascript">
+	//Show/Hide - clicked on accordions
+	$('.amb-accordion > dd').hide();
+	$('.amb-accordion > dt').click(function () {
+		$(this).toggleClass('active');
+		$(this).next('dd').slideToggle('fast');
+	});
+</script>
   {% endblock %}

@@ -123,7 +123,7 @@ def fetch_user_by_email(email):
 
     return emailName
 
-def send_donation_info(name, amount,email, project, projectmain, postalcode, state, streetaddress, addressunit, city, emailaddress, firstname, lastname, address=''):
+def send_donation_info(name, amount,email, project, projectmain, postalcode, state, streetaddress, addressunit, city, emailaddress, firstname, lastname, mailingstate, mailingstreet, mailingsuite, mailingcity, tshirtsize, address=''):
     if not settings.SFDC_ACCOUNT:
         return
     try:
@@ -145,20 +145,20 @@ def send_donation_info(name, amount,email, project, projectmain, postalcode, sta
 
             # if campaign title is one of the static campaign in the array pass through, else use static Solar Seed Fund for sub campaigns
             if any(project in s for s in campaigns):
-                payload = {'donorName': name, 'donorEmail':email, 'projectName': project, 'donationAmount': amount, 'projectTitle': description, 'postalCode': postalcode, 'monthlyDonor': 'No','donorAddress': '' ,  'billingState': state, 'billingAddress': streetaddress, 'billingAddressUnit': addressunit, 'billingCity': city, 'billingEmail': emailaddress, 'billingFirstName': firstname, 'billingLastName': lastname }
+                payload = {'donorName': name, 'donorEmail':email, 'projectName': project, 'donationAmount': amount, 'projectTitle': description, 'postalCode': postalcode, 'monthlyDonor': 'No','donorAddress': '' ,  'billingState': state, 'billingAddress': streetaddress, 'billingAddressUnit': addressunit, 'billingCity': city, 'billingEmail': emailaddress, 'billingFirstName': firstname, 'billingLastName': lastname , 'mailingState':mailingstate, 'mailingAddress':mailingstreet , 'mailingAddressUnit':mailingsuite ,'mailingCity':mailingcity, 'tshirtSize':tshirtsize  }
             elif project == 'Monthly Donations':
-                payload = {'donorName': name, 'donorEmail':email, 'projectName': project, 'donationAmount': amount, 'projectTitle': description, 'postalCode': postalcode, 'monthlyDonor': 'Yes', 'donorAddress': ''  ,   'billingState': state, 'billingAddress': streetaddress, 'billingAddressUnit': addressunit, 'billingCity': city, 'billingEmail': emailaddress, 'billingFirstName': firstname, 'billingLastName': lastname}
+                payload = {'donorName': name, 'donorEmail':email, 'projectName': project, 'donationAmount': amount, 'projectTitle': description, 'postalCode': postalcode, 'monthlyDonor': 'Yes', 'donorAddress': ''  ,   'billingState': state, 'billingAddress': streetaddress, 'billingAddressUnit': addressunit, 'billingCity': city, 'billingEmail': emailaddress, 'billingFirstName': firstname, 'billingLastName': lastname , 'mailingState':mailingstate, 'mailingAddress':mailingstreet , 'mailingAddressUnit':mailingsuite ,'mailingCity':mailingcity, 'tshirtSize':tshirtsize}
             else:
-                payload = {'donorName': name, 'donorEmail':email, 'projectName': projectmain, 'donationAmount': amount, 'projectTitle': description, 'postalCode': postalcode, 'monthlyDonor': 'No','donorAddress': ''  ,  'billingState': state, 'billingAddress': streetaddress, 'billingAddressUnit': addressunit, 'billingCity': city, 'billingEmail': emailaddress, 'billingFirstName': firstname, 'billingLastName': lastname }
+                payload = {'donorName': name, 'donorEmail':email, 'projectName': projectmain, 'donationAmount': amount, 'projectTitle': description, 'postalCode': postalcode, 'monthlyDonor': 'No','donorAddress': ''  ,  'billingState': state, 'billingAddress': streetaddress, 'billingAddressUnit': addressunit, 'billingCity': city, 'billingEmail': emailaddress, 'billingFirstName': firstname, 'billingLastName': lastname , 'mailingState':mailingstate, 'mailingAddress':mailingstreet , 'mailingAddressUnit':mailingsuite ,'mailingCity':mailingcity, 'tshirtSize':tshirtsize }
 
         else:
             
             if any(project in s for s in campaigns):
-                payload = {'donorName': existing_name, 'donorEmail':email, 'projectName': project, 'donationAmount': amount, 'projectTitle': description, 'postalCode': postalcode, 'monthlyDonor': 'No','donorAddress': ''  ,   'billingState': state, 'billingAddress': streetaddress, 'billingAddressUnit': addressunit, 'billingCity': city, 'billingEmail': emailaddress, 'billingFirstName': firstname, 'billingLastName': lastname}
+                payload = {'donorName': existing_name, 'donorEmail':email, 'projectName': project, 'donationAmount': amount, 'projectTitle': description, 'postalCode': postalcode, 'monthlyDonor': 'No','donorAddress': ''  ,   'billingState': state, 'billingAddress': streetaddress, 'billingAddressUnit': addressunit, 'billingCity': city, 'billingEmail': emailaddress, 'billingFirstName': firstname, 'billingLastName': lastname , 'mailingState':mailingstate, 'mailingAddress':mailingstreet , 'mailingAddressUnit':mailingsuite ,'mailingCity':mailingcity, 'tshirtSize':tshirtsize}
             elif project == 'Monthly Donations':
-                payload = {'donorName': existing_name, 'donorEmail':email, 'projectName': project, 'donationAmount': amount, 'projectTitle': description, 'postalCode': postalcode, 'monthlyDonor': 'Yes', 'donorAddress': ''   ,   'billingState': state, 'billingAddress': streetaddress, 'billingAddressUnit': addressunit, 'billingCity': city, 'billingEmail': emailaddress, 'billingFirstName': firstname, 'billingLastName': lastname}
+                payload = {'donorName': existing_name, 'donorEmail':email, 'projectName': project, 'donationAmount': amount, 'projectTitle': description, 'postalCode': postalcode, 'monthlyDonor': 'Yes', 'donorAddress': ''   ,   'billingState': state, 'billingAddress': streetaddress, 'billingAddressUnit': addressunit, 'billingCity': city, 'billingEmail': emailaddress, 'billingFirstName': firstname, 'billingLastName': lastname , 'mailingState':mailingstate, 'mailingAddress':mailingstreet , 'mailingAddressUnit':mailingsuite ,'mailingCity':mailingcity, 'tshirtSize':tshirtsize}
             else:
-                payload = {'donorName': existing_name, 'donorEmail':email, 'projectName': projectmain, 'donationAmount': amount, 'projectTitle': description, 'postalCode': postalcode, 'monthlyDonor': 'No','donorAddress': ''  ,  'billingState': state, 'billingAddress': streetaddress, 'billingAddressUnit': addressunit, 'billingCity': city, 'billingEmail': emailaddress, 'billingFirstName': firstname, 'billingLastName': lastname}
+                payload = {'donorName': existing_name, 'donorEmail':email, 'projectName': projectmain, 'donationAmount': amount, 'projectTitle': description, 'postalCode': postalcode, 'monthlyDonor': 'No','donorAddress': ''  ,  'billingState': state, 'billingAddress': streetaddress, 'billingAddressUnit': addressunit, 'billingCity': city, 'billingEmail': emailaddress, 'billingFirstName': firstname, 'billingLastName': lastname , 'mailingState':mailingstate, 'mailingAddress':mailingstreet , 'mailingAddressUnit':mailingsuite ,'mailingCity':mailingcity, 'tshirtSize':tshirtsize}
 
 
         if existing_name == '':

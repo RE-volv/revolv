@@ -50,6 +50,19 @@ def stripe_address_sfdc(request):
         firstnamez = request.POST['stripefirstname'] 
         lastnamez = request.POST['stripelastname'] 
 
+        tshirtz = ''
+        mailingstreetz = ''
+        mailingsuitez = ''
+        mailingcityz = ''
+        mailingstatez = ''
+
+        if request.POST.get("stripetshirt", None):
+            tshirtz = request.POST['stripetshirt']
+            mailingstreetz = request.POST['stripemailingstreet'] 
+            mailingsuitez = request.POST['stripemailingsuite']
+            mailingcityz = request.POST['stripemailingcity'] 
+            mailingstatez = request.POST['stripemailingstate']
+
         # amount input session for campaign module donation is not rounded by decimal point
         amountz = request.session.get('amount_input')
 
@@ -73,9 +86,9 @@ def stripe_address_sfdc(request):
            
         #check if project monthly Donations
         if project == 'Monthly Donations':
-            send_donation_info(emailz, mainAmount, emailz, project, project_sub , zipz, statez, streetz, suitez, cityz, emailz, firstnamez, lastnamez, address='')
-        else: 
-            send_donation_info(emailz, mainAmount, emailz, project, project_sub , zipz, statez, streetz, suitez, cityz, emailz, firstnamez, lastnamez, address='')
+            send_donation_info(emailz, mainAmount, emailz, project, project_sub , zipz, statez, streetz, suitez, cityz, emailz, firstnamez, lastnamez, mailingstatez, mailingstreetz, mailingsuitez, mailingcityz, tshirtz, address='')
+        else:
+            send_donation_info(emailz, mainAmount, emailz, project, project_sub , zipz, statez, streetz, suitez, cityz, emailz, firstnamez, lastnamez, mailingstatez, mailingstreetz, mailingsuitez, mailingcityz, tshirtz, address='')
             
         #send_donation_info(email, donation_cents / 100.0, email, 'Monthly Donations', 'Monthly Donations', postalcode, address='')
 
@@ -689,20 +702,54 @@ def stripe_operation_donation(request):
             # Add consent to track value
             consent_to_track = 'yes' # Valid: 'yes', 'no', 'unchanged'
 
-
-            # anon and logged in users gets stripe email sends to that email
-
-            # Send the message and save the response   
-            # on request post data parameters -> transfer  
-            # email -> placeholder  get email data - post -> email
-            # donations to projects, wb etc for monthly donations function 
-            # amount cents  data -> amount cents
-
-            # response = tx_mailer.smart_email_send(smart_email_id, 'Ryan Dexter <mark@re-volv.org>', consent_to_track, data = my_datax)
-
-            # Send the message and save the response
-            # response = tx_add.add(list_id, emailz, "Test name", [] , True, consent_to_track)
             response = tx_mailer.smart_email_send(smart_email_id, donor_email_cm, consent_to_track, data = my_data)
+
+            if donation_amount < 34:
+                smart_email_id = '235b79ac-9e4b-42a5-afb0-055837854a90'
+                # ---------------------------
+                tx_mailer = Transactional(auth)
+
+                donation_amount = amount / 100.00
+
+                donor_email_cm = request.POST['stripeEmail']
+
+                my_data = {
+                    'x-apple-data-detectors': 'x-apple-data-detectorsTestValue',
+                    'href^="tel"': 'href^="tel"TestValue',
+                    'href^="sms"': 'href^="sms"TestValue',
+                    'owa': 'owaTestValue',
+                    'role=section': 'role=sectionTestValue',
+                    'style*="font-size:1px"': 'style*="font-size:1px"TestValue',
+                    'donation': donation_amount
+                }
+
+                consent_to_track = 'yes' # Valid: 'yes', 'no', 'unchanged'
+
+                response = tx_mailer.smart_email_send(smart_email_id, donor_email_cm, consent_to_track, data = my_data)
+                # ---------------------------
+            elif donation_amount > 34:
+                smart_email_id = '334df744-cfd2-4503-bac2-3e58bf2c7845'
+                # ---------------------------
+                tx_mailer = Transactional(auth)
+
+                donation_amount = amount / 100.00
+
+                donor_email_cm = request.POST['stripeEmail']
+
+                my_data = {
+                    'x-apple-data-detectors': 'x-apple-data-detectorsTestValue',
+                    'href^="tel"': 'href^="tel"TestValue',
+                    'href^="sms"': 'href^="sms"TestValue',
+                    'owa': 'owaTestValue',
+                    'role=section': 'role=sectionTestValue',
+                    'style*="font-size:1px"': 'style*="font-size:1px"TestValue',
+                    'donation': donation_amount
+                }
+
+                consent_to_track = 'yes' # Valid: 'yes', 'no', 'unchanged'
+
+                response = tx_mailer.smart_email_send(smart_email_id, donor_email_cm, consent_to_track, data = my_data)
+                # ---------------------------
          
 
             return HttpResponse(json.dumps({'status': 'subscription_success', 'amount': amount / float(100)}),
