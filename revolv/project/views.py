@@ -146,7 +146,7 @@ def stripe_address_sfdc(request):
                     'role=section': 'role=sectionTestValue',
                     'style*="font-size:1px"': 'style*="font-size:1px"TestValue',
                     'donation': donation_amount,
-                    'firstname': firstnamez
+                    'firstname': donor_name
                 }
 
                 consent_to_track = 'yes' # Valid: 'yes', 'no', 'unchanged'
@@ -179,7 +179,7 @@ def stripe_address_sfdc(request):
                     'role=section': 'role=sectionTestValue',
                     'style*="font-size:1px"': 'style*="font-size:1px"TestValue',
                     'donation': donation_amount,
-                    'firstname': firstnamez
+                    'firstname': donor_name
                 }
 
                 consent_to_track = 'yes' # Valid: 'yes', 'no', 'unchanged'
