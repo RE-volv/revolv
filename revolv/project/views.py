@@ -86,8 +86,108 @@ def stripe_address_sfdc(request):
            
         #check if project monthly Donations
         if project == 'Monthly Donations':
+
             send_donation_info(emailz, mainAmount, emailz, project, project_sub , zipz, statez, streetz, suitez, cityz, emailz, firstnamez, lastnamez, mailingstatez, mailingstreetz, mailingsuitez, mailingcityz, tshirtz, address='')
+                     
+            #----- Campaign monitor --------
+            auth = {'api_key': settings.CM_KEY }
+
+            # The unique identifier for this smart email
+            #smart_email_id = '16aa58f8-f16a-44af-bc8b-b2fef5ac4a7f'
+
+            # Create a new mailer and define your message
+            tx_mailer = Transactional(auth)
+
+            donation_amount = mainAmount
+
+            # donor name
+            donor_name = firstnamez
+
+            donor_email_cm = emailz
+
+            my_data = {
+                'x-apple-data-detectors': 'x-apple-data-detectorsTestValue',
+                'href^="tel"': 'href^="tel"TestValue',
+                'href^="sms"': 'href^="sms"TestValue',
+                'owa': 'owaTestValue',
+                'role=section': 'role=sectionTestValue',
+                'style*="font-size:1px"': 'style*="font-size:1px"TestValue',
+                'donation': donation_amount,
+                'firstName': donor_name
+            }
+
+            # Add consent to track value
+            consent_to_track = 'yes' # Valid: 'yes', 'no', 'unchanged'
+
+
+            if donation_amount < 34:
+
+                auth = {'api_key': settings.CM_KEY }
+
+                # Create a new mailer and define your message
+                tx_mailer = Transactional(auth)
+
+                smart_email_id = '235b79ac-9e4b-42a5-afb0-055837854a90'
+                # ---------------------------
+                tx_mailer = Transactional(auth)
+
+                donation_amount = mainAmount
+
+                donor_email_cm = emailz
+
+                # donor name
+                donor_name = firstnamez
+
+                my_data = {
+                    'x-apple-data-detectors': 'x-apple-data-detectorsTestValue',
+                    'href^="tel"': 'href^="tel"TestValue',
+                    'href^="sms"': 'href^="sms"TestValue',
+                    'owa': 'owaTestValue',
+                    'role=section': 'role=sectionTestValue',
+                    'style*="font-size:1px"': 'style*="font-size:1px"TestValue',
+                    'donation': donation_amount,
+                    'firstname': firstnamez
+                }
+
+                consent_to_track = 'yes' # Valid: 'yes', 'no', 'unchanged'
+
+                response = tx_mailer.smart_email_send(smart_email_id, donor_email_cm, consent_to_track, data = my_data)
+                # ---------------------------
+            elif donation_amount > 34:
+                
+                auth = {'api_key': settings.CM_KEY }
+
+                # Create a new mailer and define your message
+                tx_mailer = Transactional(auth)
+
+                smart_email_id = '334df744-cfd2-4503-bac2-3e58bf2c7845'
+                # ---------------------------
+                tx_mailer = Transactional(auth)
+
+                donation_amount = mainAmount
+
+                donor_email_cm = emailz
+
+                # donor name
+                donor_name = firstnamez
+
+                my_data = {
+                    'x-apple-data-detectors': 'x-apple-data-detectorsTestValue',
+                    'href^="tel"': 'href^="tel"TestValue',
+                    'href^="sms"': 'href^="sms"TestValue',
+                    'owa': 'owaTestValue',
+                    'role=section': 'role=sectionTestValue',
+                    'style*="font-size:1px"': 'style*="font-size:1px"TestValue',
+                    'donation': donation_amount,
+                    'firstname': firstnamez
+                }
+
+                consent_to_track = 'yes' # Valid: 'yes', 'no', 'unchanged'
+
+                response = tx_mailer.smart_email_send(smart_email_id, donor_email_cm, consent_to_track, data = my_data)
+                # ---------------------------
         else:
+
             send_donation_info(emailz, mainAmount, emailz, project, project_sub , zipz, statez, streetz, suitez, cityz, emailz, firstnamez, lastnamez, mailingstatez, mailingstreetz, mailingsuitez, mailingcityz, tshirtz, address='')
             
         #send_donation_info(email, donation_cents / 100.0, email, 'Monthly Donations', 'Monthly Donations', postalcode, address='')
@@ -674,84 +774,7 @@ def stripe_operation_donation(request):
                 context, [email]
             )
 
-            #----- Campaign monitor --------
-            # emailz = request.POST['email']
-            # Authenticate with your API Key
-            auth = {'api_key': settings.CM_KEY }
-
-            # The unique identifier for this smart email
-            smart_email_id = '16aa58f8-f16a-44af-bc8b-b2fef5ac4a7f'
-
-            # Create a new mailer and define your message
-            tx_mailer = Transactional(auth)
-
-            donation_amount = amount / 100.00
-
-            donor_email_cm = request.POST['stripeEmail']
-
-            my_data = {
-                'x-apple-data-detectors': 'x-apple-data-detectorsTestValue',
-                'href^="tel"': 'href^="tel"TestValue',
-                'href^="sms"': 'href^="sms"TestValue',
-                'owa': 'owaTestValue',
-                'role=section': 'role=sectionTestValue',
-                'style*="font-size:1px"': 'style*="font-size:1px"TestValue',
-                'donation': donation_amount
-            }
-
-            # Add consent to track value
-            consent_to_track = 'yes' # Valid: 'yes', 'no', 'unchanged'
-
-            response = tx_mailer.smart_email_send(smart_email_id, donor_email_cm, consent_to_track, data = my_data)
-
-            if donation_amount < 34:
-                smart_email_id = '235b79ac-9e4b-42a5-afb0-055837854a90'
-                # ---------------------------
-                tx_mailer = Transactional(auth)
-
-                donation_amount = amount / 100.00
-
-                donor_email_cm = request.POST['stripeEmail']
-
-                my_data = {
-                    'x-apple-data-detectors': 'x-apple-data-detectorsTestValue',
-                    'href^="tel"': 'href^="tel"TestValue',
-                    'href^="sms"': 'href^="sms"TestValue',
-                    'owa': 'owaTestValue',
-                    'role=section': 'role=sectionTestValue',
-                    'style*="font-size:1px"': 'style*="font-size:1px"TestValue',
-                    'donation': donation_amount
-                }
-
-                consent_to_track = 'yes' # Valid: 'yes', 'no', 'unchanged'
-
-                response = tx_mailer.smart_email_send(smart_email_id, donor_email_cm, consent_to_track, data = my_data)
-                # ---------------------------
-            elif donation_amount > 34:
-                smart_email_id = '334df744-cfd2-4503-bac2-3e58bf2c7845'
-                # ---------------------------
-                tx_mailer = Transactional(auth)
-
-                donation_amount = amount / 100.00
-
-                donor_email_cm = request.POST['stripeEmail']
-
-                my_data = {
-                    'x-apple-data-detectors': 'x-apple-data-detectorsTestValue',
-                    'href^="tel"': 'href^="tel"TestValue',
-                    'href^="sms"': 'href^="sms"TestValue',
-                    'owa': 'owaTestValue',
-                    'role=section': 'role=sectionTestValue',
-                    'style*="font-size:1px"': 'style*="font-size:1px"TestValue',
-                    'donation': donation_amount
-                }
-
-                consent_to_track = 'yes' # Valid: 'yes', 'no', 'unchanged'
-
-                response = tx_mailer.smart_email_send(smart_email_id, donor_email_cm, consent_to_track, data = my_data)
-                # ---------------------------
          
-
             return HttpResponse(json.dumps({'status': 'subscription_success', 'amount': amount / float(100)}),
                                 content_type="application/json")
 
