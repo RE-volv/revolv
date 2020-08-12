@@ -347,6 +347,18 @@ input[type="color"]:focus,
 		justify-content: space-between;
 	}
 }
+
+@media (max-width: 1176px) {
+	.navbar-expand-lg .navbar-collapse {
+		display: block !important;
+		-ms-flex-preferred-size: auto;
+		flex-basis: auto;
+	}
+	.form-inline {
+		flex-flow: row-reverse;
+	}
+}
+
 /* Off canvas Menu */
 @media (max-width: 991px) {
 	#navbar-section {
