@@ -333,6 +333,20 @@ input[type="color"]:focus,
 #navbar-section.active-dark .offcanvas-collapse {
     background-color: rgba(0, 0, 0, 0.9);
 }
+
+@media (max-width: 1302px) {
+	.navbar-expand-lg {
+		flex-flow: column;
+		justify-content: flex-start;
+	}
+}
+
+@media (max-width: 991px) {
+	.navbar-expand-lg {
+		flex-flow: row;
+		justify-content: space-between;
+	}
+}
 /* Off canvas Menu */
 @media (max-width: 991px) {
 	#navbar-section {

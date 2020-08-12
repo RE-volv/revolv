@@ -759,7 +759,7 @@ input::-ms-clear {
 
 .Checkout.is-desktop .Addresses-object {
   position: absolute;
-  top: 4px;
+  top: -15px;
   left: 0;
   padding-left: 36px;
   padding-right: 36px;
@@ -2355,7 +2355,7 @@ input::-ms-clear {
   display: inline-block;
   border-radius: 6px;
   width: 300px;
-  padding-bottom: 36px;
+  padding-bottom: 22px;
   position: relative;
   background-color: #f5f5f7;
   box-shadow: 0 12px 30px 0 rgba(0, 0, 0, .5), inset 0 1px 0 0 hsla(0, 0%, 100%, .65);
@@ -5014,7 +5014,7 @@ input::-ms-clear {
 
 .Checkout.is-desktop .Addresses-object {
   position: absolute;
-  top: 4px;
+  top: -15px;
   left: 0;
   padding-left: 36px;
   padding-right: 36px;
@@ -6610,7 +6610,7 @@ input::-ms-clear {
   display: inline-block;
   border-radius: 6px;
   width: 300px;
-  padding-bottom: 36px;
+  padding-bottom: 22px;
   position: relative;
   background-color: #f5f5f7;
   box-shadow: 0 12px 30px 0 rgba(0, 0, 0, .5), inset 0 1px 0 0 hsla(0, 0%, 100%, .65);

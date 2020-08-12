@@ -83,7 +83,7 @@ def stripe_address_sfdc(request):
             project_sub = request.session.get('projectmain_input')
             project = request.session.get('project')
 
-           
+        
         #check if project monthly Donations
         if project == 'Monthly Donations':
 
