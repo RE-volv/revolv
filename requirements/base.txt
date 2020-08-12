@@ -36,6 +36,7 @@ django-blog-zinnia==0.15.2
 django-tagging==0.4.5
 Django==1.7.1
 django-mptt==0.6.1
+cryptography==2.9.1
 
 python-social-auth==0.2
   python-openid==2.2.5
