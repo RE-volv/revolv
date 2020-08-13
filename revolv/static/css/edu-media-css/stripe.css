@@ -1857,7 +1857,7 @@ input::-ms-clear {
 
 .Checkout.is-desktop .Header {
   position: relative;
-  padding: 12px 36px;
+  padding: 1px 36px;
   text-align: center;
   background-color: #e8e9eb
 }
@@ -1917,7 +1917,7 @@ input::-ms-clear {
 
 .Checkout.is-desktop .Header-logoWrap {
   position: absolute;
-  top: -38px;
+  top: -28px;
   right: 0;
   left: 0;
   width: 70px;
@@ -6112,7 +6112,7 @@ input::-ms-clear {
 
 .Checkout.is-desktop .Header {
   position: relative;
-  padding: 12px 36px;
+  padding: 1px 36px;
   text-align: center;
   background-color: #e8e9eb
 }
@@ -6172,7 +6172,7 @@ input::-ms-clear {
 
 .Checkout.is-desktop .Header-logoWrap {
   position: absolute;
-  top: -38px;
+  top: -28px;
   right: 0;
   left: 0;
   width: 70px;

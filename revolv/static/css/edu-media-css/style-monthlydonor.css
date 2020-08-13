@@ -501,7 +501,7 @@ div {
 */
 
 ul {
-    padding-inline-start: 30px !important;
+    padding-inline-start: 30px;
     list-style: none !important;
   }
   li {

@@ -199,9 +199,9 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-md-6 text-right mt-4">
+          <div class="col-sm-12 col-md-6 text-right mt-4" id="tabs-donor-box">
             <div class="donate-tabs">
-              <ul class="nav justify-content-center" role="tablist">
+              <ul class="nav justify-content-center" role="tablist" style="padding-inline-start: 0px;">
                 <li class="nav-item">
                   <a class="nav-link" data-toggle="tab" href="#tabs-once" role="tab">Give Once</a>
                 </li>
@@ -224,7 +224,7 @@
                         oninput="validity.valid||(value='');" value="35" placeholder="Custom"
                         name="donation_amount_cents" class="form-control" aria-label="Amount (to the nearest dollar)">
                       <div class="input-group-append">
-                        <span class="postinput input-group-text">USD</span>
+                        <span class="postinput input-group-text" style="padding: .375rem 0.50rem;">USD</span>
                       </div>
                     </div>
                     <!-- Amount -->
@@ -446,7 +446,7 @@
       <div class="row align-items-center">
         <div class="col-sm-12 col-md-12 text-center text-white my-2">
           <div class="row justify-content-center"> 
-              <a class="btn-monthly-donate btn btn-blue btn-me mx-2 my-2 donate-btn-mb" href="#donate-box" style="height: 100%; min-width: 400px; padding: 2em 3em;">Donate</a>
+              <a class="btn-monthly-donate btn btn-blue btn-me mx-2 my-2 donate-btn-mb" href="#tabs-donor-box" style="height: 100%; min-width: 400px; padding: 2em 3em;">Donate</a>
           </div>
         </div>    
         </div>

@@ -239,7 +239,7 @@
                         </div>
                       </div>
                     </div>
-                    <h1 class="Header-companyName u-textTruncate">RE-volv</h1>
+                    <h1 class="Header-companyName u-textTruncate" style="margin-bottom:0px; padding: 6px;">RE-volv</h1>
                     <h2 class="Header-purchaseDescription u-textTruncate" style="display:none;">Thank you for donating
                     </h2>
                     <div class="Header-account" style="position: relative;"></div>
@@ -256,7 +256,7 @@
 
                   <div style="position: relative; height: 270px;">
                     <div>
-                      <div class="Section Section--modalBody">
+                      <div class="Section Section--modalBody" style="padding-top: 10px;">
                         <div class="Section-content "><span>
 
                             <p> Enter your billing address</p>
@@ -276,7 +276,7 @@
                                         <div style="position: relative;">
                                           <div>
                                             <fieldset class="Fieldset Fieldset--subdued"><span
-                                                class="Fieldset-childLeftRight Fieldset-childTopBottom Fieldset-child--subdued Fieldset-child--checkboxActive u-paddingSm u-displayBlock">
+                                                class="Fieldset-childLeftRight Fieldset-childTopBottom Fieldset-child--subdued Fieldset-child--checkboxActive u-paddingSm u-displayBlock" style="padding: 4px!important;">
 
                                                 <a href="#" class=""
                                                   style="border: none; box-shadow: none; vertical-align: -4px; width: 15px;
@@ -303,7 +303,7 @@
 
                                     <div id="billingButtons" class="StaggerGroup-child is-head-1 is-tail-4"
                                       style="display:none;">
-                                      <div class="Section Section--fillBottom">
+                                      <div class="Section Section--fillBottom" style="padding-bottom:10px;">
                                         <div style="position: relative;">
                                           <div style="">
                                             <div>
@@ -646,7 +646,7 @@
                                                     <input type="text"
                                                       class="form-control Fieldset-input Textbox-control"
                                                       id="StripeMailingZipcode" value="" name="StripeFormMailingZipcode"
-                                                      for="stripemailingzipcode" placeholder="Zipcode"
+                                                      for="stripemailingzipcode" placeholder="Zip code"
                                                       autocomplete="stripe-mailingzipcode" >
 
                                                     <div class="Textbox-iconLeft"><span class="Icon-wrapper"><svg
@@ -698,7 +698,7 @@
 
 
 
-                  <nav id="complete_btn" class="Section Section-content" role="navigation" style="margin-top: 140px;">
+                  <nav id="complete_btn" class="Section Section-content" role="navigation" style="margin-top: 120px;">
 
                     <div style="position: relative;">
                       <div>
@@ -751,11 +751,11 @@ $(document).ready(function () {
    
     });
 
-    $("input#scales:checkbox").change(function () {
+    $("#scales:checkbox").change(function () {
     if (this.checked) {
-      $('#complete_btn').css('margin-top', '140px');
+      $('#complete_btn').css('margin-top', '100px');
     } else if (!this.checked) {
-      $('#complete_btn').css('margin-top', '200px');
+      $('#complete_btn').css('margin-top', '130px');
     }
   });
 
