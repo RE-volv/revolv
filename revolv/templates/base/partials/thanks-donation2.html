@@ -916,9 +916,8 @@ $('#billingButtons .SegmentedControl-Item-Shipping').click(function () {
             $formstate.appendTo($form);
 
 
-            if ($("#StripeCity, #StripeStreet, #StripeLastName, #StripeFirstName, #StripeTShirt, #StripeState, #tshirtselector").val() === "") {
+            if ($("#StripeStreet").val() === "" || $("#StripeCity").val() === ""  || $("#StripeFirstname").val() === ""   || $("#StripeLastName").val() === ""   || $("#tshirtselector").val() === ""   || $("#StripeTShirt").val() === "" || $("#StripeState").val() === "" ) {
 
-                              
             } else {
 
             $.ajax({
@@ -949,7 +948,8 @@ $('#billingButtons .SegmentedControl-Item-Shipping').click(function () {
               isValid("#StripeCity, #StripeStreet, #StripeLastName, #StripeFirstName, #StripeTShirt, #StripeState, #tshirtselector");
 
 
-              if ($("#StripeCity, #StripeStreet").val() === "") {
+
+              if ($("#StripeStreet").val() === "" || $("#StripeCity").val() === ""  || $("#StripeFirstname").val() === ""   || $("#StripeLastName").val() === ""   || $("#tshirtselector").val() === ""   || $("#StripeTShirt").val() === "" || $("#StripeState").val() === "" ) {
 
                               
               }
