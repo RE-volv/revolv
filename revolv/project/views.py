@@ -55,6 +55,7 @@ def stripe_address_sfdc(request):
         mailingsuitez = ''
         mailingcityz = ''
         mailingstatez = ''
+        mailingzipcodez = ''
 
         if request.POST.get("stripetshirt", None):
             tshirtz = request.POST['stripetshirt']
@@ -62,6 +63,8 @@ def stripe_address_sfdc(request):
             mailingsuitez = request.POST['stripemailingsuite']
             mailingcityz = request.POST['stripemailingcity'] 
             mailingstatez = request.POST['stripemailingstate']
+            mailingzipcodez = request.POST['stripemailingzipcode']
+            
 
         # amount input session for campaign module donation is not rounded by decimal point
         amountz = request.session.get('amount_input')
@@ -87,7 +90,7 @@ def stripe_address_sfdc(request):
         #check if project monthly Donations
         if project == 'Monthly Donations':
 
-            send_donation_info(emailz, mainAmount, emailz, project, project_sub , zipz, statez, streetz, suitez, cityz, emailz, firstnamez, lastnamez, mailingstatez, mailingstreetz, mailingsuitez, mailingcityz, tshirtz, address='')
+            send_donation_info(emailz, mainAmount, emailz, project, project_sub , zipz, statez, streetz, suitez, cityz, emailz, firstnamez, lastnamez, mailingstatez, mailingstreetz, mailingsuitez, mailingcityz, mailingzipcodez, tshirtz, address='')
                      
             #----- Campaign monitor --------
             auth = {'api_key': settings.CM_KEY }
@@ -188,7 +191,7 @@ def stripe_address_sfdc(request):
                 # ---------------------------
         else:
 
-            send_donation_info(emailz, mainAmount, emailz, project, project_sub , zipz, statez, streetz, suitez, cityz, emailz, firstnamez, lastnamez, mailingstatez, mailingstreetz, mailingsuitez, mailingcityz, tshirtz, address='')
+            send_donation_info(emailz, mainAmount, emailz, project, project_sub , zipz, statez, streetz, suitez, cityz, emailz, firstnamez, lastnamez, mailingstatez, mailingstreetz, mailingsuitez, mailingcityz, mailingzipcodez, tshirtz, address='')
             
         #send_donation_info(email, donation_cents / 100.0, email, 'Monthly Donations', 'Monthly Donations', postalcode, address='')
 

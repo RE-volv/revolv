@@ -810,6 +810,7 @@ $('#billingButtons .SegmentedControl-Item-Shipping').click(function () {
         var tcmailcity = $(this).closest("form").find("input[name='StripeFormMailingCity']").val();
         var tcmailstate = $(this).closest("form").find("input[name='StripeFormMailingState']").val();
 
+        var tcmailzipcode = $(this).closest("form").find("input[name='StripeFormMailingZipcode']").val();
 
 
         var serialized = $form.serializeArray();
@@ -859,6 +860,14 @@ $('#billingButtons .SegmentedControl-Item-Shipping').click(function () {
  
             $stripemailingstate.appendTo($form);
 
+
+            var $stripemailingzipcode = $('<input>')
+              .attr('type', 'hidden')
+              .attr('name', 'stripemailingzipcode')
+              .val(tcmailzipcode);
+ 
+            $stripemailingzipcode.appendTo($form);
+
             //----
 
             // mailing addrs
@@ -906,8 +915,8 @@ $('#billingButtons .SegmentedControl-Item-Shipping').click(function () {
 
             $formstate.appendTo($form);
 
-            
-            if ($("#StripeStreet, #StripeCity").val() === "") {
+
+            if ($("#StripeCity, #StripeStreet, #StripeLastName, #StripeFirstName, #StripeTShirt, #StripeState, #tshirtselector").val() === "") {
 
                               
             } else {
@@ -940,7 +949,7 @@ $('#billingButtons .SegmentedControl-Item-Shipping').click(function () {
               isValid("#StripeCity, #StripeStreet, #StripeLastName, #StripeFirstName, #StripeTShirt, #StripeState, #tshirtselector");
 
 
-              if ($("#StripeCity, #StripeStreet, #StripeLastName, #StripeFirstName, #StripeTShirt, #StripeState, #tshirtselector").val() === "") {
+              if ($("#StripeCity, #StripeStreet").val() === "") {
 
                               
               }
