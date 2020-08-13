@@ -3964,7 +3964,7 @@ input::-ms-clear {
   color: #5b5b65;
   display: table-cell;
   font-weight: 700;
-  height: 35px;
+  height: 30px;
   text-align: center;
   text-shadow: 0 1px 0 #fff;
   vertical-align: middle;
@@ -8219,7 +8219,7 @@ input::-ms-clear {
   color: #5b5b65;
   display: table-cell;
   font-weight: 700;
-  height: 35px;
+  height: 30px;
   text-align: center;
   text-shadow: 0 1px 0 #fff;
   vertical-align: middle;

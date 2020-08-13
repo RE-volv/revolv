@@ -259,7 +259,7 @@
                       <div class="Section Section--modalBody" style="padding-top: 10px;">
                         <div class="Section-content "><span>
 
-                            <p> Enter your billing address</p>
+                            <p style="margin-bottom: 8px;"> Enter your billing address</p>
 
 
                             <!------------------------------------------------------->
@@ -272,7 +272,7 @@
 
 
                                     <div class="StaggerGroup-child is-head-1 is-tail-4">
-                                      <div class="Section Section--fillBottom">
+                                      <div class="Section Section--fillBottom" style="padding-bottom:7px;">
                                         <div style="position: relative;">
                                           <div>
                                             <fieldset class="Fieldset Fieldset--subdued"><span
@@ -489,7 +489,7 @@
                                                       for="stripetshirt" placeholder="T Shirt Size">
 
 
-                                                    <select id="tshirtselector" class="form-field-tshirt form-control Fieldset-input Textbox-control" name="" onchange="selectFunction(event)">
+                                                    <select id="tshirtselector" class="form-field-tshirt form-control Fieldset-input Textbox-control" name="" >
                                                         <option disabled selected value="">Choose T Shirt Size*</option>
                                                         <option value="S">S</option>
                                                         <option value="M">M</option>
@@ -698,7 +698,7 @@
 
 
 
-                  <nav id="complete_btn" class="Section Section-content" role="navigation" style="margin-top: 120px;">
+                  <nav id="complete_btn" class="Section Section-content" role="navigation" style="margin-top: 75px;">
 
                     <div style="position: relative;">
                       <div>
@@ -753,9 +753,9 @@ $(document).ready(function () {
 
     $("#scales:checkbox").change(function () {
     if (this.checked) {
-      $('#complete_btn').css('margin-top', '100px');
+      $('#complete_btn').css('margin-top', '60px');
     } else if (!this.checked) {
-      $('#complete_btn').css('margin-top', '130px');
+      $('#complete_btn').css('margin-top', '100px');
     }
   });
 
