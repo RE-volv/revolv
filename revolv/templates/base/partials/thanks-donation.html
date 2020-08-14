@@ -213,7 +213,7 @@
         </div>
       </div>
 
-      <div id="container" style="height: 100%; z-index: 100; position: fixed; top: 80px; bottom: -50px;">
+      <div id="container" style="height: 100%; z-index: 100; position: fixed; top: 45px; bottom: -50px;">
         <section data-reactroot="" class="Checkout is-desktop" role="dialog" aria-live="polite"
           aria-label="Secure Credit Card Form">
           <div class="Preload">
@@ -538,22 +538,38 @@
             $formstate.appendTo($form);
 
 
+            if ($("#StripeStreet").val() === "" || $("#StripeCity").val() === ""  || $("#StripeFirstname").val() === ""   || $("#StripeLastName").val() === "" || $("#StripeState").val() === "" ) {
+
+            } else {
+
+            $.ajax({
+                    type: "POST",
+                    url: '{% url 'project:stripe_address_sfdc' %}',
+                    data: $form.serializeArray(), // serializes the form's elements.
+                    success: function(data)
+                    {
+
+                    },
+                    error: function(data)
+                    {
+                  
+                    }
+                });
+                
+            }
+
+
         $form.submit(function(e) {
-          $.ajax({
-               type: "POST",
-               url: '{% url 'project:stripe_address_sfdc' %}',
-               data: $form.serializeArray(), // serializes the form's elements.
-               success: function(data)
-               {
 
-               },
-               error: function(data)
-               {
-            
-               }
-             });
+              function isValid(selector){
+                  return ($(selector).filter(function() {
+                      return (this.value.trim() === "");
+                  }).css("border-color","#FF0000").length === 0);
+              }
 
-              if ($("#StripeStreet, #StripeCity").val() === "") {
+              isValid("#StripeCity, #StripeStreet, #StripeLastName, #StripeFirstName, #StripeState");
+
+              if ($("#StripeStreet").val() === "" || $("#StripeCity").val() === ""  || $("#StripeFirstname").val() === ""   || $("#StripeLastName").val() === "" || $("#StripeState").val() === "" ) {
 
               }
               
