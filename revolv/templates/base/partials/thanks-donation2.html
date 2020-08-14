@@ -239,7 +239,7 @@
                         </div>
                       </div>
                     </div>
-                    <h1 class="Header-companyName u-textTruncate" style="margin-bottom:0px; padding: 6px;">RE-volv</h1>
+                    <h1 class="Header-companyName u-textTruncate" style="margin-bottom:0px !important; padding: 6px !important;">RE-volv</h1>
                     <h2 class="Header-purchaseDescription u-textTruncate" style="display:none;">Thank you for donating
                     </h2>
                     <div class="Header-account" style="position: relative;"></div>
@@ -281,8 +281,7 @@
                                                 <a href="#" class=""
                                                   style="border: none; box-shadow: none; vertical-align: -4px; width: 15px;
                                                     height: 15px;     display: inline-block; -webkit-user-select: none;">
-                                                  <input class="" type="checkbox" id="scales" name="scales" value="1"
-                                                    checked>
+                                                  <input class="" type="checkbox" id="scales" name="scales" value="1" checked="checked">
 
                                                 </a>
 
@@ -303,7 +302,7 @@
 
                                     <div id="billingButtons" class="StaggerGroup-child is-head-1 is-tail-4"
                                       style="display:none;">
-                                      <div class="Section Section--fillBottom" style="padding-bottom:10px;">
+                                      <div class="Section Section--fillBottom" style="padding-bottom:7px !important;">
                                         <div style="position: relative;">
                                           <div style="">
                                             <div>
@@ -646,7 +645,7 @@
                                                     <input type="text"
                                                       class="form-control Fieldset-input Textbox-control"
                                                       id="StripeMailingZipcode" value="" name="StripeFormMailingZipcode"
-                                                      for="stripemailingzipcode" placeholder="Zip code"
+                                                      for="stripemailingzipcode" placeholder="ZIP Code"
                                                       autocomplete="stripe-mailingzipcode" >
 
                                                     <div class="Textbox-iconLeft"><span class="Icon-wrapper"><svg
@@ -753,7 +752,7 @@ $(document).ready(function () {
 
     $("#scales:checkbox").change(function () {
     if (this.checked) {
-      $('#complete_btn').css('margin-top', '60px');
+      $('#complete_btn').css('margin-top', '95px');
     } else if (!this.checked) {
       $('#complete_btn').css('margin-top', '100px');
     }
