@@ -465,6 +465,13 @@ class Project(models.Model):
         max_length=255,
         help_text='Date of installation for this project - new fields'
     )
+    city_state = models.CharField(
+        'Project City and State',
+        max_length=255,
+        blank=True,
+        null=True,
+        help_text='City and State of the project?'
+    )
 
     financial_product =  models.CharField(
         'Financial product',
