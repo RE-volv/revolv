@@ -67,6 +67,7 @@ urlpatterns = patterns(
     url(r'^get-involved/education/crowdfunding', 'revolv.base.views.solarcrowdfundingsection', name='solarcrowdfundingsection'),
     url(r'^get-involved/education/careers', 'revolv.base.views.solarcareerssection', name='solarcareerssection'),
 
+    url(r'^climate-courage', 'revolv.base.views.climate_courage', name='climate_courage'),
     #education center articles
     url(r'^get-involved/education/solarjobs', 'revolv.base.views.solarforall', name='solarforall'),
     url(r'^get-involved/education/reasonforsolar', 'revolv.base.views.reasonforsolar', name='reasonforsolar'),
