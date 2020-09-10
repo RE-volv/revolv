@@ -222,6 +222,115 @@ a {
         </div>
       </form>
 
+      <div class="wrapper mt-5">
+        <div class="col-md-12" style="text-align: center;">
+          <h1 class="blue-text fw-300 mb-5">RE-volv Annoucements</h1>
+        </div>
+        <div class="carousel">
+          <div>
+            <div class="card">
+              <div class="ribbon-wrapper">
+                <div class="ribbon green">Event</div>
+              </div>
+              <div class="card-header">
+                <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1599700440/images/edu-media-img/ipl-webinar.png">
+              </div>
+              <div class="card-body">
+                <div class="card-content">
+                  <div class="card-title">Interfaith Power & Light Webinar</div>
+                  <div class="card-text">
+                    <p>Learn how to implement solar at faith communities and other nonprofit organizations. Join us on
+                      <strong>Sep 15, 2020</strong> at 11 AM PST.</p>
+                    <div class="row">
+                      <div class="col-md-12 col-lg-12">
+                        <a class="btn btn-blue btn-block" href="http://bit.ly/AccessibleSolar_Sept15" target="_blank"
+                          rel="noopener noreferrer">Register Here</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card">
+              <div class="ribbon-wrapper">
+                <div class="ribbon green">Event</div>
+              </div>
+              <div class="card-header">
+                <img
+                  src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1599703633/images/edu-media-img/climatecourage-book.png">
+              </div>
+              <div class="card-body">
+                <div class="card-content">
+                  <div class="card-title">Climate Courage Book Launch</div>
+                  <div class="card-text">
+                    <p>Join us on <strong>September 29th</strong> at 4pm Eastern Time, 1pm Pacific Time, Katharine Hayhoe,
+                      Bill McKibben and Andreas Karelas, will connect over Zoom for a round table discussion about the themes
+                      of Climate Courage.</p>
+                    <div class="row">
+                      <div class="col-md-12 col-lg-12">
+                        <a class="btn btn-blue btn-block" href="http://climatecourage.eventbrite.com" target="_blank"
+                          rel="noopener noreferrer" role="button">Sign up</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="card">
+              <div class="ribbon-wrapper">
+                <div class="ribbon blue">Update</div>
+              </div>
+              <div class="card-header">
+                <img
+                  src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1599703633/images/edu-media-img/climatecourage-perks.png">
+              </div>
+              <div class="card-body">
+                <div class="card-content">
+                  <div class="card-title">RE-volv monthly donor program</div>
+                  <div class="card-text">
+                    <p>Check out the <a href="/monthly_donor" target="_blank" rel="noopener noreferrer"> monthly donor
+                        program</a>. We want to offer you a unique opportunity to support RE-volv, and get a signed copy of
+                      Climate Courage book.</p>
+                    <div class="row">
+                      <div class="col-md-12 col-lg-12">
+                        <a class="btn btn-blue btn-block" href="/monthly_donor" target="_blank" rel="noopener noreferrer"
+                          role="button">Monthly Donor</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a href="/blog-center/articles/solidarity/" target="_blank" rel="noopener noreferrer" role="button">
+              <div class="card">
+                <div class="ribbon-wrapper">
+                  <div class="ribbon red">Blog</div>
+                </div>
+                <div class="card-header">
+                  <img
+                    src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1599701372/images/edu-media-img/solidarityimg.png">
+                </div>
+                <div class="card-body">
+                  <div class="card-content">
+                    <div class="card-title">Solidarity and commitment</div>
+                    <div class="card-text">
+                      <p>RE-volv is committed to racial justice and equity in America and supports the Movement for Black
+                        Lives. RE-volv staff and board members are heartbroken, outraged, and...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div class="container-fluid" id="section-seven">
         <div class="row justify-content-center align-items-center">
           <div class="col-sm-12 co-md-12 col-lg-10 text-center">
@@ -593,5 +702,45 @@ a {
       }
 
     </script>
+    <script>
+    $(document).ready(function(){
+      $('.carousel').slick({
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots:true,
+        centerMode: false,
+        responsive: [{
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            // centerMode: true,
+          }
 
+        }, {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            dots: true,
+            infinite: true,
+
+          }
+        },  {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+          }
+        }]
+      });
+    });
+    </script>
 {% endblock %}
