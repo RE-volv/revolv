@@ -1551,6 +1551,19 @@ footer {
 	}
 }
 
+@media (max-width: 480px) {
+	.newspadding {
+	  padding: 30px 30px !important;
+	  margin-top: 100px !important;
+	}
+	.newspadding > p {
+	  font-size: 12px !important;
+	}
+	.wrapper .hdr-text h1 {
+	  font-size: 1.8rem !important;
+	}
+}
+
 /* Carousel */
 
 .carousel{
