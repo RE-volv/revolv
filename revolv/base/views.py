@@ -556,8 +556,6 @@ def solarcrowdfundingsection(request):
 def solarcareerssection(request):
     return render(request, 'base/partials/solarcareers.html')
 
-def climate_courage(request):
-    return render(request, 'base/climatecourage.html')
 
 
 # education center resource articles
