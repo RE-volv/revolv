@@ -16,8 +16,6 @@ src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLEMAPS_API_KEY }}">
   
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'>
 
-<link href="{% static 'css/eduresource-css/style.css' %}?version={{ version_number }}" rel="stylesheet" />
-<script src="{% static 'js/eduresource-js/nl-script.js' %}"></script>
 
 <style>
 a {
@@ -34,19 +32,6 @@ a {
 {% endblock %}
 
 {% block body %}
-
-    <div class='popup animated fadeIn' id="modalUser">
-      <div class='newspadding container' style="padding: 44px 35px; margin-top: 240px;">
-        <h4 style="color:#f8f9fa !important; font-weight: 700 !important; text-align: center;">Want to learn more?</h4>
-        <p style="margin: 0px; font-size: 18px; text-align: center; font-family: 'Montserrat', sans-serif;">On September 29th at 4pm Eastern Time, 1pm Pacific Time , Katharine Hayhoe, Bill McKibben and Andreas Karelas, will connect over Zoom for a round table discussion about the themes of Andreas' new book Climate Courage, and the incredible importance of the moment we're in. What we do now to affect the climate crisis will reverberate for generations to come. Space is limited - sign up today!</p>
-          <div class="row justify-content-center align-items-center" style="padding: 20px 0px">
-            <div class="row align-items-center">
-              <a class="btn btn-blue btn-me btn-arrow-orange mx-2" href="http://climatecourage.eventbrite.com" target="_blank" rel="noopener noreferrer" role="button">Register Here</a>
-            </div>
-          </div> 
-          <a href="" target="_blank" rel="noopener noreferrer" class="close" id="close-welcome" style="font-size:0.9rem;"> x Close</a>
-      </div>
-    </div>
 
     <main role="main" class="container-fluid">
       <div class="container-fluid alternate" id="top-section">
@@ -141,7 +126,7 @@ a {
               <div class="col-sm-12 col-md-3 no-gutter">
                   <div class="impact-col">
                     <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/co-2-img.png">
-                    <h4 class="lblue-text fw-700">54,595,127 lbs</h4>
+                    <h4 class="lblue-text fw-700">56,123,968 lbs</h4>
                     <p class="fw-700">CO<sub>2</sub><br/> AVOIDED</p>
                   </div>
               </div>
