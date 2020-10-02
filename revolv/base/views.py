@@ -668,6 +668,12 @@ def postmonthlydonation(request):
 def postnonprofitlead(request):
     return render(request, 'base/partials/thanks-nonprofit.html')
 
+def postepclead(request):
+    return render(request, 'base/partials/thanks-installers.html')
+
+def postambassadorlead(request):
+    return render(request, 'base/partials/thanks-ambassador.html')
+
 def ambassador_info(request):
     return render(request, 'base/partials/solar-ambassador.html')
 

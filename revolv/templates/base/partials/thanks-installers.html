@@ -1,0 +1,46 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+
+<script src="{% static 'js/blog-monthly-js/plyr.polyfilled.js' %}"></script>
+<script src="{% static 'js/blog-monthly-js/script.js' %}"></script>
+
+<link href="{% static 'css/edu-media-css/post.css' %}?version={{ version_number }}" rel="stylesheet" />
+
+<link href="{% static 'css/eduresource-css/plyr.css' %}?version={{ version_number }}" rel="stylesheet" />
+<link href="{% static 'css/eduresource-css/style.css' %}?version={{ version_number }}" rel="stylesheet" />
+
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+
+<script data-obct type="text/javascript">
+  /** DO NOT MODIFY THIS CODE**/
+  !function(_window, _document){
+  var OB_ADV_ID='005c40e939328013e9892302acc1b8b8d2';
+  if(_window.obApi){var toArray=function(object){return Object.prototype.toString.call(object)==='[object Array]'? object:[object];};_window.obApi.marketerId=toArray(_window.obApi.marketerId).concat(toArray(OB_ADV_ID));return;}
+  var api= _window.obApi=function(){api.dispatch? api.dispatch.apply(api, arguments): api.queue.push(arguments);};api.version='1.1';api.loaded=true;api.marketerId= OB_ADV_ID;api.queue=[];var tag= _document.createElement('script');tag.async=true;tag.src='//amplify.outbrain.com/cp/obtp.js';tag.type='text/javascript';var script= _document.getElementsByTagName('script')[0];script.parentNode.insertBefore(tag, script);}(window, document);
+  obApi('track','PAGE_VIEW');
+</script>
+
+{% endblock %}
+
+{% block body %}
+
+  <main role="main" class="container-fluid">
+    <section id="thanks" class="section width-medium padding-medium bg-blue-fade" id="monthly-donate-section-four"
+    style="background: url(../../../../static/images/eduresource-img/4reasonbringsolar.JPG); background-position: center center; box-shadow: inset 0 0 0 1000px rgba(16, 0, 132, 0.3);">
+      <div class="section-inner" >
+        <div id="thanks-message" class="bg-dkgray-trans text-large3 c10 ct10 cm10 box box-huge margin-bottom-large" style="border-radius: 14px; margin-top: 140px;">
+        <h4 style="text-align: center;">Thanks for Applying!</h4>
+        <p style="text-align: center;">You should hear from our team soon.</p>
+        </div>
+      </div>
+    </section>
+  </main><!-- /.container -->
+
+    <script src="{% static 'js/blog-monthly-js/plyr.polyfilled.js' %}"></script>
+    <script src="{% static 'js/blog-monthly-js/script.js' %}"></script>
+
+  {% endblock %}

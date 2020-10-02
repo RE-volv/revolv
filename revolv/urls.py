@@ -100,6 +100,9 @@ urlpatterns = patterns(
     url(r'^thanks/postmonthlydonation/', 'revolv.base.views.postmonthlydonation', name='postmonthlydonation'),
     url(r'^thanks/postnonprofit/', 'revolv.base.views.postnonprofitlead', name='postnonprofitlead'),
 
+    url(r'^thanks/postinstaller/', 'revolv.base.views.postepclead', name='postepclead'),
+    url(r'^thanks/postambassador/', 'revolv.base.views.postambassadorlead', name='postambassadorlead'),
+
     url(r'^ambassador_info/', 'revolv.base.views.ambassador_info', name='ambassador_info'),
 
     url(r'^portal/', 'revolv.base.views.sa_portal', name='sa_portal'),

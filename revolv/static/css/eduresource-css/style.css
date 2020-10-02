@@ -115,7 +115,7 @@ input[type="color"]:focus,
 	border-color: #ff8a00;
 }
 .btn-orange:hover {
-	color: #ff8a00;
+	color: #ff8a00 !important;
 	background: #fff;
 	border-color: #ff8a00;
 }
