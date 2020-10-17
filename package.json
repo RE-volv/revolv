@@ -42,7 +42,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0",
     "is-there": "^4.3.3",
-    "jquery": "^2.1",
+    "jquery": "^3.5",
     "yargs": "^3.31.0"
   }
 }
