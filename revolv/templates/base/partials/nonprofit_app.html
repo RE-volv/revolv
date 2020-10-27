@@ -17,6 +17,20 @@
   var api= _window.obApi=function(){api.dispatch? api.dispatch.apply(api, arguments): api.queue.push(arguments);};api.version='1.1';api.loaded=true;api.marketerId= OB_ADV_ID;api.queue=[];var tag= _document.createElement('script');tag.async=true;tag.src='//amplify.outbrain.com/cp/obtp.js';tag.type='text/javascript';var script= _document.getElementsByTagName('script')[0];script.parentNode.insertBefore(tag, script);}(window, document);
   obApi('track','PAGE_VIEW');
 </script>
+
+<style>
+  @media (max-width: 1270px) {
+    .logo-zero {
+      margin-bottom: 40px;
+      position: relative !important;
+      left: 0px !important;
+      top: 0px !important;
+    }
+    #cog-form {
+      margin-top: 0px !important;
+    }
+  }
+</style>
 {% endblock %}
 
 {% block body %}
@@ -45,8 +59,11 @@
               <p class="grey-text">
                 This unique model removes barriers to financing solar for nonprofits, trains the next generation of climate leaders and brings clean energy education to your community.</p>
           </div>
-          <div id="cog-form" class="col-sm-12 col-md-10 col-lg-8 text-center mt-5">
-            <h3 class="mb-5 text-center" style="color:#100084;">Sign up your nonprofit </h3>
+          <div id="cog-form" class="col-sm-12 col-md-10 col-lg-8 text-center mt-4">
+            <div style="position:relative;"> 
+                <img class="logo-zero" src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1603685105/images/edu-media-img/solarzerodown.png" style="z-index: 0; width: 300px; position: absolute; left: -250px; top: -80px; text-align: center;">
+                <h3 class="mb-5 text-center" style="color:#100084;">Sign Up Your Nonprofit </h3>
+            </div>
           </div>
 
           <iframe src="https://www.cognitoforms.com/f/o_n8-oHQCUC-10BCk9BpSA?id=1" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="913" width="100%"></iframe>
