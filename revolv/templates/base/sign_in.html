@@ -98,8 +98,7 @@
         <div class="social-login-buttons">
                 <p class="slb-title">Or login with your Google account below:</p>
                 <br/>
-            <a href="{% url "social:begin" "google-oauth2" %}?next={% if login_redirect_url %}{{ login_redirect_url }}
-                        {% else %}{% url "home" %}{% endif %}" class="slb-btn-google">
+            <a href="{% url "social:begin" "google-oauth2" %}?next={% url "home" %}" class="slb-btn-google">
                 <button class="row slb_socialButtons slb-google">
                     <i class="fa fa-google-plus visible-xs"></i>
                     <span class="hidden-xs">Google</span>
@@ -135,8 +134,7 @@
         <div class="social-login-buttons">
 {#                <p class="slb-title">Or login with your Google or Facebook account below:</p>#}
             <br/>
-            <a href="{% url "social:begin" "google-oauth2" %}?next={% if login_redirect_url %}{{ login_redirect_url }}
-                        {% else %}{% url "home" %}{% endif %}" class="slb-btn-google">
+            <a href="{% url "social:begin" "google-oauth2" %}?next={% url "home" %}" class="slb-btn-google">
                 <button class="row slb_socialButtons slb-google">
                     <i class="fa fa-google-plus visible-xs"></i>
                     <span class="hidden-xs">Google</span>
