@@ -1,0 +1,134 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url(https://res.cloudinary.com/dkwon4bkk/image/upload/v1605068437/images/edu-media-img/solarpexels4.jpg) no-repeat; background-size: 100%;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+            <h1 class="text-white fw-300 mb-1">The Cheapest Source of Electricity in History</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container-fluid" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+
+          <div>
+            <p
+              style="box-sizing:border-box;font-family:Montserrat,sans-serif;margin:20px 0px 0px;padding:0px;color:rgb(125,138,145);font-size:16px;line-height:1.38">
+              <span style="box-sizing:border-box;margin:0px;padding:0px;color:rgb(16,0,132)">It’s official. Guess what is the cheapest source of electricity in history!? Coal mining in early
+                  Industrial Revolution Great Britain? What about coal mining in West Virginia and Kentucky in
+                  the late 19 th and early 20 th centuries? How about the big, government funded dam projects in
+                  the Western United States during the New Deal Era? Or, what about the gas and fracking boom
+                  of recent lore that gets so much attention in the news? Good guesses, but none of them are
+                  correct. According to the International Energy Agency (IEA) annual World Energy Outlook on
+                  global energy production, consumption, and markets, “solar PV is now the cheapest source of
+                  electricity in history.” That’s right, solar PV! And while they buried that admission in an
+                  appendix portion of the report, those of us championing a just and sustainable future for all are
+                  celebrating, nonetheless.</span></p>
+            <p
+              style="box-sizing:border-box;font-family:Montserrat,sans-serif;margin:20px 0px 0px;padding:0px;color:rgb(125,138,145);font-size:16px;line-height:1.38">
+              <span style="box-sizing:border-box;margin:0px;padding:0px;color:rgb(16,0,132)">We are currently living through the greatest transformation of our energy infrastructure –
+                  literally how everything in our lives is powered – since the first Industrial Revolution. In fact,
+                  solar (and wind!) are getting so popular so fast that the IEA had to revise its own estimate on
+                  solar adoption by an increase of 40% from just last year’s report! That’s impressive even to us in
+                  the solar business! Over the last year, RE-volv has helped to contribute to this impressive
+                  change by installing over one megawatt of solar PV across the United States. We are proud to
+                  be a part of this dramatic transformation of our shared world, and we look forward to an even
+                  brighter future in the years to come.&nbsp;</span></p>
+            <p class="fw-500"
+              style="box-sizing:border-box;font-family:Montserrat,sans-serif;margin:20px 0px 0px;padding:0px;color:rgb(125,138,145);font-size:16px;line-height:1.38">
+              <span style="box-sizing:border-box;margin:0px;padding:0px;color:rgb(16,0,132)">By RE-volv Staff</span></p>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/solidarity/">
+                    <img src="../../../static/images/blog-monthly-img/blogpeoplesolidarity.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/solidarity/"> <span class="meta-date">JUNE 19, 2020</span> </a>
+                    <h4 class="meta-title">Solidarity and commitment</h4>
+                    <p>In the words of the Movement 4 Black Lives, “Juneteenth is a day that honors Black freedom and...</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/newyearrevolution/">
+                    <img src="../../../static/images/blog-monthly-img/blog-thumb-2.png">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/newyearrevolution/"> <span class="meta-date">JANUARY 3, 2019</span> </a>
+                    <h4 class="meta-title">A New Year’s Revolution</h4>
+                    <p>Another year under our belts. Calendars are switched out, resolutions are written, and...</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}

@@ -630,6 +630,9 @@ def newyearrevolution(request):
 def solidarity(request):
     return render(request, 'base/partials/blog-article3.html')
 
+def electricitysource(request):
+    return render(request, 'base/partials/blog-article4.html')
+
 #-----------Donate Monthly
 
 
