@@ -6,21 +6,18 @@
     {% load staticfiles %}
 
     <title>{% block title %}{% endblock %}RE-volv</title>
-    <meta name="description" content="{% if project.description %} {{ project.description | striptags|safe }}
-                                            {% else %} {{ settings.revolv_cms.ShareThisSettings.description }}{% endif %}" />
+    <meta name="description" content="Nonprofits save 15% or more on their electric bills when they go solar with RE-volv. Saving money means they can better serve their communities." />
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="re-volv.org">
     <meta name="twitter:title" content="{{ project.title }} | RE-volv">
-    <meta name="twitter:description" content="{% if project.description %} {{ project.description | striptags|safe }}
-                                            {% else %} {{ settings.revolv_cms.ShareThisSettings.description }}{% endif %}">
+    <meta name="twitter:description" content="Nonprofits save 15% or more on their electric bills when they go solar with RE-volv. Saving money means they can better serve their communities.">
     <meta name="twitter:image" content="https://res.cloudinary.com/dkwon4bkk/image/upload/v1597185794/images/climatecouragecover.jpg">
     <meta charset="utf-8">
     <meta property="og:title" content="{{ project.title }} | RE-volv" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="{{ project.title }} | RE-volv" />
     <meta property="og:image" content="https://res.cloudinary.com/dkwon4bkk/image/upload/v1597185794/images/climatecouragecover.jpg" />
-    <meta property="og:description" content="{% if project.description %} {{ project.description | striptags|safe }}
-                                            {% else %} {{ settings.revolv_cms.ShareThisSettings.description }}{% endif %}" />
+    <meta property="og:description" content="Nonprofits save 15% or more on their electric bills when they go solar with RE-volv. Saving money means they can better serve their communities." />
     <link rel="icon" type="image/png" href="{% static 'images/revolvorange.png' %}" />
     {% block meta %}
     {% endblock %}
