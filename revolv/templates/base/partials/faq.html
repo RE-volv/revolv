@@ -1,215 +1,576 @@
-{% extends "base/base2.html" %}
+{% extends "base/base.html" %}
 {% load staticfiles %}
-{% load widget_tweaks %}
 {% load humanize %}
+{% load wagtailimages_tags %}
+
 {% block head %}
-{% endblock %}
-<script type="text/javascript">
-</script>
+
 <script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
-{% block title %}Project | {% endblock %}
+
+<style>
+  ul {
+    padding-inline-start: 30px !important;
+  }
+
+  .requirment-list li {
+    margin: 3% 0 !important;
+  }
+
+  ul.stepper li.active a .circle,
+  ul.stepper li.completed a .circle {
+    background-color: #4285f4 !important;
+  }
+
+  ul.stepper li.warning a .circle {
+    background-color: #25c03c !important;
+  }
+
+  .btn-warning:not(:disabled):not(.disabled).active,
+  .btn-warning:not(:disabled):not(.disabled):active {
+    color: #fff
+  }
+
+  ul.stepper {
+    padding: 0 1.5rem;
+    padding: 1.5rem;
+    margin: 1em -1.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    counter-reset: section
+  }
+
+  ul.stepper li a {
+    padding: 1.5rem;
+    text-align: center
+  }
+
+  ul.stepper li a .circle {
+    display: inline-block;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: .5rem;
+    line-height: 1.7rem;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.38);
+    border-radius: 50%
+  }
+
+  ul.stepper li a .label {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.38)
+  }
+
+  ul.stepper li.active a .label,
+  ul.stepper li.completed a .label {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.87)
+  }
+
+  .stepper-vertical {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+  }
+
+  .stepper-vertical li {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+  }
+
+  .stepper-vertical li a {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+    align-self: flex-start
+  }
+
+  .stepper-vertical li a .circle {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1
+  }
+
+  .stepper-vertical li a .label {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-top: .2rem
+  }
+
+  .stepper-vertical li.completed a .label {
+    font-weight: 500
+  }
+
+  .stepper-vertical li .step-content {
+    display: block;
+    padding: .94rem;
+    margin-top: 0;
+    margin-left: 3.13rem
+  }
+
+  .stepper-vertical li .step-content p {
+    font-size: .88rem
+  }
+
+  .stepper-vertical li:not(:last-child):after {
+    position: absolute;
+    top: 3.44rem;
+    left: 2.19rem;
+    width: 1px;
+    height: calc(100% - 40px);
+    content: "";
+    background-color: rgba(0, 0, 0, 0.1)
+  }
+
+  .nav-tabs .nav-link.active {
+    color: #1000F9;
+  }
+
+  ul {
+    padding-inline-start: 30px;
+  }
+
+  .amb-content {
+    margin-bottom: 2.5rem;
+  }
+
+  .amb-accordion {
+    box-shadow: 0 0 .625rem #c0c0c3;
+    border-radius: .3125rem;
+  }
+
+  .amb-accordion .active {
+    background-color: #100084;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: .3125rem;
+    color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39.67 39.67'%3E%3Cpath d='M19.83 39.67a19.84 19.84 0 1 1 19.84-19.84 19.86 19.86 0 0 1-19.84 19.84zm0-38.67a18.84 18.84 0 1 0 18.84 18.83A18.86 18.86 0 0 0 19.83 1z' fill='white'/%3E%3Crect x='9.46' y='19.26' width='20.75' height='1.15' rx='.57' fill='white'/%3E%3Crect x='40.46' y='19.26' width='20.75' height='1.15' rx='.57' transform='rotate(90 19.835 19.835)' fill='%23100084'/%3E%3C/svg%3E");
+  }
+
+  .amb-accordion>dt,
+  .amb-accordion>dd {
+    padding: 1.25rem .9375rem;
+  }
+
+  .amb-accordion>dt {
+    font-weight: 400;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39.67 39.67'%3E%3Cpath d='M19.83 39.67a19.84 19.84 0 1 1 19.84-19.84 19.86 19.86 0 0 1-19.84 19.84zm0-38.67a18.84 18.84 0 1 0 18.84 18.83A18.86 18.86 0 0 0 19.83 1z' fill='%23100084'/%3E%3Crect x='9.46' y='19.26' width='20.75' height='1.15' rx='.57' fill='%23100084'/%3E%3Crect x='9.46' y='19.26' width='20.75' height='1.15' rx='.57' transform='rotate(90 19.835 19.835)' fill='%23100084'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+    background-size: 1.75rem;
+    padding-right: 3.625rem;
+    border-left: .25rem solid #100084;
+    border-top-left-radius: .3125rem;
+    border-bottom-left-radius: .3125rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  @media (min-width: 992px) {
+    .amb-content {
+      margin-bottom: 5rem;
+    }
+
+    .amb-accordion {
+      font-size: 1.125rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+
+    .amb-accordion>dt,
+    .amb-accordion>dd {
+      padding: 1.875rem 1.5625rem;
+    }
+
+    .amb-accordion>dt {
+      background-size: 2.375rem;
+      padding-right: 4.25rem;
+    }
+  }
+</style>
+
+<style>
+  .margin-team {
+    margin: 60px 0px;
+  }
+
+  .span-team {
+    color: #100084;
+    font-size: 2em;
+  }
+</style>
+{% endblock %}
+
 {% block body %}
-<div class="container-fluid application-header" id="top-section" style="background-position: center !important; height: 250px;">
+
+<div id="main">
+  <div class="container-fluid application-header" id="top-section"
+    style="background-position: center !important;height: 438px;">
     <div class="row text-center" style="height: 200px !important; margin: 0 auto;">
-        <div class="col hero-text align-self-end">
-        <h4 class="text-light" style="font-size: 30px;"> Frequently Asked Questions
-        </div>
+      <div class="col hero-text align-self-end">
+        <h4 class="text-light" style="font-size: 30px;margin-top: 292px;"> Frequently Asked Questions
+        </h4>
+      </div>
     </div>
-</div>
-<div class="container-fluid scroll-section" id="scroll-section">
-    <div class="scroll-icon">
-    <img class="scroll-arrow bouncing" src="../../../static/images/nonprofit-img/scroll-icon.png">
-    </div>
-</div>
-<div class="contents after-header">
-    <div class="col-xs-12 col-sm-3 account-tabs">
-        <div style="margin-bottom: 2em;">
-            <span id="account-link" class="account-tab-text account-tab-text-active">Nonprofits <br> Interested in Solar</span>
-        </div>
-        <div style="margin-bottom: 2em;">
-            <span id="donation-link" class="account-tab-text ">RE-volv Users</span>
-        </div>
-    </div>
-    <div id="account-info" class="col-xs-12 col-sm-9 setting-form-top" style="display: block;">
+  </div>
+  <div class="container my-4">
+    <ul class="justify-content-center nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="blue-text fw-700 nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Nonprofits Interested in
+          Solar</a>
+      </li>
+      <li class="nav-item">
+        <a class="blue-text fw-700 nav-link" data-toggle="tab" href="#tabs-2" role="tab">RE-volv Users</a>
+      </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="tabs-1" role="tabpanel">
+        <div class="my-4">
+          <div class='container amb-content'>
+            <div class='row'>
+              <h2 class="my-4 fw-700 blue-text">Nonprofits Interested in Solar</h2>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> What is RE-volv? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>RE-volv is a nonprofit organization based in San Francisco with a mission to empower people and
+                        communities to invest collectively in renewable energy. RE-volv lets individuals who support clean
+                        energy chip in a few dollars to help communities all over the United States go solar. These
+                        donations help finance solar systems for community-based nonprofits that lack access to
+                        traditional solar financing.</p>
+                      <p>These organizations save money on their electric costs while paying RE-volv back through a 20-year
+                        lease with interest. The lease payments are reinvested in a revolving fund, the Solar Seed Fund,
+                        which continually finances new community-based solar projects. Over time, each dollar donated to
+                        an individual solar project will go towards financing a new project, which will help finance the
+                        next project, and so on.</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> What makes RE-volv unique? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>Our pay-it-forward model is unique because we dedicate each nonprofit’s lease payments to a
+                        revolving fund. This revolving fund then helps to pay for the next nonprofit to go solar, whose
+                        lease payments help another nonprofit to go solar, and so on.
+                        As more and more nonprofits go solar, our collective impact on climate change grows exponentially.
+                        To top it all off, at the end of the lease, we transfer ownership of the system to each nonprofit
+                        at no additional cost</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> What are the benefits of going solar with RE-volv? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>By going solar with RE-volv, nonprofits can immediately save 15% or more on their electricity
+                        costs with no upfront cost, and 40% or more over the next 25 years. During the lease, nonprofits
+                        will benefit from a full operations & maintenance package; and at the end of the lease, they own
+                        the system outright at no additional cost.</p> 
+                      <p>By empowering their community to make a positive impact
+                        on climate change and educating community members on the benefits of solar, they also become
+                        leaders of sustainability in their communities, and help other nonprofit organizations across the
+                        country go solar by contributing to the Solar Seed Fund.</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> What is the Solar Seed Fund? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>The Solar Seed Fund is a revolving fund for solar. When a nonprofit goes solar, a portion of the
+                        upfront costs comes from this revolving fund. Once their lease begins, the nonprofit makes lease
+                        payments, which goes into the Solar Seed Fund. Over the course of their lease, the nonprofit will
+                        pay for more nonprofits to go solar – each of which will fund more solar projects (and so on and
+                        so on).</p>
 
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>What is RE-volv?</span><span data-toggle="collapse" data-target="#" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div class="">   
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">RE-volv is a nonprofit organization based in San Francisco with a mission to empower people and communities to invest collectively in renewable energy. RE-volv lets individuals who support clean energy chip in a few dollars to help communities all over the United States go solar. These donations help finance solar systems for community-based nonprofits that lack access to traditional solar financing. These organizations save money on their electric costs while paying RE-volv back through a 20-year lease with interest. The lease payments are reinvested in a revolving fund, the Solar Seed Fund, which continually finances new community-based solar projects. Over time, each dollar donated to an individual solar project will go towards financing a new project, which will help finance the next project, and so on.</li>
-                    <!--<li class="leadship-li">Thinking of going solar at home? <a target="_blank" href="{% url 'solar_at_home' %}">Get a solar savings estimate!</a> <br>Do you know you a <b>nonprofit</b> that could benefit from solar? <a target="_blank" href="{% url 'bring_solar_to_your_community' %}">Click here!</a></li>-->
-                </ul>       
-            </div> 
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>What makes RE-volv unique?</span><span data-toggle="collapse" data-target="#" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div class="">
-                <ul class="leadship-ui">
-                  <li class="leadship-li" style="margin-bottom: 1em;">Our pay-it-forward model is unique because we dedicate each nonprofit’s lease payments to a revolving fund. This revolving fund then helps to pay for the next nonprofit to go solar, whose lease payments help another nonprofit to go solar, and so on. As more and more nonprofits go solar, our collective impact on climate change grows exponentially. To top it all off, at the end of the lease, we transfer ownership of the system to each nonprofit at no additional cost</li>
-                    <!--<li class="leadship-li">Thinking of going solar at home? <a target="_blank" href="{% url 'solar_at_home' %}">Get a solar savings estimate!</a> <br>Do you know you a <b>nonprofit</b> that could benefit from solar? <a target="_blank" href="{% url 'bring_solar_to_your_community' %}">Click here!</a></li>-->
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>What are the benefits of going solar with RE-volv?</span><span data-toggle="collapse" data-target="#" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div class="">
-                <ul class="leadship-ui">
-                  <li class="leadship-li" style="margin-bottom: 1em;">By going solar with RE-volv, nonprofits can immediately save 15% or more on their electricity costs with no upfront cost, and 40% or more over the next 25 years. During the lease, nonprofits will benefit from a full operations & maintenance package; and at the end of the lease, they own the system outright at no additional cost. By empowering their community to make a positive impact on climate change and educating community members on the benefits of solar, they also become leaders of sustainability in their communities, and help other nonprofit organizations across the country go solar by contributing to the Solar Seed Fund.</li>
-                    <!--<li class="leadship-li">Thinking of going solar at home? <a target="_blank" href="{% url 'solar_at_home' %}">Get a solar savings estimate!</a> <br>Do you know you a <b>nonprofit</b> that could benefit from solar? <a target="_blank" href="{% url 'bring_solar_to_your_community' %}">Click here!</a></li>-->
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>What is the Solar Seed Fund?</span><span data-toggle="collapse" data-target="#" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">The Solar Seed Fund is a revolving fund for solar. When a nonprofit goes solar, a portion of the upfront costs comes from this revolving fund. Once their lease begins, the nonprofit makes lease payments, which goes into the Solar Seed Fund. Over the course of their lease, the nonprofit will pay for more nonprofits to go solar – each of which will fund more solar projects (and so on and so on). <br><br>Simply put, the Solar Seed Fund is a pay-it-forward model for renewable energy.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>Who is eligible for the RE-volv model?</span><span data-toggle="collapse" data-target="#" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div  class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">Nonprofits who own their own building and have recently upgraded their roof. Generally roofs less than 10 years old are ideal, since the panels will likely produce energy for 30 years or more. Organizations with roofs older than 10 years may still be eligible - it really depends on the roof’s warranty and expected lifetime. For more info, contact us at (415) 579-3251 or info@re-volv.org.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>How does the pricing work?</span><span data-toggle="collapse" data-target="#" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div  class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">RE-volv solar finance the upfront cost of installing solar, so there’s no down payment required by the nonprofit. The RE-volv lease then immediately saves the nonprofit 15% or more on their current electricity rates. Over the course of the lease, while utility rates are escalating every year, the nonprofit’s savings will accelerate. When the lease ends, RE-volv transfers ownership to the nonprofit at no cost. The exact savings depend on the project size, which is based on current electrical usage on site.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>What financing options are available?</span><span data-toggle="collapse" data-target="#" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">Most lenders and financiers don’t offer solar financing options for small-to-medium scale nonprofits, who typically lack the capital to afford their own systems. That's why, as a nonprofit ourselves, we've decided to fill this role. Our lease-to-own model is a great way for nonprofits to finance their systems at no upfront cost.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>How much does the nonprofit need to fundraise?</span><span data-toggle="collapse" data-target="#10" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div  class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">Nonprofits are not required to do any fundraising. Throughout the campaign RE-volv will tap into its network of donors from 38 states across the country and 22 countries around the world. That being said, each organization is encouraged to participate in the campaign as much as possible, and host 1-2 solar education events as part of our community engagement element.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>What happens to the solar Investment Tax Credit (ITC)?</span><span data-toggle="collapse" data-target="#11" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div  class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">Since nonprofits have no tax liability, and RE-volv is a nonprofit serving other nonprofits, we don’t utilize the federal tax credit. This enables us to transfer ownership of the system to the nonprofit for free at the end of the lease.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>Who takes care of Operations & Maintenance during the lease?</span><span data-toggle="collapse" data-target="#12" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div  class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">RE-volv is responsible for monitoring the system and maintaining the equipment for the duration of the lease, which includes managing all warranties with the installers and manufacturers. Solar modules are typically warrantied for 25 years, and rarely need to be replaced. Inverters, on the other hand, are typically warrantied for 10-15 years. However, our operations & maintenance package covers any issues with the equipment, so RE-volv will replace an inverter when needed. As provided in our lease, RE-volv is responsible to make all repairs in a timely manner.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>What happens if the system doesn’t produce as much energy as we estimated? How can we know if the system isn’t producing?</span><span data-toggle="collapse" data-target="#13" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">Our lease features an Output Guarantee, so if the system doesn’t produce as much as we expect, we repay nonprofits for the deficit. Specifically, we reimburse the annual difference between expected and actual output at the end of each year – a money-back guarantee per kilowatt-hour. To date, none of our systems have under-produced.</li>
-                    <li class="leadship-li" style="margin-bottom: 1em;">To fulfill this guarantee, RE-volv’s solar monitoring equipment reports on 15-minute intervals, so we’re able to diagnose any problems quickly. At the end of each year, RE-volv will send a report of the system’s performance over the last year, along with reimbursement for any deficit. </li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>What happens if the nonprofit moves to a new location or sells the building?</span><span data-toggle="collapse" data-target="#14" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div  class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">There are several options when a building changes ownership. We can easily transfer the lease to the new owner, and the new owner would continue the lease as normal. Or, the nonprofit can use our early buyout option to pay-off the lease at a discounted rate, then include the solar system in the property valuation. On the other hand, if a nonprofit retains ownership of the building and leases the space to new tenants, the solar lease payments could be included in the new tenant’s property lease payments.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>What if the roof needs to be replaced after the system is installed?</span><span data-toggle="collapse" data-target="#15" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div  class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">Removing and re-installing the system isn’t as hard as it sounds. Nonprofits should contact RE-volv to coordinate the re-roofing timeline. The original installer or another certified installer can then work with the re-roofing contractor to remove the panels and reinstall them.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>What happens if RE-volv goes out of business?</span><span data-toggle="collapse" data-target="#16" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">RE-volv will transfer the lease to a new system owner. Like with a transfer of building ownership, the lease continues as before, but the same lease payments are made to the new system owner. The lease specifies that all obligations for any new system owner remain the same, and any substantial change to the lease requires signatures from both parties. So, nonprofits will continue to receive all the benefits of solar as stated in the lease, but will make the lease payments to a different organization.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>What if I want to go solar at home?</span><span data-toggle="collapse" data-target="#17" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">Great! Residential solar is an easy way to make a positive impact on climate change while saving a considerable amount of money on electricity costs. We currently partner with two solar marketplaces that compare installers across the U.S. Check our <a href="https://re-volv.org/solar_at_home/">website</a> to see which solar installers they recommend in your state.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>What happens if we sell our building?</span><span data-toggle="collapse" data-target="#18" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div  class="">
-                <ul class="leadship-ui">
-                  <li class="leadship-li" style="margin-bottom: 1em;">Great! Residential solar is an easy way to make a positive impact on climate change while saving a considerable amount of money on electricity costs. We currently partner with two solar marketplaces that compare installers across the U.S. Check our <a href="https://re-volv.org/solar_at_home/">website</a> to see which solar installers they recommend in your state. </li>
-                </ul>
-            </div>
-        </div>
+                      <p>Simply put, the Solar Seed Fund is a pay-it-forward model for renewable energy.</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> Who is eligible for the RE-volv model? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>Nonprofits who own their own building and have recently upgraded their roof. Generally roofs less
+                        than 10 years old are ideal, since the panels will likely produce energy for 30 years or more.
+                        Organizations with roofs older than 10 years may still be eligible - it really depends on the
+                        roof’s warranty and expected lifetime. For more info, contact us at (415) 579-3251 or
+                        info@re-volv.org.</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> How does the pricing work? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>RE-volv solar finance the upfront cost of installing solar, so there’s no down payment required by
+                        the nonprofit. The RE-volv lease then immediately saves the nonprofit 15% or more on their current
+                        electricity rates. Over the course of the lease, while utility rates are escalating every year,
+                        the nonprofit’s savings will accelerate. When the lease ends, RE-volv transfers ownership to the
+                        nonprofit at no cost. The exact savings depend on the project size, which is based on current
+                        electrical usage on site.</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
 
-    </div>
-    <div id="donation-info" class="col-xs-12 col-sm-9 setting-form-top" style="display: none;">
-        <div class="myth-box-div">
-                <div class="myth-box-header-div"><span>Why donate to RE-volv?</span><span data-toggle="collapse" data-target="#18" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-                <div  class="">
-                    <ul class="leadship-ui">
-                        <li class="leadship-li" style="margin-bottom: 1em;">When you donate to a RE-volv, 100% of your donation goes towards installing solar on a community-serving nonprofit. Your donation will help fight climate change and reduce the nonprofit’s electricity costs by 15% or more. As the nonprofit makes lease payments to our revolving fund, the Solar Seed Fund, your donation is repaid to your RE-volv portfolio. Then you can invest those repayments into another nonprofit’s solar system and continue the cycle!</li>
-                    </ul>
-                </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>How can I manage my monthly donations within my account?</span><span data-toggle="collapse" data-target="#20" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">Login</li>
-                    <li class="leadship-li" style="margin-bottom: 1em;">Click the three lines on the top right.</li>
-                    <li class="leadship-li" style="margin-bottom: 1em;">Click Account Settings.</li>
-                    <li class="leadship-li" style="margin-bottom: 1em;">Click Donation Information on the left.</li>
-                    <li class="leadship-li" style="margin-bottom: 1em;">Then edit how much you would like to donate.</li>
-                    <li class="leadship-li" style="margin-bottom: 1em;">Then hit save.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>Is my donation to RE-volv tax deductible?</span><span data-toggle="collapse" data-target="#21" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div class="">
-                <ul class="leadship-ui">
-                    <li class="leadship-li" style="margin-bottom: 1em;">Yes, RE-volv is a registered 501(c)(3) nonprofit. All donations to RE-volv – whether to a solar project or to our operations – can be claimed as a tax deduction.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="myth-box-div">
-            <div class="myth-box-header-div"><span>I’m having trouble logging in to my account</span><span data-toggle="collapse" data-target="#22" class="myth-collapse-icon glyphicon glyphicon-chevron-down"></span></div>
-            <div  class="">
-                <ul class="leadship-ui">
-                    Here are common solutions to this issue:
-                    <li class="leadship-li" style="margin-bottom: 1em;">If you are having trouble making a donation, try using a different browser </li>
-                    <li class="leadship-li" style="margin-bottom: 1em;">If you have ad blocker on, please disable adblocker on RE-volv.org </li>
-                    <li class="leadship-li" style="margin-bottom: 1em;">Next, try clearing your cache on your web browser  </li>
-                    <li class="leadship-li" style="margin-bottom: 1em;">If you are still having trouble email anna@re-volv.org</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> What financing options are available? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>Most lenders and financiers don’t offer solar financing options for small-to-medium scale
+                        nonprofits, who typically lack the capital to afford their own systems. That's why, as a nonprofit
+                        ourselves, we've decided to fill this role. Our lease-to-own model is a great way for nonprofits
+                        to finance their systems at no upfront cost.</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
 
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> How much does the nonprofit need to fundraise? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>Nonprofits are not required to do any fundraising. Throughout the campaign RE-volv will tap into
+                        its network of donors from 38 states across the country and 22 countries around the world. That
+                        being said, each organization is encouraged to participate in the campaign as much as possible,
+                        and host 1-2 solar education events as part of our community engagement element.</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> What happens to the solar Investment Tax Credit (ITC)? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>Since nonprofits have no tax liability, and RE-volv is a nonprofit serving other nonprofits, we
+                        don’t utilize the federal tax credit. This enables us to transfer ownership of the system to the
+                        nonprofit for free at the end of the lease.</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> Who takes care of Operations & Maintenance during the lease? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>RE-volv is responsible for monitoring the system and maintaining the equipment for the duration of
+                        the lease, which includes managing all warranties with the installers and manufacturers. Solar
+                        modules are typically warrantied for 25 years, and rarely need to be replaced. Inverters, on the
+                        other hand, are typically warrantied for 10-15 years. However, our operations & maintenance
+                        package covers any issues with the equipment, so RE-volv will replace an inverter when needed. As
+                        provided in our lease, RE-volv is responsible to make all repairs in a timely manner.</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> What happens if the system doesn’t produce as much energy as we estimated? How can we know if the
+                    system isn’t producing? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>Our lease features an Output Guarantee, so if the system doesn’t produce as much as we expect,
+                        we repay nonprofits for the deficit. Specifically, we reimburse the annual difference between
+                        expected and actual output at the end of each year – a money-back guarantee per kilowatt-hour.
+                        To date, none of our systems have under-produced.</p>
+                      <p>To fulfill this guarantee, RE-volv’s solar monitoring equipment reports on 15-minute intervals,
+                        so we’re able to diagnose any problems quickly. At the end of each year, RE-volv will send a
+                        report of the system’s performance over the last year, along with reimbursement for any deficit.
+                      </p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> What happens if the nonprofit moves to a new location or sells the building? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>There are several options when a building changes ownership. We can easily transfer the lease
+                        to the new owner, and the new owner would continue the lease as normal. Or, the nonprofit can
+                        use our early buyout option to pay-off the lease at a discounted rate, then include the solar
+                        system in the property valuation. On the other hand, if a nonprofit retains ownership of the
+                        building and leases the space to new tenants, the solar lease payments could be included in the
+                        new tenant’s property lease payments.</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> What if the roof needs to be replaced after the system is installed? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>Removing and re-installing the system isn’t as hard as it sounds. Nonprofits should contact
+                        RE-volv to coordinate the re-roofing timeline. The original installer or another certified
+                        installer can then work with the re-roofing contractor to remove the panels and reinstall them.
+                      </p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> What happens if RE-volv goes out of business? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>RE-volv will transfer the lease to a new system owner. Like with a transfer of building
+                        ownership, the lease continues as before, but the same lease payments are made to the new system
+                        owner. The lease specifies that all obligations for any new system owner remain the same, and
+                        any substantial change to the lease requires signatures from both parties. So, nonprofits will
+                        continue to receive all the benefits of solar as stated in the lease, but will make the lease
+                        payments to a different organization.</p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> What if I want to go solar at home? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>Great! Residential solar is an easy way to make a positive impact on climate change while
+                        saving a considerable amount of money on electricity costs. We currently partner with two solar
+                        marketplaces that compare installers across the U.S. Check our website to see which solar
+                        installers they recommend in your state. <a href="/solar_at_home" target="_blank"
+                          rel="noopener noreferrer"> Solar at Home </a> </p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="tabs-2" role="tabpanel">
+        <div class="my-4">
+          <div class='container amb-content'>
+            <div class='row'>
+              <h2 class="my-4 fw-700 blue-text">RE-volv Users</h2>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> Why donate to RE-volv? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p> When you donate to a RE-volv, 100% of your donation goes towards installing solar on a
+                        community-serving nonprofit. Your donation will help fight climate change and reduce the
+                        nonprofit’s electricity costs by 15% or more. As the nonprofit makes lease payments to our
+                        revolving fund, the Solar Seed Fund, your donation is repaid to your RE-volv portfolio. Then you
+                        can invest those repayments into another nonprofit’s solar system and continue the cycle! </p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> How can I manage my monthly donations within my account? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <ul>
+                        <li> Login </li>
+                        <li> Click the three lines on the top right. </li>
+                        <li> Click Account Settings. </li>
+                        <li> Click Donation Information on the left. </li>
+                        <li> Then edit how much you would like to donate. </li>
+                        <li> Then hit save. </li>
+                      </ul>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> Is my donation to RE-volv tax deductible? </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p> Yes, RE-volv is a registered 501(c)(3) nonprofit. All donations to RE-volv – whether to a solar
+                      project or to our operations – can be claimed as a tax deduction. </p>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class='col-md-12'>
+                <dl class='amb-accordion'>
+                  <dt> I’m having trouble logging in to my account </dt>
+                  <dd>
+                    <div class="fr-view">
+                      <p>Here are common solutions to this issue:</p>
+                      <ul>
+                        <li> If you are having trouble making a donation, try using a different browser </li>
+                        <li> If you have ad blocker on, please disable adblocker on RE-volv.org </li>
+                        <li> Next, try clearing your cache on your web browser </li>
+                        <li> If you are still having trouble email info@re-volv.org </li>
+                      </ul>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--- end container -->
 </div>
+<!---- end main -->sss
+
+<script type="text/javascript">
+  //Show/Hide - clicked on accordions
+  $('.amb-accordion > dd').hide();
+  $('.amb-accordion > dt').click(function () {
+
+    $(this).toggleClass('active');
+    $(this).next('dd').slideToggle('fast');
+
+  });
+</script>
 
 {% endblock %}

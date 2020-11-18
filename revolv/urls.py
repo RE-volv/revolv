@@ -104,10 +104,6 @@ urlpatterns = patterns(
     url(r'^thanks/postinstaller/', 'revolv.base.views.postepclead', name='postepclead'),
     url(r'^thanks/postambassador/', 'revolv.base.views.postambassadorlead', name='postambassadorlead'),
 
-    url(r'^ambassador_info/', 'revolv.base.views.ambassador_info', name='ambassador_info'),
-
-    url(r'^portal/', 'revolv.base.views.sa_portal', name='sa_portal'),
-
     url(r'^re-volv/media', 'revolv.base.views.media_archive', name='media_archive'),
     url(r'^get-involved/education/', 'revolv.base.views.education_center_section', name='education_center_section'),
 

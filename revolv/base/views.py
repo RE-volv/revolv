@@ -640,10 +640,6 @@ def monthly_donor(request):
     return render(request, 'base/partials/monthly-donate.html')
 
 
-def sa_portal(request):
-    return render(request, 'base/partials/sa-portal.html')
-
-
 #--------------------------------
 def postdonation(request):
 
@@ -676,9 +672,6 @@ def postepclead(request):
 
 def postambassadorlead(request):
     return render(request, 'base/partials/thanks-ambassador.html')
-
-def ambassador_info(request):
-    return render(request, 'base/partials/solar-ambassador.html')
 
 
 def media_archive(request):
