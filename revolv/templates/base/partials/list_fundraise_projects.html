@@ -210,18 +210,6 @@
     {% endif %}
 
     {% if subfund_active_projects %}
-      <div class="row mt-4"></div>
-      <div class="container mb-4">
-        <h2>Personal Fundraisers</h2>
-        <p>Donate to a personal Solar Seed Fund fundraiser or start one of your own!</p>
-        <a class="btn btn-blue btn-me mx-2 mb-2" href="/project/create-sub" role="button" style="font-size: 0.7rem;">Create your own fundraiser</a>
-
-        <div class="title-icon mt-2">
-            <i class="fas fa-hand-holding-heart"></i>
-        </div>
-     
-        
-      </div>
       
       {% for active_project in subfund_active_projects %}
       <div class="col-md-4 facts-row">
