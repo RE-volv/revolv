@@ -159,12 +159,10 @@
         <div class="col-sm-12 co-md-10 col-lg-10">
           <div class="row">
             <div class="col-sm-12 col-md-4 pr-4">
-              {% if project_matching_donor %}
                 <div class="col-md-12 mb-3">
                   <div class="title-blue-border" style="height: 100% !important;">ALL DONATIONS ARE NOW BEING MATCHED!
                   </div>
                 </div>
-              {% endif %}
               <div class="campaign-col">
                 <div class="title-container">  
                   <h1><sup>$</sup> <span class="bold">{{ project.amount_donated|floatformat:"0"|intcomma }}</span> <small>Raised</small></h1>
