@@ -135,7 +135,7 @@ a {
               <div class="col-sm-12 col-md-2 no-gutter">
                   <div class="impact-col">
                     <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/co-2-img.png">
-                    <h4 class="lblue-text fw-700">74,683,250 lbs</h4>
+                    <h4 class="lblue-text fw-700">153,601,935 lbs</h4>
                     <p class="fw-700">CO<sub>2</sub><br/> AVOIDED</p>
                   </div>
               </div>
@@ -255,7 +255,7 @@ a {
               </div>
               <div class="card-body">
                 <div class="card-content">
-                  <div class="card-title">Support RE-volv today!</div>
+                  <div class="card-title">Support RE-volv year-end giving campaign!</div>
                   <div class="card-text">
                     <p>To continue to fight climate change at the local level and help nonprofits save money in 2021, RE-volv needs your help.
                        <span class="fw-500">A group of generous RE-volv board members and friends have gone above and beyond their usual contributions to the organization this year, and have pledged to match all donations received through Dec. 31st up to $12,000!</span>
@@ -263,7 +263,7 @@ a {
                     <div class="row">
                       <div class="col-md-12 col-lg-12">
                         <a class="btn btn-blue btn-block" href="https://re-volv.org/project/clean-energy/" target="_blank"
-                          rel="noopener noreferrer" role="button">Donate</a>
+                          rel="noopener noreferrer" role="button">Support RE-volv today</a>
                       </div>
                     </div>
                   </div>
@@ -765,7 +765,7 @@ a {
     <script>
     $(document).ready(function(){
       $('.carousel').slick({
-        speed: 300,
+        speed: 400,
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
@@ -773,9 +773,17 @@ a {
         dots:true,
         centerMode: false,
         responsive: [{
+          breakpoint: 1480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            // centerMode: true,
+          }
+
+        }, {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1,
             // centerMode: true,
           }
@@ -783,8 +791,8 @@ a {
         }, {
           breakpoint: 800,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             dots: true,
             infinite: true,
 
