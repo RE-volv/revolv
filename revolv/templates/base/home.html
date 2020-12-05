@@ -30,6 +30,12 @@ a {
     heignt: 50px;
   }
 }
+.bnr-cntr {
+  padding: 200px 0px;
+}
+.card-body {
+  min-height: 472px;
+}
 </style>
 {% endblock %}
 
@@ -48,17 +54,24 @@ a {
           </div>
         </div>
       </div>
-      <div class="container-fluid" id="second-section">
+      <div class="container-fluid" id="second-section" style="margin-top:0px; padding:0px;">
         <div class="scroll-section">
           <div class="scroll-icon">
             <img class="scroll-arrow bouncing" src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/home-img/scroll-icon.png">
           </div>
         </div>
+        <div class="justify-content-center align-items-center h-75 " style="background-size: cover; background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/v1607129079/images/re-volv-solar.jpg') bottom left; ">
+          <div class="text-center container bnr-cntr">
+            <h2 class="fw-400 mb-5" style="color:whitesmoke;">To continue to fight climate change at the local level and bring clean energy to nonprofits around the country that need it now more than ever, RE-volv needs your help.</h3>
+            <h4 class="fw-500 mb-5" style="color:whitesmoke;">Friends of RE-volv have pledged to match all donations through Dec. 31, up to $12,000! Please consider a gift to RE-volv today and help us get the full match</h2>
+            <a class="btn btn-blue btn-lg btn-arrow-orange mx-2" href="https://re-volv.org/project/clean-energy/" target="_blank" rel="noopener noreferrer" role="button">Support RE-volv</a>
+          </div>
+        </div>
         <div class="row justify-content-center align-items-center h-75">
           <div class="col-sm-12 col-md-10 col-lg-8 text-center">
             <h2 class="purple-text fw-300 mb-5">There are roughly 1.5 million nonprofits in the United States that face major barriers to getting their solar projects financed. <br><span class="fw-700">You can change that.</span></h2>
-            <a class="btn btn-orange btn-lg btn-arrow-white mx-2" href="/about-us/re-volv/" role="button">Learn More</a>
-            <a class="btn btn-blue btn-lg btn-arrow-orange mx-2" href="/get-involved/apply/" role="button">Sign up a nonprofit</a>
+            <a class="btn btn-orange btn-lg btn-arrow-white mx-2 my-2" href="/about-us/re-volv/" role="button">Learn More</a>
+            <a class="btn btn-blue btn-lg btn-arrow-orange mx-2 my-2" href="/get-involved/apply/" role="button">Sign up a nonprofit</a>
           </div>
         </div>
       </div>
@@ -783,30 +796,11 @@ a {
         }, {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1,
             // centerMode: true,
           }
 
-        }, {
-          breakpoint: 800,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            infinite: true,
-
-          }
-        },  {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true,
-            infinite: true,
-            autoplay: true,
-            autoplaySpeed: 2000,
-          }
         }]
       });
     });
