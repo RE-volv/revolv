@@ -8,8 +8,20 @@
 {% endblock %}
 
 {% block body %}
-<div class="row container">
-	<h1 class="title">There was an error processing your payment</h1>
-	Return to <a href="{{ project.get_absolute_url }}">{{ project.title }}</a>
+<div class="container-fluid" style="background-color: #04030c;">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-sm-12 co-md-12 col-lg-12 text-center mt-5">
+				<h1 class="text-white fw-300 mt-5">There was an error processing your payment </h1>
+				<a class="col-md-2 btn btn-orange btn-md my-4" href="{{ project.get_absolute_url }}" role="button" tabindex="0">Return to the previous page</a>
+					<div class="text-white">
+						<h4>Here are common solutions to this issue:</h4>
+						<ul class="text-left" style="max-width: 490px; margin: 0 auto;">
+							<li class="mt-2"> Your card may have been declined, use a different credit or debit card to make a donation</li>
+							<li class="mt-2"> If you are having trouble making a donation, try using a different browser </li>
+						</ul>
+					</div>
+			</div>
+		</div>
 </div>
+<div style="background-color: #04030c; height:200px;"></div>
 {% endblock %}
