@@ -637,6 +637,24 @@ def solidarity(request):
 def electricitysource(request):
     return render(request, 'base/partials/blog-article4.html')
 
+def becomesolarambassador(request):
+    return render(request, 'base/partials/blog-article-become-solar-ambassador.html')
+
+def coastalsustainability(request):
+    return render(request, 'base/partials/blog-article-coastal-carolina-sustainability.html')
+
+def ecoanxiety(request):
+    return render(request, 'base/partials/blog-article-eco-anxiety.html')
+
+def factorsrooftopsolar(request):
+    return render(request, 'base/partials/blog-article-factors-rooftop-solar.html')
+
+def mostsolarsystemenergy(request):
+    return render(request, 'base/partials/blog-article-most-out-of-solar-system-energy.html')
+
+def sustainabilitysaves(request):
+    return render(request, 'base/partials/blog-article-sustainability-saves.html')
+
 #-----------Donate Monthly
 
 

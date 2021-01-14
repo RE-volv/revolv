@@ -1,0 +1,182 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/v1610603006/images/blog-article-img/solar-panel-installation.jpg') no-repeat; background-size: 100%; background-position: top !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+            <h1 class="text-white fw-300 mb-1">6 Factors to Consider When Installing a Rooftop Solar System</h1>
+            <h3 class="fw-500 mb-5" style="color:white;">By <span class="article-auther">Danielle Kvadas</span><span class="article-date"></span></h3>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <p>
+              Installing a rooftop solar system is a great step towards achieving energy independence and lowering
+              utility bills. Solar energy has the potential to be exceptionally beneficial for both residential and
+              commercial buildings, but is dependent on a variety of factors:
+            </p>
+            <h3>Roof Quality</h3>
+            <p>
+              Before installing solar panels, the quality of the existing roof should be
+              assessed. Most roofs last about 20 years but if the roof is due for a replacement, the replacement should
+              be completed first. Solar being installed on a roof that is less than 10 years old is ideal. Installing
+              panels on a roof that needs to be repaired will only result in excess money spent on the removal and
+              reinstallation of the system.
+            </p>
+       
+            <h3>Roof Pitch</h3> 
+            <p> 
+              The pitch of a roof can affect the production of a solar system. The
+              latitude of the location where panels are being installed is considered an optimal tilt. Typically,
+              pitches between 30-45 degrees work well, although most tilts within range will produce sufficient
+              production.
+            </p>
+            <h3>Azimuth</h3> 
+            <P>
+              Both south and west facing roofs tend to be the best orientation for solar
+              systems in the northern hemisphere. Like pitch, the azimuth will also affect the amount of energy produced
+              by solar panels. In some cases, utility rates may influence the direction of the system. For example, a
+              time of use rate plan will benefit from a solar system that is positioned to have optimal irradiance
+              during on peak hours (when energy use tends to be the highest).
+            </p>
+            <h3>Shading</h3> 
+            <P>
+              Roofs need substantial sunlight to benefit from solar panels. Solar panels
+              convert the sun’s rays into energy. Without the sun, solar panels are unable to produce electricity.
+              Shading affects the solar system’s performance. Trees and rooftop obstructions typically create shading.
+              Cloudy days can also result in a less efficient system. The location where panels are being installed can
+              help determine the severity of cloud shading. Depending on the components of the solar system, some
+              system’s production can be impacted greatly by shading.
+            </p>
+            <h3>Obstructions</h3> 
+            <P>
+              Rooftop obstructions may be a critical obstacle in system design.
+              Obstructions can vary from pipes to chimneys and skylights. Depending on the height and width of the
+              obstructions, shading severity can vary. Aside from shading concerns, obstructions also restrict the
+              system design. An aesthetically pleasing system design might be unachievable if the obstructions are
+              permanent or unable to be moved.
+            </p>
+            <h3>Setbacks</h3> 
+            <P>
+              Different codes require different setbacks to be implemented on solar system
+              designs. For example, the fire code requires a three-foot setback from the ridgeline and sides of the roof
+              plane. Codes may vary under which jurisdiction has authority and are continually changing. If there is
+              already a lack of roof space, system design will be affected. On larger projects, walkways and setbacks
+              around larger obstructions such as rooftop HVAC units are common.
+            </p>
+            <P>
+              Understanding what factors affect a solar system’s performance is important when considering an
+              installation. Rooftop systems typically have a variety of fixed features that are unable to be manipulated
+              with ease such as the steepness or direction of a roof. Grasping the influence these elements have will
+              better prepare an owner on what to expect out of their solar system.
+            </p>
+            <div class="col-md-12 mt-5">
+                <h4 style="color:#100084;">About the Author</h4>
+              <div class="row">
+                <div class="col-md-2"><img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1610603002/images/blog-article-img/author-danielle-kvadas.jpg" alt="author-blog-factors-of-rooftop-solar-installation"></div>
+                <div class="col-md-10">Danielle Kvadas is a Senior Interdisciplinary Studies major attending Coastal
+                  Carolina University. She has been working in solar for almost five years and plans to continue
+                  progressing in the industry after graduating. Being a Solar Ambassador is important to Danielle because
+                  she believes every nonprofit deserves the opportunity to go solar. 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/electricity-source/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1605068437/images/edu-media-img/solarpexels4.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/electricity-source/"> <span class="meta-date">OCTOBER 28, 2020</span> </a>
+                    <h4 class="meta-title">The Cheapest Source of Electricity in History</h4>
+                    <p>It’s official. Guess what is the cheapest source of electricity in history!?</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/solidarity/">
+                    <img src="../../../static/images/blog-monthly-img/blogpeoplesolidarity.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/solarinvestment/"> <span class="meta-date">JUNE 19, 2020</span> </a>
+                    <h4 class="meta-title">Solidarity and commitment</h4>
+                    <p>In the words of the Movement 4 Black Lives, “Juneteenth is a day that honors Black freedom and...</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}

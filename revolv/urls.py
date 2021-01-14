@@ -100,6 +100,13 @@ urlpatterns = patterns(
     url(r'^blog-center/articles/solidarity/', 'revolv.base.views.solidarity', name='solidarity'),
     url(r'^blog-center/articles/electricity-source/', 'revolv.base.views.electricitysource', name='electricitysource'),
 
+    url(r'^blog-center/articles/why-i-became-a-solar-ambassador/', 'revolv.base.views.becomesolarambassador', name='becomesolarambassador'),
+    url(r'^blog-center/articles/coastal-carolina-advancement-of-sustainability/', 'revolv.base.views.coastalsustainability', name='coastalsustainability'),
+    url(r'^blog-center/articles/overcome-eco-anxiety/', 'revolv.base.views.ecoanxiety', name='ecoanxiety'),
+    url(r'^blog-center/articles/six-factors-installing-rooftop-solar-system/', 'revolv.base.views.factorsrooftopsolar', name='factorsrooftopsolar'),
+    url(r'^blog-center/articles/get-most-out-of-your-solar-system-energy-production/', 'revolv.base.views.mostsolarsystemenergy', name='mostsolarsystemenergy'),
+    url(r'^blog-center/articles/sustainability-saves-more-than-the-environment/', 'revolv.base.views.sustainabilitysaves', name='sustainabilitysaves'),
+
     url(r'^monthly_donor', 'revolv.base.views.monthly_donor', name='monthly_donor'),
     url(r'^thanks/postdonation/', 'revolv.base.views.postdonation', name='postdonation'),
     url(r'^thanks/postmonthlydonation/', 'revolv.base.views.postmonthlydonation', name='postmonthlydonation'),

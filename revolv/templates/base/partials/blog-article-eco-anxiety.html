@@ -1,0 +1,149 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/v1610603003/images/blog-article-img/climate-movement.jpg') no-repeat; background-size: 100%;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+            <h1 class="text-white fw-300 mb-1">Can we overcome Eco-Anxiety?</h1>
+            <h3 class="fw-500 mb-5" style="color:white;">By <span class="article-auther">Samantha Miller</span><span class="article-date"></span></h3>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <p>
+              After 3 years of studying environmental economics, health, and policy I have learned that environmental academia is in
+              need of a serious reboot. One of the most challenging aspects of the environmental field is the insurmountable amount
+              of challenges that face us. Sadly, my teachers have not given me the tools to come up with creative solutions to our
+              problems.
+              I've gained a deep understanding of the issues regulating climate change and pollution, but the constant focus on
+              these problems started to create a mood of pessimism that I felt I couldn’t move past.
+              I understand that to be effective in the real world, we need to have a grounded understanding of how various
+              environmental issues intersect with each other, and how these issues demand we respect social equity, environmental
+              justice, and human communities.
+            </p>
+            <p>For a while I had considered changing my major, believing that despite my passion, I could never find ways to make
+              the changes I dearly wished possible.
+              This aura of hopelessness is also felt by many of my peers, but I have learned that though we can’t control what our
+              professors decide to teach us, the inspiration we seek may need to come from alternative sources.
+            </p>
+            <p>
+              I credit my growing positivity, passion, and excitement to be in the environmental field to RE-volv. Founder, and
+              American University alum, Andreas Karelas spoke to all the solar ambassadors about how to overcome the dreaded
+              “eco-anxiety” that we all felt. He showed us that there are always places to look for inspiration. Though we won’t see
+              the advancements made by local communities and other nonprofits in the news in our textbooks, we can’t underestimate
+              their significance. There are millions of people taking action in their communities, and there are a million more who
+              just need the tools to reach their goals. Through RE-volv we can empower people, families, and businesses to reach a
+              shared goal of a country run on clean energy. During my time in this organization, I have found a renewed sense of
+              capability, and I feel that though I am still an undergraduate student, I have skills that can serve my community.
+            </p>
+            <p>
+              The eco-anxiety that many of us feel is rightly felt, but I now know there are ways to overcome this. If any other
+              students share this feeling of despair or hopelessness regarding the state of our environment, I would tell them to
+              find their own pathways to inspiration. There is an incredible amount of power and positivity that can be gained from
+              taking action in our communities. Whether it be volunteering our time at an urban community garden or by joining
+              campus environmental clubs, there are many ways that we can overcome eco-anxiety.
+            </p>
+            <p>
+              When I decided to join RE-volv, I knew that my actions could be traced to tangible benefits. My brand of environmental
+              activism is highly dependent on producing results that I can be proud of. I am now an active participant in the solar
+              revolution, and it feels great. My work with RE-volv is how I have been able to overcome my eco-anxiety, and I am
+              grateful to have a passion project that continues to renew my faith in environmental activism.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/six-factors-installing-rooftop-solar-system/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1610603006/images/blog-article-img/solar-panel-installation.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/six-factors-installing-rooftop-solar-system/"> <span class="meta-date">JANUARY 11, 2021</span> </a>
+                    <h4 class="meta-title">6 Factors to Consider When Installing a Rooftop Solar System</h4>
+                    <p>Installing a rooftop solar system is a great step..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/electricity-source/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1605068437/images/edu-media-img/solarpexels4.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/electricity-source/"> <span class="meta-date">OCTOBER 28, 2020</span> </a>
+                    <h4 class="meta-title">The Cheapest Source of Electricity in History</h4>
+                    <p>It’s official. Guess what is the cheapest source of electricity in history!?</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}

@@ -1,0 +1,164 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/v1610603005/images/blog-article-img/solar-ambassadors-kayak.jpg') no-repeat; background-size: 100%; background-position: center !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+            <h1 class="text-white fw-300 mb-1">Why I Became A Solar Ambassador for RE-volv</h1>
+            <h3 class="fw-500 mb-5" style="color:white;">By <span class="article-auther">Colin Joern</span><span class="article-date"></span></h3>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <p>
+              In this post I would like to talk about something very important to me. It acts as the founding principle
+              for the solar nonprofit RE-volv that I am doing my Solar Ambassador fellowship with, it helps me find new
+              friends and it ensures that I always have someone to lean on at my school University of Dayton (UD) :
+              community.
+            </p>
+            <p>
+              My university loves to emphasize the importance of community. UD is famous for its south student
+              neighborhood. It is an area just south of campus where the vast majority of students live at some point in
+              their time at UD. It’s not the houses, or the location that makes this neighborhood truly special. It’s
+              the people. It’s the connection every UD student holds with every other UD student, regardless of if they
+              even attended the school at the same time. Whether it’s holding the door open for someone as they walk to
+              class, enjoying a family style meal with your neighbors or sharing a drink on your porch, the feeling of
+              community is omnipresent. We look out for and care for one another. I would trust anyone (student,
+              professor, maintenance worker or otherwise) at UD to help me out in a difficult situation.
+
+            </p>
+            <p>
+              This feeling extends well beyond the borders of the campus into the city of Dayton. I see it when I work
+              with those supporting Mission of Mary Cooperative, an urban agriculture nonprofit which provides fresh and
+              healthy vegetables to low income residents, and I see it when I am doing research on the Great Miami River
+              with the River Stewards to ensure all in the Miami Valley are safe and healthy around our waters.
+            </p>
+            <p>In our community we hold each other up. We work together in order to make each other the best versions of
+              ourselves. This is exactly why I found RE-volv and its community based solar projects to be such a great
+              model and such a powerful force of good in our world. By bringing solar to community serving nonprofits,
+              RE-volv supports the nonprofit as well as all the individuals in that nonprofit’s community.
+            </p>
+            <p>
+              My role as a Solar Ambassador is to educate our UD community as well as the greater community. We hold
+              events on campus, hand out tea with simple facts about solar and its benefits, and do site visits of local
+              solar arrays around town. Those of us in the Solar Ambassador program at UD work to find a nonprofit who
+              could benefit from going solar and educate them and others in the community about the benefits. Our events
+              allow for genuine and down to Earth conversations with members of the community.
+            </p>
+            <p>
+              Providing solar to a local nonprofit allows them to reach their full potential, to focus their dollars on
+              helping those truly in need instead of worrying about how to afford the next electricity bill. By
+              supporting these nonprofits, you are then in turn able to support the members of their community.
+            </p>
+            <p>
+              The support provided from your one time donation doesn’t end once the nonprofit gets solar on their roof.
+              The nonprofit pays their monthly lease payment for the solar array (which is less than what they were
+              originally paying for their monthly energy bill). Each one of those payments goes into the revolving fund
+              that is used to help other nonprofits around the country go solar. The revolving fund allows more and more
+              nonprofits to better support their community members. It is very easy to see how RE-volv has the potential
+              to create a snowball effect of love and support for communities.
+            </p>
+            <p>
+              The Solar Ambassador program is special. Movements based off love for your community and all its
+              individuals are always the most impactful. It is easy to say “I’m going to worry about me, you worry about
+              you.” But why would you? Why give up the opportunity to love and to be loved, to support and be supported.
+              RE-volv allows all to participate in spreading that love.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/six-factors-installing-rooftop-solar-system/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1610603006/images/blog-article-img/solar-panel-installation.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/six-factors-installing-rooftop-solar-system/"> <span class="meta-date">JANUARY 11, 2021</span> </a>
+                    <h4 class="meta-title">6 Factors to Consider When Installing a Rooftop Solar System</h4>
+                    <p>Installing a rooftop solar system is a great step..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/electricity-source/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1605068437/images/edu-media-img/solarpexels4.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/electricity-source/"> <span class="meta-date">OCTOBER 28, 2020</span> </a>
+                    <h4 class="meta-title">The Cheapest Source of Electricity in History</h4>
+                    <p>It’s official. Guess what is the cheapest source of electricity in history!?</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}
