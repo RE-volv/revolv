@@ -1,0 +1,1390 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+
+<title>{% block title %}Subscribe to Newsletter | RE-volv{% endblock %}</title>
+
+<link rel="canonical" href="https://re-volv.org/newsletter/subscribe" />
+
+{% endblock %}
+
+{% block body %}
+    
+    <main role="main" class="container-fluid">
+      <div class="container-fluid application-header" id="top-section" style="height: 120px;">
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="https://res.cloudinary.com/dkwon4bkk/image/upload/images/nonprofit-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="newsletter-container">
+        <div class style="min-height: calc(100vh - 15rem); padding-bottom: 10rem; padding-top: 5rem; background: #EEEEEE;">
+          <div class="l-center-container">
+            <div class="sc-kAzzGY dLkilY">
+              <h1 size="48px" color="#100084" class="sc-chPdSV eZUcPT">Get the latest from RE-volv</h1>
+            </div>
+            <div>
+              <div class="sc-bdVaJa iIDDUy">
+                <div>
+                  <form class="js-cm-form" id="subForm" class="js-cm-form"
+                    action="https://www.createsend.com/t/subscribeerror?description=" method="post"
+                    data-id="2BE4EF332AA2E32596E38B640E905619F16299382A22A1FF9B3CD6645F02019DE79EABA0683ED1DE290443EF75A66A5FC7E10241A53EF940A5824AC5AB7FB2C4">
+                    <div size="base" class="sc-jzJRlG bMslyb">
+                      <div size="small" class="sc-jzJRlG liOVdz">
+                        <div><label size="0.875rem" color="#5d5d65" class="sc-gzVnrw dEVaGV">Name </label><input
+                            aria-label="Name" id="fieldName" maxLength="200" name="cm-name" class="sc-iwsKbI iMsgpL" /></div>
+                      </div>
+                      <div size="small" class="sc-jzJRlG liOVdz">
+                        <div><label size="0.875rem" color="#5d5d65" class="sc-gzVnrw dEVaGV">Email <span
+                              class="sc-dnqmqq iFTUZ">*</span></label><input autoComplete="Email" aria-label="Email"
+                            id="fieldEmail" maxLength="200" name="cm-sihkrr-sihkrr" required type="email"
+                            class="js-cm-email-input qa-input-email sc-iwsKbI iMsgpL" /></div>
+                      </div>
+                      <div size="base" class="sc-jzJRlG bMslyb"></div>
+                    </div><button size="1rem" color="#fff" type="submit"
+                      class="js-cm-submit-button sc-jKJlTe jKIUjR">Subscribe</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <style>
+          .iIDDUy {
+            background: rgb(255, 255, 255);
+            border-radius: 0.3125rem;
+            max-width: 35.25rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2.5rem 2.75rem;
+            position: relative;
+          }
+        
+          .fOEEVC {
+            background: rgb(255, 255, 255);
+            border-radius: 0.3125rem;
+            max-width: 35.25rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 2.5rem 2.75rem;
+            position: relative;
+          }
+        
+          .ebeRtN {
+            align-items: flex-start;
+            display: flex;
+          }
+        
+          .iHsWXX {
+            font-size: 0.875rem;
+            padding-left: 0.5rem;
+            overflow-wrap: break-word;
+            word-break: break-word;
+            font-family: Helvetica, Arial, sans-serif;
+            color: rgb(67, 77, 93);
+          }
+        
+          .jMsntP {
+            color: rgb(221, 54, 42);
+            font-weight: 400;
+            font-size: 0.75rem;
+            margin-left: 0.125rem;
+          }
+        
+          .eKOoKL {
+            flex-shrink: 0;
+            height: 1rem;
+            position: relative;
+            top: 0.08rem;
+            width: 1rem;
+          }
+        
+          .dEVaGV {
+            font-family: Helvetica, Arial, sans-serif;
+            color: rgb(93, 93, 101);
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+          }
+        
+          .iucGAN {
+            font-family: Helvetica, Arial, sans-serif;
+            color: rgb(17, 0, 0);
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+          }
+        
+          .bMQyiR {
+            font-family: Helvetica, Arial, sans-serif;
+            color: rgb(16, 0, 8);
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+          }
+        
+          .hzqaYI {
+            font-family: Helvetica, Arial, sans-serif;
+            color: rgb(16, 0, 132);
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+          }
+        
+          .oCCYR {
+            font-family: Helvetica, Arial, sans-serif;
+            color: rgb(76, 71, 111);
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+          }
+        
+          .iRnnPz {
+            font-family: Helvetica, Arial, sans-serif;
+            color: rgb(47, 45, 64);
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+          }
+        
+          .txyhl {
+            font-family: Helvetica, Arial, sans-serif;
+            color: rgb(10, 9, 12);
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+          }
+        
+          .hUEbPw {
+            font-family: Helvetica, Arial, sans-serif;
+            color: rgb(0, 0, 0);
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+          }
+        
+          .iFTUZ {
+            color: rgb(221, 54, 42);
+          }
+        
+          .iMsgpL {
+            -webkit-appearance: none;
+            background-color: rgb(255, 255, 255);
+            border: 0px;
+            border-radius: 0.1875rem;
+            box-sizing: border-box;
+            box-shadow: rgba(142, 154, 173, 0.1) 0px 2px 0px 0px inset, rgb(210, 215, 223) 0px 0px 0px 1px inset, rgb(255, 255, 255) 0px 1px 0px 0px;
+            color: rgb(67, 77, 93);
+            font-size: 0.875rem;
+            line-height: 1.5;
+            min-height: 2.8125rem;
+            outline: 0px;
+            padding: 0.75rem 1rem;
+            transition: box-shadow 0.2s ease 0s;
+            width: 100%;
+          }
+        
+          .iMsgpL:focus {
+            box-shadow: transparent 0px 0px 0px 0px inset, rgb(80, 156, 246) 0px 0px 0px 1px inset, rgba(80, 156, 246, 0.25) 0px 0px 0px 2px;
+          }
+        
+          .bMslyb {
+            margin-bottom: 1.5rem;
+          }
+        
+          .liOVdz {
+            margin-bottom: 1rem;
+          }
+        
+          .hmAVkF {
+            margin-bottom: 0rem;
+          }
+        
+          .dLkilY {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 29.125rem;
+            padding-bottom: 3.125rem;
+          }
+        
+          .iMHkJG {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 29.125rem;
+            padding-bottom: 0.5rem;
+          }
+        
+          .wSZJN {
+            font-size: 3rem;
+            text-align: center;
+            letter-spacing: -1px;
+            line-height: 1.17;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 900;
+            font-family: Lato, sans-serif;
+            color: rgb(0, 0, 0);
+          }
+        
+          .chGcBl {
+            font-size: 48px;
+            text-align: center;
+            letter-spacing: -1px;
+            line-height: 1.17;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 900;
+            font-family: Lato, sans-serif;
+            color: rgb(17, 0, 0);
+          }
+        
+          .kmHbrP {
+            font-size: 48px;
+            text-align: center;
+            letter-spacing: -1px;
+            line-height: 1.17;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 900;
+            font-family: Lato, sans-serif;
+            color: rgb(16, 0, 8);
+          }
+        
+          .eZUcPT {
+            font-size: 48px;
+            text-align: center;
+            letter-spacing: -1px;
+            line-height: 1.17;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 900;
+            font-family: Lato, sans-serif;
+            color: rgb(16, 0, 132);
+          }
+        
+          .eKPWyz {
+            font-size: 2em;
+            margin: 0.67em 0px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+          }
+        
+          .urQia {
+            border-bottom: 1px solid rgb(210, 215, 223);
+            margin-bottom: 0.75rem;
+            padding-top: 0.75rem;
+          }
+        
+          .bguLUo {
+            border-bottom: 1px solid rgb(210, 215, 223);
+            margin-bottom: 1.5rem;
+            padding-top: 1.5rem;
+          }
+        
+          .gnexaL {
+            margin-bottom: 0.25rem;
+          }
+        
+          .jHkwuK {
+            background-color: rgb(123, 177, 61);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .jHkwuK:hover {
+            cursor: pointer;
+          }
+        
+          .hKDKKv {
+            background-color: rgb(17, 0, 0);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .hKDKKv:hover {
+            cursor: pointer;
+          }
+        
+          .eLjLPb {
+            background-color: rgb(16, 8, 4);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .eLjLPb:hover {
+            cursor: pointer;
+          }
+        
+          .GlyZw {
+            background-color: rgb(16, 8, 0);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .GlyZw:hover {
+            cursor: pointer;
+          }
+        
+          .eBXUKb {
+            background-color: rgb(16, 0, 8);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .eBXUKb:hover {
+            cursor: pointer;
+          }
+        
+          .jKIUjR {
+            background-color: rgb(16, 0, 132);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .jKIUjR:hover {
+            cursor: pointer;
+          }
+        
+          .deYVmE {
+            background-color: rgb(126, 121, 159);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .deYVmE:hover {
+            cursor: pointer;
+          }
+        
+          .huLjvt {
+            background-color: rgb(136, 131, 168);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .huLjvt:hover {
+            cursor: pointer;
+          }
+        
+          .jwdlOP {
+            background-color: rgb(152, 148, 181);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .jwdlOP:hover {
+            cursor: pointer;
+          }
+        
+          .oeNAX {
+            background-color: rgb(186, 183, 206);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .oeNAX:hover {
+            cursor: pointer;
+          }
+        
+          .mjFvC {
+            background-color: rgb(210, 208, 221);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .mjFvC:hover {
+            cursor: pointer;
+          }
+        
+          .cpkdiS {
+            background-color: rgb(242, 242, 242);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .cpkdiS:hover {
+            cursor: pointer;
+          }
+        
+          .gMtreO {
+            background-color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .gMtreO:hover {
+            cursor: pointer;
+          }
+        
+          .jQkIrG {
+            background-color: rgb(129, 125, 164);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .jQkIrG:hover {
+            cursor: pointer;
+          }
+        
+          .cQWoLT {
+            background-color: rgb(127, 122, 162);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .cQWoLT:hover {
+            cursor: pointer;
+          }
+        
+          .fgPydl {
+            background-color: rgb(107, 102, 143);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .fgPydl:hover {
+            cursor: pointer;
+          }
+        
+          .brKJIc {
+            background-color: rgb(84, 80, 120);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .brKJIc:hover {
+            cursor: pointer;
+          }
+        
+          .jFkzFB {
+            background-color: rgb(68, 64, 102);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .jFkzFB:hover {
+            cursor: pointer;
+          }
+        
+          .inuTrx {
+            background-color: rgb(50, 46, 80);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .inuTrx:hover {
+            cursor: pointer;
+          }
+        
+          .ihwJzM {
+            background-color: rgb(26, 23, 47);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .ihwJzM:hover {
+            cursor: pointer;
+          }
+        
+          .gqJLIO {
+            background-color: rgb(14, 12, 28);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .gqJLIO:hover {
+            cursor: pointer;
+          }
+        
+          .hhPLeU {
+            background-color: rgb(9, 7, 18);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .hhPLeU:hover {
+            cursor: pointer;
+          }
+        
+          .cGgNAS {
+            background-color: rgb(4, 3, 9);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .cGgNAS:hover {
+            cursor: pointer;
+          }
+        
+          .eUEnER {
+            background-color: rgb(3, 2, 7);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .eUEnER:hover {
+            cursor: pointer;
+          }
+        
+          .jnyBxw {
+            background-color: rgb(41, 34, 92);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .jnyBxw:hover {
+            cursor: pointer;
+          }
+        
+          .drGeXQ {
+            background-color: rgb(35, 30, 68);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .drGeXQ:hover {
+            cursor: pointer;
+          }
+        
+          .komxiA {
+            background-color: rgb(28, 25, 49);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .komxiA:hover {
+            cursor: pointer;
+          }
+        
+          .kvbtiB {
+            background-color: rgb(18, 16, 29);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .kvbtiB:hover {
+            cursor: pointer;
+          }
+        
+          .bEwWPr {
+            background-color: rgb(5, 5, 8);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .bEwWPr:hover {
+            cursor: pointer;
+          }
+        
+          .kxMIMn {
+            background-color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .kxMIMn:hover {
+            cursor: pointer;
+          }
+        
+          .kyXmUM {
+            background-color: rgb(94, 137, 69);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .kyXmUM:hover {
+            cursor: pointer;
+          }
+        
+          .jrEVrr {
+            background-color: rgb(94, 138, 67);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .jrEVrr:hover {
+            cursor: pointer;
+          }
+        
+          .hodIAQ {
+            background-color: rgb(93, 138, 66);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .hodIAQ:hover {
+            cursor: pointer;
+          }
+        
+          .yfqFi {
+            background-color: rgb(91, 139, 62);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .yfqFi:hover {
+            cursor: pointer;
+          }
+        
+          .efUFMe {
+            background-color: rgb(90, 143, 58);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .efUFMe:hover {
+            cursor: pointer;
+          }
+        
+          .DjEMC {
+            background-color: rgb(89, 148, 54);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .DjEMC:hover {
+            cursor: pointer;
+          }
+        
+          .gYbcSl {
+            background-color: rgb(85, 164, 38);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .gYbcSl:hover {
+            cursor: pointer;
+          }
+        
+          .dPLQjv {
+            background-color: rgb(84, 162, 37);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .dPLQjv:hover {
+            cursor: pointer;
+          }
+        
+          .hHvfIN {
+            background-color: rgb(78, 152, 34);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .hHvfIN:hover {
+            cursor: pointer;
+          }
+        
+          .lnzHJV {
+            background-color: rgb(74, 146, 32);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .lnzHJV:hover {
+            cursor: pointer;
+          }
+        
+          .eXbhvW {
+            background-color: rgb(74, 146, 31);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .eXbhvW:hover {
+            cursor: pointer;
+          }
+        
+          .dxojsi {
+            background-color: rgb(73, 144, 31);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .dxojsi:hover {
+            cursor: pointer;
+          }
+        
+          .dDrICw {
+            background-color: rgb(72, 144, 29);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .dDrICw:hover {
+            cursor: pointer;
+          }
+        
+          .blwyzt {
+            background-color: rgb(67, 142, 22);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .blwyzt:hover {
+            cursor: pointer;
+          }
+        
+          .flCpxL {
+            background-color: rgb(64, 141, 19);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .flCpxL:hover {
+            cursor: pointer;
+          }
+        
+          .fHWozT {
+            background-color: rgb(64, 141, 18);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .fHWozT:hover {
+            cursor: pointer;
+          }
+        
+          .iBNvGx {
+            background-color: rgb(55, 117, 17);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .iBNvGx:hover {
+            cursor: pointer;
+          }
+        
+          .jcCRwL {
+            background-color: rgb(53, 113, 18);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .jcCRwL:hover {
+            cursor: pointer;
+          }
+        
+          .gdIOhd {
+            background-color: rgb(53, 112, 18);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .gdIOhd:hover {
+            cursor: pointer;
+          }
+        
+          .fyLLjW {
+            background-color: rgb(53, 111, 18);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .fyLLjW:hover {
+            cursor: pointer;
+          }
+        
+          .bxSLku {
+            background-color: rgb(52, 110, 18);
+            border: none;
+            border-radius: 3px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1;
+            outline: 0px;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            transition: background-color 0.1s ease-in 0s, box-shadow 0.1s ease-in 0s;
+          }
+        
+          .bxSLku:hover {
+            cursor: pointer;
+          }
+        
+          .fBOZaM {
+            white-space: pre-wrap;
+            font-size: 16px;
+            font-family: Helvetica, Arial, sans-serif;
+            color: rgb(67, 77, 93);
+          }
+        
+          button,
+          label,
+          p {
+            overflow-wrap: break-word;
+            word-break: break-word;
+          }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>WebFont.load({ google: { families: ['Lato:900:latin', 'Lato:300:latin', 'Playfair+Display:700italic:latin', 'Merriweather:700:latin', 'Crete+Round::latin', 'PT+Sans+Narrow:700:latin'] } });</script>
+        <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+        
+      </div>
+      
+    </main><!-- /.container -->
+
+
+{% endblock %}

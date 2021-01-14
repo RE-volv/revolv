@@ -56,6 +56,8 @@ urlpatterns = patterns(
     url(r'^about-us/jobs', 'revolv.base.views.jobs', name='jobs'),
     url(r'^get-involved/solar-ambassador', 'revolv.base.views.solar_ambassador', name='solar_ambassador'),
     url(r'^get-involved/apply', 'revolv.base.views.nonprofit_app', name='nonprofit_app'),
+    url(r'^newsletter/subscribe', 'revolv.base.views.newsletter_subscription', name='newsletter_subscription'),
+    
     url(r'^get-involved/solar', 'revolv.base.views.nonprofit_epc', name='nonprofit_epc'),
 
     url(r'^nonprofit/videos', 'revolv.base.views.nonprofit_videos', name='nonprofit_videos'),

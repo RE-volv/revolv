@@ -559,6 +559,9 @@ def solarcareerssection(request):
 def climate_courage(request):
     return render(request, 'base/climatecourage.html')
 
+def newsletter_subscription(request):
+    return render(request, 'base/partials/newsletter-subscription.html')
+
 # education center resource articles
 def solarforall(request):
     return render(request, 'base/education_center_resources1.html')
