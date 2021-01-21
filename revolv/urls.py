@@ -106,6 +106,7 @@ urlpatterns = patterns(
     url(r'^blog-center/articles/six-factors-installing-rooftop-solar-system/', 'revolv.base.views.factorsrooftopsolar', name='factorsrooftopsolar'),
     url(r'^blog-center/articles/get-most-out-of-your-solar-system-energy-production/', 'revolv.base.views.mostsolarsystemenergy', name='mostsolarsystemenergy'),
     url(r'^blog-center/articles/sustainability-saves-more-than-the-environment/', 'revolv.base.views.sustainabilitysaves', name='sustainabilitysaves'),
+    url(r'^blog-center/articles/where-do-we-go-chaos-or-community/', 'revolv.base.views.drmartinlutherking', name='drmartinlutherking'),
 
     url(r'^monthly_donor', 'revolv.base.views.monthly_donor', name='monthly_donor'),
     url(r'^thanks/postdonation/', 'revolv.base.views.postdonation', name='postdonation'),

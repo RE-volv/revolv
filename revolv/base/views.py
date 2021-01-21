@@ -649,6 +649,9 @@ def ecoanxiety(request):
 def factorsrooftopsolar(request):
     return render(request, 'base/partials/blog-article-factors-rooftop-solar.html')
 
+def drmartinlutherking(request):
+    return render(request, 'base/partials/blog-article-martin-luther-king.html')
+
 def mostsolarsystemenergy(request):
     return render(request, 'base/partials/blog-article-most-out-of-solar-system-energy.html')
 
