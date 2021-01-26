@@ -2,73 +2,80 @@
 const data = [
   {
     name: 'BIPOC',
-    percentage: 9.21, 
-    value: 10, 
+    percentage: 9, 
+    value: 9, 
     color: '#0789F8',
     projects: 7,
   },
   {
     name: 'Veterans',
-    percentage: 2.63,
-    value: 10,
+    percentage: 3,
+    value: 3,
     color: '#F9BA00',
     projects: 2,
   },
   {
     name: 'Youth',
-    percentage: 10.53,
-    value: 10,
+    percentage: 11,
+    value: 11,
     color: '#74C7B8',
     projects: 8,
   },
   {
     name: 'Arts',
-    percentage: 6.58,
-    value: 10,
+    percentage: 7,
+    value: 7,
     color: '#00AF91',
     projects: 5,
   },
   {
     name: 'Housing',
-    percentage: 18.42,
-    value: 10,
+    percentage: 19,
+    value: 19,
     color: '#F8DC81',
     projects: 14,
   },
   {
     name: 'Health',
-    percentage: 13.16,
-    value: 10,
+    percentage: 13,
+    value: 13,
     color: '#FF8585',
     projects: 10,
   },
   {
     name: 'Animals',
-    percentage: 2.63,
-    value: 10,
+    percentage: 3,
+    value: 3,
     color: '#FE8C00',
     projects: 2,
   },
   {
     name: 'Faith',
-    percentage: 14.47,
-    value: 10,
+    percentage: 15,
+    value: 15,
     color: '#A6A8F8',
     projects: 11,
   },
   {
+    name: 'Conservation',
+    percentage: 1,
+    value: 2,
+    color: '#3ABC60',
+    projects: 1,
+  },
+  {
     name: 'Community Development',
-    percentage: 10.53,
-    value: 10,
+    percentage: 11,
+    value: 11,
     color: '#47D7A8',
     projects: 8,
   },
   {
-    name: 'Land(Environment)/Food/Agriculture',
-    percentage: 11.84,
-    value: 10,
+    name: 'Food/Agriculture',
+    percentage: 9,
+    value: 9,
     color: '#3BCB60',
-    projects: 9,
+    projects: 7,
   },
 ];
 
@@ -134,7 +141,7 @@ const pie = d3
   .pie()
   .sort(null)
   .padAngle(0.12)
-  .value(d => d.percentage);
+  .value(d => d.value);
 
 const arc = d3
   .arc()
@@ -200,7 +207,7 @@ groupsArcs
     return `translate(${x + offset} ${y})`;
   })
   .html(({ data: d }) => `
-    <tspan x="0">${d.name}:</tspan><tspan x="0" dy="10" font-size="8">${d.percentage}% / ${d.projects} Projects</tspan>
+    <tspan x="0">${d.name}:</tspan><tspan x="0" dy="10" font-size="8">${d.percentage}% / ${d.projects} Project(s)</tspan>
   `)
   .style('opacity', 0)
   .style('visibility', 'hidden');

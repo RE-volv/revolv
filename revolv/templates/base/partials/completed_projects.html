@@ -190,11 +190,14 @@
                   </div>
               </div>
             </div>
-          <h2 class="blue-text mt-5 mb-5"> Learn more about the completed nonprofit solar projects by clicking on any of the projects below </h2>
+          <h1 class="blue-text mt-5 mb-5"> RE-volv projects by impact area </h1>
+          <div class="wrapper" id="rchart">
+            <svg viewBox="0 0 600 300" preserveAspectRatio="xMidYMid meet"></svg>
+          </div>
+          <h1 class="blue-text mt-5 mb-5"> Sort project by impact area </h1>
           <div class="container my-5">
-            <div class="row float-md-right" style="max-width:170px; padding: 0px 0px !important;">
-              <button class="btn-orange btn-sm mb-2" id="toggle-btn"
-                style="font-size:1.5em; width:100%; max-width:150px; border-radius:.5em; ">Details</button>
+            <div class="row" style="padding: 0px 0px !important; justify-content: center; text-align: center;">
+
               <select id="mySelect" class="select-dropdown" data-live-search="true" aria-label="Project"
                 style="max-width:150px; text-align: center; text-indent: 5px;">
                 <option value="showprojects" data-filter="showprojects">Projects</option>
@@ -210,10 +213,8 @@
                 <option value="faith" data-filter="faith">Faith</option>
               </select>
             </div>
-            <div class="wrapper" id="rchart" style="display:none;">
-              <svg viewBox="0 0 600 300" preserveAspectRatio="xMidYMid meet"></svg>
-            </div>
           </div>
+          <h2 class="blue-text mt-5 mb-5"> Learn more about the completed nonprofit solar projects by clicking on any of the projects below </h2>
             {% for completed_project in completed_projects %}
 
                 {% if completed_project.tagline == 'progress' %}
@@ -377,11 +378,6 @@
 </div>
 <script type="text/javascript" src="{% static 'js/base/pjscript.js' %}"></script>
 
-<script type="text/javascript">
-  jQuery("#toggle-btn").click(function () {
-    jQuery("#rchart").toggle();
-  });
-</script>
 <script>
   var posts = $('.post');
 
