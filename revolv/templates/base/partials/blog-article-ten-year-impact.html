@@ -1,0 +1,287 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/v1612470353/images/blog-article-img/ten-year-event.jpg') no-repeat; background-size: 100%; background-position: top !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <h1 class="fw-300 mb-1 text-center">Thank you for 10 Amazing Years of Impact</h1>
+            <h3 class="fw-500 mb-5 text-center">By <span class="article-auther">Andreas Karelas</span><span class="article-date"></span></h3>
+            <p>
+              Ten years ago today, February 4th 2011, I boarded a train in Jack London Square in Oakland
+              bound for Sacramento with a copy of “How to Form a Nonprofit Corporation in California” from
+              the library in hand. A few hours later I filed the articles of incorporation for RE-volv. Our mission:
+              to “empower people and communities to invest collectively in renewable energy.”
+            </p>
+            <p>
+              Ten years later, I’m proud to say that not only did we make it to this far, but our impact has been
+              real - we’ve really impacted people’s lives- and we’ve really helped to fight climate change and
+              promote clean energy. For that I’m very grateful and feel very blessed.
+            </p>
+
+            <h3>Our Impact</h3>
+            <p>
+              We have now helped <a href="https://re-volv.org/projects/completed_projects">43 amazing nonprofits</a>go solar in 10 states across the country - from
+              Maine to New Mexico, Wisconsin to Pennsylvania, Ohio to South Carolina and more. And the
+              missions of these nonprofits vary from poverty alleviation to low-income housing, from veterans'
+              halls to youth centers, from those that feed the hungry, to those that offer people a place to
+              pray, to learn, to paint, or to dance.
+            </p>
+            <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1612470343/images/blog-article-img/ten-year-impact.png" alt="Solar ribbon cutting event" style="max-width:1000px;">
+            <P>
+              Our mission to invest collectively in renewable energy has succeeded in investing $8.3 million,
+              resulting in 2.8 megawatts of solar capacity, creating over $15 Million of lifetime savings for
+              these amazing nonprofits, with over 50,000 people directly benefiting from clean energy in their
+              community. And honestly, if you ask anyone on the RE-volv team, they’d tell you we’re just
+              getting started.
+            </p>
+
+            <h3>Our Evolving Climate Justice Mission</h3>
+            <P>
+              Over the past 10 years a lot has changed. The price of solar for one, has dropped by 70%, so
+              that’s pretty cool.
+            </p>
+            <P>
+              Other things have not changed like the systemic racism, classism, inequality, injustice,
+              discrimination, and poverty that plague our country.
+            </p>
+            <P>
+              If anything, inequality has only gotten worse, racism more overt, and the apathy of so many,
+              more apparent.
+            </p>
+            <P>
+              The RE-volv Board of Directors, staff, and I, are now undergoing the process of revising our
+              mission to guide us for the next 10 years. In doing so we will solidify and quantify our
+              commitment not just to the planet, but to the people on it. Not just to creating a more sustainable
+              world, but a more equitable one.
+            </p>
+            <p>
+              We know that by taking back our power in our communities and on our rooftops we can create
+              real wealth, real opportunity, and real services for the least fortunate among us, the
+              marginalized, disenfranchised, and forgotten, and that by doing so we can create real change.
+              The metrics we track, our ways of measuring our impact, and the way we design our programs,
+              needs to reflect this commitment even more than they do today. Not just to alleviate climate
+              change risks of the future. But to alleviate the poverty, inequality, and injustice that have
+              plagued us throughout our past and still haunt us today.
+            </p>
+            <h3>Lessons Learned</h3>
+            <p>
+              After ten years of doing this, I’ve probably learned a few lessons along the way in spite of
+              myself. Here’s a crack at trying to distill a few.
+            </p>
+            <h6>Embrace the Suck</h6>
+            <p>
+              No one starts out good at anything. As a novice, more often than not, you're going to be pretty
+              bad at whatever you're doing. As Brene Brown put it “I believe that you have to walk through
+              vulnerability to get to courage, therefore . . . embrace the suck.” In other words, whether it’s
+              starting an organization, or showing up for anything in your life that’s important to you, accept
+              that it’s going to be hard. If it was easy, everyone would do it. But it’s the hard things that have
+              the biggest pay off, that give you the greatest reward. So show up, do your best to hang on
+              during the tough moments, and see what comes of it. The worst that can happen is you learn
+              from your missteps and are better informed for your next move.
+            </p>
+            <h6>Ask for Support</h6>
+            <p>
+              No one accomplishes anything challenging by themselves. I’m so grateful for all the support I
+              received from day one and continue to receive. In fact, I'm often blown away by how generous
+              people have been over the years whenever I've asked for help. From Mathias Craig agreeing to
+              fiscally sponsor RE-volv through blueEnergy and giving me a desk in his office and invaluable
+              nonprofit leadership advice, to Danny Kennedy inviting us to move into the New Energy Nexus
+              office and introducing us to whatever funder or partner walked through the door. From Andy
+              Revkin covering us in the NY Times before we had even finished our first project, to Bill
+              McKibben and Leonardo DiCaprio tweeting about our crowdfunding campaigns. From Erica
+              Mackie picking up the phone to chat with me about how GRID Alternatives handled whatever
+              problem I was facing, to Matt Flannery sharing wisdom with me from Kiva's experience, while
+              simultaneously challenging me to go harder and think bigger. From Francesca Vietor at the San
+              Francisco Foundation taking a chance on us, giving us our first grant, to Michael Ferrante’s firm
+              Trisolaris becoming our most significant partner in scaling our work.
+            </p>
+            <p>
+              Most of all, I'm blown away by the RE-volv staff, volunteers, Solar Ambassadors, supporters,
+              and Board of Directors, some of whom have been on the board since day one, and who have
+              poured their passion and dedication into this work for a decade.
+            </p>
+            <p>
+              What I've learned is that the climate movement is a supportive one and the people who helped
+              RE-volv make it this far have known that we're only going to achieve our goals by working
+              together.
+            </p>
+            <h6>
+              Creativity is King
+            </h6>
+
+            <p>
+              The big thing that stands out to me, that I’m always so impressed by, is the creativity of the
+              people we’ve been blessed to work with. The people who’ve worked or volunteered for RE-volv
+              always knew ​ what ​ we were trying to accomplish... but that doesn’t mean we knew ​ how ​ .
+            </p>
+
+            <p>
+              Thankfully when smart, passionate, creative people come together with the right attitude, they
+              figure it out. Volunteers, board members, fellows, interns, and staff that were passionate about
+              clean energy, rolled up their sleeves and made something happen out of nothing. From
+              stumbling our way through our first crowdfunding campaigns on Indiegogo, to building our own
+              crowdfunding platform, to creating our Solar Ambassador program to train college students
+              across the country how to pitch solar, to structuring mutli-million dollar tax equity partnerships.
+              As long as you’ve got enough passion and allow for creativity to take you where it leads you,
+              you’ll be surprised at what you can accomplish.
+            </p>
+
+            <h3>
+              Moving forward
+            </h3>
+            <h6>
+              An Investment Opportunity
+            </h6>
+            <p>
+              RE-volv is going through an exciting, transformative moment. With a proven model, and more
+              demand for our services than ever, we’re now seeking to raise $10 Million of recoverable grants
+              from foundations and Donor Advised Funds to help us continue deploying solar as fast as we
+              can. If you’re interested, take a look at this​ ​ <a href="https://www.dropbox.com/s/l9n71jwik2dwbyy/RE-volv%20Recoverable%20Grant%20Overview.pdf?dl=0">investment overview document</a>​ and let me know if
+              you’d like to chat about it.
+            </p>
+
+
+            <h6>We're Hiring!</h6>
+            <p>
+              We’re now looking for an important new staff member: our first​ ​ <a href="https://re-volv.org/about-us/jobs/">Director of Operations​</a> . This
+              person will be working hand in hand with me on setting the strategy for the organization,
+              managing our finances, HR, and many of the internal operations of the organization to help us
+              scale so that when we’re celebrating 20 years, we’ve reached greater heights than we can
+              imagine today.
+            </p>
+
+            <h6>Take action</h6>
+            <p>
+              For those of you that would like to help us ratchet up our efforts to achieve even greater impact
+              over the next ten years, I encourage you to join our​ ​ <a href="https://re-volv.org/monthly_donor/">monthly donor</a> program​ . How about joining
+              at the $10 per month level in honor of this auspicious occasion? For an added motivation we’re
+              starting a​ ​ <a href="https://re-volv.org/monthly_donor/">book club​</a> to read​ ​ <a href="https://climatecourage.us/">Climate Courage</a>​ exclusively for monthly donors.​ ​ <a href="https://re-volv.org/monthly_donor/"> Sign up here! </a>
+            </p>
+
+            <h6>Gratitude</h6>
+            <p>
+              At the end of the day, I hope all of you who have supported RE-volv over the years feel very
+              honored to have helped RE-volv play the small role that it has in this much larger environmental,
+              climate and energy justice movement that has preceded our time on this planet, and haschanged the world
+              during our lifetime, and will continue to do so, faster and with greater impact
+              than we can imagine.
+            </p>
+            <p>
+              When you hear the latest news about climate change being worse than scientists thought, or
+              learn about a speed bump on our road to 100% renewable energy, don’t fret. Just remember
+              that together, we can figure this out. We really can. And that when we apply our creativity to
+              these problems collectively, we’ll not only solve climate change, and create a prosperous clean
+              energy future for ourselves and future generations, but we’ll be able to do so in a way that
+              creates equity, equality, and justice for everyone. Pretty exciting huh?
+            </p>
+            <p>
+              Thanks for all the support over these incredible 10 years. We look forward to continuing to work
+              with you over the next 10.
+            </p>
+            <br></br>
+            <h6>Andreas Karelas</h6>
+            <h6>Founder and Executive Director, RE-volv</h6>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/where-do-we-go-chaos-or-community/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1611207165/images/blog-article-img/where-do-we-go.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/where-do-we-go-chaos-or-community/"> <span class="meta-date">JANUARY 18, 2021</span> </a>
+                    <h4 class="meta-title">Where do we go from Here? Chaos or Community</h4>
+                    <p>Today is a national holiday where we take time to reflect on the legacy..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/electricity-source/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1605068437/images/edu-media-img/solarpexels4.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/electricity-source/"> <span class="meta-date">OCTOBER 28, 2020</span> </a>
+                    <h4 class="meta-title">The Cheapest Source of Electricity in History</h4>
+                    <p>It’s official. Guess what is the cheapest source of electricity in history!?</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}

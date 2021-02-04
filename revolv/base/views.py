@@ -658,6 +658,9 @@ def mostsolarsystemenergy(request):
 def sustainabilitysaves(request):
     return render(request, 'base/partials/blog-article-sustainability-saves.html')
 
+def tenyearimpact(request):
+    return render(request, 'base/partials/blog-article-ten-year-impact.html')
+
 #-----------Donate Monthly
 
 
