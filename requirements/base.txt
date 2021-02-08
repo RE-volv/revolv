@@ -37,6 +37,7 @@ django-tagging==0.4.5
 Django==1.7.1
 django-mptt==0.6.1
 cryptography==2.8
+pip==20.3.4
 django-classy-tags==0.7.0
 
 python-social-auth==0.2
