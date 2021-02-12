@@ -1,4 +1,4 @@
-{% extends "base/base3.html" %}
+{% extends "base/base.html" %}
 {% load staticfiles %}
 {% load humanize %}
 {% load wagtailimages_tags %}
@@ -112,26 +112,6 @@
 {% endblock %}
 
 {% block body %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-overlay top-nav" id="navbar-section" style="padding-bottom: 20px;">
-      <a class="navbar-brand" href="/">
-        <img src="../../../static/images/home-img/REVOLV_logo_light.png">
-      </a>
-      <button class="navbar-toggler hamburger hamburger--stand" type="button" data-toggle="offcanvas" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-      <div class="offcanvas-collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav ml-auto">
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/about-us/re-volv" >About</a>
-          </li>
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/get-involved/apply" >Nonprofit Solar</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <main role="main" class="container-fluid">
       <div class='popup' id="modalUser">
         <div class='newspadding' style="padding: 44px 35px;">
@@ -169,7 +149,7 @@
         <div class="row justify-content-center align-items-center">
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
               <p class="grey-text">It’s no secret that the current administration in Washington, DC is a much bigger fan of fossil fuels than renewable energy. But cities across America are showing that you can grow green jobs and the clean energy economy locally, with initiatives like renewables-friendly regulations, electric vehicle charging stations, direct municipal investments in wind and solar, and much, much more.  </p>
-              <p class="grey-text">The Sierra Club’s #ReadyFor100 campaign is a fantastic example of how powerful this local energy can be, with over 100 cities pledging to go all the way to 100% renewable energy - and many that are well on their way to that goal already! If you’re looking to start a career in solar or other renewable energy industries, these 5 cities highlighted in the Sierra Club’s 2018 Case Study Report are great places to start.</p>
+              <p class="grey-text"><a href="https://www.sierraclub.org/ready-for-100" rel="noopener noreferrer" target="_blank">The Sierra Club’s #ReadyFor100</a> campaign is a fantastic example of how powerful this local energy can be, with over 100 cities pledging to go all the way to 100% renewable energy - and many that are well on their way to that goal already! If you’re looking to <a href="https://re-volv.org/get-involved/education/solarjobs/" rel="noopener noreferrer" target="_blank">start a career in solar</a> or other renewable energy industries, these 5 cities highlighted in the Sierra Club’s 2018 Case Study Report are great places to start.</p>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
             <h5 class="grey-text fw-600">1. Denver, CO</h5>
@@ -184,7 +164,7 @@
               <div class="col-sm-12 col-md-6 col-lg-6">
                 <h5 class="grey-text fw-600">2. Fayetteville, AR</h5>
                   <p class="grey-text">Historically, Arkansas may be coal country, but in January 2018 the fast-growing city of Fayetteville became the first in the state to commit to 100% renewable energy. The city’s Energy Action Plan targets 100% renewables for the city government by 2030 and for the city as a whole by 2050, and also includes targets for energy efficiency, public transportation, and even shade cover!</p>
-                  <p class="grey-text">While the initiative is only a year old, significant progress is underway. The city has installed electric vehicle charging stations, launched a bike-share program, and is promoting energy efficiency programs for homes and businesses. The next step for Fayetteville is developing municipal renewable energy generation, and it is partnering with the University of Arkansas - the city’s largest employer - to explore opportunities to build a wind or solar farm</p>
+                  <p class="grey-text">While the initiative is only a year old, significant progress is underway. The city has installed electric vehicle charging stations, launched a bike-share program, and is promoting energy efficiency programs for homes and businesses. The next step for Fayetteville is developing municipal renewable energy generation, and it is partnering with the University of Arkansas - the city’s largest employer - to explore opportunities to build a wind or solar farm.</p>
               </div>
             </div>
           </div>

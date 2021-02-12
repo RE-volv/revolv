@@ -1,4 +1,4 @@
-{% extends "base/base3.html" %}
+{% extends "base/base.html" %}
 {% load staticfiles %}
 {% load humanize %}
 {% load wagtailimages_tags %}
@@ -112,26 +112,6 @@
 {% endblock %}
 
 {% block body %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-overlay top-nav" id="navbar-section" style="padding-bottom: 20px;">
-      <a class="navbar-brand" href="/">
-        <img src="../../../static/images/home-img/REVOLV_logo_light.png">
-      </a>
-      <button class="navbar-toggler hamburger hamburger--stand" type="button" data-toggle="offcanvas" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-      <div class="offcanvas-collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav ml-auto">
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/about-us/re-volv" >About</a>
-          </li>
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/get-involved/apply" >Nonprofit Solar</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <main role="main" class="container-fluid">
       <div class='popup' id="modalUser">
         <div class='newspadding' style="padding: 44px 35px;">
@@ -168,7 +148,7 @@
       <div class="container-fluid" id="edu-cen-re-section-two">
         <div class="row justify-content-center align-items-center">
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
-              <p class="grey-text">There are over 242,000 solar jobs in America today, and employment in this fast-growing industry has grown at six times the rate of the economy as a whole! It’s a great time to be a part of this industry, and many entry-level positions don’t require a college degree or previous industry experience. (And, if you’re looking for a solar job, read this post). </p>
+              <p class="grey-text">There are over 242,000 solar jobs in America today, and employment in this fast-growing industry has grown at six times the rate of the economy as a whole! It’s a great time to be a part of this industry, and many entry-level positions don’t require a college degree or previous industry experience. (And, if you’re looking for a solar job, <a href="https://re-volv.org/get-involved/education/solarjobs/" rel="noopener noreferrer" target="_blank">read this post</a>). </p>
               <p class="grey-text">
                 While there are solar workers in literally every state, those 242,000 jobs aren’t divided up evenly across the country. Let’s dig into the data to see which states have the most solar jobs, and look at why these states are emerging as leaders in building the clean energy economy. 
                 </p>
@@ -215,7 +195,7 @@
               <div class="col-sm-12 col-md-6 col-lg-6">
                 <h5 class="grey-text fw-600">2. Why These States Are Solar Jobs Leaders</h5>
                   <p class="grey-text">You might expect solar jobs states to match California’s profile: coastal “blue” states with lots of sunshine. However, these lists show that solar jobs winners are spread out across the north, south, east, west, and the middle of this country, and politically they include some of the reddest red states (Utah and Texas, step right up!) as well as lots of blue and purple.   </p>
-                  <p class="grey-text">However, even if these states have very different politics, they share a common denominator in two key solar-supporting policies: net metering, and renewable portfolio standards. While these policies can vary in their details from state to state, they each encourage investments in solar power by ensuring that they are compensated appropriately by utilities. </p>
+                  <p class="grey-text">However, even if these states have very different politics, they share a common denominator in two key solar-supporting policies: <a href="https://re-volv.org/get-involved/education/solarpolicy/" rel="noopener noreferrer" target="_blank">net metering, and renewable portfolio standards</a>. While these policies can vary in their details from state to state, they each encourage investments in solar power by ensuring that they are compensated appropriately by utilities. </p>
                   <div style="margin-left:4px;">
                     <p class="grey-text"><span class="fw-600 fw-points">Net Metering: </span> Net metering allows homeowners and businesses with solar panels to receive credits on their utility bill for every kilowatt-hour (kWh) of electricity they generate. Most net metering policies provide a 1:1 credit for customer generation - in other words, if you produce 3 kWh of solar, your electricity bill will be reduced by 3 kWh. </p>
                     <p class="grey-text"><span class="fw-600 fw-points">Renewable portfolio standards:</span> require utilities to supply a rising percentage of their electricity from renewable sources like solar and wind until an overall target is reached. For example, New Jersey will require 50% of its electricity to be renewable by 2030, and California has committed to getting 100% of its electricity from renewables by 2045.</p>
@@ -227,7 +207,7 @@
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
             <h5 class="grey-text fw-600">3. Supporting Solar Jobs in Your State</h5>
-            <p class="grey-text">With more and more states adopting these policies and other solar incentives, chances are you might already be living in a great state for solar jobs! You can help support the solar job boom in your state by going solar yourself - or by helping deserving non-profits save money and do more great work by helping them go solar.</p>
+            <p class="grey-text">With more and more states adopting these policies and other solar incentives, chances are you might already be living in a great state for solar jobs! You can help support the solar job boom in your state by going solar yourself - or by helping deserving non-profits save money and do more great work by <a href="https://re-volv.org/get-involved/apply/" rel="noopener noreferrer" target="_blank">helping them go solar</a>.</p>
             <p class="grey-text"> </p>
           </div>
         </div>

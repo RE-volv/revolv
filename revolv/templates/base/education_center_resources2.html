@@ -1,4 +1,4 @@
-{% extends "base/base3.html" %}
+{% extends "base/base.html" %}
 {% load staticfiles %}
 {% load humanize %}
 {% load wagtailimages_tags %}
@@ -106,27 +106,6 @@
 {% endblock %}
 
 {% block body %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-overlay top-nav" id="navbar-section" style="padding-bottom: 20px;">
-      <a class="navbar-brand" href="/">
-        <img src="../../../static/images/home-img/REVOLV_logo_light.png">
-      </a>
-      <button class="navbar-toggler hamburger hamburger--stand" type="button" data-toggle="offcanvas" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-      <div class="offcanvas-collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav ml-auto">
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/about-us/re-volv" >About</a>
-          </li>
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/get-involved/apply" >Nonprofit Solar</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
     <main role="main" class="container-fluid">
       <div class='popup' id="modalUser">
         <div class='newspadding' style="padding: 44px 35px;">
@@ -181,7 +160,7 @@
                 <h5 class="grey-text fw-600">2. Help a Local Nonprofit</h5>
                   <p class="grey-text">Schools, houses of worship, homeless shelters, food kitchens, community centers, and many other types of nonprofit organization provide vital services for so many in our communities. Unfortunately, electricity costs can take a big chunk out of their budget, and as electricity costs rise, that means even less funding to do good in the world.</p>
                   <p class="grey-text">Solar power can be cheaper than buying electricity from your utility company, making it a great solution to reduce costs for pretty much any organization. For-profit businesses have already discovered this: according to the Solar Energy Industry Association, there are over 4,000 American businesses that have invested in solar, led by Fortune 500 giants like Target, Wal Mart, and Apple.</p>
-                  <p class="grey-text">Saving with solar shouldn’t just be an option for big businesses, and it doesn’t have to be. By bringing together your community to help a non-profit go solar, you can help them save 15% or more on their electric bills and put thousands of dollars back into the community to better provide vital services.</p>
+                  <p class="grey-text">Saving with solar shouldn’t just be an option for big businesses, and it doesn’t have to be. By bringing together your community to help a <a href="https://re-volv.org/get-involved/apply/" rel="noopener noreferrer" target="_blank">non-profit go solar [with RE-volv]</a>, you can help them save 15% or more on their electric bills and put thousands of dollars back into the community to better provide vital services.</p>
               </div>
             </div>
           </div>
@@ -194,7 +173,7 @@
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
             <h5 class="grey-text fw-600">4. Empower Your Community To Be Part of the Climate Change Solution</h5>
             <p class="grey-text">Finally, let’s look back to the big picture: the impacts of climate change and air pollution are being seen - and felt - across the country like never before. The good news is, Americans know that it’s time to move away from a fossil fuel economy and towards a clean energy future, and we’re more empowered than ever to take the lead.</p>
-            <p class="grey-text">One inspiring example is the Sierra Club’s Ready For 100 campaign, a movement of residents, businesses, faith, and community groups, and city leaders all across the country calling for 100% clean energy for 100% of the people. In less than 3 years since the campaign began, over 100 cities and towns across America have taken the pledge - with many more to come.</p>
+            <p class="grey-text">One inspiring example is the <a href="https://www.sierraclub.org/ready-for-100" rel="noopener noreferrer" target="_blank">Sierra Club’s Ready For 100 campaign</a>, a movement of residents, businesses, faith, and community groups, and city leaders all across the country calling for 100% clean energy for 100% of the people. In less than 3 years since the campaign began, over 100 cities and towns across America have taken the pledge - with many more to come.</p>
             <p class="grey-text">If your hometown has already set its sights on 100%, a community solar project can be a great way to bring people together around this ambitious goal. And if your local community isn’t quite ready to commit to 100%, a solar project is the perfect place to start getting people involved in a positive way.</p>
           </div>
         </div>

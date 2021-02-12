@@ -1,4 +1,4 @@
-{% extends "base/base3.html" %}
+{% extends "base/base.html" %}
 {% load staticfiles %}
 {% load humanize %}
 {% load wagtailimages_tags %}
@@ -106,26 +106,6 @@
 {% endblock %}
 
 {% block body %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-overlay top-nav" id="navbar-section" style="padding-bottom: 20px;">
-      <a class="navbar-brand" href="/">
-        <img src="../../../static/images/home-img/REVOLV_logo_light.png">
-      </a>
-      <button class="navbar-toggler hamburger hamburger--stand" type="button" data-toggle="offcanvas" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-      <div class="offcanvas-collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav ml-auto">
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/about-us/re-volv" >About</a>
-          </li>
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/get-involved/apply" >Nonprofit Solar</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <main role="main" class="container-fluid">
       <div class='popup' id="modalUser">
         <div class='newspadding' style="padding: 44px 35px;">
@@ -162,7 +142,7 @@
       <div class="container-fluid" id="edu-cen-re-section-two">
         <div class="row justify-content-center align-items-center">
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
-              <p class="grey-text">It’s a great time to be working in the solar industry. According to the National Solar Jobs Census, American solar jobs have grown six times faster than jobs in other sectors over the past five years, with over 100,000 new workers hired. And, with another 17,000 solar jobs expected to be added in 2019, it doesn’t look like this momentum is slowing down!</p>
+              <p class="grey-text">It’s a great time to be <a href="https://re-volv.org/get-involved/education/solarizenonprofit/" rel="noopener noreferrer" target="_blank">working in the solar industry</a>. According to the National Solar Jobs Census, American solar jobs have grown six times faster than jobs in other sectors over the past five years, with over 100,000 new workers hired. And, with another 17,000 solar jobs expected to be added in 2019, it doesn’t look like this momentum is slowing down!</p>
               <p class="grey-text">The term “solar jobs” encompasses a wide range of career paths. And, while some positions require specialized expertise, you might be surprised to learn that the majority of solar jobs don’t - and many don’t even require a college degree or previous experience! So, if you want to start a career in this exciting, fast-growing, world-saving industry, it may be easier than you think.</p>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
@@ -192,23 +172,23 @@
             <h5 class="grey-text fw-600">4. Learn About The Industry</h5>
             <p class="grey-text">While most of the jobs discussed in this post don’t require you to be knowledgeable about solar beforehand, it doesn’t hurt to get to know the industry before you start your job search. </p>
             <div style="margin-left:4px;">
-              <p class="grey-text"><span class="fw-600 fw-points"></span>Solar Energy Industries Association (SEIA), the primary trade group for the industry, is a great place to start. Between its website and social media feeds, SEIA can give you an education on solar’s past, present, and future. </p>
+              <p class="grey-text"><span class="fw-600 fw-points"></span><a href="https://www.seia.org/" rel="noopener noreferrer" target="_blank">Solar Energy Industries Association</a> (SEIA), the primary trade group for the industry, is a great place to start. Between its website and social media feeds, SEIA can give you an education on solar’s past, present, and future. </p>
             </div>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
             <h5 class="grey-text fw-600">5. Job Boards</h5>
             <p class="grey-text">When it comes to looking for job openings, you can check the usual places like LinkedIn, Idealist, and Craigslist - just search “solar” and see what comes up! There are also solar-specific job boards used by many companies in the industry, including:</p>
             <div style="margin-left:4px;">
-              <p class="grey-text"><span class="fw-600 fw-points"></span>Solar Training Network run by the Solar Foundation, and </p>
-              <p class="grey-text"><span class="fw-600 fw-points"></span>Careers in Solar Energy, a page run by SEIA </p>
+              <p class="grey-text"><span class="fw-600 fw-points"></span><a href="https://americansolarworkforce.org/" rel="noopener noreferrer" target="_blank">Solar Training Network</a> run by <a href="https://www.thesolarfoundation.org/" rel="noopener noreferrer" target="_blank">the Solar Foundation</a>, and </p>
+              <p class="grey-text"><span class="fw-600 fw-points"></span><a href="https://seia-jobs.careerwebsite.com/" rel="noopener noreferrer" target="_blank">Careers in Solar Energy</a>, a page run by SEIA </p>
             </div>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
             <h5 class="grey-text fw-600">6. Company Pages</h5>
             <p class="grey-text">Another good tactic to use when looking for solar jobs is simply looking up the websites of the big solar companies and navigating to their “Careers” page to see if (and where) they’re hiring.</p>
             <div style="margin-left:4px;">
-              <p class="grey-text"><span class="fw-600 fw-points"></span>Greentech Media’s solar channel is a great resource for learning about who the major players in the industry are - and why they’re making news. </p>
-              <p class="grey-text"><span class="fw-600 fw-points"></span>Top Solar Contractors, a ranking from Solar Power World, lets you search companies by service provided (i.e., electrical subcontractors), market, and state of operations.</p>
+              <p class="grey-text"><span class="fw-600 fw-points"></span><a href="https://www.greentechmedia.com/channel/solar" rel="noopener noreferrer" target="_blank">Greentech Media’s solar channel</a> is a great resource for learning about who the major players in the industry are - and why they’re making news. </p>
+              <p class="grey-text"><span class="fw-600 fw-points"></span><a href="https://www.solarpowerworldonline.com/2020-top-solar-contractors/" rel="noopener noreferrer" target="_blank">Top Solar Contractors</a>, a ranking from <a href="https://www.solarpowerworldonline.com/" rel="noopener noreferrer" target="_blank">Solar Power World</a>, lets you search companies by service provided (i.e., electrical subcontractors), market, and state of operations.</p>
             </div>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">

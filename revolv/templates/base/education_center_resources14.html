@@ -1,4 +1,4 @@
-{% extends "base/base3.html" %}
+{% extends "base/base.html" %}
 {% load staticfiles %}
 {% load humanize %}
 {% load wagtailimages_tags %}
@@ -106,26 +106,6 @@
 {% endblock %}
 
 {% block body %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-overlay top-nav" id="navbar-section" style="padding-bottom: 20px;">
-      <a class="navbar-brand" href="/">
-        <img src="../../../static/images/home-img/REVOLV_logo_light.png">
-      </a>
-      <button class="navbar-toggler hamburger hamburger--stand" type="button" data-toggle="offcanvas" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-      <div class="offcanvas-collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav ml-auto">
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/about-us/re-volv" >About</a>
-          </li>
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/get-involved/apply" >Nonprofit Solar</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <main role="main" class="container-fluid">
       <div class='popup' id="modalUser">
         <div class='newspadding' style="padding: 44px 35px;">
@@ -162,7 +142,7 @@
       <div class="container-fluid" id="edu-cen-re-section-two">
         <div class="row justify-content-center align-items-center">
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
-              <p class="grey-text">Solar power seems like an incredibly advanced technology, creating electricity directly from sunlight as if by magic. And considering the fact that it generates that electricity with no smog-forming or climate-warming emissions - and that it’s now cheaper than fossil fueled energy in more and more places around the world - it’s definitely the future of energy.</p>
+              <p class="grey-text"><a href="https://re-volv.org/get-involved/education/solarenergy/" rel="noopener noreferrer" target="_blank">Solar power</a> seems like an incredibly advanced technology, creating electricity directly from sunlight as if by magic. And considering the fact that it generates that electricity with no smog-forming or climate-warming emissions - and that it’s now cheaper than fossil fueled energy in more and more places around the world - it’s definitely the future of energy.</p>
               <p class="grey-text">But as high-tech as it seems, the history of solar power goes back to the 19th century! It’s almost hard to believe it’s taken us this long to turn solar panels into a mainstream technology, but there have been a few twists and turns along the way. Let’s look at the longer-than-you-think history of this critical energy source for our future.</p>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
@@ -194,7 +174,7 @@
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
             <h5 class="grey-text fw-600">4. Our Bright Solar Future</h5>
             <p class="grey-text">Fast forward to the present, and this rapid decline in costs has made solar the fastest-growing source of power in the world - and, in more and more places, it’s also the cheapest. Today, going solar can help homeowners, businesses, and other organizations save 15% or more compared to grid electricity prices in most U.S. states. </p>
-            <p class="grey-text">And, thanks to the creation of innovative new crowdfunding models, communities across America are coming together to help nonprofits like schools, churches, and social service providers participate in this low-cost, zero-emission solar future.</p>
+            <p class="grey-text">And, thanks to the creation of RE-volv's innovative Solar Seed Fund crowdfunding model, communities across America are <a href="https://re-volv.org/projects/completed_projects" rel="noopener noreferrer" target="_blank">coming together to help nonprofits</a> such as schools, churches, and social service providers participate in this low-cost, zero-emission solar future.</p>
           </div>
         </div>
       </div>

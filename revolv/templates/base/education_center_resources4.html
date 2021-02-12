@@ -1,4 +1,4 @@
-{% extends "base/base3.html" %}
+{% extends "base/base.html" %}
 {% load staticfiles %}
 {% load humanize %}
 {% load wagtailimages_tags %}
@@ -106,26 +106,6 @@
 {% endblock %}
 
 {% block body %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-overlay top-nav" id="navbar-section" style="padding-bottom: 20px;">
-      <a class="navbar-brand" href="/">
-        <img src="../../../static/images/home-img/REVOLV_logo_light.png">
-      </a>
-      <button class="navbar-toggler hamburger hamburger--stand" type="button" data-toggle="offcanvas" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-      <div class="offcanvas-collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav ml-auto">
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/about-us/re-volv" >About</a>
-          </li>
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/get-involved/apply" >Nonprofit Solar</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <main role="main" class="container-fluid">
       <div class='popup' id="modalUser">
         <div class='newspadding' style="padding: 44px 35px;">
@@ -163,7 +143,7 @@
         <div class="row justify-content-center align-items-center">
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
               <p class="grey-text">America is more politically polarized than ever, and unfortunately, climate change has become a partisan issue too. Despite overwhelming consensus among scientists that climate change is happening and is caused by human activity, your conservative friends and family members might put more stock in the consensus among Fox News pundits that it’s a “hoax.”</p>
-              <p class="grey-text">The good news is, you don’t have to convince them to agree on the problem to get them excited about the solution. Renewable energy sources like wind and solar power are truly a bright spot of bipartisanship, with a ton of appeal to Americans of all political stripes. Here are 5 ways you can get conservatives on board with renewables, including some handy facts to back you up.
+              <p class="grey-text">The good news is, you don’t have to convince them to agree on the problem to get them excited about the solution. Renewable energy sources like wind and <a href="https://re-volv.org/get-involved/education/solarenergy/" rel="noopener noreferrer" target="_blank">solar power</a> are truly a bright spot of bipartisanship, with a ton of appeal to Americans of all political stripes. Here are 5 ways you can get conservatives on board with renewables, including some handy facts to back you up.
               </p>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
@@ -178,7 +158,7 @@
               </div>
               <div class="col-sm-12 col-md-6 col-lg-6">
                 <h5 class="grey-text fw-600">2. Renewables Create Jobs</h5>
-                  <p class="grey-text">While coal miners and oil drillers may have played an important role in providing our energy needs in the 20th century, the future is all about renewable energy jobs. According to the National Solar Jobs Census, there are over 242,000 solar workers in America - that’s twice as many jobs as the coal industry! If you really want to bring the point home, you can also find solar job stats for individual states, counties, and metro areas.</p>
+                  <p class="grey-text">While coal miners and oil drillers may have played an important role in providing our energy needs in the 20th century, the future is all about <a href="https://re-volv.org/get-involved/education/solarjobs/" rel="noopener noreferrer" target="_blank">renewable energy jobs</a>. According to the National Solar Jobs Census, there are over 242,000 solar workers in America - that’s twice as many jobs as the coal industry! If you really want to bring the point home, you can also find solar job stats for individual states, counties, and metro areas.</p>
                   <p class="grey-text">These jobs are growing fast, too. Solar jobs have grown six times faster than jobs in other sectors over the past five years, with over 100,000 new workers hired, and the Bureau of Labor Statistics projects that solar installer will be one of the fastest-growing jobs of the next decade.</p>
               </div>
             </div>

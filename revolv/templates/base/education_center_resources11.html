@@ -1,4 +1,4 @@
-{% extends "base/base3.html" %}
+{% extends "base/base.html" %}
 {% load staticfiles %}
 {% load humanize %}
 {% load wagtailimages_tags %}
@@ -112,26 +112,6 @@
 {% endblock %}
 
 {% block body %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-overlay top-nav" id="navbar-section" style="padding-bottom: 20px;">
-      <a class="navbar-brand" href="/">
-        <img src="../../../static/images/home-img/REVOLV_logo_light.png">
-      </a>
-      <button class="navbar-toggler hamburger hamburger--stand" type="button" data-toggle="offcanvas" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-      <div class="offcanvas-collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav ml-auto">
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/about-us/re-volv" >About</a>
-          </li>
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/get-involved/apply" >Nonprofit Solar</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <main role="main" class="container-fluid">
       <div class='popup' id="modalUser">
         <div class='newspadding' style="padding: 44px 35px;">
@@ -168,7 +148,7 @@
       <div class="container-fluid" id="edu-cen-re-section-two">
         <div class="row justify-content-center align-items-center">
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
-              <p class="grey-text">Going solar can reduce your electricity bills by 15% or more every month. That’s not all, though - it can reduce the taxes you owe, thanks to tax credits and other incentives available at the federal as well as state level.</p>
+              <p class="grey-text">Going <a href="https://re-volv.org/get-involved/education/solarenergy/" rel="noopener noreferrer" target="_blank">solar</a> can reduce your electricity bills by 15% or more every month. That’s not all, though - it can reduce the taxes you owe, thanks to tax credits and other incentives available at the federal as well as state level.</p>
               <p class="grey-text">The exact amount of savings will vary depending on the specific tax situation of an individual or organization, as well as where they are located. Let’s take a closer look at what solar incentives are available and who qualifies for them.</p>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
@@ -196,7 +176,7 @@
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
             <h5 class="grey-text fw-600">3. Supporting Solar Energy For All</h5>
             <p class="grey-text">The combination of federal and state incentives have helped to reduce the cost of solar for countless businesses and homeowners across America, playing a crucial role in supporting the U.S. solar boom. All of that said, not everyone can benefit from these incentives, however. As noted previously, businesses and individuals that don’t owe sufficient income taxes may not be able to claim the full value of their 30% solar tax credit. Moreover, nonprofits don't pay taxes at all, so these tax incentives don’t reduce their cost of going solar. </p>
-            <p class="grey-text">The good news is, communities can come together to help nonprofits go solar with innovative new crowdfunding models.</p>
+            <p class="grey-text">The good news is, communities can come together to <a href="https://re-volv.org/get-involved/apply/" rel="noopener noreferrer" target="_blank">help nonprofits go solar</a> with innovative new crowdfunding models.</p>
           </div>
         </div>
       </div>

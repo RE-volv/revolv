@@ -1,4 +1,4 @@
-{% extends "base/base3.html" %}
+{% extends "base/base.html" %}
 {% load staticfiles %}
 {% load humanize %}
 {% load wagtailimages_tags %}
@@ -112,26 +112,6 @@
 {% endblock %}
 
 {% block body %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-overlay top-nav" id="navbar-section" style="padding-bottom: 20px;">
-      <a class="navbar-brand" href="/">
-        <img src="../../../static/images/home-img/REVOLV_logo_light.png">
-      </a>
-      <button class="navbar-toggler hamburger hamburger--stand" type="button" data-toggle="offcanvas" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-      <div class="offcanvas-collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav ml-auto">
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/about-us/re-volv" >About</a>
-          </li>
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/get-involved/apply" >Nonprofit Solar</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <main role="main" class="container-fluid">
       <div class='popup' id="modalUser">
         <div class='newspadding' style="padding: 44px 35px;">
@@ -168,7 +148,7 @@
       <div class="container-fluid" id="edu-cen-re-section-two">
         <div class="row justify-content-center align-items-center">
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
-              <p class="grey-text">Going solar is a great deal, saving homeowners and businesses 15% or more on their electricity bills. But because the up-front costs are still significant, most individuals or organizations rely on solar financing to reduce or eliminate the up-front costs of a solar installation.</p>
+              <p class="grey-text">Going <a href="https://re-volv.org/get-involved/education/solarenergy/" rel="noopener noreferrer" target="_blank">solar</a> is a great deal, saving homeowners and businesses 15% or more on their electricity bills. But because the up-front costs are still significant, most individuals or organizations rely on solar financing to reduce or eliminate the up-front costs of a solar installation.</p>
               <p class="grey-text">Unfortunately, certain types of end-users, including non-profits, may have a difficult time accessing solar financing. Let’s first look at the types of financing that’s out there, and then explore why non-profits are often left out - and what solutions there are to this problem. </p>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
@@ -199,7 +179,7 @@
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
             <h5 class="grey-text fw-600">3. That's where RE-volv steps in!</h5>
-            <p class="grey-text">RE-volv's mission is to provide options for these smaller nonprofits that have been left out of traditional solar financing, with a solar lease solution built specifically with their needs in mind.</p>
+            <p class="grey-text">RE-volv's mission is to <a href="https://re-volv.org/get-involved/apply/" rel="noopener noreferrer" target="_blank">provide options for these smaller nonprofits</a> that have been left out of traditional solar financing, with a solar lease solution built specifically with their needs in mind.</p>
             <p class="grey-text">We raise the upfront cost of the system through our crowdfunding campaigns, then use a revolving fund, called the Solar Seed Fund, to help pay for the projects. The Solar Seed Fund allows our donors to reinvest the proceeds from previous solar projects to help pay for new projects. At the end of the lease, we transfer ownership to the nonprofit at no cost. This is referred to as a lease-to-own model.</p>
           </div>
         </div>

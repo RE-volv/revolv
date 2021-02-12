@@ -1,4 +1,4 @@
-{% extends "base/base3.html" %}
+{% extends "base/base.html" %}
 {% load staticfiles %}
 {% load humanize %}
 {% load wagtailimages_tags %}
@@ -106,26 +106,6 @@
 {% endblock %}
 
 {% block body %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-overlay top-nav" id="navbar-section" style="padding-bottom: 20px;">
-      <a class="navbar-brand" href="/">
-        <img src="../../../static/images/home-img/REVOLV_logo_light.png">
-      </a>
-      <button class="navbar-toggler hamburger hamburger--stand" type="button" data-toggle="offcanvas" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-      <div class="offcanvas-collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav ml-auto">
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/about-us/re-volv" >About</a>
-          </li>
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/get-involved/apply" >Nonprofit Solar</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <main role="main" class="container-fluid">
       <div class='popup' id="modalUser">
         <div class='newspadding' style="padding: 44px 35px;">
@@ -163,7 +143,7 @@
         <div class="row justify-content-center align-items-center">
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
               <p class="grey-text">Climate change is a generational challenge for the entire planet, but transitioning our energy system away from fossil fuels can start today right in your hometown. By bringing your community together around climate solutions like solar power, you can help catalyze this global transition while delivering positive impacts where you live.</p>
-              <p class="grey-text">Helping a local nonprofit to go solar is one of the most effective ways you can participate in this movement. And the good news is, you don’t have to be a solar energy expert to lead a community solar project. All you need is some determination, the right partners - and these 5 steps.</p>
+              <p class="grey-text"><a href="https://re-volv.org/get-involved/solar-ambassador/" rel="noopener noreferrer" target="_blank">Helping a local nonprofit to go solar</a> is one of the most effective ways you can participate in this movement. And the good news is, you don’t have to be a solar energy expert to lead a community solar project. All you need is some determination, the right partners - and these 5 steps.</p>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
             <h5 class="grey-text fw-600">1. Put a team together</h5>
@@ -178,22 +158,17 @@
               <div class="col-sm-12 col-md-6 col-lg-6">
                 <h5 class="grey-text fw-600">2. Find a nonprofit to solarize</h5>
                   <p class="grey-text">This is the most important step: you need to identify a nonprofit organization that serves an important role in your community, owns their building, and wants to reduce their electricity costs. It could be a homeless shelter, a nonprofit school, a house of worship, a community center, a food kitchen, an arts center, a health clinic - you name it!</p>
-                  <p class="grey-text">You might have a nonprofit in mind already, or you might have to do some research and outreach in your community. Either way, Re-volv is an organization specializing in community solar projects that can help you determine if a given nonprofit is a good fit for a solar project.</p>
+                  <p class="grey-text">You might have a nonprofit in mind already, or you might have to do some research and outreach in your community. Either way, Re-volv is an organization <a href="https://re-volv.org/projects/completed_projects" rel="noopener noreferrer" target="_blank">specializing in community solar projects</a> that can help you determine if a given nonprofit is a good fit for a solar project.</p>
               </div>
             </div>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
-            <h5 class="grey-text fw-600">3. Run a crowdfunding campaign</h5>
-            <p class="grey-text">Once you determine how much going solar will cost your nonprofit - Re-volv can help with this, too - it’s time to raise the money. This is really the heart of your work on the campaign, and you can use videos, social media, events, and other fundraising initiatives to reach your goal.</p>
-            <p class="grey-text">Be creative, tap into the skills of your talented team, and most importantly have fun! Remember, you’re raising money for a great cause for your community and the entire planet, so don’t be shy about getting the word out.</p>
-          </div>
-          <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
-            <h5 class="grey-text fw-600">4. Document the installation</h5>
+            <h5 class="grey-text fw-600">3. Document the installation</h5>
             <p class="grey-text">Project implementation will be taken care of by professionals, but you and your team will be responsible for capturing the solar magic as it happens. The design and installation process for a solar project can take a few months, but it’s hugely satisfying to see, and worth documenting every step of the way.</p>
-            <p class="grey-text">Posting videos, photos, and writing blogs about the progress of your solar project will be greatly appreciated by your project supporters - after all, they helped to make it happen! It will also help other nonprofits learn how they can benefit from solar too, so your good work can reverberate beyond your community.</p>
+            <p class="grey-text"><a href="https://re-volv.org/nonprofit/videos" rel="noopener noreferrer" target="_blank">Posting videos</a>, photos, and writing blogs about the progress of your solar project will be greatly appreciated by your project supporters - after all, they helped to make it happen! It will also help other nonprofits learn how they can benefit from solar too, so your good work can reverberate beyond your community.</p>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
-            <h5 class="grey-text fw-600">5. Celebrate!</h5>
+            <h5 class="grey-text fw-600">4. Celebrate!</h5>
             <p class="grey-text">Once the installation is complete, it’s time to celebrate! Work with your team and your newly-solarized nonprofit partner to hold a public ribbon-cutting event to unveil the solar project to your community.</p>
             <p class="grey-text">Try to line up a “headliner” to say a few words to introduce the project. It could be the mayor, the president of the nonprofit, a local celebrity - anyone who can help draw attention to the solar energy future you’re helping to build. And be sure to invite the press, community leaders, local solar installers, and any other relevant groups.</p>
             <p class="grey-text">Finally, it’s time to high five your entire team - not only have you made an important positive impact on your community, you’re helping to inspire more solar love around the world! </p>

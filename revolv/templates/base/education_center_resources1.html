@@ -1,4 +1,4 @@
-{% extends "base/base3.html" %}
+{% extends "base/base.html" %}
 {% load staticfiles %}
 {% load humanize %}
 {% load wagtailimages_tags %}
@@ -105,26 +105,6 @@
 {% endblock %}
 
 {% block body %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-overlay top-nav" id="navbar-section" style="padding-bottom: 20px;">
-      <a class="navbar-brand" href="/">
-        <img src="../../../static/images/home-img/REVOLV_logo_light.png">
-      </a>
-      <button class="navbar-toggler hamburger hamburger--stand" type="button" data-toggle="offcanvas" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button>
-      <div class="offcanvas-collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav ml-auto">
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/about-us/re-volv" >About</a>
-          </li>
-          <li id="dropdownz" class="nav-item">
-            <a class="nav-link" href="/get-involved/apply" >Nonprofit Solar</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <main role="main" class="container-fluid">
       <div class='popup' id="modalUser">
         <div class='newspadding' style="padding: 44px 35px;">
@@ -161,26 +141,38 @@
       <div class="container-fluid" id="edu-cen-re-section-two">
         <div class="row justify-content-center align-items-center">
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
-            <h5 class="grey-text fw-600">1. Solar Installer</h5>
-            <p class="grey-text">Solar is booming, and so are solar job opportunities. According to the most recent National Solar Jobs Census, there are over 242,000 solar workers in America - that’s twice as many jobs as the coal industry! And with over 100,000 of these jobs added in just the past five years, and another 17,000 expected to be added in 2019, it’s a great time to start a career in solar.</p>
+            <p class="grey-text">Solar is booming, and so are <a href="https://re-volv.org/get-involved/education/lookingsolar/" rel="noopener noreferrer" target="_blank">solar job opportunities</a>. According to the most recent National Solar Jobs Census, there are over 242,000 solar workers in America - that’s twice as many jobs as the coal industry! And with over 100,000 of these jobs added in just the past five years, and another 17,000 expected to be added in 2019, it’s a great time to start a career in solar.</p>
             <p class="grey-text">Best of all, there are solar jobs available for workers across a wide range of skillsets and educational levels, from entry-level installation and sales positions to specialized engineering and design roles. If having a career in this fast-growing, world-saving industry sounds good to you, here are five ways you can work in solar.</p>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
             <div class="row">
-              <div class="col-sm-12 col-md-6 col-lg-6">
+              <div class="col-md-12 col-lg-6">
                 <img src="../../../static/images/eduresource-img/solarjobforall-mini.png">
               </div>
-              <div class="col-sm-12 col-md-6 col-lg-6">
-                <h5 class="grey-text fw-600">2. Solar Manufacturing</h5>
-                  <p class="grey-text">Solar power installations are made up of hundreds of components, from solar modules that generate power to the racking systems that hold them in place to the inverters that connect the system to your home. While some of these components are produced overseas, many are manufactured right here in America, in factories that employ workers similar to other high-tech industries.</p>
-                  <p class="grey-text">Solar module producers accounted for 31% of manufacturing respondents to the National Solar Jobs Census, including six major manufacturing facilities reporting plans to expand operations. Another 28% of U.S. solar manufacturers produce mounting hardware, 24% produce monitoring systems, 15% produce inverters, 12% produce trackers, and 21% produce other solar-related equipment. (That adds up to more than 100% because some vertically-integrated manufacturers produce equipment for more than one part of the supply chain.)</p>
-                  <p class="grey-text">According to the Solar Foundation, there are over 17,000 solar manufacturing and production roles in the U.S. Entry-level manufacturing jobs pay a median wage of $24.46/hour, with median wages going up to $32.61/hour for the highest-paid manufacturing workers.</p>
+              <div class="col-md-12 col-lg-6">
+                <div class="row">
+                  <div class="row">
+                  <div class="col-md-12">
+                    <h5 class="grey-text fw-600">1. Solar Installer</h5>
+                    <p class="grey-text">In order to install solar on a roof, on a parking structure, as a ground mount, or anywhere else, it needs to be installed by solar installers, making this one of the most popular jobs in the solar field.</p>
+                    <p class="grey-text">Solar installation and project development companies required experience for 61% of hires, but many entry-level roles for solar installers in particular offer opportunities for on-the-job training.</p>
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h5 class="grey-text fw-600">2. Solar Manufacturing</h5>
+                        <p class="grey-text">Solar power installations are made up of hundreds of components, from solar modules that generate power to the racking systems that hold them in place to the inverters that connect the system to your home. While some of these components are produced overseas, many are manufactured right here in America, in factories that employ workers similar to other high-tech industries.</p>
+                        <p class="grey-text">Solar module producers accounted for 31% of manufacturing respondents to the National Solar Jobs Census, including six major manufacturing facilities reporting plans to expand operations. Another 28% of U.S. solar manufacturers produce mounting hardware, 24% produce monitoring systems, 15% produce inverters, 12% produce trackers, and 21% produce other solar-related equipment. (That adds up to more than 100% because some vertically-integrated manufacturers produce equipment for more than one part of the supply chain.)</p>
+                        <p class="grey-text">According to the Solar Foundation, there are over 17,000 solar manufacturing and production roles in the U.S. Entry-level manufacturing jobs pay a median wage of $24.46/hour, with median wages going up to $32.61/hour for the highest-paid manufacturing workers.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="col-sm-12 col-md-10 col-lg-10 mb-4">
             <h5 class="grey-text fw-600">3. Solar Sales Representatives</h5>
-            <p class="grey-text">Solar may be booming, but those solar panels don’t sell themselves! Solar sales representatives are employed by installation companies that sell to homeowners and business, either by phone or door-to-door. Higher up the supply chain, solar equipment manufacturers also have wholesale sales representatives that engage in more complex negotiations with other solar companies. </p>
+            <p class="grey-text">Solar may be booming, but those solar panels don’t sell themselves! <a href="https://re-volv.org/get-involved/education/solarjobs/" rel="noopener noreferrer" target="_blank">[ In fact, there are so different types of jobs in the solar field! ]</a> Solar sales representatives are employed by installation companies that sell to homeowners and business, either by phone or door-to-door. Higher up the supply chain, solar equipment manufacturers also have wholesale sales representatives that engage in more complex negotiations with other solar companies. </p>
             <p class="grey-text">After the sale, consumer-facing solar companies may employ large numbers of customer service representatives to ensure a high level of customer satisfaction (and good reviews and referrals). Regardless of whether you’re dealing with home solar prospects, existing customers, or buyers from downstream solar companies, all of these sales representative positions require strong communications skills.</p>
             <p class="grey-text">According to the Solar Foundation, there are about 36,000 solar sales reps in the U.S. While the National Solar Jobs Census doesn’t have wage data for these roles in the solar context, Bureau of Labor Statistics data indicates a median wage of $11.24/hour for retail sales roles in general, $15.81 for customer service reps, and $29.01/hour for wholesale and manufacturing sales reps.</p>
           </div>
