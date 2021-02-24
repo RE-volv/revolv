@@ -20,6 +20,9 @@ src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLEMAPS_API_KEY }}">
 <link rel='stylesheet' href='https://unpkg.com/leaflet.markercluster@1.0.5/dist/MarkerCluster.css'>
 <link rel='stylesheet' href='https://unpkg.com/leaflet.markercluster@1.0.5/dist/MarkerCluster.Default.css'>
 
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css" />
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'>
+
 
 <link href="{% static 'css/eduresource-css/style.css' %}?version={{ version_number }}" rel="stylesheet" />
 
@@ -90,7 +93,31 @@ a {
           </div>
         </div>
       </div>
-      
+
+      <div class="container-fluid" id="section-four"
+        style="margin-top:0px !important; padding: 100px 0px 100px 0px !important;">
+        <div class="col-sm-12 co-md-12 col-lg-12 text-center container">
+          <h1 class="text-white fw-5">Investment Opportunity</h1>
+          <p class="text-white fw-400" style="max-width: 700px; margin: 0 auto !important;"><a class="col-md-6 image clean-enrgy-colzx" data-tooltip-content="#tooltip-1" style="max-width: 400px; padding:20px 0px 20px 0px; color:#CAE4F1; text-decoration: underline;">RE-volv</a>
+            &nbsp;works to provide solar energy access to those that are excluded from the benefits of the clean
+            energy economy. RE-volv is currently raising $10 Million through
+            <a class="col-md-6 image clean-enrgy-colzx" data-tooltip-content="#tooltip-2"
+              style="max-width: 400px; padding:20px 0px 20px 0px; color:#CAE4F1; text-decoration: underline;">Recoverable
+              Grants</a>
+            &nbsp;from impact investors through <a class="col-md-6 image clean-enrgy-colzx" data-tooltip-content="#tooltip-3"
+            style="max-width: 400px; padding:20px 0px 20px 0px; color:#CAE4F1; text-decoration: underline;">two investment options</a> to scale our proven model of solar finance for community-serving nonprofit organizations across the United States.
+          </p>
+
+          <h4 style="text-align: center; margin-top: 30px; color: white !important;"> Sign up to Receive More Information Below</h4>
+          <div style="margin-top: -440px !important;">
+            <iframe src="https://www.cognitoforms.com/f/o_n8-oHQCUC-10BCk9BpSA?id=8"
+              style="width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="no" seamless="seamless"
+              height="300" width="100%"></iframe>
+            <script src="https://www.cognitoforms.com/scripts/embed.js"></script>
+          </div>     
+        </div>
+      </div>
+  
       <div class="row justify-content-center align-items-center" style="background:orange;">
         <div class="col-sm-12 co-md-12 col-lg-12">
           <div class="row align-items-center">
@@ -586,6 +613,59 @@ a {
         </div>
       </div>
 
+      <div class="tooltip_templates">
+        <div id="tooltip-1">
+          <div class="tooltip-body">
+            <h3 class="blue-text"> About RE-volv </h3>
+            <p>
+              RE-volv is a national nonprofit organization whose mission is to tackle climate change at the local level
+              by empowering people to accelerate the adoption of clean energy in their communities. At RE-volv, we
+              believe that everyone can participate in helping to build the clean energy economy and everyone can share
+              in its benefits. We provide solar energy financing to nonprofits serving disadvantaged communities across
+              the country, while raising awareness about the benefits of solar, and training the next generation of
+              clean energy leaders in the process.
+            </p>
+            <p>
+              Since 2013, RE-volv has been solarizing nonprofits in low-to-moderate-income communities, BIPOC
+              communities, and in parts of the country where solar is less common, less economical, and where through
+              community engagement, we hope to build momentum for stronger clean energy policy.
+
+            </p>
+            <p>Contact Andreas at <span class="orange-text fw-400">andreas@re-volv.org</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tooltip_templates">
+        <div id="tooltip-2">
+          <div class="tooltip-body">
+            <h3 class="blue-text"> Recoverable Grant </h3>
+            <p>
+              An innovative financial vehicle that allows RE-volv to receive a grant from foundations and Donor Advised
+              Funds, use the funds to build solar projects for deserving nonprofits, and pay back the endowment with
+              interest over time. Grantors can then continue to regrant those funds to organizations of their choice.
+            </p>
+            <p>Contact Andreas at <span class="orange-text fw-400">andreas@re-volv.org</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tooltip_templates">
+        <div id="tooltip-3">
+          <div class="tooltip-body">
+            <h3 class="blue-text"> Investment Opportunity </h3>
+            <p>
+              RE-volv is currently seeking to raise $10 Million through two recoverable grant investment offerings.
+              Additional grantor specific-terms are possible. 
+            </p>
+            <p>9-year term with 1% annual interest rate ($3M investment opportunity)</p>
+            <p>15-year term with 1.75% annual interest rate ($7M investment opportunity)</p>
+          </div>
+        </div>
+      </div>
+
+
     </main><!-- /.container -->
 
   <script>
@@ -635,7 +715,25 @@ a {
 
     <script src="{% static 'js/home-js/script.js' %}"></script>
     <script src="{% static 'js/script.js' %}"></script>
-    
+    <script>
+      $('.clean-enrgy-colzx').tooltipster({
+        animation: 'grow',
+        maxWidth: 1800,
+        speed: 300,
+        side: 'top',
+        arrow: false,
+        trigger: 'click',
+        interactive: true,
+        contentAsHTML: true,
+        theme: '',
+      });
+    </script>
+    <script>
+        Cognito.setCss('.cognito .c-forms-template {     padding-top: 480px; }'); 
+        Cognito.setCss('.cognito .c-action { text-align: center; float:none !important; }'); 
+        Cognito.setCss('.cognito #c-submit-button { text-align: center; float:none; }'); 
+        Cognito.setCss('.cognito .c-forms-confirmation-message { font-size: 1.5rem; text-align: center; font-weight: 600; }'); 
+    </script>
     <script>
       $(function ($) {
       var handler = StripeCheckout.configure({
