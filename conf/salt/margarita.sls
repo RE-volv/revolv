@@ -4,7 +4,7 @@ git-install:
 
 clone_repo:
   cmd.run:
-     - name: git clone https://github.com/caktus/margarita.git margarita
+     - name: git clone https://github.com/revolv-dev/margarita.git margarita
      - user: root
      - unless: test -e /srv/margarita/.git
      - cwd: /srv
