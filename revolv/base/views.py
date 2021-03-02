@@ -661,6 +661,12 @@ def sustainabilitysaves(request):
 def tenyearimpact(request):
     return render(request, 'base/partials/blog-article-ten-year-impact.html')
 
+def textingforchange(request):
+    return render(request, 'base/partials/blog-article-texting-for-change.html')
+
+def evolvingenergy(request):
+    return render(request, 'base/partials/blog-article-solar-ambassador-evolving.html')
+
 #-----------Donate Monthly
 
 

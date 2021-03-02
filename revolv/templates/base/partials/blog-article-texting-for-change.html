@@ -1,0 +1,184 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/v1614666489/images/blog-article-img/2019-team-1.jpg') no-repeat; background-size: 100%; background-position: center !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <h1 class="fw-300 mb-1 text-center">Texting for Change - Purdue Solar Ambassadors Contribute to Elect a Climate-friendly Administration</h1>
+            <h3 class="fw-500 mb-5 text-center mt-4">By <span class="article-auther">Anna Adamsson and the Purdue Solar Ambassador Team - Hannah Congleton, Tyler Huff, and Abby Lenzini</span><span class="article-date"></span></h3>
+
+            <p>I was just finishing the 3rd grade when the 2008 Democratic primaries came to Indiana. The candidates were Hillary Clinton and Barack Obama. I didn’t grasp much about the importance of the office of the President; I’m not even sure I realized the “candidates” were running for President. All I knew was that my mom supported Obama and volunteered for his campaign. She helped, even in a small way, to turn Indiana blue that November for the first time since 1964. Wow!</p>
+            
+            <p>At that time, both candidates, Obama and McCain, supported policies to fight climate change. When running for office, Republican <a href="https://grist.org/article/mccain_factsheet/">McCain even said</a> global warming would be one of his three key issues if elected to office. The next Republican President of course sang a very different song, one of climate denial.</p>
+
+            <p>When looking forward to the 2020 Election, I needed to contribute somehow to making sure we elected a more climate friendly administration. That is when I became a campaign volunteer. Our <a href="https://re-volv.org/get-involved/solar-ambassador/">Solar Ambassador</a> Team at Purdue University joined me.</p>
+
+            <p>We worked for one Sunday on Senator Gary Peters’ reelection campaign in Michigan, our neighboring state. We signed up to be “text-bankers” who text Michigan voters on behalf of the campaign to make sure they had a plan to vote. <strong class="fw-500">Here is a testimony of one Solar Ambassador, Hannah Congleton, who volunteered that day.</strong></p>
+
+            <p style="line-height: 2;">“When I turned 18, the only benefit I found was being able to vote. It made me feel like I had an impact so, when Anna suggested doing text banking, I felt like I could make a larger impact than just voting myself. It was much simpler than I imagined and I received a variety of replies. My favorite was a grandma who was very excited to tell me she mailed in her ballot. Overall, it was a fun experience hanging out with friends while making sure some people got their vote counted.”</p>
+
+            <p>There are a lot of ways to get involved in electing climate champions to public office. Some of those ways include knocking on people’s doors, what my mom did back in 2008, or calling folks on the telephone. Of course, sending a donation - even $5, can really get a campaign up on its feet too. All of these options (and more) are often clearly visible on any candidate’s website, typically near the top of their website. </p>
+
+            <p>During the coronavirus, campaigns have had to get much more creative in the ways they connected with voters. <strong class="fw-500">Another one of our Solar Ambassadors, Tyler Huff, gained experience with this new text-banking platform:</strong></p>
+
+            <div class="row my-4">
+              <div class="col-md-6">
+            <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1614666497/images/blog-article-img/tyler-purdue.jpg" alt="tyler huff purdue" style="width:400px;">
+              </div>
+              <div class="col-md-6" style="margin-top:80px;">
+            <p style="line-height: 2;">“I participated in a text bank for Michigan Senator Gary Peters (D). First off, I was surprised to see people of all ages in the text bank Zoom call. This was really empowering, it showed that even the older population are trying to adapt to all this new technology being used for activism. As the event went on, I was happy to see so many people reply saying their ballots were already turned in. In the end, I’m happy I was able to contribute to such an important race. Without this progressive text banking system, the results of the election would not have been the same.”</p>
+              </div>
+            </div>
+
+            <p>Like Tyler said, Michigan’s Senate race became one of the closest in the country during the 2020 election. Gary Peters trailed the Republican nominee in vote count until the absentee ballots were finally counted from metropolitan and plurality Black communities. </p>
+
+            <p>Volunteering in an election can really make a difference. <a href="https://www.jstor.org/stable/pdf/10.1017/s0022381609990119.pdf?casa_token=92lS_079dqcAAAAA:9nlX7bdzXAI4buS1-1ZbtePL7tL4wzN16s7LxCloXQ2ximwAhcArKhHJ6XazLWJmaIZPk3gzZoT9fATefVJ7U4SNWW6IyIR8RjLu1mSfkcI0sRzPSsnt">Studies</a> in the earlier 2000s found that door-to-door canvassing has led to seven to 12 percent increases in voter turnout. Phone banking also leads to a three to five percent bump in voting rates, and significantly more if voters are given a follow-up call.</p>
+
+            <p>Now, compare those statistics with an off-year <a href="https://www.jconline.com/story/news/2019/11/05/election-2019-west-lafayette-city-council-results/4163730002/">2019 city council election</a> near Purdue University: <strong class="fw-500">one district that represents some Purdue students was decided by just five votes.</strong></p>
+
+            <p>An aggressive national agenda against climate change can be incredibly effective and is very needed right now. But, local races are important too. For example, local governments can regulate renewable energy installations. In our county, the Republican controlled council voted to <a href="https://www.wlfi.com/content/news/Wind-farm-ban-in-Tippecanoe-County-509609181.html">ban wind farms</a> in 2019. This ban makes it much harder for our community to rely less on our significant use of coal.</p>
+
+            <p><strong class="fw-500">Local and state governments are essential in the fight against climate change and they are often the races that are easiest to get involved in and make an impact.</strong> Spending just a few hours on a Sunday volunteering for a campaign, like we did, is empowering. </p>
+
+            <p>Although campaign season is officially over and we now happily welcome a new administration that has a bold climate agenda, there are still things we can do to make a difference. </p>
+
+            <p>First, search and find when your next local election is; it may be as soon as this spring. Then, add a reminder on your calendar to vote, and maybe pencil in a date to volunteer with the campaign on one of your free weekends.</p>
+
+            <p>Getting involved can really be that easy: just a reminder on your calendar and a few hours on a weekend. If you cannot commit your time, a $5 donation can mean a lot, especially in a local election.</p>
+
+            <p><strong class="fw-500">Lastly, Solar Ambassador Abby Lenzini’s shares her reflections on volunteering that weekend and what politics has begun to mean to her:</strong></p>
+
+            <p style="line-height: 2;">“I was excited when the idea of participating in a text banking campaign as a group came up in our meetings. I had never been super into politics, but the many issues that we are dealing with today has made it more and more important to me to get involved. I thought the Michigan campaign would be a great way to do this and work to make a difference. Our country is facing many conflicts right now, and while our team mostly talks about environmental issues, the other concerns such as social justice, for instance, are closely interconnected. This year we have talked about how to incorporate these other issues into our mission, and the campaign was a great way to get involved in the community to impact environmental issues as well as all the other things the Michigan Democrats are working towards. 
+              My experience was overall really meaningful and fun too! It was amazing to be able to help voters get important information about early and mail-in voting, as well as help educate people about the reasons to vote for our candidates. It was also fun to be able to have my team members there supporting me and exchanging stories about any crazy responses we got. There were some negative responses but having the others there to joke with helped lighten the mood. I am so glad we were able to help out and volunteer our time for a good cause!”
+            </p>
+
+            <p>Join us in making a plan to call, text, and campaign our way into a future with climate champions elected to all levels of government, making policies that guarantee us a brighter, healthier and more sustainable future!</p>
+
+            <div class="col-md-12 mt-5">
+                <h4 style="color:#100084;">About the Authors</h4>
+              <div class="row my-4">
+                <div class="col-md-2"><img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1614666493/images/blog-article-img/anna-adamsson.jpg" alt="author-anna-adamsson"></div>
+                <div class="col-md-10"><strong class="fw-500">Anna Adamsson</strong> is a senior majoring in Global Studies with concentrations in environmental politics and policy and social justice studies. Anna is in her third year with the Solar Ambassador program and is currently the Team Lead at Purdue University. She enjoys how this internship has pushed to her to be more involved and connected with the surrounding community outside Purdue University. Her favorite memories of the program are when her team achieved their crowdfunding goal in 2019 and when they take occasional time off for a plant-based pizza night.
+                </div>
+              </div>
+              <div class="row my-4">
+                <div class="col-md-10" style="text-align:right;">
+                  <strong class="fw-500">Hannah Congleton</strong> is a Sophomore Environmental and Ecological Engineering major at Purdue University. She has been working with Purdue Solar Ambassadors since her freshman year. Being a Solar Ambassador allows for experience working with a variety of people and learning more about solar that will help with her future endeavors. 
+                </div>
+                <div class="col-md-2"><img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1614666503/images/blog-article-img/hannah-purdue.jpg" alt="author-hannah-purdue"></div>
+              </div>
+              <div class="row my-4">
+                <div class="col-md-2"><img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1614666498/images/blog-article-img/tylerhuff-bpurdue.jpg" alt="author-tyler-huff"></div>
+                <div class="col-md-10">
+                  <strong class="fw-500">Tyler Huff</strong> is a freshman at Purdue studying engineering. He joined the Solar Ambassadors this year because he’s passionate about renewable energy and wants to help in any way he can. Tyler also plays basketball, the trombone, and attends climate protests in his hometown of Madison, Wisconsin.
+                </div>
+              </div>
+              <div class="row my-4">
+                <div class="col-md-10" style="text-align:right;">
+                  <strong class="fw-500">Abby Lenzini</strong> is a sophomore at Purdue University studying natural resources and environmental science with a concentration in environmental quality and restoration. She has been a part of the Solar Ambassador program for two years and loves getting to work with her community and renewable energy. 
+                </div>
+                <div class="col-md-2"><img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1614666491/images/blog-article-img/abb-lenzini.jpg" alt="author-abby-lenzini"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/evolving-energy/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1614669782/images/blog-article-img/solar-panel-clouds.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/ten-years-of-impact/"> <span class="meta-date">FEBRUARY 28, 2021</span> </a>
+                    <h4 class="meta-title">Solar Ambassadorship: Evolving Energy</h4>
+                    <p>I became interested in Re-volv’s Solar Ambassador Program the first..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/ten-years-of-impact/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1612470353/images/blog-article-img/ten-year-event.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/ten-years-of-impact/"> <span class="meta-date">FEBRUARY 4, 2021</span> </a>
+                    <h4 class="meta-title">Thank you for 10 Amazing Years of Impact</h4>
+                    <p>Ten years ago today, February 4th 2011, I boarded a train in Jack London..</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}

@@ -108,6 +108,8 @@ urlpatterns = patterns(
     url(r'^blog-center/articles/sustainability-saves-more-than-the-environment/', 'revolv.base.views.sustainabilitysaves', name='sustainabilitysaves'),
     url(r'^blog-center/articles/where-do-we-go-chaos-or-community/', 'revolv.base.views.drmartinlutherking', name='drmartinlutherking'),
     url(r'^blog-center/articles/ten-years-of-impact/', 'revolv.base.views.tenyearimpact', name='tenyearimpact'),
+    url(r'^blog-center/articles/texting-for-change', 'revolv.base.views.textingforchange', name='textingforchange'),
+    url(r'^blog-center/articles/evolving-energy/', 'revolv.base.views.evolvingenergy', name='evolvingenergy'),
 
     url(r'^monthly_donor', 'revolv.base.views.monthly_donor', name='monthly_donor'),
     url(r'^thanks/postdonation/', 'revolv.base.views.postdonation', name='postdonation'),
