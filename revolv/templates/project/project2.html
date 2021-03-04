@@ -1383,7 +1383,7 @@
             <span class="draft-mode-detail-text">This project is currently pending approval. Thank you!</span>
         </div>
     {% endif %}
-    <div class="contents project-details-contents after-header">
+    <div class="contents project-details-contents after-header" style="margin-top:0px !important;">
     {% if project_matching_donor %}
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 title-matching-donor">
             <div class="title-blue-border title-yellow-border">ALL DONATIONS ARE NOW BEING MATCHED!
@@ -1423,18 +1423,12 @@
                             </a>
                         </div>
                     </div>
-                    <div class="project-status-mobile title-blue-border title-active-project pull-right">{{ project.status_display|upper }}
-                        PROJECT
-                    </div>
+
                 {% else %}
-                    <div class="title-blue-border title-active-project pull-right">{{ project.status_display|upper }}
-                        PROJECT
-                    </div>
+
                 {% endif %}
             </div>
-            <div class="col-lg-8 col-md-7 col-sm-12 col-xs-12">
-                <h1 class="title-h1 title-right-new">{{ project.title }}</h1>
-            </div>
+
         </div>
     </div>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -1461,444 +1455,168 @@
             </ul>
         </div>
     {% endif %}
-    {% if request.GET.reinvestment %}
-        <div class="info-section">
-            <div class="container">
-                <div class="video-main">
-                    <div class="row">
-                        <div class="video-area col-lg-8 col-md-7">
-                            <div class="video" style="height:313px">
-                                {% if project.video_url %}
-                                    <iframe class="project_video youtube-player" allowfullscreen
-                                            style="height:313px"></iframe>
-                                {% endif %}
-                            </div>
-                        </div>
 
-                        <div class="txt-area1 col-lg-4 col-md-5">
-                            <div class="module-box payment-module">
-                                <h5 class="title-h5">Reinvestment In this Project</h5>
-                                <div class="back-the-project">Reinvest now to help {{ project.title }} go solar and grow
-                                    the Solar Seed Fund
-                                </div>
-                                <div class="inputs">
-                                    <form action="{% url 'project:reinvest' pk=project.pk %}" method="POST">
-                                        {% csrf_token %}
-                                        <div class="input-group">
-                                            <label for="value">Reinvestment In this Project</label>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">$</span>
-                                                <input type="number" class="form-control" id="amt" step="0.01"
-                                                       name="amount" value="{{ reinvestment_amount|floatformat:2}}"
-                                                       min="0.01" max="{{ reinvestment_amount|floatformat:2}}">
+      <div class="container-fluid" id="campaign-body">
+          <div class="row justify-content-center align-items-center">
+              <div class="col-sm-12 co-md-10 col-lg-10">
+                  <div class="row">
+                      <div class="col-sm-12 col-md-4 pr-4">
+                          {% if project_matching_donor %}
+                          <div class="col-md-12 mb-3">
+                              <div class="title-blue-border" style="height: 100% !important;">ALL DONATIONS ARE NOW
+                                  BEING MATCHED!
+                              </div>
+                          </div>
+                          {% endif %}
+                          <div class="campaign-col">
+                              <div class="title-container">
+                                  <h1><small>Project Details</small></h1>
+                              </div>
+
+                              <div class="campaign-text">
+
+                                  <div class="w-100"></div>
+
+                                  <div class="row">
+                                    
+                                    <div class="col-lg-12">
+                                        <div class="row"> 
+                                            <div class="col-lg-6 project-stats mt-2">
+                                                <h5 class="fw-500 my-0">CO<sub>2</sub> Avoided</h5>
+                                                <h3 class="fw-700 mb-0" style="max-width: 100% !important;">{{ project.carbon_avoided }} lbs</h3>
                                             </div>
+                                            <div class="col-lg-6 project-stats mt-2">
+                                                <h5 class="fw-500 my-0">Solar System</h5>
+                                                <h3 class="fw-700 mb-0">{{  project.total_kwh_value|floatformat:"0"|intcomma }} kW </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mt-3">
+                                        <div class="row"> 
+                                            <div class="col-lg-6 project-stats mt-2">
+                                                <h5 class="fw-500 my-0">Dollars saved</h5>
+                                                <h3 class="fw-700 mb-0">${{ project.dollars_saved }}</h3>
+                                            </div>
+                                            <div class="col-lg-6 project-stats mt-2">
+                                                <h5 class="fw-500 my-0">People served</h5>
+                                                <h3 class="fw-700 mb-0">{{ project.people_affected|floatformat:"0"|intcomma }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                  </div>
+                                  <div class="row mt-4">
+                                    <div class="col-md-12">
+                                        <div>
+                                            <h5 class="fw-500 my-0 h-100">{{ project.installation_status }}</h5>
+                                            <i class="fas fa-solar-panel"></i>
+                                        </div>
+                                        <h3 class="fw-700 mb-0">{{ project.installation_date_status }}</h3>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="donate-icon-col mb-4  updates-col">
+                              <a href="/monthly_donor">
+                                <div class="row justify-content-center">
+                                    <div class="row " style="justify-content: center; text-align: center;">
+                                        <div class="mt-2">
+                                        <img src="../../../static/images/blog-monthly-img/donate-icon.png">
                                         </div>
                                         <div>
-                                            <!-- Trigger the modal with a button -->
-                                            <button type="submit" class="btn-reinvest" style="visibility: visible">
-                                                REINVEST NOW
-                                            </button>
-
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info-main">
-                        <div class="blue-bar">
-                            <span class="pull-left"><span
-                                    class="bold">${{ project.amount_donated|floatformat:"0"|intcomma }}</span> Donated</span>
-                            {% if project.is_completed %}
-                                <span class="pull-right"><span class="bold">Campaign completed</span></span>
-                            {% else %}
-                                <span class="pull-right"><span
-                                        class="bold">{{ project.days_left }}</span> Days Left</span>
-                            {% endif %}
-                        </div>
-                        <!-- end .blue-bar -->
-                        <div class="dark-blue-bar">
-            <span class="pull-left actual-energy">
-              <span class="bold">{{ project.get_statistic_for_project|floatformat:"0"|intcomma }}</span> lbs CO<sub>2</sub> Avoided</span><span
-                                class="pull-right">
-              <span class="bold">{{ donor_count }} </span> {{ settings.revolv_cms.ProjectPageSettings.donors_wording }}</span>
-                        </div>
-                        <div class="banner-section" style="    font-family: 'Montserrat', sans-serif;">
-                            <div class="container">
-                                <div class="funded-round">
-                <span class="status-text">
-                  <span class="round-depict"><span>OF</span> ${{ project.funding_goal|floatformat:0|intcomma }}</span>
-                </span>
-                                    <!-- end .status-text -->
-                                    <div class="status-indicator desktop-circle">
-                                        <input type="text" value="{{ project.percent_complete }}" data-min="0"
-                                               data-width="210" data-height="210" data-bgcolor="#fff"
-                                               data-fgcolor="#100084" data-max="100" data-readonly="true"
-                                               data-thickness=".12">
-                                    </div>
-                                    <div class="status-indicator small-circle">
-                                        <input type="text" value="{{ project.percent_complete }}" data-min="0"
-                                               data-width="175" data-height="175" data-bgcolor="#fff"
-                                               data-fgcolor="#100084" data-max="100" data-readonly="true"
-                                               data-thickness=".13">
-                                    </div>
-                                    <div class="status-indicator tablet-circle">
-                                        <input type="text" value="{{ project.percent_complete }}" data-min="0"
-                                               data-width="152" data-height="152" data-bgcolor="#fff"
-                                               data-fgcolor="#100084" data-max="100" data-readonly="true"
-                                               data-thickness=".16">
-                                    </div>
-                                    <div class="status-indicator mobile-circle">
-                                        <input type="text" value="{{ project.percent_complete }}" data-min="0"
-                                               data-width="75" data-height="75" data-bgcolor="#fff"
-                                               data-fgcolor="#100084" data-max="100" data-readonly="true"
-                                               data-thickness=".12">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end .blue-bar -->
-                    </div>
-                    <!-- end .info-main -->
-                    <!-- end .video-main -->
-                </div>
-            </div>
-            <!-- end .info-section -->
-        </div>
-        <!-- end .details-active-project-module -->
-        <div class="container">
-        <div class="col-sm-12 outer-basic-silver-gold project-updates-module">
-                <div class="col-xl-8 col-lg-8 col-md-12 col-12 ">
-                        <div class="col-md-12">
-                            <p class="content-gold-silver">{{ project.tagline }}</p>
-                        </div>
-                        <div class="col-md-12">
-                            <p class="content-gold-silver content_sec">{{ project.description|safe }}</p>
-                        </div>
-                    </div>
-
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-right price-tables">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="right-aside-new">
-                        <aside class="right-aside">
-                            {% if project_donation_levels %}
-                                {% for donation_level in project_donation_levels %}
-                                    <div class="module-box payment-module">
-                                        <div class="value-txt" data-value="{{ donation_level.amount }}">$
-                                            {{ donation_level.amount|floatformat:"0"|intcomma }}</div>
-                                        <h5 class="title-h5">OUR APPRECIATION</h5>
-                                        <p>{{ donation_level.description }}</p>
-                                        <div class="inputs">
-                                            <label for="tip_edit">Additional support for RE-volv</label>
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">$</span>
-                                                <input type="number" name="tip_edit" min="0" step="any" value="7.50"
-                                                       class="form-control tip_edit1">
-                                                <span id="edit_value1" class="input-group-text">Edit</span>
-                                            </div>
-                                            <label for="total">Total</label>
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">$</span>
-                                                <input type="number" name="total" value="10" step="1"
-                                                       class="form-control" disabled>
-                                            </div>
-                                        </div>
-                                        <form action="{% url 'project:stripe_payment' pk=project.pk %}" method="POST">
-                                            {% csrf_token %}
-                                            <input type="hidden" name="amount_cents"
-                                                   value="{{ donation_level.amount }}">
-                                            <input name="metadata" value="1.00" type="hidden">
-                                            <button type="submit" class="stripe-button-el" style="visibility: visible;">
-                                                <span style="display: block; min-height: 30px;">Donate</span>
-                                            </button>
-                                        </form>
-                                    </div>
-                                {% endfor %}
-                                <!-- end .module-box -->
-
-                            {% endif %}
-                            <div class="module-box payment-module" style="display: none">
-                                <h5 class="title-h5">Display NONE set here</h5>
-                                <div class="back-the-project">Donate now to help {{ project.title }} go solar and grow
-                                    the Solar Seed Fund
-                                </div>
-                                <div class="inputs">
-                                    <label for="value">Donation to the project</label>
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">$</span>
-                                        <input type="number" name="value" min="0" value="50" step="any"
-                                               class="form-control">
-                                    </div>
-                                    <label for="tip_edit">Additional support for RE-volv</label>
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">$</span>
-                                        <input type="number" name="tip_edit" min="0" step="any" value="7.50"
-                                               class="form-control tip_edit2">
-                                        <span id="edit_value2" class="input-group-text">Edit</span>
-                                    </div>
-                                    <label for="total">Total</label>
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">$</span>
-                                        <input type="number" name="total" value="10" step="1" class="form-control"
-                                               disabled>
-                                    </div>
-                                </div>
-                                {% for level in project_donation_levels %}
-                                {% endfor %}
-                                <form action="{% url 'project:stripe_payment' pk=project.pk %}" method="POST">
-                                    {% csrf_token %}
-                                    <input type="hidden" name="amount_cents" value="1000">
-                                    <input name="metadata" value="1.00" type="hidden">
-                                    <button type="submit" class="stripe-button-el" style="visibility: visible;">
-                                        <span style="display: block; min-height: 30px;">Donate</span>
-                                    </button>
-                                </form>
-                            </div>
-                            <!-- end .module-box -->
-                        </aside>
-                        <!-- end .list-area -->
-                    </div>
-                </div>
-            </div>
-
-
-            {% else %}
-            <div class="info-section">
-                <div class="container">
-                    <div class="video-main">
-                        <div class="row">
-                            <div class="video-area col-lg-8 col-md-7">
-                                <div class="video">
-                                    {% if project.video_url %}
-                                        <iframe class="project_video youtube-player" style="height: 468px;"
-                                                allowfullscreen></iframe>
-                                    {% endif %}
-                                </div>
-                            </div>
-                            <div class="txt-area1 col-lg-4 col-md-5">
-                                <div class="module-box payment-module">
-                                    <h5 class="title-h5">Donate</h5>
-                                    <div class="back-the-project">Donate now to help {{ project.title }} go solar and
-                                        grow the Solar Seed Fund
-                                    </div>
-                                    <div class="inputs">
-                                        <div class="col-lg-11 col-md-8 col-sm-8 col-8" >
-                                            <div class="input-group">
-                                                <label for="value">Donation to the project</label>
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">$</span>
-                                                    <input type="number" class="form-control donation-field" step="any"
-                                                            value="50" min="0" name="value">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-11 col-md-8 col-sm-8 col-8" >
-                                            <div class="input-group">
-                                                <label for="total">Total</label>
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">$</span>
-                                                    <input type="number" disabled="" class="form-control" step="1"
-                                                        value="10" name="total">
-                                                </div>
-                                            </div>
+                                        <h2>Become</h2>
+                                        <p>a monthly supporter</p>
                                         </div>
                                     </div>
-                                    <form action="{% url 'project:stripe_payment' pk=project.pk %}" method="POST"
-                                          id="phone">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="amount_cents" value="{{ donation_level.amount }}">
-                                        <input name="metadata" value="1.00" type="hidden">
-                                        <button type="submit" class="stripe-button-el" style="visibility: visible;">
-                                            <span style="display: block; min-height: 30px;">DONATE</span>
-                                        </button>
-                                    </form>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info-main">
-                        <div class="blue-bar">
-                            <span class="pull-left"><span
-                                    class="bold">${{ project.amount_donated|floatformat:"0"|intcomma }}</span> Donated</span>
-                            {% if project.is_completed %}
-                                <span class="pull-right"><span class="bold">Campaign completed</span></span>
-                            {% else %}
-                                <span class="pull-right"><span
-                                        class="bold">{{ project.days_left }}</span> Days Left</span>
-                            {% endif %}
-                        </div>
-                        <!-- end .blue-bar -->
-                        <div class="dark-blue-bar">
-            <span class="pull-left actual-energy">
-              <span class="bold">{{ project.get_statistic_for_project|floatformat:"0" |intcomma}}</span> lbs CO<sub>2</sub> Avoided</span><span
-                                class="pull-right">
-              <span class="bold">{{ donor_count }}</span> {{ settings.revolv_cms.ProjectPageSettings.donors_wording }}</span>
-                        </div>
-                        <div class="banner-section">
-                            <div class="container">
-                                <div class="funded-round">
-                <span class="status-text">
-                  <span class="round-depict"><span>OF</span> ${{ project.funding_goal|floatformat:0|intcomma }}</span>
-                </span>
-                                    <!-- end .status-text -->
-                                    <div class="status-indicator desktop-circle">
-                                        <input type="text" value="{{ project.percent_complete }}" data-min="0"
-                                               data-width="210" data-height="210" data-bgcolor="#fff"
-                                               data-fgcolor="#100084" data-max="100" data-readonly="true"
-                                               data-thickness=".12">
-                                    </div>
-                                    <div class="status-indicator small-circle">
-                                        <input type="text" value="{{ project.percent_complete }}" data-min="0"
-                                               data-width="175" data-height="175" data-bgcolor="#fff"
-                                               data-fgcolor="#100084" data-max="100" data-readonly="true"
-                                               data-thickness=".13">
-                                    </div>
-                                    <div class="status-indicator tablet-circle">
-                                        <input type="text" value="{{ project.percent_complete }}" data-min="0"
-                                               data-width="152" data-height="152" data-bgcolor="#fff"
-                                               data-fgcolor="#100084" data-max="100" data-readonly="true"
-                                               data-thickness=".16">
-                                    </div>
-                                    <div class="status-indicator mobile-circle">
-                                        <input type="text" value="{{ project.percent_complete }}" data-min="0"
-                                               data-width="75" data-height="75" data-bgcolor="#fff"
-                                               data-fgcolor="#100084" data-max="100" data-readonly="true"
-                                               data-thickness=".12">
-                                    </div>
+                                <hr class="mt-1" style="width:200px; margin: auto; background: #fff;" />
+                                <p class="fw-600 mt-3" style="justify-content: center; text-align: center;">
+                                    Consider giving a small monthly donation so we can bring more communities the power of solar.
+                                </p>
+                                <div class="row justify-content-center" style="text-align:center;">
+                                    <button class="btn btn-blue mt-2" href="/bring_solar_to_your_community/intake_form/nonprofit/" role="button">Donate Now</button>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- end .blue-bar -->
-                    </div>
-                    <!-- end .info-main -->
-                    <!-- end .video-main -->
-                </div>
-            </div>
-            <!-- end .info-section -->
-        </div>
-        <!-- end .details-active-project-module -->
-        <div class="container">
-        <div class="col-sm-12 outer-basic-silver-gold project-updates-module">
-            
-                <div class="col-xl-8 col-lg-8 col-md-12 col-12 ">
-                        <div class="col-md-12">
-                            <p class="content-gold-silver">{{ project.tagline }}</p>
-                        </div>
-                        <div class="col-md-12">
-                            <p class="content-gold-silver content_sec">{{ project.description|safe }}</p>
-                        </div>
-                    </div>
+                               </a>
+                          </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-right price-tables">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="right-aside-new">
-                    <aside class="right-aside">
-                        {% if project_donation_levels %}
-                            {% for donation_level in project_donation_levels %}
-                                <div class="module-box payment-module">
-                                    <div class="value-txt" data-value="{{ donation_level.amount }}">$
-                                        {{ donation_level.amount|floatformat:"0"|intcomma }}</div>
-                                    <h5 class="title-h5">OUR APPRECIATION</h5>
-                                    <p>{{ donation_level.description }}</p>
-                                    <div class="inputs">
-                                        <label for="tip_edit">Additional support for RE-volv</label>
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">$</span>
-                                            <input type="number" name="tip_edit" min="0" step="any" value="7.50"
-                                                   class="form-control tip_edit4">
-                                            <span id="edit_value4" class="input-group-text">Edit</span>
-                                        </div>
-                                        <label for="total">Total</label>
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text">$</span>
-                                            <input type="number" name="total" value="10" step="1" class="form-control"
-                                                   disabled>
-                                        </div>
-                                    </div>
-                                    <form action="{% url 'project:stripe_payment' pk=project.pk %}" method="POST">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="amount_cents" value="{{ donation_level.amount }}">
-                                        <input name="metadata" value="1.00" type="hidden">
-                                        <button type="submit" class="stripe-button-el" style="visibility: visible;">
-                                            <span style="display: block; min-height: 30px;">Donate</span>
-                                        </button>
-                                    </form>
+                          <div class="updates-col" style="text-align: center;">
+                              <a href="/How_it_works/">
+                                <h3 class="blue-text my-3 ml-5"> </h3>
+                                <div class="line-section pb-2" >
+                                    <p class="fw-500" style="color: black;"> This project is funded by </p>
+                                    <img src="/static/images/edu-media-img/revolvorange7.png" alt="Project is completed"
+                                    style="width: 248px;">
                                 </div>
-                            {% endfor %}
-                            <!-- end .module-box -->
-                        {% endif %}
-                        <!-- Perks -->    
-                   
-                        <!-- end .module-box -->
-                    </aside>
-                    <!-- end .list-area -->
-                </div>
-            </div>
-        </div>
-    {% endif %}
-<div class="main-area col-lg-8 col-md-8 col-sm-12 col-xs-12">
-    {% if updates|length > 0 %}
-        <h2 class="title-blue-border title-project-updates pull-right">PROJECT UPDATES</h2>
-        <div class="clearfix">
-        </div>
-        <div class="list-area">
-            {% for update in updates %}
-                <div class="row">
-                    <div class="left-date">
-                        <span class="date-txt">{{ update.date|date:"o" }}</span>
-                        <span class="month-txt">{{ update.date|date:"M"|upper }}</span>
-                    </div>
-                    <div class="main-info">
-                        {{ update.update_text|safe }}
-                        <ul class="social-ul">
-                            <li>
-                                <a href="#" class="btn-icon-gray">
-                                    <i class="icon-fb icons"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-icon-gray">
-                                    <i class="icon-tw icons"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-icon-gray">
-                                    <i class="icon-gg icons"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- end .row -->
-            {% endfor %}
-        </div>
-    {% endif %}
-    <!-- end .list-area -->
-    <div class="venue-area venue-area-left pull-left">
-        <h2 class="title-blue-border title-venue pull-left">VENUE</h2>
-        <div class="clearfix">
-        </div>
-        <div class="venue-map" id="map-canvas"></div>
-        <div class="venue-bottom">
-            <h4 class="title-h4">{{ project.title }}</h4>
-            <p>
-                <span>{{ project.location_street }}</span>
-                <span>{{ project.location_city_state_zip }}</span>
-            </p>
-        </div>
-    </div>
-    <!-- end .venue-area -->
-</div>
-</div>
-</div>
+                              </a>
+                          </div>
+                      </div>
 
-<div class="clearfix"></div>
-<!-- tabs start here -->
+                      <div class="col-sm-12 col-md-8 campaign-body-text pl-4">
+                          <h2 class="orange-text fw-300 mb-4" style="text-transform: uppercase;">About 
+                              {{ project.title }}</h2>
+                
+                          {% if project.video_url %}
+                          <iframe class="new-project-page project_video youtube-player" allowfullscreen
+                                  style="height:380px; width:70%;"></iframe>
+                          {% endif %}
+
+                          <p class="content-gold-silver content_sec">{{ project.description|safe  }}</p>
+
+                          <div class="row">
+                              <div class="col-sm-12 outer-basic-silver-gold project-updates-module"
+                                  style="padding-left: 0px;">
+                                  <div class="main-area col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                      <div class="venue-area  pull-left">
+                                          <h2 class="title-blue-border title-venue pull-left">VENUE</h2>
+                                          <div class="clearfix">
+                                          </div>
+                                          <div class="venue-map" id="map-canvas"></div>
+                                          <div class="venue-bottom">
+                                              <h4 class="title-h4">{{ project.title }}</h4>
+                                              <p>
+                                                  <span>{{ project.location_street }}</span>
+                                                  <span>{{ project.location_city_state_zip }}</span>
+                                              </p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="row">
+                              <h6 class="mt-3"> Make sure to share the campaign on social media. <span
+                                      style='font-size:2rem;'>&#128516;</span></h6>
+                              <div>
+                                  <div>
+                                      <div id="share-buttons">
+                                          <a href="http://www.facebook.com/sharer.php?u=https://www.re-volv.org/project/{{ project.project_url }}"
+                                              onclick="window.open('http://www.facebook.com/sharer.php?u=https://www.re-volv.org/project/{{ project.project_url }}','popup','width=600,height=600'); return false;"
+                                              target="_blank" class="social-circle facebook">
+                                              <i class="fab fa-facebook-square mx-2 display-4"
+                                                  style="color:#140869;"></i>
+                                          </a>
+                                          <a href="https://www.twitter.com/share?url=https://www.re-volv.org/project/{{ project.project_url }}&amp;text=Spread solar and change lives. Learn more about people-funded renewable energy here:&amp;"
+                                              target="_blank" class="social-circle twitter">
+                                              <i class="fab fa-twitter-square mx-2 display-4"
+                                                  style="color:#140869;"></i>
+                                          </a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
 <div class="donors-module">
-    <div class="mains-tabs">
-        <nav class="tab-index">
-            <div class="container">
-                <div class="row">
+    <div class="mains-tabs" style="margin-top:0px !important;">
+        <nav class="tab-index" style="background: #f4f4f4;">
+            <div class="container" style="margin:0px !important;">
+                <div class="row" style="justify-content:center;">
                     <div class="col-lg-3 col-md-3 col-sm-6">
                         <a href="javascript:;" class="active">DONORS</a>
                     </div>
@@ -1935,7 +1653,25 @@
     </div>
     <!-- end .tabs -->
 </div>
-</div>
+
+<div class="container-fluid" id="share-section">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-12 co-md-12 col-lg-12 text-center">
+                <h1 class="text-white fw-300 mb-5">Follow us on social media</h1>
+                <ul class="sharing-icons">
+                    <li><a href="https://www.facebook.com/solarseedfund/" rel="noopener noreferrer" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/RE_volv" rel="noopener noreferrer" target="_blank"><i
+                                class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/user/REvolvSolarSeedFund" rel="noopener noreferrer"
+                            target="_blank"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://www.instagram.com/re.volv/" rel="noopener noreferrer" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 {% endif %}
 <!-- End start -->
 
