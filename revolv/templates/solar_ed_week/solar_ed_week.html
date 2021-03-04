@@ -81,29 +81,8 @@
         </ul>
     </nav>
 {% block body %}
-    <div class="container">
-        <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">Dear solar enthusiasts,</h3>
-            </div>
-            <div class="modal-body">
-                <p style="font-size:1.8rem;">Unfortunately, given the current public health crisis, Solar Education Week will have to be postponed. The new dates for Solar Education Week have yet to be determined. Please sign up below for updates and we'll be sure to let you know when it's rescheduled. In the meantime, please take good care of yourselves.</p>
-            </div>
-            <div class="modal-body">
-                <h4>Sincerely,</h4>
-                <h4>The Solar Ed Week partners</h4>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-            </div>
-        </div>
-        </div>
-    </div>
     <div class="solar-ed-page section-1">
-        <img class="background-image-size-home" src="/static/images/header@2X.png" alt="RE-volv">
+        <img class="background-image-size-home" src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1614815585/images/solar-ed-week/solaredweekbanner.png" alt="RE-volv">
     </div>
     <section id="the-what">
         <div class="what-section">
@@ -144,7 +123,7 @@
                         <p class="paragraph">Check the map for events in your area! Don’t see one? <a href="#the-how" class="host-event">Host
                             an Event!</a></p>
                             <p class="event-count" style="margin-top: 120px;">
-                                <h2>2020 Stats:</h2>
+                                <h2>2021 Stats:</h2>
                                 {% if solar_counter %}
                                 <span style="margin: 0 10px;font-size: 30px; color:black; text-align: center;">{{ solar_counter }}</span>
                                 {% endif %}
@@ -358,6 +337,12 @@
             </a>
             <a class="social-icons" href="https://twitter.com/RE_volv" target="_blank">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a class="social-icons" href="https://www.instagram.com/re.volv/" target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="social-icons" href="https://www.youtube.com/user/REvolvSolarSeedFund" target="_blank">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
             </a>
         </div>
     <div class="become-host-pop-up">
