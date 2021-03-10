@@ -667,6 +667,12 @@ def textingforchange(request):
 def evolvingenergy(request):
     return render(request, 'base/partials/blog-article-solar-ambassador-evolving.html')
 
+def planforsolarbenefit(request):
+    return render(request, 'base/partials/blog-article-plan-for-solar-benefit.html')
+
+def solarambassadorimpact(request):
+    return render(request, 'base/partials/blog-article-solar-ambassador-impact.html')
+
 #-----------Donate Monthly
 
 

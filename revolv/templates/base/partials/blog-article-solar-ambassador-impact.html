@@ -1,0 +1,181 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/v1615406018/images/blog-article-img/vfw-ribbon-cutting.png') no-repeat; background-size: 100%; background-position: center !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <h1 class="fw-300 mb-1 text-center">Solar Ambassadors’ Impact in Their Community</h1>
+            <h3 class="fw-500 my-4 text-center">By <span class="article-auther">Connor Herndon, Coastal Carolina University Solar Ambassador</span><span class="article-date"></span></h3>
+            <h4>Locals Helping Locals</h4>
+            <p>
+              It is no question that members of the RE-volv team and Solar Ambassadors recognize the importance of
+              nonprofits and the services they provide to various members of the community. The presence and intentions
+              of Solar Ambassadors really highlights this influence of collective community work. Oftentimes, people can
+              be wary when they are approached by a business or other organization that is trying to sell them
+              something. Who can blame them? However, Solar Ambassadors attempt to eliminate this feeling. As Solar
+              Ambassadors encourage different nonprofit organizations to install solar systems, they emphasize that with
+              the help of RE-volv, this could be an extremely cooperative process. Rather than someone representing a
+              larger, possibly profit-driven company, Solar Ambassadors invest their genuine interest and effort into
+              the organization they are working with. This can make going solar a better, more earnest experience for
+              the members of the nonprofit.
+            </p>
+            <h4>
+              Building Community Ties
+            </h4>
+            <p>
+              The Coastal Carolina University (CCU) Solar Ambassadors have held and participated in many different
+              events to enhance our community engagement efforts. Pre-pandemic, our Solar Ambassador Team would often
+              host tabling events on campus that include activities and educational materials for other students and
+              faculty to learn about solar energy and sustainability. The CCU Solar Ambassadors have also attended and
+              participated in events with <a href="https://www.cvsc.org/">Conservation Voters of South Carolina, South Carolina Solar Council</a>, Gullah
+              Geechee Environmental & Energy Conference, and other organizations on Coastal’s campus. Not only do we
+              believe in helping individual nonprofits but educating others in the community about renewable energy is
+              just as important to our team.
+
+            </p>
+
+            <h4>
+              Our Success Stories
+            </h4>
+            <p>
+              The Solar Ambassadors at Coastal Carolina University have successfully helped various nonprofits
+              transition to solar energy. In 2018, we helped the <a href="https://re-volv.org/project/VFW10420/">Veterans of Foreign Wars (VFW) Post 10420</a> in North
+              Myrtle Beach make their shift to solar. We also worked closely with the Murrells Inlet VFW to educate and
+              advocate about the urgency for renewable energy and finished their solar system installation with a ribbon
+              cutting ceremony in January 2020. Coastal Carolina University highlighted our work with Murrells Inlet and
+              the ribbon cutting we hosted through this <a href="https://www.youtube.com/watch?v=BmI1q47bqc0&feature=youtu.be">educational video</a>.
+            </p>
+            <img class="my-4" src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1615408087/images/blog-article-img/vfw-ribbon-cutting-one.jpg" alt="row-homes-deforestation" style="width:100%;">
+
+            <p>The CCU Solar Ambassadors are also currently teaming up with The <a href="https://thevillagegroup.org/">Village Group</a>, a nonprofit organization
+              in Georgetown, SC that offers after school programs for children. We’re excited to assist The Village
+              Group in going solar because they represent historic grassroots communal development, and it will give the
+              Solar Ambassador Team an opportunity to educate members of the community in Georgetown about the
+              importance of clean energy. Throughout their time at Coastal Carolina University, students involved with
+              the Solar Ambassador Team have been active in the community and expanding solar energy in the Southeast!
+            </p>
+            <h4>
+              Why I Chose to Get Involved
+            </h4>
+            <p>
+              I chose to become a member of the Solar Ambassador Team because I wanted to educate and advocate for clean
+              energy within my community. I admire how hands-on and experiential the role of a Solar Ambassador is. I
+              also just really love the work that RE-volv does. The fact that RE-volv is a nonprofit organization that
+              helps other nonprofits transition to solar energy with the use of their Solar Seed Fund makes the work I
+              participate in feel super useful and extremely gratifying.
+            </p>
+
+            <div class="col-md-12 mt-5">
+                <h4 style="color:#100084;">About the Author</h4>
+              <div class="row my-4">
+                <div class="col-md-2"><img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1615408050/images/blog-article-img/author-1.jpg" alt="author-blog-factors-of-rooftop-solar-installation"></div>
+                <div class="col-md-10">
+                    <strong class="fw-500">Connor Herndon</strong> is a Senior Interdisciplinary Studies major at Coastal Carolina University. Her program focuses on Sustainability with a concentration in Visual Documentation and she has a minor in Marine Science. Although Connor has only been with the Solar Ambassadors for a short time, she is very passionate about the work they do. It is pertinent to her to educate and advocate for renewable energy and sustainable practices within her community. 
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/six-factors-installing-rooftop-solar-system/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1610603006/images/blog-article-img/solar-panel-installation.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/six-factors-installing-rooftop-solar-system/"> <span class="meta-date">JANUARY 11, 2021</span> </a>
+                    <h4 class="meta-title">6 Factors to Consider When Installing a Rooftop Solar System</h4>
+                    <p>Installing a rooftop solar system is a great step..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/electricity-source/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1605068437/images/edu-media-img/solarpexels4.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/electricity-source/"> <span class="meta-date">OCTOBER 28, 2020</span> </a>
+                    <h4 class="meta-title">The Cheapest Source of Electricity in History</h4>
+                    <p>It’s official. Guess what is the cheapest source of electricity in history!?</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}
