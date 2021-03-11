@@ -13,6 +13,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
+
+    <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css?family=Prompt:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic%7CFredoka%20One:400&amp;subset=latin&amp;display=swap&amp;ver=1614133374" />
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Prompt:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic%7CFredoka%20One:400&amp;subset=latin&amp;display=swap&amp;ver=1614133374"
+    media="print" onload="this.media='all'"><noscript>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Prompt:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic%7CFredoka%20One:400&amp;subset=latin&amp;display=swap&amp;ver=1614133374" />
+    </noscript>
+    <link rel='stylesheet' id='google-fonts-1-css'
+    href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CSchoolbell%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CFredoka+One%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.6.2'
+    media='all' />
+
     <script src="{% static 'js/script.js' %}?version={{ version_number }}"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-26030992-4"></script>
@@ -54,12 +67,102 @@
     </script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier/1.0.3/oms.min.js"></script>
     <script src="/static/js/solar_ed_week.js?version={{ version_number }}" async></script>
+
+    <style>
+    .custom-heading {
+        font-family: 'Fredoka One',sans-serif;
+        font-weight: 400;
+        color: #271344;
+        clear: both;
+        line-height: 1.2;
+        margin: 0 0 15px;
+        font-size: 38px;
+    }
+
+    .custom-list {
+        font-family: 'Fredoka One',sans-serif;
+        font-weight: 400;
+        color: #271344;
+        clear: both;
+        font-size: 18px;
+    }
+    .custom-subheading {
+        font-family: "Schoolbell",Sans-serif !important;
+        text-transform: uppercase;
+        letter-spacing: 3.4px;
+        color: #ffc323;
+        font-size: 20px;
+    }
+    .custom-heading-description{
+        font-size: 18px;
+        line-height: 1.67;
+        color: #777;
+
+    }
+
+    .list-one {
+        padding-inline-start: 0px !important;
+    }
+
+    .margin-desc{
+        float: left;
+        width: calc(100% - 107px);
+
+    }
+
+    .custom-heading-description > li {
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+
+    .custom-heading-description > ul {
+    padding-inline-start: 0px !important;
+    }
+
+    .custom-heading-description .m-ico {
+        margin-right: 20px;
+    }
+
+    .sub-custom-heading {
+        font-weight: 600;
+        font-size: 25px;
+    }
+
+    .cms-img-box {
+        margin-bottom: 40px;
+    }
+
+
+    .cms-animation-left-to-right {
+        animation: nudge 7s linear infinite alternate;
+        margin-bottom:40px;
+    }
+
+    @keyframes nudge {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    
+    50% {
+        transform: translate(20px, 0);
+    }
+    
+    80% {
+        transform: translate(-20px, 0);
+    }
+    }
+
+    a {
+        text-decoration: none !important;
+    }
+    </style>
+
 </head>
 <body>
     <nav class="menu nav" id="hamburger-nav">
         <img class="header-image" src="/static/images/sewlogo2@1X.png" alt="Solar Education Week">
         <label class="burger-label" for="toggle">&#9776;</label>
-        <input type="checkbox" id="toggle"/>
+        <input type="checkbox" id="toggle" />
         <ul class="menu-list">
             <li><a href="#the-what" class="active">THE WHAT</a></li>
             <li><a href="#the-how">THE HOW</a></li>
@@ -71,7 +174,7 @@
     <nav class="menu nav" id="nav">
         <img class="header-image" src="/static/images/sewlogo2@1X.png" alt="Solar Education Week">
         <label class="burger-label" for="toggle">&#9776;</label>
-        <input type="checkbox" id="toggle"/>
+        <input type="checkbox" id="toggle" />
         <ul class="menu-list">
             <li><a href="#the-what" class="active">THE WHAT</a></li>
             <li><a href="#the-how">THE HOW</a></li>
@@ -80,161 +183,305 @@
             <li><a href="#contact">CONTACT US</a></li>
         </ul>
     </nav>
-{% block body %}
+    {% block body %}
     <div class="solar-ed-page section-1">
-        <img class="background-image-size-home" src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1614815585/images/solar-ed-week/solaredweekbanner.png" alt="RE-volv">
+        <img class="background-image-size-home"
+            src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1614815585/images/solar-ed-week/solaredweekbanner.png"
+            alt="RE-volv">
     </div>
     <section id="the-what">
         <div class="what-section">
             <div class="section">
-                <h1 class="bold-header"><b>WHAT IS</b></h1>
-                <h1>SOLAR EDUCATION WEEK?</h1>
-                <hr width="10%">
+
+                <h1 class="custom-subheading"><b>What is</b></h1>
+                <h1 class="custom-heading">Solar Education Week?</h1>
+                <div class="cms-image-single cms-animation-left-to-right wow flash"
+                    style="visibility: visible; animation-name: nudge;">
+                    <div class="cms-img-box"> <img width="99" height="23"
+                            src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_99,h_23/https://demo.cmssuperheroes.com/themeforest/kindori/wp-content/uploads/2020/08/image-bee.png"
+                            class="attachment-full size-full" alt="Kindori"></div>
+                </div>
                 <br>
-                <p>The week leading up to Earth Day, college students and community members around the country will host
+                <p class="custom-heading-description" style="max-width: 800px;
+                margin: 0 auto;">The week leading up to Earth Day, college students and community members around the
+                    country will host
                     solar education events in their community to spark a national conversation about solar energy,
                     energy access,
                     and a just transition to a clean energy economy.
                 </p>
                 <p style="font-size:2rem; margin-top:40px;">
-                    Make sure to take pictures and post images on social media with the <span style="font-weight:700;">#solaredweek</span>
+                    Make sure to take pictures and post images on social media with the <span
+                        style="font-weight:700;">#solaredweek</span>
                 </p>
             </div>
         </div>
     </section>
-        <div id="the-how" class="container-field">
-            <div class="section">
-                <h1 class="bold-header"><b>HOW DO</b></h1>
-                <h1 class="sub-bold-header">I PARTICIPATE ?</h1>
-                <hr width="10%">
+    <div id="the-how" class="container-field">
+        <div class="section">
+            <h1 class="custom-subheading"><b>How do</b></h1>
+            <h1 class="custom-heading">I Participate?</h1>
+            <div class="cms-image-single" style="visibility: visible; animation-name: nudge;">
+                <div class="cms-img-box"> <img width="99" height="23"
+                        src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_99,h_23/https://demo.cmssuperheroes.com/themeforest/kindori/wp-content/uploads/2020/08/image-bee.png"
+                        class="attachment-full size-full" alt="Kindori"></div>
             </div>
-            <div class="section-1">
-                <div class="row">
-                    <div class="col-sm-4 host-separator participat-block">
-                        <div class="row-header"> HOST</div>
-                        <p class="paragraph">Host a Solar Education event at your home, workplace,
-                            or local community center. Screen a film, host a discussion, or throw a solar party. Be
-                            creative!
-                        </p>
-                        <button id="event-host-button" class="event-host host-event" type="submit">Host an Event</button>
-                    </div>
-                    <div class="col-sm-4  participat-block">
-                        <div class="row-header bottom-space"> ATTEND</div>
-                        <p class="paragraph">Check the map for events in your area! Don’t see one? <a href="#the-how" class="host-event">Host
+        </div>
+        <div class="section-1">
+            <div class="row">
+                <div class="col-sm-4 host-separator participat-block">
+                    <div class="row-header">HOST</div>
+                    <p class="paragraph">Host a Solar Education event at your home, workplace,
+                        or local community center. Screen a film, host a discussion, or throw a solar party. Be
+                        creative!
+                    </p>
+                    <button id="event-host-button" class="event-host host-event" type="submit"
+                        style="border-radius: 10px;">Host an Event</button>
+                </div>
+                <div class="col-sm-4  participat-block">
+                    <div class="row-header bottom-space"> ATTEND</div>
+                    <p class="paragraph">Check the map for events in your area! Don’t see one? <a href="#the-how"
+                            class="host-event">Host
                             an Event!</a></p>
-                            <p class="event-count" style="margin-top: 120px;">
-                                <h2>2021 Stats:</h2>
-                                {% if solar_counter %}
-                                <span style="margin: 0 10px;font-size: 30px; color:black; text-align: center;">{{ solar_counter }}</span>
-                                {% endif %}
-                                Events in
-                                {% if state_counter %}
-                                <span style="margin: 0 10px; font-size: 30px; color:black; text-align: center;">{{ state_counter }}</span>
-                                {% endif %}
-                                States
-                            </p>
-                    </div>
-                    <div class="col-sm-4 partner-separator participat-block">
-                        <div class="row-header"> PARTNER</div>
-                        <p class="paragraph">Does your organization support renewable energy? Join the movement and mobilize your members during Solar Education Week!</p>
-                        <button id="become-partner-button" class="event-host become-partner" type="submit">Become a Partner</button>
-                    </div>
+                    <p class="event-count" style="margin-top: 120px;">
+                        <h2>2021 Stats:</h2>
+                        {% if solar_counter %}
+                        <span
+                            style="margin: 0 10px;font-size: 30px; color:black; text-align: center;">{{ solar_counter }}</span>
+                        {% endif %}
+                        Events in
+                        {% if state_counter %}
+                        <span
+                            style="margin: 0 10px; font-size: 30px; color:black; text-align: center;">{{ state_counter }}</span>
+                        {% endif %}
+                        States
+                    </p>
+                </div>
+                <div class="col-sm-4 partner-separator participat-block">
+                    <div class="row-header"> PARTNER</div>
+                    <p class="paragraph">Does your organization support renewable energy? Join the movement and mobilize
+                        your members during Solar Education Week!</p>
+                    <button id="become-partner-button" class="event-host become-partner" type="submit"
+                        style="border-radius: 10px;">Become a Partner</button>
                 </div>
             </div>
         </div>
-        <div id="map_canvas" style="width: 100%; height: 400px">
+    </div>
+    <div id="map_canvas" style="width: 100%; height: 400px">
+    </div>
+    <div class="solar-ideas section">
+        <h1 class="custom-subheading"><b>LOOKING FOR IDEAS FOR</b></h1>
+        <h1 class="custom-heading">Your virtual solar ed week event?</h1>
+        <div class="cms-image-single" style="visibility: visible; animation-name: nudge;">
+            <div class="cms-img-box"> <img width="99" height="23"
+                    src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_99,h_23/https://demo.cmssuperheroes.com/themeforest/kindori/wp-content/uploads/2020/08/image-bee.png"
+                    class="attachment-full size-full" alt="Kindori"></div>
         </div>
-        <div class="solar-ideas section">
-            <h1 class="bold-header"><b>LOOKING FOR IDEAS FOR</b></h1>
-            <h1 style="font-weight:100">YOUR VIRTUAL SOLAR ED WEEK EVENT?</h1>
-            <hr width="10%">
-            <h6 class="sub-bold-header">Here are a few suggestions!</h6>
-            <div class="wrapper">
-                <ul class="list-suggest" style="max-width: 720px;">
-                    <li class="suggest">Host a virtual solar trivia night</li>
-                    <li class="suggest">Host a virtual environmental film screening with a discussion afterwards</li>
-                    <li class="suggest">Host a virtual letter writing event where you educate attendees about solar and write letters to policy makers</li>
-                    <li class="suggest">Host a virtual panel and invite an expert to give a talk about solar</li>
-                    <li class="suggest">Invite a solar installer to answer questions about going solar during a virtual event</li>
-                    <li class="suggest">Host a virtual book club and discuss a climate related book, such as <br><a href="https://climatecourage.us/">Climate Courage</a></li>
-                </ul>
-            </div>
-            <h6 class="sub-bold-header">Individual Actions You Can Take</h6>
-            <div class="wrapper">
-                <ul class="list-suggest">
-                    <li class="suggest">Make solar inspired art or music and post to social media</li>
-                    <li class="suggest">Share why you care about solar with your friends, family, and on social media</li>
-                    <li class="suggest">Write letters to your policy makers at the city or state level supporting solar</li>
-                    <li class="suggest">Read a book about climate change and renewable energy, such as <a href="https://climatecourage.us/">Climate Courage</a></li>
-                    <li class="suggest">Learn more about solar through RE-volv’s <a href="https://re-volv.org/get-involved/education/">Solar Education Center</a></li>
-                </ul>
-            </div>
-        </div>
+        <h3 class="sub-custom-heading">Here are a few suggestions!</h3>
 
-        <div class="event-register solar-ideas section" style="background: #eeeeee !important; width: 100%; border:1px solid #e9ecef; padding: 60px 0;">
-            <h1 class="bold-header" style="font-weight: 700; text-transform: uppercase;"><b>Featured Events</b></h1>
-            <div class="divider-featured" style="margin:30px;"></div>
-        
-            <h6 class="sub-bold-header" style="font-size:30px; text-transform: uppercase;">Featured Events Coming Soon!</h6>
-        </div>
 
-        <div class="solar-ideas section">
-            <h1 class="bold-header"><b>SOLAR ED CENTER</b></h1>
-            <hr width="10%">
-            <h3 style="justify-content: center; text-align:center; max-width:720px; margin: 0 auto;">Interested in learning more about solar, careers in the solar industry, and how to bring solar to nonprofits in your community? Head on over to RE-volv’s Solar Education Resource Center to learn more! </h6>
-            <button style="background:#ffc323;     margin-top: 20px;
-            height: 50px;
-            color: white !important; border-radius:4px;
-            border: none;"><a href="/blog-center/articles/" style=" color: white !important;">Learn More</a></button>
-        </div>
+            <div class="col-md-12">
+                <div class="row align-self-center gy-4">
 
-        <div class="solar-ideas section">
-                <h1 class="bold-header"><b>FEATURED SOLAR EDUCATION ARTICLES</b></h1>
-                <hr width="10%">
-                <div class="container " >
-                        <div class="row">
-                          <div class="col-xs-6 col-sm-4">
-                            <a href="https://re-volv.org/get-involved/education/solarenergy/" target="_blank">
-                            <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1594177087/images/eduresource-img/solarenergy101.jpg"
-                                 class="img-thumbnail img-responsive">
-                            Solar Energy 101</a>
-                          </div>
-                       
-                           <div class="col-xs-6 col-sm-4">
-                            <a href="https://re-volv.org/get-involved/education/solarjobs/" target="_blank">
-                            <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_1520,w_2704/v1614985658/images/eduresource-img/Solar_Jobs_for_All.jpg"
-                                 class="img-thumbnail img-responsive">
-                            Solar Jobs for All</a>
-                          </div>
-                       
-                          <div class="col-xs-6 col-sm-4">
-                            <a href="https://re-volv.org/get-involved/education/solarizenonprofit/ " target="_blank">
-                            <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1594177054/images/eduresource-img/solarizenonprofitsthumb.png"
-                                 class="img-thumbnail img-responsive">
-                            Solarizing a Nonprofit in your Community</a>
-                          </div>
-                        </div> <!-- Row -->                
-                      </div>  <!-- Container --> 
+                    <div class="col-md-6 ">
+
+                        <div>
+                            <h4 class="custom-list">Trivia night</h4>
+                            <p class="custom-heading-description">Host a virtual solar trivia night</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 ">
+
+                        <div>
+                            <h4 class="custom-list">Film screening</h4>
+                            <p class="custom-heading-description">Host a virtual environmental film screening with a
+                                discussion afterwards</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div>
+                            <h4 class="custom-list">Book club</h4>
+                            <p class="custom-heading-description">Host a virtual book club and discuss a climate related
+                                book, such as Climate Courage</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 ">
+
+                        <div>
+                            <h4 class="custom-list">Letter writing</h4>
+                            <p class="custom-heading-description">Host a virtual letter writing event where you educate
+                                attendees about solar and write letters to
+                                policy makers</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 ">
+
+                        <div>
+                            <h4 class="custom-list">Panel</h4>
+                            <p class="custom-heading-description">Host a virtual panel and invite an expert to give a
+                                talk about solar</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 ">
+                        <div>
+                            <h4 class="custom-list">Invite a Solar installer</h4>
+                            <p class="custom-heading-description">Invite a solar installer to answer questions about
+                                going solar during a virtual event</p>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
 
-            <div class="solar-ideas section">
-                    <h1 class="bold-header"><b>SOLAR AMBASSADORS</b></h1>
-                    <hr width="10%">
-                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1594177933/images/team-edu-img/ambassadorteam2.jpg" class="img-thumbnail img-responsive">
-                    <h2><span class="sub-bold-header">Get Involved</span> and help nonprofits go solar!</h2>
-                    <p style="justify-content: center; text-align:center; max-width:720px; margin: 0 auto;">Ready to be a part of climate solutions and bring clean energy to your community? <br>Become a RE-volv Solar Ambassador Fellow and get the tools, training, and support to help bring solar to a community-serving nonprofit in your community! For more information and to sign up: </p>
-                    <button style="background:#ffc323;     margin-top: 20px;
+
+            <div class="cms-image-single cms-animation-left-to-right ">
+                <div class="cms-img-box">
+                    <img width="133" height="137"
+                        src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_133,h_137/https://demo.cmssuperheroes.com/themeforest/kindori/wp-content/uploads/2020/08/image-home-2.png"
+                        class="attachment-full size-full" alt="">
+                </div>
+            </div>
+
+            <h3 class="sub-custom-heading">Individual actions you can take</h3>
+                <div class="row my-4 text-center">
+                    <div class="col-md-4">
+
+                        <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,w_375,h_500/v1615406017/images/blog-article-img/ambassador-install-solar.jpg"
+                            class="img-thumbnail" alt="">
+
+                    </div>
+                    <div class="col-md-8 " style="margin-top:20px">
+                        <ul class="custom-heading-description list-one"
+                            style="line-height: 40px !important; list-style:none; text-align: left;">
+                            <li><i class="fa fa-sun-o m-ico"></i>Make solar inspired art or music and post to social
+                                media</li>
+                            <li><i class="fa fa-sun-o m-ico"></i>Share why you care about solar with your friends,
+                                family, and on social media</li>
+                            <li><i class="fa fa-sun-o m-ico"></i>Write letters to your policy makers at the city or
+                                state level supporting solar</li>
+                            <li><i class="fa fa-sun-o m-ico"></i>Read a book about climate change and renewable energy,
+                                such as <a href="https://climatecourage.us/">Climate Courage</a></li>
+                            <li><i class="fa fa-sun-o m-ico"></i>Learn more about solar through RE-volv’s <a
+                                    href="https://re-volv.org/get-involved/education/">Solar Education Center</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+    </div>
+
+    <div class="event-register solar-ideas section"
+        style="background: #eeeeee !important; width: 100%; border:1px solid #e9ecef; padding: 60px 0;">
+        <h1 class="custom-heading" style="font-weight: 700;"><b>Featured Events</b></h1>
+        <div class="divider-featured" style="margin:30px;"></div>
+
+        <h6 class="sub-custom-heading" style="font-size:25px;">Featured events coming soon!</h6>
+    </div>
+
+
+    <div class="solar-ideas section">
+        <h1 class="custom-heading"><b>Solar Education Articles</b></h1>
+        <div class="cms-image-single" style="visibility: visible; animation-name: nudge;">
+            <div class="cms-img-box"> <img width="99" height="23"
+                    src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_99,h_23/https://demo.cmssuperheroes.com/themeforest/kindori/wp-content/uploads/2020/08/image-bee.png"
+                    class="attachment-full size-full" alt="Kindori"></div>
+        </div>
+        <div class="container ">
+            <div class="row">
+                <div class="col-xs-6 col-sm-4">
+                    <a href="https://re-volv.org/get-involved/education/solarenergy/" target="_blank">
+                        <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1594177087/images/eduresource-img/solarenergy101.jpg"
+                            class="img-thumbnail img-responsive">
+                        Solar Energy 101</a>
+                </div>
+
+                <div class="col-xs-6 col-sm-4">
+                    <a href="https://re-volv.org/get-involved/education/solarjobs/" target="_blank">
+                        <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_1520,w_2704/v1614985658/images/eduresource-img/Solar_Jobs_for_All.jpg"
+                            class="img-thumbnail img-responsive">
+                        Solar Jobs for All</a>
+                </div>
+
+                <div class="col-xs-6 col-sm-4">
+                    <a href="https://re-volv.org/get-involved/education/solarizenonprofit/ " target="_blank">
+                        <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1594177054/images/eduresource-img/solarizenonprofitsthumb.png"
+                            class="img-thumbnail img-responsive">
+                        Solarizing a Nonprofit in your Community</a>
+                </div>
+            </div> <!-- Row -->
+        </div> <!-- Container -->
+    </div>
+
+    <div class="solar-ideas section">
+        <div class="row">
+
+            <div class="col-md-9" style="margin-top:20px;">
+
+                <h1 class="sub-custom-heading "
+                    style="justify-content: center; text-align:left; max-width:720px; margin: 0 auto;">Solar Education
+                    Center</h1>
+            </div>
+            <div class="col-md-2" style="margin-top:20px">
+
+            </div>
+
+            <div class="col-md-9" style="margin-top:20px;">
+
+                <p class="custom-heading-description"
+                    style="justify-content: center; text-align:left; max-width:720px; margin: 0 auto;">Interested in
+                    learning more about solar, careers in the solar industry, and how to bring solar to nonprofits in
+                    your community? Head on over to RE-volv’s Solar Education Resource Center! </p>
+            </div>
+            <div class="col-md-2" style="margin-top:20px">
+                <button style="background:#ffc323; margin-top: 20px; height: 50px; width:100%; color: white !important; border-radius:4px; border: none;">
+                    <a href="/get-involved/education/" style=" color: white !important; font-weight: 600;">Education Center</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="solar-ideas section" style="    background: #eeeeee !important;
+            width: 100%;
+            border: 1px solid #e9ecef;
+            padding: 60px 0">
+        <h1 class="custom-heading"><b>Solar Ambassadors</b></h1>
+        <div class="cms-image-single" style="visibility: visible; animation-name: nudge;">
+            <div class="cms-img-box"> <img width="99" height="23"
+                    src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_99,h_23/https://demo.cmssuperheroes.com/themeforest/kindori/wp-content/uploads/2020/08/image-bee.png"
+                    class="attachment-full size-full" alt="Kindori"></div>
+        </div>
+        <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1594177933/images/team-edu-img/ambassadorteam2.jpg"
+            class="img-thumbnail img-responsive" style="margin-top:40px;">
+        <h2 class="sub-custom-heading">Get Involved and help nonprofits go solar!</h2>
+        <p class="custom-heading-description"
+            style="justify-content: center; text-align:center; max-width:720px; margin: 0 auto;">Ready to be a part of
+            climate solutions and bring clean energy to your community? <br>Become a RE-volv Solar Ambassador Fellow and
+            get the tools, training, and support to help bring solar to a community-serving nonprofit in your community!
+            For more information and to sign up: </p>
+        <button style="background:#ffc323;     margin-top: 20px;
                     height: 50px;
                     color: white !important; border-radius:4px;
-                    border: none;"><a href="https://re-volv.org/get-involved/solar-ambassador/" style=" color: white !important;">Become a Solar Ambassador</a></button>
-                </div>
+                    border: none;"><a href="https://re-volv.org/get-involved/solar-ambassador/"
+                style=" color: white !important; font-weight: 600;">Become a Solar Ambassador</a></button>
+    </div>
 
-        <div id="partner" class="section">
-            <h1 class="bold-header"><b>SOLAR EDUCATION WEEK</b></h1>
-            <h1 class="sub-bold-header">PARTNERS</h1>
-            <hr width="10%">
-            <p class="paragraph">Solar Education Week is a partnership effort by leading clean energy organizations to engage individuals across the country to organize and participate in Solar Education events!</p>
+    <div id="partner" class="section">
+        <h1 class="custom-heading"><b>Solar Education Week</b></h1>
+        <h1 class="sub-custom-heading">Partners</h1>
+        <div class="cms-image-single" style="visibility: visible; animation-name: nudge;">
+            <div class="cms-img-box"> <img width="99" height="23"
+                    src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_99,h_23/https://demo.cmssuperheroes.com/themeforest/kindori/wp-content/uploads/2020/08/image-bee.png"
+                    class="attachment-full size-full" alt="Kindori"></div>
         </div>
+        <p class="custom-heading-description" style="max-width:800px; margin:0 auto;">Solar Education Week is a
+            partnership effort by leading clean energy organizations to engage individuals across the country to
+            organize and participate in Solar Education events!</p>
+
         <div class="partners-images">
             <a href="https://gridalternatives.org/" target="_blank"><img src="/static/images/partner_grid.png" alt="grid alternative"></a>
             <a href="https://re-volv.org/" target="_blank"><img src="/static/images/edu-media-img/revolvorange.png" alt="Revolv logo"></a>
@@ -246,105 +493,111 @@
             <a href="http://climateandenergy.org/  " target="_blank"><img src="/static/images/partner_cep.png" alt="Climate and energy project logo"></a>
             <a href="http://solarschoolhouse.org/glendale/ " target="_blank"><img src="/static/images/partner_solarschool.png" alt="Solar School House"></a>
         </div>
-        <div class="section"></div>
-        <div id="the-why" class="why-participate">
-                <div class="participation-cntnr">
-                    <div class="col-sm-6 padding-zero">
-                        <img class="participatio-img" src="/static/images/whyparticipate@1X.png" alt="Participation">
-                    </div>
-                    <div class="col-sm-6 padding-zero participation-main-cntnr">
-                        <h3 class="participation-main-text solar-main-text">WHY PARTICIPATE IN</h3>
-                        <h3 class="participation-sub-text solar-sub-text">SOLAR EDUCATION WEEK?</h3>
-                        <hr class="horizontal-line">
-                        <div class="participation-icons full-width">
-                            <div class="participation-row full-width">
-                                <div class="participation-icon" style="background: transparent;">
-                                    <img src="/static/images/network.png" alt="network icon">
-                                </div>
-                                <p class="participation-text">You can play a critical role in spreading the word about solar and
-                                    how it benefits communities across the nation. The message is simple: solar is affordable,
-                                    sustainable and provides communities at all economic levels with clean energy and energy
-                                    independence.</p>
-                            </div>
-                            <div class="participation-row full-width">
-                                <div class="participation-icon" style="background: transparent;">
-                                    <img src="/static/images/chat.png" alt="chat icon">
-                                </div>
-                                <p class="participation-text">By coordinating a national solar education effort, we can engage
-                                    our local and nationwide networks and the press in order to spread the word about solar and
-                                    promote its increased adoption.</p>
-                            </div>
-                            <div class="participation-row full-width">
-                                <div class="participation-icon" style="background: transparent;">
-                                    <img src="/static/images/idea.png" alt="idea icon">
-                                </div>
-                                <p class="participation-text">Solar is a unique solution to climate change because it’s
-                                    something that anyone can get involved with. Solar Education Week allows everyone to
-                                    participate in reducing carbon emissions and creating a 100% renewable powered future for
-                                    all.</p>
-                            </div>
+    </div>
+
+    <div id="the-why" class="why-participate">
+        <div class="participation-cntnr">
+            <div class="col-sm-6 padding-zero">
+                <img class="participatio-img" src="/static/images/whyparticipate@1X.png" alt="Participation">
+            </div>
+            <div class="col-sm-6 padding-zero participation-main-cntnr">
+                <h3 class="custom-subheading" style="text-align: center;" style="font-size: 24px !important;">Why
+                    participate in</h3>
+                <h3 class="custom-heading" style="text-align: center;" style="font-size: 35px !important;">Solar
+                    Education Week?</h3>
+                <hr class="horizontal-line">
+                <div class="participation-icons full-width">
+                    <div class="participation-row full-width">
+                        <div class="participation-icon" style="background: transparent;">
+                            <img src="/static/images/network.png" alt="network icon">
                         </div>
+                        <p class="custom-heading-description margin-desc">You can play a critical role in spreading the
+                            word about solar and
+                            how it benefits communities across the nation. The message is simple: solar is affordable,
+                            sustainable and provides communities at all economic levels with clean energy and energy
+                            independence.</p>
+                    </div>
+                    <div class="participation-row full-width">
+                        <div class="participation-icon" style="background: transparent;">
+                            <img src="/static/images/chat.png" alt="chat icon">
+                        </div>
+                        <p class="custom-heading-description margin-desc">By coordinating a national solar education
+                            effort, we can engage
+                            our local and nationwide networks and the press in order to spread the word about solar and
+                            promote its increased adoption.</p>
+                    </div>
+                    <div class="participation-row full-width">
+                        <div class="participation-icon" style="background: transparent;">
+                            <img src="/static/images/idea.png" alt="idea icon">
+                        </div>
+                        <p class="custom-heading-description margin-desc">Solar is a unique solution to climate change
+                            because it’s
+                            something that anyone can get involved with. Solar Education Week allows everyone to
+                            participate in reducing carbon emissions and creating a 100% renewable powered future for
+                            all.</p>
                     </div>
                 </div>
             </div>
-        <div id="contact" class="footer-info">
-            <h3>For more information or to join as a partner organization</h3>
-            <img src="/static/images/message@1X.png">
-            <address><a href="mailto:info@re-volv.org">info@re-volv.org</a></address>
-            <hr width="20%">
-            <p>SPREAD SOLAR EDUCATION ON SOCIAL MEDIA! #SOLAREDWEEK</p>
-            <a class="social-icons" href="https://www.facebook.com/solarseedfund/" target="_blank">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a class="social-icons" href="https://twitter.com/RE_volv" target="_blank">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a class="social-icons" href="https://www.instagram.com/re.volv/" target="_blank">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a class="social-icons" href="https://www.youtube.com/user/REvolvSolarSeedFund" target="_blank">
-                <i class="fa fa-youtube" aria-hidden="true"></i>
-            </a>
         </div>
+    </div>
+    <div id="contact" class="footer-info">
+        <h3>For more information or to join as a partner organization</h3>
+        <img src="/static/images/message@1X.png">
+        <address><a href="mailto:info@re-volv.org">info@re-volv.org</a></address>
+        <hr width="20%">
+        <p>SPREAD SOLAR EDUCATION ON SOCIAL MEDIA! #SOLAREDWEEK</p>
+        <a class="social-icons" href="https://www.facebook.com/solarseedfund/" target="_blank">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a class="social-icons" href="https://twitter.com/RE_volv" target="_blank">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a class="social-icons" href="https://www.instagram.com/re.volv/" target="_blank">
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a class="social-icons" href="https://www.youtube.com/user/REvolvSolarSeedFund" target="_blank">
+            <i class="fa fa-youtube" aria-hidden="true"></i>
+        </a>
+    </div>
     <div class="become-host-pop-up">
-            <div class="event-form">
-                <br>
-                <span class="pull-right clickable close-icon" data-effect="fadeOut"><i class="fa fa-times"></i></span>
-                <header><span>HOST</span> AN EVENT</header> 
-                <hr style="margin:10px 0;">
-                <form method="POST" id="host_event_form" onsubmit='disableButton()'>
-                    {% csrf_token %}
-                    <label>Organization/Name</label><input type="text" name="name" id="name" required/>
-                    <label>Email</label><input type="email" name="email" id="email" required/>
-                    <label>Event Title</label><input type="text" name="event_title" id="event-title" required/>
-                    <label>Date</label><input type="date" name="date" id="date" required/>
-                    <label>Time</label><input type="time" name="evntime" id="evntime" required/>
-                    <label>Address</label><input type="text" name="address" id="address" required/>
-                    <label></label>
-                    <input id="latitude" type="hidden" name="latitude">
-                    <input id="longitude" type="hidden" name="longitude">
-                    <div class="row">
-                        <div class="col-sm-4 city-class">
-                            <label>City</label><input type="text" name="city" id="city" required/>
-                        </div>
-                        <div class="col-sm-4 state-class">
-                            <label>State</label><input type="text" list="states" name="state" id="state" maxlength="2" 
-                            oninput="this.value = this.value.toUpperCase()" required/>
-                            <datalist id="states">
-                            </datalist>
-                        </div>
-                        <div class="col-sm-4 zip-code-class">
-                            <label>Zip Code</label><input type="number" name="zipcode" id="zipcode" required/>
-                        </div>
+        <div class="event-form">
+            <br>
+            <span class="pull-right clickable close-icon" data-effect="fadeOut"><i class="fa fa-times"></i></span>
+            <header><span>HOST</span> AN EVENT</header>
+            <hr style="margin:10px 0;">
+            <form method="POST" id="host_event_form" onsubmit='disableButton()'>
+                {% csrf_token %}
+                <label>Organization/Name</label><input type="text" name="name" id="name" required />
+                <label>Email</label><input type="email" name="email" id="email" required />
+                <label>Event Title</label><input type="text" name="event_title" id="event-title" required />
+                <label>Date</label><input type="date" name="date" id="date" required />
+                <label>Time</label><input type="time" name="evntime" id="evntime" required />
+                <label>Address</label><input type="text" name="address" id="address" required />
+                <label></label>
+                <input id="latitude" type="hidden" name="latitude">
+                <input id="longitude" type="hidden" name="longitude">
+                <div class="row">
+                    <div class="col-sm-4 city-class">
+                        <label>City</label><input type="text" name="city" id="city" required />
                     </div>
-                    <label>Event Details</label><input type="text" name="event_detail" id="details" required/>
-                    <label>Link to your Facebook event or Eventbrite page</label>
-                    <input type="text" name="eventbrite" id="link"/><br><br>
-                    <button id="host-submit" type="submit" class="host-event-btn">HOST AN EVENT</button>
-                    <span class="response_message"></span>
-                </form>
-                <br><br>
-            </div>
+                    <div class="col-sm-4 state-class">
+                        <label>State</label><input type="text" list="states" name="state" id="state" maxlength="2"
+                            oninput="this.value = this.value.toUpperCase()" required />
+                        <datalist id="states">
+                        </datalist>
+                    </div>
+                    <div class="col-sm-4 zip-code-class">
+                        <label>Zip Code</label><input type="number" name="zipcode" id="zipcode" required />
+                    </div>
+                </div>
+                <label>Event Details</label><input type="text" name="event_detail" id="details" required />
+                <label>Link to your Facebook event or Eventbrite page</label>
+                <input type="text" name="eventbrite" id="link" /><br><br>
+                <button id="host-submit" type="submit" class="host-event-btn">HOST AN EVENT</button>
+                <span class="response_message"></span>
+            </form>
+            <br><br>
+        </div>
         <script src="{% static 'typeahead/typeahead.bundle.js' %}"></script>
         <script src="{% static 'typeahead/typeahead-addresspicker.js' %}"></script>
     </div>
@@ -355,23 +608,26 @@
                 <form id="become_sponsor_form">
                     {% csrf_token %}
                     <br>
-                    <span class="pull-right clickable close-icon" data-effect="fadeOut"><i class="fa fa-times"></i></span>
+                    <span class="pull-right clickable close-icon" data-effect="fadeOut"><i
+                            class="fa fa-times"></i></span>
                     <header><span>BECOME A SPONSOR</span></header>
                     <hr>
                     <label>Logo</label><br>
                     <div style="height:0px;overflow:hidden">
-                        <input type="file" id="sponsorFileInput" name="sponsor_logo"/>
+                        <input type="file" id="sponsorFileInput" name="sponsor_logo" />
                     </div>
                     <img type="button" id="sponsorLogoImage" src="/static/images/upload_image@1x.png"><br>
-                    <label>Name</label><input type="text" name="sponsor_name" required/>
-                    <label>Email</label><input type="email" name="sponsor_email" required/>
-                    <label>Organization</label><input type="text" name="sponsor_organization" required/>
+                    <label>Name</label><input type="text" name="sponsor_name" required />
+                    <label>Email</label><input type="email" name="sponsor_email" required />
+                    <label>Organization</label><input type="text" name="sponsor_organization" required />
                     <div class="megawatt">
-                        <input type="checkbox" name="financially_support">We agree to financially support the campaign:<br>
+                        <input type="checkbox" name="financially_support">We agree to financially support the
+                        campaign:<br>
                         <ul>
                             <li><span>Megawatt Sponsor (name and logo listed on page): $1,500</span></li>
                             <li><span>Kilowatt Sponsor (name listed on page, no logo): $750</span></li>
-                            <p class="required"><span>*</span>RE-volv is a 501c3 nonprofit. All donations are tax-deductible.
+                            <p class="required"><span>*</span>RE-volv is a 501c3 nonprofit. All donations are
+                                tax-deductible.
                             </p>
                         </ul>
                     </div>
@@ -397,33 +653,35 @@
                         <input type="file" id="partnerFileInput" name="partner_logo" />
                     </div>
                     <img id="partnerLogoImage" type="button" src="/static/images/upload_image@1x.png"><br>
-                    <label>Name</label><input type="text" name="partner_name" required/>
-                    <label>Email</label><input type="email" name="partner_email" required/>
-                    <label>Organization</label><input type="text" name="partner_organization" required/>
+                    <label>Name</label><input type="text" name="partner_name" required />
+                    <label>Email</label><input type="email" name="partner_email" required />
+                    <label>Organization</label><input type="text" name="partner_organization" required />
                     <div class="megawatt">
                         <input type="checkbox" name="promote_solar">We agree to promote Solar Education Week by:<br>
                         <ul>
-                            <li><span>Sending at least three emails to our network encouraging them to host events.</span>
+                            <li><span>Sending at least three emails to our network encouraging them to host
+                                    events.</span>
                             </li>
                             <li>
-                                <span>Sharing at least 10 social media posts leading up to and during Solar Education Week.</span>
+                                <span>Sharing at least 10 social media posts leading up to and during Solar Education
+                                    Week.</span>
                             </li>
                             <li><span>Do yo have another way of promoting Solar Education Week you'd like to offer?<br>
-                                        Let us know!</span></li>
+                                    Let us know!</span></li>
                             <li type="none"><span><input type="text" name="promoting_way"></span></li>
                         </ul>
                     </div>
-                    <button type="submit">Become a Partner</button>
+                    <button type="submit" style="border-radius: 10px;">Become a Partner</button>
                     <span class="partner_response_message"></span>
-                    <hr style="margin: 15px 0 10px 0;"/>
+                    <hr style="margin: 15px 0 10px 0;" />
                     <div class="megawatt">
-                        Are you a foundation or company interested in sponsoring? <span class="partner-click-here">Click here.</span>
+                        Are you a foundation or company interested in sponsoring? <span class="partner-click-here">Click
+                            here.</span>
                     </div>
                 </form>
-                </div>
-                <br><br>
             </div>
         </div>
+    </div>
     </div>
 
     <footer class="copyright-text">
@@ -435,6 +693,7 @@
         $('#myModal').modal('show');
     });
 </script>
+
 
 {% endblock %}
 </body>
