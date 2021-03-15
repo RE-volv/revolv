@@ -1,0 +1,535 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+
+
+<style>
+
+.quote-text {
+  font-size: 1rem;
+}
+
+.blockquote-footer {
+  display: inline-block;
+  background-color: white;
+  padding-top: 0px !important;
+  float: right;
+}
+
+.span-team {
+  color:#100084; 
+  font-size:2em;
+}
+
+</style>
+{% endblock %}
+
+{% block body %}
+
+    <main role="main" class="container-fluid">
+      <div class="container-fluid ambassador-header" id="top-section">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end">
+            <h1 class="text-light amb-text">Solar Ambassador Fellowship Program Info</h1>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/about-abr-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container-fluid" id="ambassador-section-second" style="padding-bottom: 6%;">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 col-md-10 col-lg-8 text-center">
+              <h2 class="blue-text fw-300 mb-3">About the Solar Ambassador Fellowship</h2>
+              <p class="grey-text">Are you a college student passionate about renewable energy? Are you interested in taking action to put up solar in your community? If the opportunity to install a solar energy system on a nonprofit or cooperative near you sounds exciting, then RE-volv wants to help you make it happen.</p>
+              <p class="grey-text">The Solar Ambassador Fellowship is a fellowship for one academic year that gives college students the opportunity to spearhead a solar project in their community using RE-volv’s innovative solar financing model. We are looking for creative, passionate, and resourceful college students who are eager to spread solar across the country. <p>
+              <p class="grey-text">Ready to join the RE-volv Solar Ambassadors Fellowship program? <a href="/get-involved/solar-ambassador/"> Sign up </a> to become a volunteer Solar Ambassador Fellow today and receive the tools, training, and support to make your community’s solar dreams a reality!</p>
+              <p class="grey-text">Interested in applying but have questions? Reach out at <a href = "mailto:info@re-volv.org?subject=SolarAmbassadorProgram&body=Message">info@re-volv.org</a> to set up an intro call.</p>
+              <p class="grey-text"> </p>
+                
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="application-section-five" style="background-size:100%;">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <div class="row align-items-center justify-content-start">
+              <div class="col-sm-12 col-md-5">
+                <h1 class="orange-text amb-text mb-4">Requirements</h1>
+                <ul class="requirment-list text-white">
+                  <li>Form a team of college students or community members</li>
+                  <li>Have your team complete our online Solar Ambassadors Training and virtual Solar Ambassador Training Retreat in the fall</li>
+                  <li>Work with nonprofits organizations in your community to help them go solar with RE-volv</li>
+                  <li>Educate your community about solar and work with local policy organizations to advocate for pro-solar legislation on the local level</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="application-section-second">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-sm-12 col-md-10 col-lg-8 text-center">
+                <h2 class="blue-text fw-300 mb-3">Benefits of Being a Solar Ambassador</h2>
+                <p class="grey-text">During the academic year, RE-volv will help the Solar Ambassador Teams bring their solar projects to fruition. To facilitate this, every team member is invited to a virtual 2-day Solar Ambassador Training Retreat hosted in the fall where the Solar Ambassador Teams will learn about solar finance and policy, event planning, communications, and community engagement - all the skills needed to complete their proposed project! Every Solar Ambassador will also be provided with exclusive resources and campaign materials to help with community engagement efforts throughout the academic year.</p>
+                <p class="grey-text">During the academic year, all team members will participate in monthly webinars with RE-volv staff and special guests from leading environmental organizations and solar companies. Topics range from renewable energy to environmental justice, and these webinars will serve as discussion rooms for fellow Solar Ambassadors to share ideas. All Solar Ambassadors will also receive close mentoring and guidance from RE-volv staff through a monthly check-in meeting. </p>
+  
+            </div>
+            
+            <div class="col-sm-12 col-md-10 col-lg-8 text-center">
+                <p class="grey-text">Interested in applying? <a href="/get-involved/solar-ambassador/">Sign up</a> to become a volunteer Solar Ambassador Fellow today or reach out at <a href = "mailto:info@re-volv.org?subject=SolarAmbassadorProgram&body=Message">info@re-volv.org</a> to set up an intro call.</p>
+            </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="ambassador-section-second" style="padding-bottom: 6%;">
+          <div class="row justify-content-center align-items-center">
+            <div class="col-sm-12 col-md-10 col-lg-8 text-center">
+                <h2 class="blue-text fw-300 mb-3">RE-volv Solar Ambassadors</h2>
+                <img src="../../../static/images/team-edu-img/ambassadorteam2.jpg">
+                <p class="grey-text"> </p>
+                <div class="">
+                <section class="row">
+                  <div class="row my-4">
+                    <div class="col-md-4" >
+                      <img src="http://img.new.livestream.com/accounts/000000000051f6bf/33279fe7-3ec8-4849-8b57-6dffa9dc1eb7.png" style="width:200px; float:right;">
+                    </div>
+                    <div class="col-md-7">
+                      <div class="container-fluid my-3">
+                        <blockquote class="blockquote">
+                          <p class="quote-text" style="max-width: 700px; text-align: right; float:right; display:block;">"Being a RE-volv Solar Ambassador gives me a sense of leadership that is important when advancing my career. I have learned accountability, the push to complete a project from start to finish and a better grasp on handling any challenges thrown my way."</p>
+                          <footer class="blockquote-footer">Danielle Kvadas, Coastal Carolina University Solar Ambassador from 2018 - 2021</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row my-4">
+                    <div class="col-md-7">
+                        <div class="container-fluid my-3">
+                            <blockquote class="blockquote">
+                              <p class="quote-text" style="max-width: 700px; text-align: right; float:left; display:block;">
+                                  "There is a place for everyone in RE-volv. You can learn about anything from finance to communication to videography. If you join, there is no way you will not develop a skill which will carry over into your career in some way, shape, or form."
+                              </p>
+                              <footer class="blockquote-footer" style="float:left !important;">Sabato (Sam) Dasco, University of Dayton Solar Ambassador from 2018 - 2021</footer>
+                            </blockquote>
+                          </div>
+                    </div>
+                    <div class="col-md-4" >
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Dayton_Flyers_logo.svg/1200px-Dayton_Flyers_logo.svg.png" style="width:200px; float:left;">
+                      </div>
+                  </div>
+                  <div class="row mt-4 mb-5">
+                    <div class="col-md-4" >
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Dickinson_Red_Devils_D_logo.svg/639px-Dickinson_Red_Devils_D_logo.svg.png" style="width:200px; float:right;">
+                    </div>
+                    <div class="col-md-7">
+                      <div class="container-fluid my-3">
+                        <blockquote class="blockquote">
+                          <p class="quote-text" style="max-width: 700px; text-align: right; float:right; display:block;">
+                              "I became a RE-volv Solar Ambassador because I think solar energy is contagious and I want to help bring that to my community at college. I have become much more aware about clean energy and feel that I can be an advocate at the state level for legislation."
+                          </p>
+                          <footer class="blockquote-footer">Kiara Nia Smith, Dickinson College Solar Ambassador from 2020 - 2021</footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                  <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_thumb,w_200,h_107,g_face/v1594177933/images/team-edu-img/coast-uni.png"
+                          class="" alt="Coastal Carolina University logo">
+
+                        <br>
+                        <span class="span-team">Coastal Carolina University</span>
+                          <div style="text-align: left;">
+                            <strong><br>Team:</strong> Connor Herndon, Meagan Modrusic, Colton Walker, Thomas McCullough, Danielle Kvadas, Marina Herbert, Takiah Anderson,
+                            Savannah Billings, Nylah Robinson, Michael Lowery, Megan Stewart, Hannah Bennett, Dean Wrobel, Shayne Doone, Jessica Borders, Maura Bramlitt
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_thumb,w_200,h_107,g_face/v1594177933/images/team-edu-img/claremontuni.png"
+                          class="" alt="Claremonth logo">
+
+                        <br>
+                        <span class="span-team">Claremont Colleges</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Ella Meyer, Joseph May, Jackson Patrick, Ethan Vitaz, Samantha, Gavin Siegert
+                          Sherman, Catherine Ward
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="row">
+                  <div class="col-md-6">
+                    <div class="col-md-12 my-5">
+                      <img
+                        src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_thumb,w_200,h_107,g_face/v1594177933/images/team-edu-img/america-uni.png"
+                        class="" alt="American university logo">
+                      <br>
+                      <span class="span-team">American University</span>
+                      <div style="text-align: left;">
+                        <strong><br>Team:</strong>Samantha Miller, Fraser Lee Hudgins, Danielle Dumais, Sahara Pereira, Megan Burns, Maggie Fitzgerald,
+                        Kiernan Lewman, Mohamed Moustafa, Tasha Sussman Moss, Caroline Hubbard, Lizzie Williamson, Nitya Aggarwal, Sarah Berkowitz, Z Stowe, Naomi Greengold
+                      </div>
+                    </div>
+                  </div>
+                    <div class="col-md-6">
+
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_thumb,w_200,h_107,g_face/v1594177933/images/team-edu-img/purdue-uni.png"
+                          class="" alt="Purdue logo">
+
+                        <br>
+                        <span class="span-team">Purdue University</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Hannah Jongkind, Anna Adamsson, Liana Zogbi, Jasmine Papas, Kyle Carpenter, Clayton
+                          Jarosinki, Abigail Lenzini, Hannah Congleton, Jonah Ross, Laura Workman, Tyler Huff
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_thumb,w_200,h_107,g_face/v1594177933/images/team-edu-img/ucsb-uni.png"
+                          class="" alt="UCSB logo">
+
+                        <br>
+                        <span class="span-team">University of California <br> Santa Barbara</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Michelle Le, Veronica Hsu, Brendan Abatecola, Iris Li, Jessica Anguiano, Udval
+                          Tsolmonkhuu, Matthew Choi, Ava Tomasik, Gigi Fung, Gabriela Garcia, Ruth Alcantara, Yuli Xue, Brianna Lee, Amina Garewal,
+                          Duy Dinh, Kerrie Lou
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_thumb,w_200,h_107,g_face/v1594177933/images/team-edu-img/milwaukee-uni.png"
+                          class="" alt="University of Winsconsin Milwaukee logo">
+
+                        <br>
+                        <span class="span-team">University of Wisconsin <br> Milwaukee</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Lauren Bonofiglio, Nathan Tennies, James Homann
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_thumb,w_200,h_107,g_face/v1594177933/images/team-edu-img/dayton-uni.png"
+                          class="" alt="Dayton logo">
+
+                        <br>
+                        <span class="span-team">University of Dayton</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Emily Burns, Melissa Padera, Sabato (Sam) Dasco, Thomas Abrams, Benjamin Mullins, Jonathan Stevens, Addison Grigsby, Luke Skobieranda, Patrick Hoody,
+                            Kathleen Ziemba
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_107,w_200/v1615849465/images/team-edu-img/berkeley-uni.png"
+                          class="" alt="berkeley logo">
+                        <br>
+                        <span class="span-team">University of California, Berkeley</span>
+                        <div style="text-align: left;"> 
+                          <strong><br>Team:</strong> Lauren Hibbert, Maggie McDonough, Renee Serota, Meghan Cruz, Christine Chen, Leah Mealey, Skylar Schaubel, Elena Vindrola
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_thumb,w_200,h_107,g_face/v1594177933/images/team-edu-img/oregonuni.jpg"
+                          class="" alt="University Oregon logo">
+
+                        <br>
+                        <span class="span-team">University of Oregon</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Ama Duru, Jaron Malcom, John Wilson, Kelly Shull, Rene Torres Mata
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_thumb,w_200,h_107,g_face/v1594177933/images/team-edu-img/yale-uni.png"
+                          class="" alt="Yale University logo">
+                        <br>
+                        <span class="span-team">Yale University</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Lauren Delgado, Katie Schlick, Tracy Zhou, Rebecca Huang, Diego Meucci, Orven
+                          Mallari, John Lignelli
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_thumb,w_300,h_107,g_face/v1594177933/images/team-edu-img/ucsc-uni.png"
+                          class="" alt="UCSC logo">
+
+                        <br>
+                        <span class="span-team">University of California <br> Santa Cruz</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Tyler Vallejos, Jacob Hillerman, Jaimie Guzman, Aidan Warlick, Nir Ribak, Daniel
+                          Sonnenberg, Karimeh Berrios
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_107,w_207/v1614040752/images/team-edu-img/calpolslo-uni.png"
+                          class="" alt="Cal Poly SLO Logo">
+
+                        <br>
+                        <span class="span-team">Cal Poly <br> San Luis Obispo</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Amanda Gersoff, Jacqueline Hewitt
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_thumb,w_270,h_107,g_face/v1594177933/images/team-edu-img/babson-uni.png.jpg"
+                          class="" alt="Babson logo">
+
+                        <br>
+                        <span class="span-team">Babson College</span>
+                        <div style="text-align: left;">
+                          <strong><br>Champion:</strong> Nan Wang
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_107,w_200/v1614044199/images/team-edu-img/dickinson-uni.png"
+                          class="" alt="Dickinson logo">
+
+                        <br>
+                        <span class="span-team">Dickinson College</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Kiara Smith, Patrick Noonan, Nickolas Bradbury, Sara O'Herron, Katherine Vill, Peter Gaston
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_107,w_200/v1614030627/images/team-edu-img/pitzer-uni.png"
+                          class="" alt="Pitzer logo">
+
+                        <br>
+                        <span class="span-team">Pitzer College</span>
+                        <div style="text-align: left;">
+                          <strong><br>Champion:</strong> Joseph Sulpizio
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_107,w_200/v1614044198/images/team-edu-img/sjsu-uni.jpg"
+                          class="" alt="SJSU logo">
+
+                        <br>
+                        <span class="span-team">San Jose State University</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Jaelyn Ibarra, Sammuel Nicholas Garcia
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_107,w_200/v1614041413/images/team-edu-img/columbia-uni.jpg"
+                          class="" alt="Columbia Logo">
+
+                        <br>
+                        <span class="span-team">Columbia University</span>
+                        <div style="text-align: left;">
+                          <strong><br>Champion:</strong> Karen Liu
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1614040752/images/team-edu-img/michigan-uni.png"
+                          class="" alt="Michigan logo">
+
+                        <br>
+                        <span class="span-team">Michigan University</span>
+                        <div style="text-align: left;">
+                          <strong><br>Champion:</strong> Valentina Vargas
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1614040753/images/team-edu-img/ucsf-uni.png"
+                          class="" alt="USF logo">
+
+                        <br>
+                        <span class="span-team">University of California <br> San Francisco</span>
+                        <div style="text-align: left;">
+                          <strong><br>Champion:</strong> Anthony DeMaria
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_110,w_200/v1614049541/images/team-edu-img/usc-uni.png"
+                          class="" alt="USC logo">
+
+                        <br>
+                        <span class="span-team">University of Southern <br> California</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Alana MacMahon, Anna Pendleton, Julius Ball-Heldman, Emy Li
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_107/v1614040753/images/team-edu-img/scripps-uni.png"
+                          class="" alt="Scripps logo">
+
+                        <br>
+                        <span class="span-team">Scripps College</span>
+                        <div style="text-align: left;">
+                          <strong><br>Champion:</strong> Cassidy Yueh
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_107,w_200/v1614040752/images/team-edu-img/gonzago-uni.png"
+                          class="" alt="Gonzaga logo">
+                        <br>
+                        <span class="span-team">Gonzaga University</span>
+                        <div style="text-align: left;">
+                          <strong><br>Team:</strong> Logan Wetland, JJ Doria, Quang Pham, Jose Corcione, Jessica Childress, Carlee Burnett, Mia Foster,  Preston Ernst, Jessica Vasquez, Sarah Frisby
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_107,w_200/v1614044199/images/team-edu-img/rochester-uni.png"
+                          class="" alt="University Rochester logo">
+
+                        <br>
+                        <span class="span-team">University of Rochester</span>
+                        <div style="text-align: left;"> 
+                          <strong><br>Champion:</strong> Syed Bilal Hussain
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_107,w_200/v1614051517/images/team-edu-img/mssp-uni.jpg"
+                          class="" alt="Mississippi logo">
+
+                        <br>
+                        <span class="span-team">Mississippi State University</span>
+                        <div style="text-align: left;"> 
+                          <strong><br>Team:</strong> Alexander Collins, Grant Peterson, Mayukh Datta, Gabriel Hernandez, Toluwanimi Chris-Amuwa
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="col-md-12 my-5">
+                        <img
+                          src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1611872286/images/team-edu-img/re-volv-uni.png"
+                          class="" alt="RE-volv logo">
+                        <br>
+                        <span class="span-team">Solar Ambassador Champion</span>
+                        <div style="text-align: left;">
+                          <strong><br>Individual:</strong> Kyrea Njuguna, Howard Chu, Joni Hauck, Kevin Chan
+                        </div>
+                      </div>
+                    </div>
+                  </div>                  
+                </section>
+                  </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="container-fluid" id="ambassador-section-five">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-12 col-lg-8 text-center">
+            <h2 class="text-white mb-4">RE-volv's Solar Ambassador Fellowship</h2>
+            <p class="grey-text">The Solar Ambassador Fellowship is a year-long fellowship for college students who want to help a community-serving organization near their campus go solar! RE-volv trains ambassadors in solar policy, community engagement, and project management. In turn, the Solar Ambassadors educate their campus communities about solar energy, develop a deep understanding of the energy sector, produce a tangible reduction in carbon emissions, and build a national network of environmental stewards. </p>
+            <p class="grey-text">Interested in applying? <a href="/get-involved/solar-ambassador/">Sign up</a> to become a volunteer Solar Ambassador Fellow today or reach out at <a href = "mailto:info@re-volv.org?subject=SolarAmbassadorProgram&body=Message">info@re-volv.org</a> to set up an intro call.</p>
+            <a class="btn btn-orange btn-me btn-arrow-white my-4" href="#" role="button" style="display: none;">Learn more about being a Community Champion</a>
+            <div class="row justify-content-center align-items-center margin-top:40px;">
+                <a class="btn btn-blue btn-me btn-arrow-orange mx-2" href="/get-involved/solar-ambassador/" role="button">Reach out to learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main><!-- /.container -->
+    
+    <!-- responsive navigation bar -->
+    <script src="{% static 'js/home-js/script.js' %}"></script>
+{% endblock %}

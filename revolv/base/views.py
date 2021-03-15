@@ -531,6 +531,9 @@ def jobs(request):
 def solar_ambassador(request):
     return render(request, 'base/partials/ambassador.html')
 
+def solar_ambassador_team(request):
+    return render(request, 'base/partials/solar-ambassador-team.html')
+
 def nonprofit_app(request):
     return render(request, 'base/partials/nonprofit_app.html')
 
