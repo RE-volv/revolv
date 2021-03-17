@@ -59,7 +59,7 @@ const data = [
   {
     name: 'Conservation',
     percentage: 1,
-    value: 1,
+    value: 2,
     color: '#3ABC60',
     projects: 1,
   },
