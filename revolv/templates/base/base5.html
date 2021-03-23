@@ -1,0 +1,375 @@
+{% load sekizai_tags %}
+{% load mediaurl %}
+<!DOCTYPE html>
+<html class="app-root-element">
+<head>
+    {% load staticfiles %}
+
+    <title>{% block title %}RE-volv | Solar for Nonprofit Organizations{% endblock %}</title>
+    <meta name="description" content="{% if project.description %} {{ project.description | striptags|safe }}
+                                            {% else %} {{ settings.revolv_cms.ShareThisSettings.description }}{% endif %}" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="re-volv.org">
+    <meta name="twitter:title" content="{{ project.title }} | RE-volv">
+    <meta name="twitter:description" content="{% if project.description %} {{ project.description | striptags|safe }}
+                                            {% else %} {{ settings.revolv_cms.ShareThisSettings.description }}{% endif %}">
+    <meta name="twitter:image" content="{% if project.video_url %}{{ project.video_url |fullmediaurl }}{% else %}{{ settings.revolv_cms.ShareThisSettings.image|fullmediaurl }}{% endif %}">
+    <meta charset="utf-8">
+    <meta property="og:title" content="{{ project.title }} | RE-volv" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/> -->
+    <meta property="og:title" content="{{ project.title }} | RE-volv" />
+    <meta property="og:image" content="{% if project.video_url %}{{ project.video_url |fullmediaurl }}{% else %}{{ settings.revolv_cms.ShareThisSettings.image|fullmediaurl }}{% endif %}" />
+    <meta property="og:description" content="{% if project.description %} {{ project.description | striptags|safe }}
+                                            {% else %} {{ settings.revolv_cms.ShareThisSettings.description }}{% endif %}" />
+    <!-- Meta icon -->
+    <link rel="icon" type="image/png" href="{% static 'images/revolvorange.png' %}" />
+    {% block meta %}
+    {% endblock %}
+
+    <!-- Bootstrap 
+
+    <link href="{% static 'css/font-awesome.css' %}?version={{ version_number }}"  rel="stylesheet" />
+    <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'lib/bootstrap/css/bootstrap-theme.min.css' %}" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500" rel="stylesheet">
+    -->
+    <link href="https://res.cloudinary.com/dkwon4bkk/raw/upload/v1616094780/css/recoverable-grant/bootstrap.css" rel="stylesheet">
+    <link href="https://res.cloudinary.com/dkwon4bkk/raw/upload/v1616486081/css/recoverable-grant/style.css" rel="stylesheet">
+    <link href="https://res.cloudinary.com/dkwon4bkk/raw/upload/v1616094780/css/recoverable-grant/responsive.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link href="{% static 'css/jqtransform.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/animate.css' %}?version={{ version_number }}" rel="stylesheet" />
+    <link href="{% static 'css/screen.css' %}?version={{ version_number }}"  rel="stylesheet" />
+    <link rel="manifest" href="{% static 'manifest.json' %}" />
+    <meta name="theme-color" content="#100084" />
+
+    <!-- Toastr CSS -->
+    <link href="{% static 'css/toastr.min.css' %}?version={{ version_number }}"  rel="stylesheet" />
+
+    <style>
+        .testimonial-section:before {
+            background: url(https://res.cloudinary.com/dkwon4bkk/image/upload/v1616114420/images/recoverable-grant/solar-install-circle.png) no-repeat !important;
+            margin-left: -180px;
+            margin-top: 100px;
+        }
+        .flaticon-next-1:before {
+            content: "⟶";
+        }
+        .flaticon-left-arrow:before {
+            content: "⟵";
+        } 
+        .call-to-action:before {
+            background-color: rgba(0,0,0,0.70) !important;
+        }
+        @media (max-width: 1020px) {
+            .testimonial-section.padding-top {
+                padding-top: 0px;
+            }
+        }
+    </style>
+    <!-- jQuery library -->
+    <!-- temporay comment out jquery older version, new code on webpages are on jquery     -->
+    <!-- <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.knob.js' %}"></script>
+    <script src="{% static 'js/parallax.min.js' %}"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+    <script src="{% static 'js/hammer.min.js' %}"></script>
+    <script src="{% static 'js/jquery.hammer.js' %}"></script>
+    <script src="{% static 'js/jquery.jqtransform.js' %}"></script>
+    <!--  <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script> -->
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+
+    <!-- Main JS -->
+    <script src="{% static 'js/script.js' %}?version={{ version_number }}"></script>
+
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body {% block body_class %}{% endblock%} class="main-body" id="project">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHW869"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+<div id="donation-spinner"><img src="/static/images/gif/revolv-loader.gif" alt="reinvestment is loading" ></div>
+    {% block nav %}
+    {% include "base/partials/nav.html" %}
+    {% endblock %}
+
+    {% block body %}
+    {% endblock %}
+
+    {% block body-bottom %}
+    {% endblock %}
+
+    {% include "base/partials/foot.html" %}  
+
+    <script src="{% static 'js/toastr.min.js' %}?version={{ version_number }}"></script>
+
+    {% if messages %}
+        <script>
+            toastr.options.positionClass = "toast-bottom-right";
+        </script>
+        {% for message in messages %}
+            <script>
+                toastr.{{ message.tags }}('{{ message }}')
+            </script>
+        {% endfor %}
+    {% endif %}
+
+    {% render_block "js" %}
+    {% block javascripts %}
+    {% endblock %}
+<div class="modal fade et_monarch" id="social_media" role="dialog">
+    <div class="et_social_popup_content et_social_resize et_social_fadein" style="height: 176px; max-height: 392px; top: 108px;">
+        <a href="#" class="et_social_icon et_social_icon_cancel"></a>
+        <div class="et_social_header" style="padding-bottom: 2em;text-align: center;">
+            <span class="confirm-text">Thank you for donating! Now help us spread the word!</span>
+        </div>
+        <div class="et_social_networks et_social_3col et_social_slide et_social_rounded et_social_left et_social_withcounts et_social_withnetworknames" style="height: 112px;">
+
+            <ul class="et_social_icons_container">
+                <li class="et_social_facebook">
+                        <a target="_blank" 
+                                href="https://www.facebook.com/sharer/sharer.php?u=https://re-volv.org/&title=RE-volv&description=I just donated to RE-volv, a clean energy nonprofit! Join me in bringing solar energy to communities across the country!&picture={{ cover_photo }}" 
+                                class="et_social_share et_social_display_count" 
+                                rel="nofollow" 
+                                onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://re-volv.org/&title=RE-volv&description=I just donated to RE-volv, a clean energy nonprofit! Join me in bringing solar energy to communities across the country!&picture={{ cover_photo }}','popup','width=600,height=600'); return false;"  
+                                data-social_name="facebook" data-post_id="7661" data-social_type="share" data-location="popup" data-min_count="0">
+                            <i class="et_social_icon et_social_icon_facebook" aria-hidden="true"></i><div class="et_social_network_label"><div class="et_social_networkname">Facebook</div><div class="et_social_count">
+        </div></div><span class="et_social_overlay"></span>
+                        </a>
+                    </li>
+                    <li class="et_social_twitter">
+                        <a target="_blank" href="https://twitter.com/share?text=I just donated to RE-volv, a clean energy nonprofit! Join me in bringing solar energy to communities across the country!&url=https://re-volv.org/&image={{cover_photo}}" class="et_social_share" rel="nofollow" data-social_name="twitter" data-post_id="7661" data-social_type="share" data-location="popup">
+                            <i class="et_social_icon et_social_icon_twitter"></i><div class="et_social_network_label"><div class="et_social_networkname">Twitter</div><div class="et_social_count">
+        </div></div><span class="et_social_overlay"></span>
+                        </a>
+                    </li>
+                    <li class="et_social_linkedin">
+                        <a target="_blank" 
+                            href="http://www.linkedin.com/shareArticle?mini=true&url=https://re-volv.org/&title=I just donated to RE-volv, a clean energy nonprofit! Join me in bringing solar energy to communities across the country!" 
+                            onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=https://re-volv.org/&title=I just donated to RE-volv, a clean energy nonprofit! Join me in bringing solar energy to communities across the country!','popup','width=600,height=600'); return false;"
+                            class="et_social_share"
+                            rel="nofollow" 
+                            data-social_name="linkedin" data-post_id="7661" data-social_type="share" data-location="popup">
+                            <i class="et_social_icon et_social_icon_linkedin"></i><div class="et_social_network_label"><div class="et_social_networkname">linkedin</div></div><span class="et_social_overlay"></span>
+                        </a>
+                    </li>
+                    </ul>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="operationModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+
+      <div class="modal-content modal-reinvest" style="width: 80%;margin-top: 30%;margin-left: 8%;">
+        <div class="modal-header">
+            <h4 class="modal-title" style="font-weight: bold;">Thank you for your generous donation to RE-volv!</h4>
+        </div>
+        <div class="modal-body">
+            <p class="donation-text"> Your commitment to solar energy is appreciated by the communities we serve and the environment we work to protect.</p>
+        </div>
+        <div class="modal-footer align-center">
+            <a href="" class="btn btn-primary donate-ok-btn">OK</a>
+        </div>
+      </div>
+
+    </div>
+</div>
+<div class="modal fade" id="popup" role="dialog">
+    <div class="modal-dialog" style="padding:14vmin 8% 0">
+
+      <!-- Modal content-->
+      <div class="modal-content donate-popup" >
+        <div class="full-width modal-header">
+            <div class="full-width donate-popup-header">
+                <div class="col-xs-10">
+                    <img class="background-image-size" src="/static/images/revolvorange.png">
+                    <h4 class="modal-title">RE-volv</h4>
+                </div>
+                <div class="col-xs-2">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+            </div>
+        </div>
+        <form action="{% url 'project:stripe_operation_donation' %}" method="POST">
+              {% csrf_token %}
+            <div class="u-background--grey">
+                <div class="full-width">
+                    <input class="u-margin--0 donationWizard-amount-input" type="checkbox" id="checkbox-recurring" name="check">
+                    <label for="checkbox-recurring">Become a <strong>sustaining, monthly</strong> contributor</label>
+                </div>
+                <div class="monthly-plan-msg">Select an amount for your <strong>monthly</strong> contribution</div>
+            </div>
+            <div class="donation-values">
+                <div class="col-xs-4">
+                    <div class="col-xs-12 donation-value-suggestion stripe-button-el" >
+                        <span>$</span>
+                        <span><b>10</b></span>
+                    </div>
+                    <div class="col-xs-12 donation-value-suggestion stripe-button-el">
+                        <span>$</span>
+                        <span><b>70</b></span>
+                    </div>
+                    <div class="col-xs-12 donation-value-suggestion stripe-button-el">
+                        <span>$</span>
+                        <span><b>1000</b></span>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="col-xs-12 donation-value-suggestion stripe-button-el">
+                        <span>$</span>
+                        <span><b>20</b></span>
+                    </div>
+                    <div class="col-xs-12 donation-value-suggestion stripe-button-el">
+                        <span>$</span>
+                        <span><b>100</b></span>
+                    </div>
+                    <div class="col-xs-12 input-custom-amount"> <span>$</span><input type="number" step="0.01" min="1" placeholder="Custom" name="donation_amount_cents"> </div>
+                </div>
+                 <div class="col-xs-4">
+                    <div class="col-xs-12 donation-value-suggestion stripe-button-el">
+                        <span>$</span>
+                        <span><b>30</b></span>
+                    </div>
+                    <div class="col-xs-12 donation-value-suggestion stripe-button-el">
+                        <span>$</span>
+                        <span><b>200</b></span>
+                    </div>
+                    <div class="col-xs-12 next-button"><b>Next</b></div>
+                </div>
+            </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+
+  
+<script>
+$(function ($) {
+  var handler = StripeCheckout.configure({
+    key: '{{ stripe_publishable_key }}'
+    , image: '{% static "images/revolvorange.png" %}'
+    , locale: 'auto'
+    , name: 'RE-volv'
+    , email: '{{request.user.email}}'
+  });
+  $(window).on('popstate', function () {
+    handler.close();
+  });
+  $(document).on('click','.stripe-button-el',function (e) {
+    $('body').removeClass('modal-open');
+    $('.modal-backdrop').remove();
+    var $form = $(this).closest('form');
+    var serialized = $form.serializeArray();
+    var endpoint = $form.attr('action');
+    var amount, metadata, donationtype;
+    var check=document.getElementById('checkbox-recurring').checked;
+    if (check) {
+        donationtype = 'Donate Monthly';
+    } else {
+       donationtype = 'Donate';
+    }
+
+    $.each(serialized, function () {
+      if (this.name === 'donation_amount_cents') {
+        amount = this.value*100;
+      }
+      if (this.name === 'metadata') {
+        metadata = this.value;
+      }
+    });
+    if (typeof amount !== 'undefined') {
+      handler.open({
+        description: 'Donate $' + parseFloat((amount/100).toFixed(2)).toLocaleString()
+        , amount: parseFloat((amount).toFixed(2))
+        , panelLabel: donationtype
+        , zipCode: true
+        , closed : function(){$('#popup').modal('hide');}
+        , metadata: metadata
+        , token: function (token) {
+          var id = token.id;
+          var email = token.email;
+          var zipcode = token.card.address_zip;
+          var $id = $('<input>')
+            .attr('type', 'hidden')
+            .attr('name', 'stripeToken')
+            .val(id);
+          var $email = $('<input>')
+            .attr('type', 'hidden')
+            .attr('name', 'stripeEmail')
+            .val(email);
+          var $zipcode = $('<input>')
+            .attr('type', 'hidden')
+            .attr('name', 'stripeBillingAddressZip')
+            .val(zipcode);
+          $id.appendTo($form);
+          $email.appendTo($form);
+          $zipcode.appendTo($form);
+          $form.submit(function(e) {
+          $('#donation-spinner').css('display', 'flex');
+          $.ajax({
+                 type: "POST",
+                 url: '{% url 'project:stripe_operation_donation' %}',
+                 data: $form.serializeArray(), // serializes the form's elements.
+                 success: function(data)
+                 {
+                    if(data.status == 'donation_success') {
+                        $("#social_media_operation").modal("show");
+                        window.location.href='/thanks/postdonation/';
+                    }
+                    if(data.status == 'subscription_success') {
+                        $("#social_media_operation").modal("show");
+                        window.location.href='/thanks/postdonation/';
+                    }
+                    if(data.status == 'already_exist') {
+                        $('.modal-title').text('Donation already exist');
+                        $('.donation-text').text("Thank you for showing interest, you are already subscribe for monthly donation!");
+                        $('#operationModal').modal('show');
+                    }
+                    $('#donation-spinner').css('display', 'none');
+
+                 },
+                 error: function(data)
+                 {
+                    $('.modal-title').text('Error!');
+                    $('.donation-text').text("Payment error. Something went wrong.");
+                     $('#donation-spinner').css('display', 'none');
+                    $('#operationModal').modal('show');
+                 }
+               });
+
+          e.preventDefault(); // avoid to execute the actual submit of the form.
+      });
+          $form.trigger('submit');
+        }
+      });
+    }
+  });
+});
+</script>
+<script>
+    $('#operationModal').on('hidden.bs.modal', function (e) {
+        location.reload();
+ });
+</script>
+<script>
+     $("#social_media_operation").on("hidden.bs.modal", function () {
+      location.reload();
+    });
+
+</script>
+</body>
+
+</html>

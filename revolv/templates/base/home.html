@@ -711,7 +711,7 @@ a {
       }).addTo(map);
   
       var GeojsonMarkers;
-      $.getJSON('https://res.cloudinary.com/dkwon4bkk/raw/upload/v1608271701/images/spmap.geojson', function(data) {
+      $.getJSON('https://res.cloudinary.com/dkwon4bkk/raw/upload/v1616117390/images/spmap.geojson', function(data) {
           var clusteredPoints = L.markerClusterGroup();
           var GeojsonMarkers = L.geoJson(data, {
             onEachFeature: function (feature, layer) {

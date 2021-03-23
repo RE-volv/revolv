@@ -682,6 +682,9 @@ def solarambassadorimpact(request):
 def monthly_donor(request):
     return render(request, 'base/partials/monthly-donate.html')
 
+def recoverablegrant(request):
+    return render(request, 'base/partials/recoverable-grant.html')
+
 
 #--------------------------------
 def postdonation(request):

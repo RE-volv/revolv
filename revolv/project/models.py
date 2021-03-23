@@ -509,6 +509,20 @@ class Project(models.Model):
         help_text='This is the body of content that shows up on the project page.'
     )
 
+    socials = RichTextField(
+        'Social Media',
+        blank=True,
+        null=True,
+        help_text='This is the content that shows up as a component social media box on left column on the project page'
+    )
+    
+    partners = RichTextField(
+        'Project Partners',
+        blank=True,
+        null=True,
+        help_text='This is the content that shows up as a component box on left column on the project page'
+    )
+
     donors = models.ManyToManyField(RevolvUserProfile, blank=True)
 
     created_by_user = models.ForeignKey(RevolvUserProfile, related_name='created_by_user')

@@ -119,6 +119,7 @@ urlpatterns = patterns(
     url(r'^thanks/postinstaller/', 'revolv.base.views.postepclead', name='postepclead'),
     url(r'^thanks/postambassador/', 'revolv.base.views.postambassadorlead', name='postambassadorlead'),
 
+    url(r'^recoverable-grant/', 'revolv.base.views.recoverablegrant', name='recoverablegrant'),
     url(r'^re-volv/media', 'revolv.base.views.media_archive', name='media_archive'),
     url(r'^get-involved/education/', 'revolv.base.views.education_center_section', name='education_center_section'),
 

@@ -1,0 +1,208 @@
+{% comment %}
+    We have to load staticfiles here, even though it's already loaded
+    in the base template, because of how django does staticfile processing:
+    http://stackoverflow.com/questions/22650371/django-is-it-impossible-to-static-tag-into-block-tag
+{% endcomment %}
+{% load staticfiles revolv_cms_tags %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="/static/css/style.css?version={{ version_number }}">
+<!--  
+<link rel="stylesheet" type="text/css" href="/static/css/donateform.css?version={{ version_number }}" />
+-->
+<!--   
+commented out overrides padding etc... 
+<link rel="stylesheet" type="text/css" href="/static/css/accelerator.css?version={{ version_number }}" />  
+-->
+<link rel="stylesheet" type="text/css" href="/static/css/donation.css?version={{ version_number }}" />
+
+<!-- Bootstrap stackpath needed for nav bar alignment -->
+<!-- Bootstrap stackpath alters project page size -->
+<!-- CMS container alignment is not centered -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+<link href="{% static 'css/home-css/style.css' %}?version={{ version_number }}" rel="stylesheet" />
+<link href="{% static 'css/about-abr-css/plyr.css' %}?version={{ version_number }}" rel="stylesheet" />
+<link href="{% static 'css/about-abr-css/style.css' %}?version={{ version_number }}" rel="stylesheet" />
+<link href="{% static 'css/nonprofit-css/plyr.css' %}?version={{ version_number }}" rel="stylesheet" />
+<link href="{% static 'css/nonprofit-css/style.css' %}?version={{ version_number }}" rel="stylesheet" />
+
+<!-- monthly donor, blog, blog articles -->
+<link href="{% static 'css/blog-monthly-css/plyr.css' %}?version={{ version_number }}" rel="stylesheet" />
+<link href="{% static 'css/blog-monthly-css/style.css' %}?version={{ version_number }}" rel="stylesheet" />
+
+<!-- edu , fundraise, fundraise project, media -->
+<link href="{% static 'css/edu-media-css/plyr.css' %}?version={{ version_number }}" rel="stylesheet" />
+<link href="{% static 'css/edu-media-css/style.css' %}?version={{ version_number }}" rel="stylesheet" />
+
+
+
+<!-- Placeholder signin-->
+<style>
+  .cms-content-row h1 {
+  color: #100084 !important;
+}
+.cms-content-row h2, .cms-content-row h3, .cms-content-row h4, .cms-content-row h5, .cms-content-row h6 {
+  color: #FF8A00 !important;
+}
+
+  #dropdownz{
+      
+  }
+  #dropdownz{
+      position: relative;
+      line-height: 58px;
+      margin-right: 20px;
+  }
+  #dropdownz a{
+      display: block;
+      color: #333;
+      text-decoration: none;
+  }
+  #dropdownz .dropdown > li a:hover{
+      border-radius: 2px;
+      background: #ff8a00;
+
+  }
+  #dropdownz ul.dropdown{
+      min-width: 200%; /* Set width of the dropdown */
+      background:  #100084;
+      opacity: 0.86;
+      display: none;
+      position: absolute;
+      border-radius: 10px;
+      z-index: 999;
+      left: 0;
+  }
+  #dropdownz:hover ul.dropdown{
+      display: block;	/* Display the dropdown */
+  }
+  #dropdownz ul.dropdown li{
+      display: block;
+      
+  }
+
+  #dropdownz ul.dropdown li > a{
+      color: white !important;
+      margin-left: -20px;
+      margin-right: -20px;
+      font-size:10px;
+      text-align: left;
+      padding-left: 10px;
+      font-weight: bolder;
+  }
+
+  #dropdownz ul.dropdown li:hover{
+      border-radius: 5px;
+      
+  }
+
+  @media (max-width: 991px) {
+    #dropdownz ul.dropdown{
+      min-width: auto;
+    }
+  }
+</style>
+{% endblock %}
+
+
+{% block body %}
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-overlay top-nav" id="navbar-section" style="padding-bottom: 20px;">
+      <a class="navbar-brand" href="/">
+        <img src="../../../static/images/home-img/REVOLV_logo_light.png">
+      </a>
+      <button class="navbar-toggler hamburger hamburger--stand" type="button" data-toggle="offcanvas" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      <div class="offcanvas-collapse navbar-collapse" id="main-nav">
+        <ul class="navbar-nav ml-auto">
+
+          <li id="dropdownz" class="nav-item">
+            <a class="nav-link" href="/about-us/re-volv" >About</a>
+            <ul class="dropdown">
+              <li><a href="/about-us/re-volv" >About Us</a></li>
+              <li><a href="/about-us/team/" >Team</a></li>
+              <li><a href="/about-us/jobs/" >Jobs</a></li>
+              <li><a href="/re-volv/media/" >News</a></li>
+              <li><a href="/about-us/contact/" >Contact Us</a></li>
+            </ul>
+          </li>
+
+          <li id="dropdownz" class="nav-item">
+            <a class="nav-link" href="/get-involved/apply/">Nonprofit Solar</a>
+            <ul class="dropdown">
+              <li><a href="/get-involved/apply/" >Nonprofit Solar Signup</a></li>
+              <li><a href="{% url 'fundraise_list' %}" style="display: none;">Open Campaigns</a></li>
+              <li><a href="{% url 'completed_projects' %}" >Solar Projects</a></li>
+            </ul>
+          </li>
+
+          <li id="dropdownz" class="nav-item">
+            <a class="nav-link" href="/get-involved/solar/">Solar Installers</a>
+          </li>
+
+          <li id="dropdownz" class="nav-item">
+            <a class="nav-link" href="/get-involved/solar-ambassador/">Solar Ambassador</a>
+            <ul class="dropdown">
+              <li><a href="/get-involved/team" >Solar Ambassador Teams</a></li>
+            </ul>
+          </li>
+
+          <li id="dropdownz" class="nav-item">
+            <a class="nav-link" href="/get-involved/education/">Education</a>
+            <ul class="dropdown">
+              <li><a href="/get-involved/education/" >Resource center</a></li>
+              <li style="display: none;"><a href="/get-involved/faq" >FAQ</a></li>
+              <li><a href="/blog-center/articles/" >Blog</a></li>
+              <li><a href="/nonprofit/videos">Videos</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <form class="form-inline">
+          <a href="/monthly_donor/" class="btn btn-orange" >Donate</a>
+          {% if request.user.is_authenticated %}
+          <a href="{% url "project:newsub" %}" class="btn btn-outline" style="display:none;">Fundraise</a>
+          <li id="dropdownz" class="has-dropdown " data-link-name="donate" 
+          style="text-decoration: none; list-style: none; font-size: 20px; color: orange;">
+            <a href="#" style="    text-decoration: none; list-style: none;padding-right: .5rem;padding-left: .5rem;font-size: 20px;color: #fff;font-weight: 600;text-transform: uppercase;font-size: 13px; letter-spacing: 1px; position: relative;">Account &#9662;</a>
+            <ul class="dropdown" style="min-width:100% !important; width: auto !important;">
+                <li><a href="{% url 'dashboard' %}" >Portfolio</a></li>
+                <li><a href="{% url 'account_settings' %}" >Settings</a></li>
+                <li><a href="{% url 'logout' %}" >Sign out</a></li>
+            </ul>
+          </li>
+          {% else %}
+          <a href="{% url "project:newsub" %}" class="btn btn-outline" style="display:none;">Fundraise</a>
+              <a href="{% url 'signin' %}" class="btn btn-outline btn-white" >Sign in</a>
+          {% endif %}
+        </form>
+      </div>
+    </nav>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"><\/script>')</script>
+    -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+    <script src="{% static 'js/home-js/script.js' %}"></script>
+    <script src="{% static 'js/about-abr-js/plyr.polyfilled.js' %}"></script>
+    <script src="{% static 'js/about-abr-js/script.js' %}"></script>
+    <script src="{% static 'js/nonprofit-js/plyr.polyfilled.js' %}"></script>
+    <script src="{% static 'js/nonprofit-js/script.js' %}"></script>
+    <!-- monthly donor, blog, blog articles-->
+    <script src='https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/js/tooltipster.bundle.min.js'></script>
+
+    <script src="{% static 'js/edu-media-css/plyr.polyfilled.js' %}"></script>
+    <script src="{% static 'js/edu-media-css/script.js' %}"></script>
+
+    <script src="{% static 'js/script.js' %}"></script>
+
+{% endblock %}
