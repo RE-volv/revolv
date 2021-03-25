@@ -129,6 +129,12 @@
     border-color: #aaa;
     }
 
+    .impact-desc{
+      font-size:1.5rem; 
+      margin: 0 auto; 
+      max-width:800px;
+    }
+
     </style>
 {% endblock %}
 
@@ -222,6 +228,22 @@
               </select>
             </div>
           </div>
+          
+          <div>
+            <p class="impact-desc" data-category="projects"></p>
+            <p class="impact-desc" data-category="bipoc"><i class="fas fa-users"></i><br/>RE-volv is committed to working with nonprofits who serve Black, Iniginous, and People of Color (BIPOC) communities. These nonprofits serve BIPOC communities by providing programming for kids, creating spaces to share culture and preserve heritage, and more. </p>
+            <p class="impact-desc" data-category="veterans"><i class="fas fa-medal"></i><br/>Veterans of Foreign Wars (VFWs) Posts are community centers across the country where Veterans of Foregin Wars gather. RE-volv is proud to have helped one of the first VFW's in the nation go solar, which is VFW Post 10804 in South Carolina. </p>
+            <p class="impact-desc" data-category="arts"><i class="fas fa-palette"></i><br/>Art is a way to express oneself, build community, and bring joy into our lives. RE-volv solarizes nonprofits focused on the arts, including dance centers, cultural centers, and organizations focused on building community through ar</p>
+            <p class="impact-desc" data-category="housing"><i class="fas fa-home"></i><br/>Housing is an essential fabric of our communities. RE-volv helps housing nonprofits go solar who provide housing for low income families, help improve low-income neighborhoods, and support community groups through housing solutions.</p>
+            <p class="impact-desc" data-category="health"><i class="fas fa-heart"></i><br/>Health is an integral part of every community. RE-volv works with nonprofits whose mission is centered on community health. These nonprofits include children's camps, health-based food cooperatives, and nonprofits focused on mental and cognitive health. </p>
+            <p class="impact-desc" data-category="animals"><i class="fas fa-dog"></i><br/>RE-volv works with nonprofits whose mission is centered around animals and their wellbeing. Nonprofits in this impact area include animal shelters and sanctuaries that care for animals and allow them to thrive.</p>
+            <p class="impact-desc" data-category="food"><i class="fas fa-tractor"></i><br/>RE-volv helps nonprofits whose work is focused on sustainable food and agriculture go solar. These nonprofits include community gardens, food cooperatives, and nonprofits that host food distribution programs for people in need.</p>
+            <p class="impact-desc" data-category="conservation"><i class="fas fa-dove"></i><br/>As an organization committed to climate action, RE-volv helps conversation focused nonprofits go solar. Nonprofits in the conservation impact space focus on conserving and protecting the natural environment now and for the future. </p>
+            <p class="impact-desc" data-category="community"><i class="fas fa-users"></i><br/>Nonprofits who work on Community Development focus on revitalizing their community. RE-volv helps community development nonprofits go solar who focus on food security, education, creating spaces for the community to gather and help strengthen the fabric of the community. </p>
+            <p class="impact-desc" data-category="youths"><i class="fas fa-child"></i><br/>RE-volv helps nonprofits focused on serving youth go solar. These nonprofits provide youth with academic enrichment, mentoring, and nutritious meals along with opportunities to engage in dance, day camps, community gardens, and art.</p>
+            <p class="impact-desc" data-category="faith"><i class="fas fa-place-of-worship"></i><br/>RE-volv helps provide solar financing for communities of faith and houses of worship across the country including, but not limited to, synagogues, churches, mosques, congregations, and faith driven community centers. </p>
+          </div>  
+
           <h2 class="blue-text mt-5 mb-5"> Learn more about the completed nonprofit solar projects by clicking on any of the projects below </h2>
             {% for completed_project in completed_projects %}
 
@@ -388,9 +410,19 @@
 
 <script>
   var posts = $('.post');
+  var impacts = $('.impact-desc');
+
+  impacts.hide();
 
   $("#mySelect").change(function () {
     var value = $(this).val();
+
+    impacts
+        .hide()
+        .filter(function () {
+          return $(this).data('category').toLowerCase().indexOf(value.toLowerCase()) > -1;
+        })
+        .show();
 
     posts
         .hide()

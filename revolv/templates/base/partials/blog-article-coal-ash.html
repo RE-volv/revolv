@@ -1,0 +1,272 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/v1616653136/images/blog-article-img/in-the-water.png') no-repeat; background-size: 100%; background-position: bottom !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <h1 class="fw-300 mb-1 text-center">Virtual Film Screening of In the Water to Help Push Coal Ash Legislation in Indiana</h1>
+            <h3 class="fw-500 mb-5 text-center mt-4">By <span class="article-auther">Abby Lenzini and Hannah Congleton, Purdue University Solar Ambassadors</span><span class="article-date"></span></h3>
+
+            <h4>My Experience with a Documentary Screening - by Abby Lenzini</h4>
+
+            <p>
+              With the COVID-19 pandemic, it has been harder as a student organization to hold events and engage with
+              our community while staying safe, but the switch to holding virtual events has also opened up the
+              opportunity to have a broader reach than only connecting with our fellow Purdue students. For our
+              screening of In The Water we were able to bypass any pandemic restrictions by holding the event on Zoom,
+              which meant that we were able to spread the message about coal ash to students and non-students all over
+              Indiana, which was really exciting.
+            </p>
+
+            <p>
+              Coal ash was something I learned about in my environmental science classes, but I didn’t realize it was
+              such a big problem that influenced so many people. Coal ash is a by-product of burning coal and is one of
+              the largest types of industrial waste in the United States. Coal ash <a href="https://www.epa.gov/coalash/coal-ash-basics ">“contains contaminants like mercury,
+              cadmium and arsenic,”</a> which can pollute waterways, ground water, drinking water, and the air according to
+              the EPA. When coal ash is not properly disposed of, it can be very harmful to environmental and human
+              health. Once I saw In the Water, I realized how many people are harmed by improper disposal of coal ash in
+              my community in Indiana. It was apparent this was an issue I wanted to do something about, and our idea of
+              doing a movie screening ended up being perfect for this issue.
+            </p>
+
+            <p>
+              We were able to work with the group <a href="https://www.facebook.com/JustTransitionNWI/">Just Transition NWI</a> to help gather resources for the screening and
+              information about the proposed Indiana Statehouse legislation that neither the House nor the Senate had
+              scheduled a hearing for yet. This meant that we were able to both spread more awareness around the issue
+              and gather support for the bills. After we screened the documentary and had a short discussion, some of
+              the leaders from Just Transition were able to speak about the proposed bills. We helped people find the
+              contact information for their representatives, provided email drafts, and discussed how best to show
+              support for the legislation. It was really rewarding to know that we helped bring awareness to this issue.
+            </p>
+
+            <img
+              src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1616653135/images/blog-article-img/coal-ash.png"
+              alt="coal ash blog image" style="width:100%;">
+
+            <p style="font-size:0.8rem; text-align: center; max-width:800px; margin: 0 auto;">Wade Utility Plant in West
+              Lafayette, IN had natural gas and coal boilers to provides power to Purdue University’s campus (<a href="https://www.facebook.com/pages/Purdue-WADE-Utility-Plant/149867941749737">Photo from
+              Purdue Wade Utility Facebook Page</a>)</p>
+
+            <h4 class="mt-5">Coal in My Community - by Hannah Congleton</h4>
+
+            <p>
+              Being from Kentucky, coal has been a constant part of my life. I have multiple family members that work in
+              the coal industry, and I even took a tour in middle school of the local power plant that used coal. During
+              the tour, they talked of how coal benefits us and how they “scrub” it to reduce air pollution. What they
+              don’t talk about is the coal ash waste that is created and the largely ineffective way of storing it. So
+              when we had the opportunity to screen the film about coal ash called In the Water, I was ecstatic.
+            </p>
+
+            <p>
+              When we started watching the documentary with our participants, I really connected to the documentary and
+              learned even more about the coal industry here in Indiana. I was lucky enough to help lead the discussion
+              after the documentary. Our discussion went well and we even talked with the team that is pushing for
+              legislation for coal ash. I would definitely count the event as a success and was happy to learn more
+              about issues that happen in my communities.
+            </p>
+
+            <h4>How to Host your own Film Screening - by Hannah and Abby</h4>
+
+            <p>
+              It was a simple event to set up and we would recommend it as an easy, pandemic-friendly activity. Before
+              our screening, we tested the quality of the video on Zoom to make sure it didn’t lag and the audio was
+              good. We manually reduced the film’s picture quality down to 540p or pixels from 1080p to reduce lagging.
+              We also made a Powerpoint presentation with the discussion questions we wanted to ask and information
+              about how to help the issue like signing petitions and contacting your representatives.
+            </p>
+
+            <p>
+              To start the event, our team-lead Anna Adamsson talked about RE-volv and the <a href="https://re-volv.org/get-involved/team">Solar Ambassador program</a>.
+              Then we played the documentary. For the discussion, we used the annotate feature on Zoom so people were
+              able to interact with discussion topics in a larger group setting. We also had a verbal discussion and
+              asked more open-ended questions, which allowed people to share their personal experiences. Overall, we
+              felt this was a great way to engage everyone, even those who weren’t as comfortable speaking in front of
+              many people on Zoom.
+            </p>
+
+            <h4>General tips for running a virtual film screening and activist event:</h4>
+
+            <ul class="ml-4">
+              <li>
+                Choose a topic that is important to you and your community.
+              </li>
+
+              <li>
+                Test the quality of the video before to make sure it doesn’t lag and the audio works for your audience.
+                It can also help to have participants turn off their video during the screening to reduce lagging.
+              </li>
+
+              <li>
+                Have a discussion with your audience to let people share their experiences and drive home the issues you
+                are bringing awareness to. Using a variety of different discussion methods such as quick polling and
+                open-ended questions to engage your audience in different ways.
+              </li>
+
+              <li>
+                If you are using this event to spread the word about a current event in your community, encourage your
+                audience to take action! Include action items such as emailing your representatives or signing a
+                petition, and gather resources like contact information and email drafts to make the process as easy as
+                possible for people who want to help.
+              </li>
+
+              <li>
+                Use it as an opportunity to connect with other organizations! We collaborated with the local Sunrise
+                Movement at Purdue for the screening. By working with Just Transition NWI, the Citizens Action Coalition
+                and the broader coalition to push for coal ash pond legislation in our state, our screening reached
+                people who were a part of over a dozen organizations statewide.
+              </li>
+
+            </ul>
+
+            <h4>
+              Additional Resources about Coal Ash
+            </h4>
+
+            <ul class="ml-4">
+              <li>
+                <a href="https://www.hecweb.org/issues/environmental-health-justice/coal-ash/ ">Hoosier Environmental Council on Coal Ash</a>
+              </li>
+              <li>
+                <a href="https://www.epa.gov/coalash/coal-ash-basics ">Coal Ash Information from the EPA</a>
+              </li>
+            </ul>
+
+            <div class="col-md-12 mt-5">
+              <h4 style="color:#100084;">About the Authors</h4>
+
+
+              <div class="row my-4">
+                <div class="col-md-10" style="text-align:right;">
+                  <strong class="fw-500">Hannah Congleton</strong> is a Sophomore Environmental and Ecological
+                  Engineering major at Purdue University. She has been working with Purdue Solar Ambassadors since her
+                  freshman year. Being a Solar Ambassador allows for experience working with a variety of people and
+                  learning more about solar that will help with her future endeavors.
+                </div>
+                <div class="col-md-2"><img
+                    src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1614666503/images/blog-article-img/hannah-purdue.jpg"
+                    alt="author-hannah-purdue"></div>
+              </div>
+
+              <div class="row my-4">
+                <div class="col-md-2"><img
+                    src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1616653132/images/blog-article-img/abby-blog.jpg"
+                    alt="author-abby-lenzini"></div>
+                <div class="col-md-10"><strong class="fw-500">Abby Lenzini</strong> Abby Lenzini is a sophomore at
+                  Purdue University studying Natural Resources and Environmental Science with a concentration in
+                  environmental quality and restoration and minors in environmental and ecological engineering and
+                  economics. She has been a part of the Solar Ambassador program for two years and loves getting to work
+                  with her community and raise awareness about renewable energy in Indiana.
+                </div>
+              </div>
+
+              <p style="font-size:0.8rem; text-align: center; max-width:800px; margin: 0 auto;">Cover photo credits: In
+                The Water Documentary Promotional graphic provided by film director, Beth Edwards</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+
+
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/plan-solar-and-benefits/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1615406021/images/blog-article-img/solar-panel-roof.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/plan-solar-and-benefits/"> <span class="meta-date">MARCH 9, 2021</span> </a>
+                    <h4 class="meta-title">The New Administration’s Plan for Solar and the Benefits</h4>
+                    <p>With a new administration now in the White House..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/solar-ambassador-impact/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1615406018/images/blog-article-img/vfw-ribbon-cutting.png">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/solar-ambassador-impact/"> <span class="meta-date">MARCH 3, 2021</span> </a>
+                    <h4 class="meta-title">Solar Ambassadors’ Impact in Their Community</h4>
+                    <p>It is no question that members of the RE-volv team and Solar Ambassadors recognize the importance..</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}

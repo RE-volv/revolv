@@ -667,6 +667,9 @@ def tenyearimpact(request):
 def textingforchange(request):
     return render(request, 'base/partials/blog-article-texting-for-change.html')
 
+def coalash(request):
+    return render(request, 'base/partials/blog-article-coal-ash.html')
+
 def evolvingenergy(request):
     return render(request, 'base/partials/blog-article-solar-ambassador-evolving.html')
 
