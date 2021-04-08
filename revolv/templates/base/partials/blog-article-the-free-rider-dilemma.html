@@ -1,0 +1,203 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830899/images/blog-article-img/rider-dilemma-cover.jpg') no-repeat; background-size: 100%; background-position: bottom !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <h1 class="fw-300 mb-1 text-center">The Free Rider Dilemma: South Carolina Utility Rate Structure and Solar Implications</h1>
+            <h3 class="fw-500 mb-5 text-center mt-4">By <span class="article-auther">Dean Wrobel, Coastal Carolina Solar Ambassador</span><span class="article-date"></span></h3>
+
+
+            <p>
+              Electric bills and savings are at the forefront of everyone’s mind when working with nonprofits to go
+              solar through RE-volv. However, there is a wide range of factors that ultimately determine how much the
+              non-profit client will save from their solar installation. These factors all revolve around electrical
+              rate structure, which becomes a function of facility location as there are not many situations where
+              multiple utilities compete for customers. South Carolina is a great state to use as an example to break
+              down the various rate structures of utilities because they have investor-owned utilities, rural electrical
+              cooperatives, municipal utilities, and public-owned utility.
+
+            </p>
+
+            <h4>Breaking Down the Rates</h4>
+
+            <p>
+              Fortunately, in South Carolina the two largest utilities, Dominion Energy and Duke Energy/Duke Energy
+              Progress, have both adopted <a href="https://www.duke-energy.com/_/media/pdfs/for-your-business/generate-your-own-renewable/sc/net-metering/net-metering-dec-tariff.pdf?la=en">net metering schedules</a> for their solar policy. These types of agreements are
+              crucial for the overall feasibility of solar operation in the state as it allows homeowners and nonprofits
+              alike to connect their solar systems to the grid and not have to operate their solar systems with the use
+              of batteries, which can greatly increase the total price of the solar system for the consumer.
+              Additionally, <a href="https://www.dominionenergy.com/south-carolina/save-energy/solar-for-your-home">Dominion Energy</a> offers clients a <a href="https://cdn-dominionenergy-prd-001.azureedge.net/-/media/pdfs/south-carolina/save-energy/solar/technical-resources/buy-all-sell-all/ratepr1.pdf?la=en&rev=4b00f4fef5e04bf09a6ffc0cf893ed2b&hash=1F0339C6CFB05BA200160919CC99F4EE">“wholesale” rate schedule</a> for larger solar systems where
+              they can purchase all their electricity from the grid as they would with no solar, and then sell back all
+              the solar energy that they produce at a fixed rate. This option suits larger solar systems well,
+              especially those whose solar generation far exceeds consumption. Additionally, these providers also allow
+              for extra solar generation to be added to a bill credit, which rolls over month to month for up to a year
+              before the credits expire.
+            </p>
+
+            <p>
+              In rural areas of the state, where community nonprofits and churches are typically located, utilities are
+              generally provided by an electrical cooperative. Different from their investor-owned cousins in the state,
+              Duke Energy and Dominion energy, these various electrical cooperatives in South Carolina are
+              not-for-profit, member-owned, and highly local. However, an issue that the Coastal Solar Ambassadors have
+              run into in working along the Grand Strand of South Carolina is that there is a utility fee that is only
+              applicable to customers who contribute solar energy to these grids. These fees are known as <a href="https://www.santee.org/santee-electric-solar-information">“rider” fees</a>
+              and are the attempt of the cooperative to try and continue charging solar customers fees associated with
+              infrastructure maintenance where their bills are normally entirely offset by their solar installation.
+              While most every utility, public, investor-owned, or cooperative charges their customers with either a
+              facility charge or an operational fee, these rider fees target only customers who install solar energy on
+              their home or business. Besides the rider fees, the electrical cooperatives in this region have also
+              adopted <a href="https://www.horryelectric.com/wp-content/uploads/2020/08/Horry-Electric-Cooperative-Solar-Rate-Agreement.pdf">net metering rate structures</a> for their solar customers which have allowed for these areas to be
+              financially feasible for interconnected solar installation.
+            </p>
+
+            <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830900/images/blog-article-img/solar-array-image.jpg" alt="solar panels" style="width:100%; margin-bottom:20px;">
+
+            <h4>Redesigning Rates</h4>
+
+            <p>Since we are fortunate enough to operate in an area of South Carolina where net metering is not as
+              pressing of an issue as it can be with other utilities, how can the Coastal Solar Ambassadors overcome the
+              issue of rider fees? The first step is to analyze this issue from the utility’s perspective. Electrical
+              cooperatives are relatively small organizations that make their budgets work by relying on a crucial set
+              of existing customers to generate revenue in order to keep the power on. When customers decide to go solar
+              and connect their installation to the grid, net metering policies directly affect the cooperative's
+              budget. This idea of solar power undercutting the cooperative's customer base in terms of revenue is what
+              has given rise to rider fee policies that take an adversarial approach to solar. Consequently, these
+              monthly rider fees erode savings that customers can collect when they go solar and disincentivize green
+              solar energy in their service areas. Fortunately, these policies have not deterred every cooperative
+              utility customer from going solar, and where they choose to interconnect their solar system to the grid or
+              not, a growing presence of solar power in the utility service area is the motivation for financial
+              officers and directors to consider revising rate structures and plan to craft more inclusive solar energy
+              policy.</p>
+
+
+            <h4>Nationwide Significance</h4>
+
+            <p>While rider fees are an issue of particular importance in this area of South Carolina, they are also a
+              nationwide issue. While major investor and publicly owned utilities cover huge swaths of the country, it
+              is often left up to rural electrical cooperatives to fill in the gaps for these customers not covered by
+              major utilities. This patchwork of cooperative utilities can lead to a solar policy that is far from
+              uniform and may subjugate some of the most energy vulnerable communities to anti-green energy policy,
+              which unfortunately are the same communities that could use energy independence the most.</p>
+
+
+            <div class="col-md-12 mt-5">
+              <h4 style="color:#100084;">About the Authors</h4>
+
+
+              <div class="row my-4">
+                <div class="col-md-10" style="text-align:right;">
+                  <strong class="fw-500">Dean Wrobel</strong> is a Junior Honors Marine Science and Coastal Geology Major at Coastal Carolina University in Conway, South Carolina. Dean is thoroughly engaged in the outdoors through his community and college and believes that solar and renewable energy is the best avenue to shift America towards a more green and sustainable future.
+                </div>
+                <div class="col-md-2"><img
+                    src="https://res.cloudinary.com/dkwon4bkk/image/upload/a_90/v1617831705/images/blog-article-img/dean-wrobel.jpg"
+                    alt="author-dean-wrobel"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/partnership-with-dickinson/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830949/images/blog-article-img/sheep-near-a-solar-panel.png">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/partnership-with-dickinson/"> <span class="meta-date">APRIL 7, 2021</span> </a>
+                    <h4 class="meta-title">Why You Should Get Excited About RE-volv&#39;s Partnership with Dickinson</h4>
+                    <p>Nestled halfway between Pittsburgh and..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/project-impact-areas/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830906/images/blog-article-img/student-learning.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/project-impact-areas/"> <span class="meta-date">APRIL 7, 2021</span> </a>
+                    <h4 class="meta-title">RE-volv’s Project Impact Areas</h4>
+                    <p>At RE-volv, we empower people to bring clean energy to their communities. We do that by bringing..</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}

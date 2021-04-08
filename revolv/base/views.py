@@ -652,6 +652,15 @@ def ecoanxiety(request):
 def factorsrooftopsolar(request):
     return render(request, 'base/partials/blog-article-factors-rooftop-solar.html')
 
+def riderdilemma(request):
+    return render(request, 'base/partials/blog-article-the-free-rider-dilemma.html')
+
+def impactareas(request):
+    return render(request, 'base/partials/blog-article-project-impact-areas.html')
+
+def partnershipdickinson(request):
+    return render(request, 'base/partials/blog-article-partnership-with-dickinson.html')
+
 def drmartinlutherking(request):
     return render(request, 'base/partials/blog-article-martin-luther-king.html')
 

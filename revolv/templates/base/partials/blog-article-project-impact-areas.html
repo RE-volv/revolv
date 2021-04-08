@@ -1,0 +1,249 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830906/images/blog-article-img/student-learning.jpg') no-repeat; background-size: 100%; background-position: center !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <h1 class="fw-300 mb-1 text-center">RE-volv’s Project Impact Areas</h1>
+
+            <p class="mt-5">
+              At RE-volv, we empower people to bring clean energy to their communities. We do that by bringing solar to
+              community-serving nonprofits across the country. Within the United States, there are roughly 1.5 million
+              nonprofits that face major barriers to getting their solar projects financed. RE-volv removes those
+              barriers, allowing nonprofits to go solar for zero down while saving on average 15% on their electricity
+              bills each month.
+            </p>
+
+            <p>
+              We work with nonprofits across the country that play an active role in serving their community. We work
+              with nonprofits that have an impact on eleven critical areas, including: animals, arts, BIPOC communities,
+              food and agriculture, community development, conservation, faith, health, housing, veterans and youth.
+              Read on to learn more about our eleven impact areas.
+            </p>
+
+            <h4>Animals </h4>
+
+            <p>RE-volv works with nonprofits whose mission is centered around animals and their wellbeing. Nonprofits in
+              this impact area include animal shelters and sanctuaries that care for animals and allow them to thrive.
+              In 2019, with the help of the University of Wisconsin-Madison Solar Ambassadors, we brought solar to
+              <a href="https://re-volv.org/project/primates/">Primate Inc.</a> located in Wisconsin, which is a sanctuary for monkeys after their retirement from medical
+              laboratories and Hollywood films.</p>
+
+            <h4>Art</h4>
+
+            <p>Art is a way to express oneself, build community, and bring joy into our lives. RE-volv solarizes
+              nonprofits focused on the arts, including dance centers, cultural centers, and organizations focused on
+              building community through art. For our first project in 2013, we brought solar to <a href="https://re-volv.org/project/shawl-andersondancecenter/">Shawl-Anderson Modern
+              Dance Center</a> located in Berkeley, California.</p>
+
+            <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830901/images/blog-article-img/Kids-Casey-Ishisan-Rebecca-Johnson.jpg" alt="kids casey ishinan" style="width:100%;">
+            <p style="font-size:0.8rem; text-align: center; max-width:800px; margin: 0 auto;">Cover photo credits: Casey Ishinan</p>
+
+            <h4>BIPOC</h4>
+
+            <p>RE-volv is committed to working with nonprofits who serve Black, Indigenous, and People of Color (BIPOC)
+              communities. These nonprofits serve BIPOC communities by providing programming for kids, creating spaces
+              to share culture and preserve heritage, and more. Some examples of our nonprofit projects in the BIPOC
+              impact area include <a href="https://re-volv.org/project/lapenaculturalcenter/">La Peña Cultural Center</a>  in Berkeley, California, the <a href="https://re-volv.org/project/TheVillage/">Village of Arts and Humanities</a> in
+              Philadelphia, and the <a href="https://re-volv.org/project/sweetwaterfoundation/">Sweet Water Foundation</a> in Chicago.</p>
+
+
+            <h4>Food & Agriculture </h4>
+
+            <p>RE-volv helps nonprofits whose work is focused on sustainable food and agriculture go solar. These
+              nonprofits include community gardens, food cooperatives, and nonprofits that host food distribution
+              programs for people in need. One nonprofit that we helped bring solar to in 2018 is the <a href="https://re-volv.org/project/missionofmary/">Mission of Mary</a>, a
+              non-profit addressing food deserts and social justice issues in east Dayton by providing access to
+              healthy, affordable food. </p>
+
+
+            <h4>Community Development </h4>
+
+            <p>Nonprofits who work on community development focus on revitalizing their community. RE-volv helps
+              community development nonprofits go solar who focus on food security, education, creating spaces for the
+              community to gather and help strengthen the fabric of the community. RE-volv has helped many community
+              development nonprofits go solar, including <a href="https://re-volv.org/project/faithbaptistchurch/">Faith Baptist Church</a> in Oakland, who hosts a Food Giving
+              Program and gives out more than 100 tons of food each year.</p>
+
+
+            <h4>Conservation </h4>
+
+            <p>As an organization committed to climate action, RE-volv helps conversation focused nonprofits go solar.
+              Nonprofits in the conservation impact space focus on conserving and protecting the natural environment now
+              and for the future. In 2018, the University of Wisconsin-Milwaukee Solar Ambassador Team worked with us to
+              bring solar to the <a href="https://re-volv.org/project/riverrevitalizationfoundation/">River Revitalization Foundation</a>, a nonprofit land trust dedicated to the preservation,
+              conservation, enjoyment, and revitalization of Milwaukee’s rivers and their surrounding environments.</p>
+
+            <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830902/images/blog-article-img/img-shelter.jpg" alt="shelter" style="width:100%; margin-bottom:20px;">
+
+            <h4>Faith</h4>
+
+            <p>RE-volv helps provide solar financing for communities of faith and houses of worship across the country
+              including, but not limited to, synagogues, churches, mosques, congregations, and faith driven community
+              centers. Some of our solar projects within the faith impact area includes <a href="https://re-volv.org/project/kehillacommunitysynagogue/">Kehilla Community Synagogue</a> in
+              Oakland, <a href="https://re-volv.org/project/truefellowship/">True Fellowship Baptist Church</a> in Richmond, California, and <a href="https://re-volv.org/project/netivotshalom/">Congregation Netivot Shalom</a> in
+              Berkeley.</p>
+
+
+            <h4>Health</h4>
+
+            <p>Health is an integral part of every community. RE-volv works with nonprofits whose mission is centered on
+              community health. These nonprofits include children's camps, health-based food cooperatives, and
+              nonprofits focused on mental and cognitive health. In 2020, we bought a 17 kW system to <a href="https://re-volv.org/project/collinslake/">Collins Lake
+              Autism Center</a>, located in New Mexico.</p>
+
+            <h4>Housing</h4>
+
+            <p>Housing is an essential fabric of our communities. RE-volv helps housing nonprofits go solar who provide
+              housing for low income families, help improve low-income neighborhoods, and support community groups
+              through housing solutions. In 2021, we brought an 83 kW system to <a href="https://re-volv.org/project/projectartaud/">Project Artaud</a>, an artist housing
+              community in San Francisco and also brought a 615 kW system to <a href="https://re-volv.org/project/villa-del-arroyo/">Villa del Arroyo</a> in Moorpark, California.
+            </p>
+
+            <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830905/images/blog-article-img/unity-garden.jpg" alt="unity gardens" style="width:100%; margin-bottom:20px;">
+
+            <h4>Veterans </h4>
+
+            <p>Veterans of Foreign Wars (VFWs) Posts are community centers across the country where Veterans of Foregin
+              Wars gather. RE-volv is proud to have helped one of the first VFW's in the nation go solar, which is <a href="https://re-volv.org/project/volts4vets/">VFW
+              Post 10804</a> in South Carolina. This installation was made possible through the support of the RE-volv Solar
+              Ambassadors at Coastal Carolina University.</p>
+
+            <h4>Youth</h4>
+
+            <p>RE-volv helps nonprofits focused on serving youth go solar. These nonprofits provide youth with academic
+              enrichment, mentoring, and nutritious meals along with opportunities to engage in dance, day camps,
+              community gardens, and art. <a href="https://re-volv.org/project/EastEnd/">East End Community Services</a> went solar with RE-volv through the help of the
+              University of Dayton Solar Ambassadors. East End provides many wonderful services to youth in Dayton,
+              including daily nutritionally-balanced meals, academic help, mentoring, college and career planning, drug
+              prevention, and various leadership opportunities.</p>
+
+            <h4>Project Overview</h4>
+
+            <p>From 2011 to Q1 of 2021, we have had the privilege of working with 45 amazing community-serving
+              nonprofits throughout the country to help them go solar. Learn more about all our <a href="https://re-volv.org/projects/completed_projects">nonprofit solar
+              projects.</a> </p>
+
+            <h4>Get Involved </h4>
+
+            <p>Ready to bring clean solar power to a deserving nonprofit in your community? Sign up to be a <a href="https://re-volv.org/get-involved/team">Solar
+              Ambassador</a> and help bring solar to a community-serving nonprofit in your community. Our Solar Ambassadors
+              work with nonprofits in their community to help them go solar, and use that nonprofit solar project to
+              spark a solar revolution in their community. </p>
+
+            <h4>Sign-up you Nonprofit to go Solar</h4>
+
+            <p>If you’re a nonprofit and are ready to learn more about going solar with RE-volv, let us know by <a href="https://re-volv.org/get-involved/apply/">signing
+              up your nonprofit</a> for a free solar quote today! At RE-volv, we help nonprofits go solar, by saving them on
+              average 15% off their monthly electricity bill. </p>
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+
+
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/partnership-with-dickinson/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830949/images/blog-article-img/sheep-near-a-solar-panel.png">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/partnership-with-dickinson/"> <span class="meta-date">APRIL 7, 2021</span> </a>
+                    <h4 class="meta-title">Why You Should Get Excited About RE-volv&#39;s Partnership with Dickinson</h4>
+                    <p>Nestled halfway between Pittsburgh and..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/free-rider-dilemma/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830899/images/blog-article-img/rider-dilemma-cover.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/free-rider-dilemma/"> <span class="meta-date">APRIL 5, 2021</span> </a>
+                    <h4 class="meta-title">The Free Rider Dilemma: South Carolina Utility Rate Structure and Solar Implications</h4>
+                    <p>Electric bills and savings are at the forefront of..</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}
