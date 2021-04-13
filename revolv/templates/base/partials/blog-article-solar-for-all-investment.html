@@ -1,0 +1,223 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_1000,w_1920/v1618345746/images/blog-article-img/solar-project-re-volv.jpg') no-repeat; background-size: 100%; background-position: bottom !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <h1 class="fw-300 mb-1 text-center">Announcing our $10M “Solar For All” Investment Round</h1>
+            <h2 class="fw-300 mb-1 text-center mt-4">Using an emerging investment vehicle to bring solar to frontline communities </h2>
+            <h3 class="fw-500 mb-5 text-center mt-4">Press Release: <span class="article-auther">San Francisco, CA, </span><span class="article-date">April 14, 2021</span></h3>
+
+            <p>
+              At <a href="https://re-volv.org/about-us/re-volv" target="_blank" rel="nofollow">RE-volv</a>, we are a climate justice nonprofit organization
+              and leading financier of solar for community-serving
+              nonprofits. We are excited to announce the launch of a $10M recoverable grant investment opportunity to
+              help unlock
+              the market for solar in frontline communities that bear the brunt of pollution and climate change. We have
+              already
+              received our first three recoverable grants totalling $275,000 through leading national donor advised
+              funds
+              facilitated by CapShift, an impact investing firm that helps facilitate recoverable grants.
+            </p>
+
+            <p>We expect this fund, representing a <a href="https://re-volv.org/recoverable-grant/" target="_blank" rel="nofollow">new model for financing
+                solar projects</a>, to more than double our year-over-year impact, allowing us to finance an additional
+              3MW of solar for nonprofits across the U.S. in the next 18 months that will save them between $15-20M on
+              future electricity bills. <a href="https://re-volv.org/blog-center/articles/project-impact-areas/" target="_blank" rel="nofollow">Organizations we serve</a> include community centers, food banks, affordable housing
+              providers, schools, homeless shelters and more, which provide critical services in communities facing
+              outsized impact from the economic downturn.</p>
+
+            <img
+              src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,w_1280/v1618345743/images/blog-article-img/Ambassadors_on_roof.png"
+              alt="RE-volv solar ambassadors" style="width:100%;">
+
+            <p style="font-size:0.8rem; text-align: center; max-width:800px; margin: 0 auto;">
+              RE-volv's Coastal Carolina University Solar Ambassadors next to a solar array on <a href="https://re-volv.org/project/volts4vets/" target="_blank" rel="nofollow">VFW Post 10804</a> in South
+              Carolina</p>
+
+            <p class="mt-4">“Lack of access to capital has made it especially difficult for nonprofits serving some of the most
+              environmentally and economically impacted communities to reap the benefits of solar,” said Andreas
+              Karelas, RE-volv founder and executive director. “Unlocking these new sources of capital to ensure
+              equitable solar access for all will transform the energy landscape and make our communities more resilient
+              and more sustainable.”</p>
+
+            <p>Recoverable Grants are a growing philanthropic trend that offer donors the opportunity to recoup their
+              funds plus a small return when a certain impact milestone is met, so they can regrant those same dollars
+              to another cause, similar to the more traditional Program Related Investment (PRI) vehicle used by
+              foundations, although with much less administrative burden.
+            </p>
+
+            <p>Recoverable Grants also allow Donor Advised Funds (DAF) to invest as well, as opposed to PRIs, which are
+              traditionally only offered by large foundations. This opens up the pool of over $150B currently locked in
+              DAFs, which have received criticism as of late for not deploying the capital for its intended
+              philanthropic purposes, but rather investing it for continued wealth creation indefinitely. </p>
+
+              <div class="row my-4">
+                <div class="col-md-6 mt-4">
+                  <p style="color: #3e3e3e !important;">When a foundation or Donor Advised Fund makes a recoverable grant to RE-volv, we use the capital to
+                    finance solar projects for <a href="https://re-volv.org/projects/completed_projects" target="_blank" rel="nofollow">nonprofits serving underserved communities.</a> The nonprofit pays us for solar
+                    power at an average of 15% less than their local utility rates, lowering their operational costs so they
+                    can better serve their community. In turn, we recoup our investment and are able to repay the grant with a
+                    small return to the foundation or DAF so they can re-gift it to future charitable projects. </p>
+                </div>
+                <div class="col-md-6" >
+                  <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1617840994/images/blog-article-img/RE-volv-Recoverable-grant-graphic.png" alt="tyler huff purdue" style="width:400px;">
+                </div>
+              </div>
+
+              <p class="mt-4" style="color: #3e3e3e !important;">This new model builds on our incredible growth over the past year and a half. From 2011- 2019 we invested
+                under $1M into 400kW of solar projects for 28 nonprofits across the country. In 2019 a $10 Million
+                commitment from Trisolaris, LLC allowed us to dramatically increase both the size and number of
+                installations. Through this commitment, we will have brought a total of 45 solar projects in ten states
+                totaling 3.3MW of power online by the end of 2021.</p>
+
+            <img class="mt-4"
+              src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,w_1280/v1618349387/images/blog-article-img/Other_Avenues_Solar_Installation_1.jpg"
+              alt="Other_Avenues_Solar_Installation" style="width:100%;">
+
+            <p style="font-size:0.8rem; text-align: center; max-width:800px; margin: 0 auto;">Solar installation for
+              <a href="https://re-volv.org/project/otheravenuesfoodcooperative/" target="_blank" rel="nofollow">Other Avenues Food Co-Op</a> in San Francisco, which was one of RE-volv’s first solar projects </p>
+
+            <p class="mt-4">We are partnering with CapShift to support the recoverable grant initiative to dramatically scale our
+              solar finance program and meet a growing demand for clean energy from the nonprofit sector. </p>
+
+            <p>“Up-front capital-intensive projects like solar are a great fit for recoverable grants,” said Adam Rein,
+              President and COO of CapShift. “Recoverable grants give nonprofits access to the upfront risk capital
+              needed to achieve long-term social and financial benefits in terms of climate resiliency and community
+              sustainability, with a potential repayment mechanism for donors who want to get the most out of their
+              philanthropic dollars.”</p>
+
+            <p>We will be hosting a webinar on May 4th with a philanthropic advisor from CapShift to discuss recoverable
+              grants and our “Solar For All” investment opportunity. <a href="https://www.eventbrite.com/e/re-volvs-solar-for-nonprofits-recoverable-grant-info-webinar-ft-capshift-tickets-146782401113" target="_blank" rel="nofollow">Register here.</a> </p>
+
+            <div class="col-md-12 mt-5">
+              <h4 style="color:#100084;">About RE-volv</h4>
+
+              <p class="mt-3" style="color: #3e3e3e !important;">RE-volv empowers people to bring clean energy to their communities, providing up-front financing to
+                make it easy for community-serving nonprofits like community centers, homeless shelters, schools, and
+                houses of worship to go solar. RE-volv also raises awareness about solar energy through its flagship
+                <a href="https://re-volv.org/get-involved/team" target="_blank" rel="nofollow">Solar Ambassador Program</a>, which trains college students as well as volunteers of all ages to help
+                nonprofits they care about save money and reduce their climate impact with solar. RE-volv is an
+                inaugural member of the White House National Community Solar Partnership and is supported by the U.S.
+                Department of Energy SunShot Initiative. Executive Director Andreas Karelas is author of Climate
+                Courage: How Tackling <a href="https://climatecourage.us/" target="_blank" rel="nofollow">Climate Change</a> Can Build Community, Transform the Economy, and Bridge the
+                Political Divide in America. Learn more at <a href="https://re-volv.org/" target="_blank" rel="nofollow">re-volv.org</a>.</p>
+
+              <h4 style="color:#100084;">About CapShift</h4>
+
+              <p class="mt-3" style="color: #3e3e3e !important;">CapShift LLC and its subsidiary CapShift Advisors LLC (collectively CapShift) empowers philanthropic
+                and financial institutions, along with their clients, to mobilize capital for social and environmental
+                change. CapShift provides access to public, private, and nonprofit ventures and funds, operating
+                globally and locally across all themes, supported by leading impact investors. Their suite of solutions
+                makes it easy to source, implement, and monitor impact investments. Learn more at <a href="https://capshift.com/" target="_blank" rel="nofollow">capshift.com</a>.</p>
+
+              <p style="color: #3e3e3e !important;">View the original press release <a href="https://www.dropbox.com/s/bnzlsvi3q6rs0id/Press%20Release%20RE-volv%20announces%20new%20recoverable%20grants%20opportunity%204.14.21.pdf?dl=0" target="_blank" rel="nofollow">here</a>.</p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>View the original press release here. 
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+
+
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/partnership-with-dickinson/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830949/images/blog-article-img/sheep-near-a-solar-panel.png">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/partnership-with-dickinson/"> <span class="meta-date">APRIL 7, 2021</span> </a>
+                    <h4 class="meta-title">Why You Should Get Excited About RE-volv&#39;s Partnership with Dickinson</h4>
+                    <p>Nestled halfway between Pittsburgh and..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/project-impact-areas/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830906/images/blog-article-img/student-learning.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/project-impact-areas/"> <span class="meta-date">APRIL 7, 2021</span> </a>
+                    <h4 class="meta-title">RE-volv’s Project Impact Areas</h4>
+                    <p>At RE-volv, we empower people to bring clean energy to their communities. We do that by bringing..</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}

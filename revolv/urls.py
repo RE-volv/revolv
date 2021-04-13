@@ -114,6 +114,7 @@ urlpatterns = patterns(
     url(r'^blog-center/articles/evolving-energy/', 'revolv.base.views.evolvingenergy', name='evolvingenergy'),
     url(r'^blog-center/articles/plan-solar-and-benefits/', 'revolv.base.views.planforsolarbenefit', name='planforsolarbenefit'),
     url(r'^blog-center/articles/solar-ambassador-impact/', 'revolv.base.views.solarambassadorimpact', name='solarambassadorimpact'),
+    url(r'^blog-center/articles/solar-for-all-investment/', 'revolv.base.views.solarforallinvestment', name='solarforallinvestment'),
 
     url(r'^monthly_donor', 'revolv.base.views.monthly_donor', name='monthly_donor'),
     url(r'^thanks/postdonation/', 'revolv.base.views.postdonation', name='postdonation'),

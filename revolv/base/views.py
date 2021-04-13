@@ -688,6 +688,9 @@ def planforsolarbenefit(request):
 def solarambassadorimpact(request):
     return render(request, 'base/partials/blog-article-solar-ambassador-impact.html')
 
+def solarforallinvestment(request):
+    return render(request, 'base/partials/blog-article-solar-for-all-investment.html')
+
 #-----------Donate Monthly
 
 
