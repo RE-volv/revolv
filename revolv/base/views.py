@@ -691,6 +691,9 @@ def solarambassadorimpact(request):
 def solarforallinvestment(request):
     return render(request, 'base/partials/blog-article-solar-for-all-investment.html')
 
+def sourceofoptimism(request):
+    return render(request, 'base/partials/blog-article-optism-during-global-pandemic.html')
+
 #-----------Donate Monthly
 
 

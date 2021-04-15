@@ -1,0 +1,207 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/v1618441942/images/blog-article-img/Capture1.png') no-repeat; background-size: 100%; background-position: bottom !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <h1 class="fw-300 mb-1 text-center">Finding Sources of Optimism as a <br>RE-volv Solar Ambassador During a Global Pandemic</h1>
+            <h3 class="fw-500 mb-5 text-center mt-4">By <span class="article-auther">Cristina Dobbelaere, UC Santa Barbara Solar Ambassador</span><span class="article-date"></span></h3>
+            
+            <p>
+              When I signed up to become a <a href="https://re-volv.org/get-involved/team" target="_blank" rel="nofollow">Solar Ambassador</a> for the UC Santa Barbara RE-volv chapter in spring 2020, I
+              was a rising college senior, blissfully optimistic and eagerly anticipating the imminent solar leads our
+              team would secure and installations our team would plan. Looking back, these ideas seem hopelessly naïve.
+              In the past year, COVID-19 has exerted an unfathomable pain on communities across the globe, and it is
+              safe to say that it has affected everyone to some degree. Amidst all other stressors in human life, COVID
+              prevails, and it both reveals and exacerbates inequalities that exist in concert with it.
+            </p>
+
+            <p>
+              That said, volunteering as a Solar Ambassador—during a year when all once-collaborative activities have been relocated
+              to online platforms and confined to two-dimensional computer screens—has proven challenging at times. With in-person
+              activities effectively on hold for the foreseeable future, COVID has rendered many nonprofit organizations’ offices
+              empty and many phones unattended. It has been difficult to get in contact with representatives of nonprofits and even
+              more difficult to secure leads for solar installations. I haven’t even had the opportunity to meet my UCSB team
+              collaborators in person.
+            </p>
+
+            <p>
+              But not all is lost. Despite the very real and visible consequences of the pandemic, I am among the lucky in this time
+              of unprecedented distress, and I want to use that privilege to make the most of my time as a RE-volv Solar
+              Ambassador—to do what I can, given the circumstances. To help, in the small ways that are still possible.
+            </p>
+
+            <p>One aspect of life that still persists, notwithstanding extraordinary challenges, is education. Hoping to help foster
+              a culture of environmental awareness among young generations, this past February, our team organized a virtual solar
+              education event for elementary school students in the Santa Barbara region. We delivered a presentation to a fifth
+              grade class, introducing them to renewable energy and providing a basic understanding of <a href="https://re-volv.org/get-involved/education/solarenergy/" target="_blank" rel="nofollow">solar array systems</a>. The
+              event went better than we ever could have imagined—even over Zoom, the students were incredibly engaged and conveyed a
+              genuine curiosity and creativity that I’d almost forgotten existed. Not only were most of the students already fairly
+              knowledgeable about the perils of climate change and the potential of solar energy, but they were innovative, excited,
+              creative thinkers. One student even theorized a new technology that would capture both energy from the sun and kinetic
+              energy from rain, depending on the weather. I was impressed, to say the least.
+            </p>
+
+            <div class="row my-4">
+              <div class="col-md-6 mt-4">
+                <p style="color: #3e3e3e !important;">
+                  And, thanks to <a href="https://www.instagram.com/p/CGiBzkMFot2/" target="_blank" rel="nofollow">Amira Garewal</a>, one of my fellow UCSB team members, and her unwavering passion for positive
+                  environmental news and solutions-oriented thinking, we have started a Solar News series on our team’s <a href="https://www.instagram.com/revolvucsb/?hl=en" target="_blank" rel="nofollow">Instagram</a>
+                  page. What began as a minor venture into publicizing small-scale clean energy projects arising in the UCSB
+                  community—including, for instance, the installation of <a href="https://www.instagram.com/p/CGJBKLqlURK/" target="_blank" rel="nofollow">solar charging tables</a> at a local park near our campus—soon
+                  became something much more meaningful. Amira effortlessly took on the role of team informer and now frequently
+                  sends us articles to share on our Instagram. Not only have these articles served to inform our social media
+                  following of positive shifts and breakthroughs in the clean energy world, but they have helped generate within
+                  myself and within our team a beautiful, sometimes forgotten sense of inspiration and hopefulness—a strange but
+                  warranted confidence in a clean energy future that so often feels out of reach.
+                </p>
+              </div>
+              <div class="col-md-6">
+                <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1618441942/images/blog-article-img/Capture.png"
+                  alt="capture" style="width:400px;">
+              </div>
+            </div>
+
+            <p>
+
+              In the past year, I’ve found that perspective can be a powerful tool for positive movement toward a goal. In times
+              like these, it can be easy to concentrate solely on losses and sources of stress. And that’s completely valid—2020 and
+              2021 have brought with them unprecedented challenges in every sphere of life, and grieving is a necessary process! But
+              remembering that solutions are out there and that we can partake in them has proven vital for my own well-being and
+              perseverance. Ultimately, as individuals, we need things to inspire us—to propel us forward so that we can
+              successfully work for the environmental goals that we would like to realize. And publicizing solar news, teaching
+              children about solar energy, and developing collaborative community dynamics surrounding climate resiliency and clean
+              energy have done just that.
+            </p>
+
+            <p>
+              Not to mention the beautiful reality that since I first wrote this post in mid-February 2021, the number of
+              vaccinations administered in the U.S. has more than tripled (from an initial 55.2 million to <a href="https://covid.cdc.gov/covid-data-tracker/#forecasting_weeklydeaths" target="_blank" rel="nofollow">192 million
+              vaccinations</a>)! I have a much better feeling about the months to come—for future collaborative efforts, for working for
+              clean energy and the environment, and of course, for public and mental health.
+            </p>
+
+            <div class="col-md-12 mt-5">
+              <h4 style="color:#100084;">About the Author</h4>
+              <div class="row my-4">
+                <div class="col-md-10" style="text-align:right;">
+                  <strong class="fw-500">Cristina Dobbelaere</strong> graduated from UC Santa Barbara with a B.S. in
+                  Environmental Studies and a concentration in Marine Ecology in March 2021. She hopes to spend her life
+                  working for the environment and dreams of a future where clean energy, rather than fossil fuels,
+                  powers human activities. As a Solar Ambassador, she loves working for and publicizing community-based
+                  clean energy projects, and she hopes to continue striving for similar goals throughout her career. In
+                  her free time, Cristina likes to go on long walks in nature, listen to absurd quantities of music, and
+                  work on art projects of various forms.
+                </div>
+                <div class="col-md-2"><img
+                    src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1618441943/images/blog-article-img/cmd_headshot.jpg"
+                    alt="author-christina-dobblelaere"></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/solar-for-all-investment/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_1000,w_1920/v1618345746/images/blog-article-img/solar-project-re-volv.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/solar-for-all-investment/"> <span class="meta-date">APRIL 13, 2021</span> </a>
+                    <h4 class="meta-title">Announcing our $10M “Solar For All” Investment Round</h4>
+                    <p>At RE-volv, we are a climate justice nonprofit organization and leading financier..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/partnership-with-dickinson/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1617830949/images/blog-article-img/sheep-near-a-solar-panel.png">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/partnership-with-dickinson/"> <span class="meta-date">APRIL 7, 2021</span> </a>
+                    <h4 class="meta-title">Why You Should Get Excited About RE-volv&#39;s Partnership with Dickinson</h4>
+                    <p>Nestled halfway between Pittsburgh and..</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}
