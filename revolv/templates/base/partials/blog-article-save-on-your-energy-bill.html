@@ -1,0 +1,186 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,w_1920/v1618868309/images/blog-article-img/Home_electricity_monitor.jpg') no-repeat; background-size: 100%; background-position: bottom !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <h1 class="fw-300 mb-1 text-center">Seven Ways to Save on Your Energy Bill</h1>
+            <h3 class="fw-500 mb-5 text-center mt-4">By <span class="article-auther">Savannah Billings, Coastal Carolina University Solar Ambassador</span><span class="article-date"></span></h3>
+
+            <p>Everybody loves saving money but one area people do not typically think of to save money is on their
+              energy bill, but there are many simple changes people can take to save money. These seven energy
+              saving tips not only save you money on your electricity bills but also saves electricity from being wasted.
+              This helps the planet by lowering fossil fuel usage.</p>
+
+            <h4>1. Turn off the lights and unplug unused electronics</h4>
+            <p>A quick and easy way to minimize your electricity bill is to turn off your lights and unplug unused
+              electronics. The energy used when electronics are plugged in but not in use is called phantom or
+              vampire electricity. When the average charger is not being used but is still plugged in it can consume
+              0.26 watts of energy. In total, vampire energy can account for 10 percent of your electricity bill.
+              Switching to LED light bulbs will also save you money on your electricity bills.</p>
+
+            <h4>2. Use appliances during the off peak hours</h4>
+            <p>Peak hours refers to the time during the day when consumer demands are high and many consumers
+              are using electricity which costs the utility and the consumer more. Using high energy appliances during
+              off peak hours will save you and the utility money. Most utility companies have their peak hours listed
+              on their website or you can call them and they will let you know.</p>
+
+            <h4>3. Weatherize your home </h4>
+            <p>You can weatherize your home by sealing your doors and windows to keep the heat in your house
+              during the winter and the cool air in during the summer. You can also weatherize your house by sealing
+              your windows, cleaning and checking your air ducts for leaks, and installing an insulated tank wrap on
+              your water heater. Another way that is more costly up front but beneficial in the long run is to add
+              proper installation to your whole house including your basement and attic.</p>
+
+            <img class="mb-4"
+              src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,w_1920/v1618868310/images/blog-article-img/Home_Thermostat.jpg"
+              alt="home thermostat" style="width:100%;"/>
+
+            <h4 class="mt-4">4. Install a programmable thermostat</h4>
+            <p>Programmable thermostats allow you to set specific temperatures for certain times of the day. This
+              allows you to set the thermostat to keep your house hot or cold without wasting excess electricity. For
+              example, during warmer weather it is more energy efficient to precool your home during off-peak hours
+              and turn the air conditioner back up during peak hours. With a programmable thermostat you could
+              have this preset so you do not have to worry about it but still save money. You can also install “smart”
+              programmable thermostats that allow you to control your thermostat from your phone allowing you to
+              lower the temperature in the winter and increase it in the summer to be more energy efficient when
+              you are not home. Three to five percent more energy is used by your home for every additional degree
+              that the thermostat is raised from 68 degrees fahrenheit.</p>
+
+            <h4>5. Use energy efficient appliances</h4>
+            <p><a href="https://www.energystar.gov/" target="_blank" rel="noopener noreferrer">Energy Star</a> appliances meet energy-efficient guidelines set by the EPA. A wide range of appliances are
+              Energy Star certified including refrigerators, televisions, stoves, air conditioners, and washer and dryers.
+              Energy Star appliances use far less energy than standard appliances and can save you up to 30 percent
+              on your electricity bill. The most sustainable way to switch to Energy Star appliances is to replace your
+              appliances as they break and you use through them.</p>
+
+            <h4>6. Perform an Energy Audit</h4>
+            <p>An energy audit involves hiring a professional to come into your home and evaluate where energy is
+              being wasted or used inefficiently. Audits can be performed by public utility companies, energy service
+              companies, or the state Energy Office. You can also perform an energy audit yourself. The US
+              Department of Energy has a <a href="https://www.energy.gov/energysaver/downloads/energy-saver-guide" target="_blank" rel="noopener noreferrer">helpful guide</a> to do it yourself.</p>
+
+            <h4>7. Going Solar</h4>
+            <p>Although the upfront cost of going solar is high, many people qualify for <a href="https://re-volv.org/get-involved/education/solartax/" target="_blank" rel="noopener noreferrer">tax breaks</a> once they install
+              <a href="https://re-volv.org/get-involved/education/solarenergy/" target="_blank" rel="noopener noreferrer">solar panels</a> on their home. By going solar you produce your own energy, providing energy freedom and
+              savings on your electricity bill. <a href="https://www.ncsl.org/research/energy/net-metering-policy-overview-and-state-legislative-updates.aspx" target="_blank" rel="noopener noreferrer">Utilities in 38 states and Washington, DC</a> have some form of net metering
+              that allows consumers to receive credits for the excess energy that their solar panels produce but they
+              do not use. This is another way that solar can save you money on your energy bill.</p>
+
+            <div class="col-md-12 mt-5">
+              <h4 style="color:#100084;">About the Authors</h4>
+              <div class="row my-4">
+                <div class="col-md-2"><img
+                    src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_crop,h_600/v1618869911/images/blog-article-img/savannah-solar-ambassador.png"
+                    alt="author-savannah-billings"></div>
+                <div class="col-md-10"><strong class="fw-500">Savannah Billings</strong> is a senior Interdisciplinary Studies major with a
+                  focus on Botany and Sociology at Coastal Carolina University. She is
+                  very passionate about sustainability and her time as a Solar
+                  Ambassador, although brief, has been very insightful and she has
+                  learned a lot. She has most enjoyed giving back to her community
+                  by helping them become more sustainable.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/source-of-optimism/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1618441942/images/blog-article-img/Capture1.png">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/source-of-optimism/"> <span class="meta-date">APRIL 15, 2021</span> </a>
+                    <h4 class="meta-title">Finding Sources of Optimism as a RE-volv Solar Ambassador During a Global Pandemic</h4>
+                    <p>When I signed up to become a Solar Ambassador..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/solar-for-all-investment/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_1000,w_1920/v1618345746/images/blog-article-img/solar-project-re-volv.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/solar-for-all-investment/"> <span class="meta-date">APRIL 13, 2021</span> </a>
+                    <h4 class="meta-title">Announcing our $10M “Solar For All” Investment Round</h4>
+                    <p>At RE-volv, we are a climate justice nonprofit..</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}

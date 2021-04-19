@@ -694,6 +694,9 @@ def solarforallinvestment(request):
 def sourceofoptimism(request):
     return render(request, 'base/partials/blog-article-optism-during-global-pandemic.html')
 
+def saveenergybill(request):
+    return render(request, 'base/partials/blog-article-save-on-your-energy-bill.html')
+
 #-----------Donate Monthly
 
 
