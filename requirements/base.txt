@@ -23,7 +23,7 @@ WebTest==2.0.18
 django-webtest==1.7.7
 factory_boy==2.5.2
 django-ckeditor==4.4.8
-wagtail==1.0b2
+wagtail==2.11.6
 wagtailsettings==0.4.1
 django-sekizai==0.8.1
 django-sesame==1.1
