@@ -1,0 +1,155 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_1200,w_1920/v1619217872/images/blog-article-img/University_of_Dayton_Solar_Ambassadors.jpg') no-repeat; background-size: 100%; background-position: top !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <h1 class="fw-300 mb-1 text-center">University of Dayton Solar Ambassador Presentation</h1>
+            <h3 class="fw-500 mb-5 text-center mt-4">By <span class="article-auther">University of Dayton Solar Ambassadors</span><span class="article-date"></span></h3>
+
+            <p>Emily Burns is a <a href="https://re-volv.org/get-involved/team" target="_blank" rel="noopener noreferrer">Solar Ambassador</a> on the <a href="https://www.instagram.com/udrevolv/" target="_blank" rel="noopener noreferrer">University of Dayton Team</a>. Emily has been involved in the Solar Ambassador
+              program for four years, since she was a freshman until she graduated from the University of Dayton in spring 2021.</p>
+
+            <p>During the presentation for the University of Dayton’s Clean Energy Speaker Series, Emily discusses how the upfront
+              cost of solar can prohibit many individuals, groups, and nonprofits from going solar. She also highlights how
+              difficult it is for nonprofits in particular to get loans for their solar projects and that these organizations can
+              not take advantage of the solar tax benefits. RE-volv helps nonprofits go solar who face major barriers to getting
+              their solar projects financed, and in this presentation Emily discusses how this is achieved.</p>
+
+            <h4>About the University of Dayton’s Solar Projects</h4>
+
+            <p class="mb-4">The University of Dayton Solar Ambassador team has brought solar to two community-serving nonprofits in Dayton,
+              including <a href="https://re-volv.org/project/missionofmary/" target="_blank" rel="noopener noreferrer">Mission of Mary</a> and <a href="https://re-volv.org/project/EastEnd/" target="_blank" rel="noopener noreferrer">East End Community Services</a>. Mission of Mary Cooperative is a nonprofit organization
+              that addresses food deserts and social justice issues in East Dayton by providing access to healthy, affordable food.
+              Mission of Mary aims to provide tangible benefits for the people of the Dayton community, as well as revitalize vacant
+              and forgotten neighborhood land, by growing and distributing nutritious food and educating their neighbors about
+              healthy and sustainable lifestyles. East End Community Services specializes in providing youth, family, and
+              neighborhood development programs to families in inner East Dayton to help break the cycle of multi-generation
+              poverty. During the presentation, Emily introduces both of these projects and talks about how the University of Dayton
+              Solar Ambassadors brought solar to these two nonprofits. <a href="https://www.youtube.com/watch?v=IAQmSFura4Y" target="_blank" rel="noopener noreferrer">View the presentation</a> to learn more about the University of
+              Dayton team, their two solar projects, and RE-volv’s solar financing model.</p>
+
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/IAQmSFura4Y" frameborder="0" allowfullscreen></iframe>
+
+            <h4 class="mt-4">Get Involved - Become a Solar Ambassador</h4>
+
+            <p>RE-volv’s Solar Ambassador Fellowship is a fellowship for one academic year that gives college students the
+              opportunity to spearhead a solar project in their community using RE-volv’s innovative solar financing model.
+              Throughout the fellowship, students help bring solar to a local nonprofit, learn about solar financing and technology,
+              and educate the local community on the importance of solar and clean energy. For more information and to sign up to be
+              a Solar Ambassador, head over to our <a href="https://re-volv.org/get-involved/team" target="_blank" rel="noopener noreferrer">Solar Ambassador Teams page</a>.</p>
+
+            <div class="col-md-12 mt-5">
+              <h4 style="color:#100084;">About the Presenter</h4>
+              <div class="row my-4">
+                <div class="col-md-12"><strong class="fw-500">Emily Burns</strong> is a senior Mechanical Engineering
+                  student at the University of Dayton with a concentration in Energy Systems. She has been a Solar
+                  Ambassador with RE-volv for four years, helping community-serving nonprofits in Dayton install solar
+                  panels to lower their electric bill and become more energy independent. Her interest in sustainability
+                  is focused on the built environment, from residential homes to sustainable urban development, with an
+                  emphasis on facilitating a just transition.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/save-on-your-energy-bill/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,w_1920/v1618868309/images/blog-article-img/Home_electricity_monitor.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/save-on-your-energy-bill/"> <span class="meta-date">APRIL 19, 2021</span> </a>
+                    <h4 class="meta-title">Seven Ways to Save on Your Energy Bill</h4>
+                    <p>Everybody loves saving money but one area people do not typically think of to save money..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/source-of-optimism/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1618441942/images/blog-article-img/Capture1.png">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/source-of-optimism/"> <span class="meta-date">APRIL 15, 2021</span> </a>
+                    <h4 class="meta-title">Finding Sources of Optimism as a RE-volv Solar Ambassador During a Global Pandemic</h4>
+                    <p>When I signed up to become a Solar Ambassador..</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}

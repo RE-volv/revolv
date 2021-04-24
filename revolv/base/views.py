@@ -697,6 +697,9 @@ def sourceofoptimism(request):
 def saveenergybill(request):
     return render(request, 'base/partials/blog-article-save-on-your-energy-bill.html')
 
+def universityofdaytonpresentation(request):
+    return render(request, 'base/partials/blog-article-university-of-dayton-presentation.html')
+
 #-----------Donate Monthly
 
 

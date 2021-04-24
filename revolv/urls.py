@@ -117,6 +117,7 @@ urlpatterns = patterns(
     url(r'^blog-center/articles/solar-for-all-investment/', 'revolv.base.views.solarforallinvestment', name='solarforallinvestment'),
     url(r'^blog-center/articles/source-of-optimism/', 'revolv.base.views.sourceofoptimism', name='sourceofoptimism'),
     url(r'^blog-center/articles/save-on-your-energy-bill/', 'revolv.base.views.saveenergybill', name='saveenergybill'),
+    url(r'^blog-center/articles/university-of-dayton-presentation/', 'revolv.base.views.universityofdaytonpresentation', name='universityofdaytonpresentation'),
 
     url(r'^monthly_donor', 'revolv.base.views.monthly_donor', name='monthly_donor'),
     url(r'^thanks/postdonation/', 'revolv.base.views.postdonation', name='postdonation'),
