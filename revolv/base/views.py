@@ -700,6 +700,12 @@ def saveenergybill(request):
 def universityofdaytonpresentation(request):
     return render(request, 'base/partials/blog-article-university-of-dayton-presentation.html')
 
+def joiningsolarambassadorteam(request):
+    return render(request, 'base/partials/blog-article-joining-solar-ambassador-team.html')
+
+def solareducationonlinecampus(request):
+    return render(request, 'base/partials/blog-article-solar-education-online-campus.html')
+
 #-----------Donate Monthly
 
 

@@ -1,0 +1,193 @@
+{% extends "base/base.html" %}
+{% load staticfiles %}
+{% load humanize %}
+{% load wagtailimages_tags %}
+
+{% block head %}
+<style>
+@media (max-width: 1600px) {
+  .container-fluid .blog-post-header {
+    background-size: auto !important;
+  }
+}
+.body-paragraph > p {
+    color: #3e3e3e !important;
+}
+</style>
+<!-- -->
+<script src="{% static 'js/base/homeAnimations.js' %}?version={{ version_number }}"></script>
+<link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/tooltipster@4.2.6/dist/css/tooltipster.bundle.min.css"/>
+{% endblock %}
+
+{% block body %}
+    <main role="main" class="container-fluid">
+      <div class="container-fluid blog-post-header" id="top-section" style="background: url('https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,w_1600/v1619648290/images/blog-article-img/solar-panel-blog-cover-solar-ambassador.jpg') no-repeat; background-size: 100%; background-position: center !important;">
+        <div class="row text-center">
+          <div class="col hero-text align-self-end mb-5">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid scroll-section" id="scroll-section">
+          <div class="scroll-icon">
+            <img class="scroll-arrow bouncing" src="../../../static/images/blog-monthly-img/scroll-icon.png">
+          </div>
+      </div>
+      <div class="container" id="article-body">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10 body-paragraph mt-5">
+            <h1 class="fw-300 mb-1 text-center">Finding Sources of Optimism as a <br>RE-volv Solar Ambassador During a Global Pandemic</h1>
+            <h3 class="fw-500 mb-5 text-center mt-4">By <span class="article-auther">Hannah Bennett, Coastal Carolina Solar Ambassador</span><span class="article-date"></span></h3>
+            
+            <p>
+              Being from a small rural town in northeastern Pennsylvania, I grew up with a unique experience in terms of
+              fossil fuels and the energy sector. When I was in middle school, <a href="https://www.eia.gov/energyexplained/natural-gas/natural-gas-and-the-environment.php" target="_blank">natural gas</a> extraction became a booming
+              business, and my hometown fell right in the middle of <a href="https://stateimpact.npr.org/pennsylvania/tag/marcellus-shale/" target="_blank">The Marcellus Shale</a>. I got front row seats to watch
+              a non-renewable energy source develop right in front of my eyes. The impacts of this, both good and bad,
+              deeply affected my entire community. I moved away almost three years ago; however, it was not until this
+              past year that I was educated on the idea of renewable energy sources. More specifically, solar energy.
+              Now, as a member of one of <a href="https://re-volv.org/get-involved/team" target="_blank">RE-volv's Solar Ambassador Teams</a> at Coastal Carolina University, I get to also
+              experience solar energy development and the impacts it has on my community I live in now.
+            </p>
+
+            <p style="color: #3e3e3e !important;">
+                My hometown of Lawton, Pennsylvania mostly consists of farmers and quarriers. There are not many other options for
+                employment that pay a livable wage. When the process of natural gas extraction was introduced to my community, it
+                offered new employment opportunities and a way to boost our local economy. In addition, property owners who allowed
+                fracking to take place on their property receive payments for the usage of their property. This was of course all
+                taking place while all of America was still feeling the effects of the 2008 recession. As such, my community jumped on
+                the opportunity. For the first time in my life, I got to see families rise out of the poverty level, the local
+                population expand, and local businesses not just survive but thrive. Of course, there were some cons to this process
+                as well. A lot of the land used for natural gas fracking sites had to be logged and excavated into a level site. Also,
+                the large pipelines required to transport the natural gas had to be buried, which disturbed wildlife, habitats, and
+                natural resources. When the drilling began, air pollution and large volumes of contaminated water were produced.
+                Although these negative impacts were rather severe, the economic relief is all anyone wanted.
+            </p>
+
+            <div class="row my-4" style="text-align: center; justify-content: center;">
+                <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1619650522/images/blog-article-img/pipeline.jpg"
+                alt="pipeline" style="width:400px; height:300px;">
+            </div>
+
+            <p style="color: #3e3e3e !important;">
+                After about five years, the volume of natural gas extraction started to decrease. As a result, so did some of the
+                benefits. The population decreased as well, and members of the community had to move in order to maintain their jobs.
+                The economic benefits have lasted in part, however not in impactful ways towards the community. This left me thinking
+                that this was a short-term process with short term benefits. In dwelling on this, I had previously done minor research
+                on solar as a long-term energy solution alternative. As a renewable energy source, it has the potential to be a
+                lasting energy source with lasting benefits to the economy. The initial problem I saw with this was a lack of access.
+                This includes both the inability of low-income families to afford the costs of switching to solar, and the lack of
+                solar options to choose from at the time. I just couldn’t see this as an option that the majority of my hometown would
+                jump onboard with.
+            </p>
+
+            <div class="row my-4" style="text-align: center; justify-content: center;">
+                <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,w_1280/v1619648379/images/blog-article-img/solar_panel_array.jpg"
+                alt="solar panel arrays" style="width:400px; height:300px;">    
+            </div>
+  
+            <p>In the summer of 2020, I decided to take a class on sustainability in the fall semester. Little did I know, this
+              class would include the opportunity to work directly with <a href="https://re-volv.org/get-involved/education/solarenergy/" target="_blank">solar energy</a>. A few weeks into the class I decided to join
+              the Coastal Carolina Solar Ambassador Team and I completed RE-volv's bootcamp course on solar. This helped me to truly
+              understand the entire process of switching to solar energy. Throughout my time so far as a Solar Ambassador, I have
+              learned so much more. From different types of utility companies, rate structures, residential/community solar, panel
+              types, marketing, etc., I have been well versed on solar. In addition, I also get to watch solar grow within my
+              community by helping local non-profit organizations to make the switch to renewable energy. My entire perspective on
+              solar as a renewable energy choice has done a turn around. I have gone from never even seeing a solar panel to now
+              getting the opportunity to help install them. I understand now that solar energy options are far more accessible than
+              I initially thought they were a few years ago. If it were not for RE-volv and the Solar Ambassador team that I am so
+              lucky to be a part of, I may have never reached the perspective that I have. Thankfully I have, and I cannot wait to
+              see what else I learn in the future.
+            </p>
+
+            <div class="col-md-12 mt-5">
+              <h4 style="color:#100084;">About the Author</h4>
+              <div class="row my-4">
+                  <div class="col-md-3"><img
+                    src="https://res.cloudinary.com/dkwon4bkk/image/upload/v1619650522/images/blog-article-img/author-hannah.jpg"
+                    alt="Author Hannah Bennett"></div>
+
+                <div class="col-md-9" style="text-align:left;">
+                  <strong class="fw-500">Hannah Bennett</strong> is a Junior at Coastal Carolina University. While
+                  majoring in Political Science and minoring in Marketing, I joined the Solar Ambassador team during the
+                  fall semester of 2020. After discovering this opportunity and learning about solar, I realized that it
+                  was something I am super interested in. I would love to pursue a career in solar energy post
+                  graduation. Ideally, I would like to continue using solar energy as a way to help non-profit
+                  organizations and communities.
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="recent-posts">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-sm-12 co-md-10 col-lg-10">
+            <h3 class="blue-text ml-3 text-uppercase">Recent <span class="orange-text">Posts</span></h3>
+            <div class="row justify-content-start align-items-center mt-5">
+              <!-- Blog post loop start -->
+
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/university-of-dayton-presentation/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,h_1200,w_1920/v1619217872/images/blog-article-img/University_of_Dayton_Solar_Ambassadors.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/university-of-dayton-presentation/"> <span class="meta-date">APRIL 21, 2021</span> </a>
+                    <h4 class="meta-title">University of Dayton Solar Ambassador Presentation</h4>
+                    <p>Emily Burns is a Solar Ambassador on the University of Dayton Team. Emily has been..</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4 blog-posts-col">
+                <div class="blog-post-inner">
+                  <div class="blog-thumb-wrapper">
+                    <a href="/blog-center/articles/save-on-your-energy-bill/">
+                    <img src="https://res.cloudinary.com/dkwon4bkk/image/upload/c_scale,w_1920/v1618868309/images/blog-article-img/Home_electricity_monitor.jpg">
+                    </a>
+                  </div>
+                  <div class="blog-excerpt-wrapper">
+                      <a href="/blog-center/articles/save-on-your-energy-bill/"> <span class="meta-date">APRIL 19, 2021</span> </a>
+                    <h4 class="meta-title">Seven Ways to Save on Your Energy Bill</h4>
+                    <p>Everybody loves saving money but one area people do not typically think of to save money..</p>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Blog post loop end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <form id="form1" name="form1" class="wufoo  page" autocomplete="off" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="container-fluid" id="section-six">
+          <div class="row justify-content-center align-items-center section-six-row">
+            <div class="col-sm-12 co-md-12 col-lg-10">
+              <div class="row align-items-center">
+                <div class="col-sm-12 col-md-5 text-right text-white">
+                  <h2 class="fw-700 mb-3">Newsletter Signup</h2>
+                  <p class="fw-300">By subscribing to our mailing list you will always be updated with the latest news from us.</p>
+                </div>
+
+
+                <div class="col-sm-12 col-md-7">
+                  <div class="input-group mb-3 subscription-form inputs">
+                      <input class="form-control" id="Field0" name="email" type="email" spellcheck="false" value="" maxlength="255" tabindex="1" placeholder="Enter your email address" required>
+                      <div class="input-group-append">
+                      <button class="btn btn-blue newsletter-signup btn-sign-up" type="button" style="height: 100%;">Sign up</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </main><!-- /.container -->
+
+{% endblock %}
