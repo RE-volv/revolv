@@ -1,7 +1,7 @@
 psycopg2==2.5.3
 django-facebook==6.0.1
 pip==20.3
-Pillow==2.9.0
+Pillow==9.0.0
 Willow==0.2.2
 createsend==6.0.0
 mock==1.0.1
